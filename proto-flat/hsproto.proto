@@ -1,0 +1,4118 @@
+syntax = "proto2";
+package hsproto;
+
+
+message bnet_protocol_account_AccountCredential {
+	required uint32 id = 1;
+	optional bytes data = 2;
+}
+
+message bnet_protocol_account_AccountFieldOptions {
+	optional bool all_fields = 1;
+	optional bool field_account_level_info = 2;
+	optional bool field_privacy_info = 3;
+	optional bool field_parental_control_info = 4;
+	optional bool field_game_level_info = 6;
+	optional bool field_game_status = 7;
+	optional bool field_game_accounts = 8;
+}
+
+message bnet_protocol_account_AccountId {
+	required fixed32 id = 1;
+}
+
+message bnet_protocol_account_AccountLicense {
+	required uint32 id = 1;
+	optional uint64 expires = 2;
+}
+
+message bnet_protocol_account_AccountLevelInfo {
+	repeated .hsproto.bnet_protocol_account_AccountLicense licenses = 3;
+	optional fixed32 default_currency = 4;
+	optional string country = 5;
+	optional uint32 preferred_region = 6;
+}
+
+message bnet_protocol_account_AccountServiceRegion {
+	required uint32 id = 1;
+	required string shard = 2;
+}
+
+message bnet_protocol_account_AccountServiceConfig {
+	repeated .hsproto.bnet_protocol_account_AccountServiceRegion region = 1;
+}
+
+message bnet_protocol_account_CAIS {
+	optional uint32 played_minutes = 1;
+	optional uint32 rested_minutes = 2;
+	optional uint64 last_heard_time = 3;
+}
+
+message bnet_protocol_account_CreateGameAccountRequest {
+	optional .hsproto.bnet_protocol_account_AccountId account = 1;
+	optional uint32 region = 2;
+	optional fixed32 program = 3;
+	optional uint32 realm_permissions = 4 [default = 1];
+}
+
+message bnet_protocol_account_CredentialUpdateRequest {
+	required .hsproto.bnet_protocol_account_AccountId account = 1;
+	repeated .hsproto.bnet_protocol_account_AccountCredential old_credentials = 2;
+	repeated .hsproto.bnet_protocol_account_AccountCredential new_credentials = 3;
+	optional uint32 region = 4;
+}
+
+message bnet_protocol_account_CredentialUpdateResponse {
+}
+
+message bnet_protocol_account_CurrencyRestriction {
+	required string currency = 1;
+	required string authenticator_cap = 2;
+	required string soft_cap = 3;
+}
+
+message bnet_protocol_account_FlagUpdateRequest {
+	required .hsproto.bnet_protocol_account_AccountId account = 1;
+	optional uint32 region = 2;
+	required uint64 flag = 3;
+	required bool active = 4;
+}
+
+message bnet_protocol_account_FlagUpdateResponse {
+}
+
+message bnet_protocol_account_GameAccountFieldOptions {
+	optional bool all_fields = 1;
+	optional bool field_game_level_info = 2;
+	optional bool field_game_time_info = 3;
+	optional bool field_game_status = 4;
+}
+
+message bnet_protocol_account_GameAccountFieldTags {
+	optional fixed32 game_level_info_tag = 2;
+	optional fixed32 game_time_info_tag = 3;
+	optional fixed32 game_status_tag = 4;
+}
+
+message bnet_protocol_account_GameAccountHandle {
+	required fixed32 id = 1;
+	required fixed32 program = 2;
+	required uint32 region = 3;
+}
+
+message bnet_protocol_account_AccountReference {
+	optional fixed32 id = 1;
+	optional string email = 2;
+	optional .hsproto.bnet_protocol_account_GameAccountHandle handle = 3;
+	optional string battle_tag = 4;
+	optional uint32 region = 10 [default = 0];
+}
+
+message bnet_protocol_account_CacheExpireRequest {
+	repeated .hsproto.bnet_protocol_account_AccountId account = 1;
+	repeated .hsproto.bnet_protocol_account_GameAccountHandle game_account = 2;
+	repeated string email = 3;
+}
+
+message bnet_protocol_account_GameAccountBlob {
+	required .hsproto.bnet_protocol_account_GameAccountHandle game_account = 1;
+	optional string name = 2 [default = ""];
+	optional uint32 realm_permissions = 3 [default = 0];
+	required uint32 status = 4;
+	optional uint64 flags = 5 [default = 0];
+	optional uint32 billing_flags = 6 [default = 0];
+	required uint64 cache_expiration = 7;
+	optional uint64 subscription_expiration = 10;
+	optional uint32 units_remaining = 11;
+	optional uint64 status_expiration = 12;
+	optional uint32 box_level = 13;
+	optional uint64 box_level_expiration = 14;
+	repeated .hsproto.bnet_protocol_account_AccountLicense licenses = 20;
+}
+
+message bnet_protocol_account_GameAccountBlobList {
+	repeated .hsproto.bnet_protocol_account_GameAccountBlob blob = 1;
+}
+
+message bnet_protocol_account_GameAccountLink {
+	required .hsproto.bnet_protocol_account_GameAccountHandle game_account = 1;
+	required string name = 2;
+}
+
+message bnet_protocol_account_GameAccountList {
+	optional uint32 region = 3;
+	repeated .hsproto.bnet_protocol_account_GameAccountHandle handle = 4;
+}
+
+message bnet_protocol_account_GameLevelInfo {
+	optional bool is_starter_edition = 3;
+	optional bool is_trial = 4;
+	optional bool is_lifetime = 5;
+	optional bool is_restricted = 6;
+	optional bool is_beta = 7;
+	optional string name = 8;
+	optional fixed32 program = 9;
+	repeated .hsproto.bnet_protocol_account_AccountLicense licenses = 10;
+	optional uint32 realm_permissions = 11;
+}
+
+message bnet_protocol_account_GameSessionLocation {
+	optional string ip_address = 1;
+	optional uint32 country = 2;
+	optional string city = 3;
+}
+
+message bnet_protocol_account_GameSessionInfo {
+	optional uint32 start_time = 3;
+	optional .hsproto.bnet_protocol_account_GameSessionLocation location = 4;
+	optional bool has_benefactor = 5;
+	optional bool is_using_igr = 6;
+	optional bool parental_controls_active = 7;
+}
+
+message bnet_protocol_account_GameSessionUpdateInfo {
+	optional .hsproto.bnet_protocol_account_CAIS cais = 8;
+}
+
+message bnet_protocol_account_GameAccountSessionNotification {
+	optional .hsproto.bnet_protocol_account_GameAccountHandle game_account = 1;
+	optional .hsproto.bnet_protocol_account_GameSessionUpdateInfo session_info = 2;
+}
+
+message bnet_protocol_account_GameStatus {
+	optional bool is_suspended = 4;
+	optional bool is_banned = 5;
+	optional uint64 suspension_expires = 6;
+	optional fixed32 program = 7;
+}
+
+message bnet_protocol_account_GameTimeInfo {
+	optional bool is_unlimited_play_time = 3;
+	optional uint64 play_time_expires = 5;
+	optional bool is_subscription = 6;
+	optional bool is_recurring_subscription = 7;
+}
+
+message bnet_protocol_account_GameAccountState {
+	optional .hsproto.bnet_protocol_account_GameLevelInfo game_level_info = 1;
+	optional .hsproto.bnet_protocol_account_GameTimeInfo game_time_info = 2;
+	optional .hsproto.bnet_protocol_account_GameStatus game_status = 3;
+}
+
+message bnet_protocol_account_GameAccountStateNotification {
+	optional .hsproto.bnet_protocol_account_GameAccountState state = 1;
+	optional uint64 subscriber_id = 2;
+	optional .hsproto.bnet_protocol_account_GameAccountFieldTags game_account_tags = 3;
+	optional bool subscription_completed = 4;
+}
+
+message bnet_protocol_account_GameAccountStateTagged {
+	optional .hsproto.bnet_protocol_account_GameAccountState game_account_state = 1;
+	optional .hsproto.bnet_protocol_account_GameAccountFieldTags game_account_tags = 2;
+}
+
+message bnet_protocol_account_GameTimeRemainingInfo {
+	optional uint32 minutes_remaining = 1;
+	optional uint32 parental_daily_minutes_remaining = 2;
+	optional uint32 parental_weekly_minutes_remaining = 3;
+}
+
+message bnet_protocol_account_GetAccountRequest {
+	optional .hsproto.bnet_protocol_account_AccountReference ref = 1;
+	optional bool fetch_all = 10 [default = false];
+	optional bool fetch_blob = 11 [default = false];
+	optional bool fetch_id = 12 [default = false];
+	optional bool fetch_email = 13 [default = false];
+	optional bool fetch_battle_tag = 14 [default = false];
+	optional bool fetch_full_name = 15 [default = false];
+	optional bool fetch_links = 16 [default = false];
+	optional bool fetch_parental_controls = 17 [default = false];
+}
+
+message bnet_protocol_account_GetCAISInfoResponse {
+	optional .hsproto.bnet_protocol_account_CAIS cais_info = 1;
+}
+
+message bnet_protocol_account_GetEBalanceRequest {
+	required .hsproto.bnet_protocol_account_AccountId account_id = 1;
+	required string currency = 2;
+	optional uint32 currency_home_region = 3;
+}
+
+message bnet_protocol_account_GetEBalanceResponse {
+	optional string balance = 1;
+}
+
+message bnet_protocol_account_GetEBalanceRestrictionsRequest {
+	optional uint32 currency_home_region = 1;
+}
+
+message bnet_protocol_account_GetEBalanceRestrictionsResponse {
+	repeated .hsproto.bnet_protocol_account_CurrencyRestriction currency_restrictions = 1;
+}
+
+message bnet_protocol_account_GetGameAccountStateResponse {
+	optional .hsproto.bnet_protocol_account_GameAccountState state = 1;
+	optional .hsproto.bnet_protocol_account_GameAccountFieldTags tags = 2;
+}
+
+message bnet_protocol_account_GetGameSessionInfoResponse {
+	optional .hsproto.bnet_protocol_account_GameSessionInfo session_info = 2;
+}
+
+message bnet_protocol_account_GetGameTimeRemainingInfoResponse {
+	optional .hsproto.bnet_protocol_account_GameTimeRemainingInfo game_time_remaining_info = 1;
+}
+
+message bnet_protocol_account_GetLicensesResponse {
+	repeated .hsproto.bnet_protocol_account_AccountLicense licenses = 1;
+}
+
+message bnet_protocol_account_GetWalletListRequest {
+	required .hsproto.bnet_protocol_account_AccountId account_id = 1;
+	optional bool refresh = 2 [default = false];
+}
+
+message bnet_protocol_account_IsIgrAddressRequest {
+	optional string client_address = 1;
+	optional uint32 region = 2;
+}
+
+message bnet_protocol_account_ParentalControlInfo {
+	optional string timezone = 3;
+	optional uint32 minutes_per_day = 4;
+	optional uint32 minutes_per_week = 5;
+	optional bool can_receive_voice = 6;
+	optional bool can_send_voice = 7;
+	repeated bool play_schedule = 8;
+}
+
+message bnet_protocol_account_AccountBlob {
+	required fixed32 id = 2;
+	required uint32 region = 3;
+	repeated string email = 4;
+	required uint64 flags = 5;
+	optional uint64 secure_release = 6;
+	optional uint64 whitelist_start = 7;
+	optional uint64 whitelist_end = 8;
+	required string full_name = 10;
+	repeated .hsproto.bnet_protocol_account_AccountLicense licenses = 20;
+	repeated .hsproto.bnet_protocol_account_AccountCredential credentials = 21;
+	repeated .hsproto.bnet_protocol_account_GameAccountLink account_links = 22;
+	optional string battle_tag = 23;
+	optional fixed32 default_currency = 25;
+	optional uint32 legal_region = 26;
+	optional fixed32 legal_locale = 27;
+	required uint64 cache_expiration = 30;
+	optional .hsproto.bnet_protocol_account_ParentalControlInfo parental_control_info = 31;
+	optional string country = 48;
+	optional uint32 preferred_region = 49;
+}
+
+message bnet_protocol_account_AccountBlobList {
+	repeated .hsproto.bnet_protocol_account_AccountBlob blob = 1;
+}
+
+message bnet_protocol_account_GetAccountResponse {
+	optional .hsproto.bnet_protocol_account_AccountBlob blob = 11;
+	optional .hsproto.bnet_protocol_account_AccountId id = 12;
+	repeated string email = 13;
+	optional string battle_tag = 14;
+	optional string full_name = 15;
+	repeated .hsproto.bnet_protocol_account_GameAccountLink links = 16;
+	optional .hsproto.bnet_protocol_account_ParentalControlInfo parental_control_info = 17;
+}
+
+message bnet_protocol_account_PrivacyInfo {
+	enum GameInfoPrivacy {
+		PRIVACY_ME = 0;
+		PRIVACY_FRIENDS = 1;
+		PRIVACY_EVERYONE = 2;
+	}
+	optional bool is_using_rid = 3;
+	optional bool is_real_id_visible_for_view_friends = 4;
+	optional bool is_hidden_from_friend_finder = 5;
+	optional .hsproto.bnet_protocol_account_PrivacyInfo.GameInfoPrivacy game_info_privacy = 6 [default = PRIVACY_FRIENDS];
+}
+
+message bnet_protocol_account_AccountState {
+	optional .hsproto.bnet_protocol_account_AccountLevelInfo account_level_info = 1;
+	optional .hsproto.bnet_protocol_account_PrivacyInfo privacy_info = 2;
+	optional .hsproto.bnet_protocol_account_ParentalControlInfo parental_control_info = 3;
+	repeated .hsproto.bnet_protocol_account_GameLevelInfo game_level_info = 5;
+	repeated .hsproto.bnet_protocol_account_GameStatus game_status = 6;
+	repeated .hsproto.bnet_protocol_account_GameAccountList game_accounts = 7;
+}
+
+message bnet_protocol_account_ProgramTag {
+	optional fixed32 program = 1;
+	optional fixed32 tag = 2;
+}
+
+message bnet_protocol_account_RegionTag {
+	optional fixed32 region = 1;
+	optional fixed32 tag = 2;
+}
+
+message bnet_protocol_account_AccountFieldTags {
+	optional fixed32 account_level_info_tag = 2;
+	optional fixed32 privacy_info_tag = 3;
+	optional fixed32 parental_control_info_tag = 4;
+	repeated .hsproto.bnet_protocol_account_ProgramTag game_level_info_tags = 7;
+	repeated .hsproto.bnet_protocol_account_ProgramTag game_status_tags = 9;
+	repeated .hsproto.bnet_protocol_account_RegionTag game_account_tags = 11;
+}
+
+message bnet_protocol_account_AccountStateNotification {
+	optional .hsproto.bnet_protocol_account_AccountState state = 1;
+	optional uint64 subscriber_id = 2;
+	optional .hsproto.bnet_protocol_account_AccountFieldTags account_tags = 3;
+	optional bool subscription_completed = 4;
+}
+
+message bnet_protocol_account_AccountStateTagged {
+	optional .hsproto.bnet_protocol_account_AccountState account_state = 1;
+	optional .hsproto.bnet_protocol_account_AccountFieldTags tags = 2;
+}
+
+message bnet_protocol_account_GameAccountNotification {
+	repeated .hsproto.bnet_protocol_account_GameAccountList region_delta = 1;
+	optional uint64 subscriber_id = 2;
+	optional .hsproto.bnet_protocol_account_AccountFieldTags account_tags = 3;
+}
+
+message bnet_protocol_account_GetAccountStateResponse {
+	optional .hsproto.bnet_protocol_account_AccountState state = 1;
+	optional .hsproto.bnet_protocol_account_AccountFieldTags tags = 2;
+}
+
+message bnet_protocol_account_Wallet {
+	required uint32 region = 1;
+	required uint64 wallet_id = 2;
+	required uint32 wallet_type = 3;
+	optional string description = 4;
+	required uint32 country_id = 5;
+	optional string state = 6;
+	optional string city = 7;
+	optional string postal_code = 8;
+	optional bytes payment_info = 9;
+	optional string bin = 10;
+	optional string locale_id = 11;
+	optional string street = 12;
+	optional string first_name = 13;
+	optional string last_name = 14;
+	optional uint64 birth_date = 15;
+}
+
+message bnet_protocol_account_GetWalletListResponse {
+	repeated .hsproto.bnet_protocol_account_Wallet wallets = 1;
+}
+
+message bnet_protocol_account_Wallets {
+	repeated .hsproto.bnet_protocol_account_Wallet wallets = 1;
+}
+
+message bnet_protocol_AccountInfo {
+	optional bool account_paid = 1 [default = false];
+	optional fixed32 country_id = 2 [default = 0];
+	optional string battle_tag = 3;
+	optional bool manual_review = 4 [default = false];
+}
+
+message bnet_protocol_Address {
+	required string address = 1;
+	optional uint32 port = 2;
+}
+
+message bnet_protocol_authentication_AccountSettingsNotification {
+	repeated .hsproto.bnet_protocol_account_AccountLicense licenses = 1;
+	optional bool is_using_rid = 2;
+	optional bool is_playing_from_igr = 3;
+	optional bool can_receive_voice = 4;
+	optional bool can_send_voice = 5;
+}
+
+message bnet_protocol_authentication_GenerateSSOTokenRequest {
+	optional fixed32 program = 1;
+}
+
+message bnet_protocol_authentication_GenerateSSOTokenResponse {
+	optional bytes sso_id = 1;
+	optional bytes sso_secret = 2;
+}
+
+message bnet_protocol_authentication_LogonQueueUpdateRequest {
+	required uint32 position = 1;
+	required uint64 estimated_time = 2;
+	required uint64 eta_deviation_in_sec = 3;
+}
+
+message bnet_protocol_authentication_LogonRequest {
+	optional string program = 1;
+	optional string platform = 2;
+	optional string locale = 3;
+	optional string email = 4;
+	optional string version = 5;
+	optional int32 application_version = 6;
+	optional bool public_computer = 7;
+	optional bytes sso_id = 8;
+	optional bool disconnect_on_cookie_fail = 9 [default = false];
+	optional bool allow_logon_queue_notifications = 10 [default = false];
+	optional bool web_client_verification = 11 [default = false];
+	optional bytes cached_web_credentials = 12;
+	optional string user_agent = 14;
+}
+
+message bnet_protocol_authentication_LogonUpdateRequest {
+	required uint32 error_code = 1;
+}
+
+message bnet_protocol_authentication_MemModuleLoadResponse {
+	required bytes data = 1;
+}
+
+message bnet_protocol_authentication_ModuleMessageRequest {
+	required int32 module_id = 1;
+	optional bytes message = 2;
+}
+
+message bnet_protocol_authentication_ModuleNotification {
+	optional int32 module_id = 2;
+	optional uint32 result = 3;
+}
+
+message bnet_protocol_authentication_ServerStateChangeRequest {
+	required uint32 state = 1;
+	required uint64 event_time = 2;
+}
+
+message bnet_protocol_authentication_VerifyWebCredentialsRequest {
+	optional bytes web_credentials = 1;
+}
+
+message bnet_protocol_authentication_VersionInfo {
+	optional uint32 number = 1;
+	optional string patch = 2;
+	optional bool is_optional = 3;
+	optional uint64 kick_time = 4;
+}
+
+message bnet_protocol_authentication_VersionInfoNotification {
+	optional .hsproto.bnet_protocol_authentication_VersionInfo version_info = 1;
+}
+
+message bnet_protocol_challenge_Challenge {
+	required fixed32 type = 1;
+	optional string info = 2;
+	optional string answer = 3;
+	optional uint32 retries = 4;
+}
+
+message bnet_protocol_challenge_ChallengeAnsweredRequest {
+	required string answer = 1;
+	optional bytes data = 2;
+	optional uint32 id = 3;
+}
+
+message bnet_protocol_challenge_ChallengeAnsweredResponse {
+	optional bytes data = 1;
+	optional bool do_retry = 2;
+	optional bool record_not_found = 3;
+}
+
+message bnet_protocol_challenge_ChallengeCancelledRequest {
+	optional uint32 id = 1;
+}
+
+message bnet_protocol_challenge_ChallengeExternalRequest {
+	optional string request_token = 1;
+	optional string payload_type = 2;
+	optional bytes payload = 3;
+}
+
+message bnet_protocol_challenge_ChallengeExternalResult {
+	optional string request_token = 1;
+	optional bool passed = 2 [default = true];
+}
+
+message bnet_protocol_challenge_ChallengePickedRequest {
+	required fixed32 challenge = 1;
+	optional uint32 id = 2;
+	optional bool new_challenge_protocol = 3 [default = false];
+}
+
+message bnet_protocol_challenge_ChallengePickedResponse {
+	optional bytes data = 1;
+}
+
+message bnet_protocol_challenge_ChallengeResultRequest {
+	optional uint32 id = 1;
+	optional fixed32 type = 2;
+	optional uint32 error_id = 3;
+	optional bytes answer = 4;
+}
+
+message bnet_protocol_challenge_SendChallengeToUserResponse {
+	optional uint32 id = 1;
+}
+
+message bnet_protocol_channel_GetChannelIdRequest {
+}
+
+message bnet_protocol_channel_invitation_AcceptInvitationResponse {
+	required uint64 object_id = 1;
+}
+
+message bnet_protocol_channel_invitation_HasRoomForInvitationRequest {
+	required uint32 service_type = 1;
+	optional fixed32 program = 2;
+	optional string channel_type = 3 [default = "default"];
+}
+
+message bnet_protocol_channel_invitation_IncrementChannelCountResponse {
+	repeated uint64 reservation_tokens = 1;
+}
+
+message bnet_protocol_channel_SubscribeChannelResponse {
+	optional uint64 object_id = 1;
+}
+
+message bnet_protocol_chat_ChannelState {
+	optional string identity = 1;
+	optional fixed32 program = 2;
+	optional fixed32 locale = 3;
+	optional bool public = 4 [default = false];
+	optional uint32 bucket_index = 5;
+}
+
+message bnet_protocol_config_RPCMethodConfig {
+	optional string service_name = 1;
+	optional string method_name = 2;
+	optional uint32 fixed_call_cost = 3 [default = 1];
+	optional uint32 fixed_packet_size = 4 [default = 0];
+	optional float variable_multiplier = 5 [default = 0];
+	optional float multiplier = 6 [default = 1];
+	optional uint32 rate_limit_count = 7;
+	optional uint32 rate_limit_seconds = 8;
+	optional uint32 max_packet_size = 9;
+	optional uint32 max_encoded_size = 10;
+	optional float timeout = 11;
+}
+
+message bnet_protocol_config_RPCMeterConfig {
+	repeated .hsproto.bnet_protocol_config_RPCMethodConfig method = 1;
+	optional uint32 income_per_second = 2 [default = 1];
+	optional uint32 initial_balance = 3;
+	optional uint32 cap_balance = 4;
+	optional float startup_period = 5 [default = 0];
+}
+
+message bnet_protocol_connection_BindResponse {
+	repeated uint32 imported_service_id = 1;
+}
+
+message bnet_protocol_connection_BoundService {
+	required fixed32 hash = 1;
+	required uint32 id = 2;
+}
+
+message bnet_protocol_connection_BindRequest {
+	repeated fixed32 imported_service_hash = 1;
+	repeated .hsproto.bnet_protocol_connection_BoundService exported_service = 2;
+}
+
+message bnet_protocol_connection_DisconnectNotification {
+	required uint32 error_code = 1;
+	optional string reason = 2;
+}
+
+message bnet_protocol_connection_DisconnectRequest {
+	required uint32 error_code = 1;
+}
+
+message bnet_protocol_connection_EchoRequest {
+	optional fixed64 time = 1;
+	optional bool network_only = 2 [default = false];
+	optional bytes payload = 3;
+}
+
+message bnet_protocol_connection_EchoResponse {
+	optional fixed64 time = 1;
+	optional bytes payload = 2;
+}
+
+message bnet_protocol_connection_EncryptRequest {
+}
+
+message bnet_protocol_ContentHandle {
+	required fixed32 region = 1;
+	required fixed32 usage = 2;
+	required bytes hash = 3;
+	optional string proto_url = 4;
+}
+
+message bnet_protocol_authentication_MemModuleLoadRequest {
+	required .hsproto.bnet_protocol_ContentHandle handle = 1;
+	required bytes key = 2;
+	required bytes input = 3;
+}
+
+message bnet_protocol_authentication_ModuleLoadRequest {
+	required .hsproto.bnet_protocol_ContentHandle module_handle = 1;
+	optional bytes message = 2;
+}
+
+message bnet_protocol_connection_ConnectionMeteringContentHandles {
+	repeated .hsproto.bnet_protocol_ContentHandle content_handle = 1;
+}
+
+message bnet_protocol_EntityId {
+	required fixed64 high = 1;
+	required fixed64 low = 2;
+}
+
+message bnet_protocol_account_ForwardCacheExpireRequest {
+	optional .hsproto.bnet_protocol_EntityId entity_id = 1;
+}
+
+message bnet_protocol_account_GetAccountStateRequest {
+	optional .hsproto.bnet_protocol_EntityId entity_id = 1;
+	optional uint32 program = 2;
+	optional uint32 region = 3;
+	optional .hsproto.bnet_protocol_account_AccountFieldOptions options = 10;
+	optional .hsproto.bnet_protocol_account_AccountFieldTags tags = 11;
+}
+
+message bnet_protocol_account_GetCAISInfoRequest {
+	optional .hsproto.bnet_protocol_EntityId entity_id = 1;
+}
+
+message bnet_protocol_account_GetGameAccountStateRequest {
+	optional .hsproto.bnet_protocol_EntityId account_id = 1;
+	optional .hsproto.bnet_protocol_EntityId game_account_id = 2;
+	optional .hsproto.bnet_protocol_account_GameAccountFieldOptions options = 10;
+	optional .hsproto.bnet_protocol_account_GameAccountFieldTags tags = 11;
+}
+
+message bnet_protocol_account_GetGameSessionInfoRequest {
+	optional .hsproto.bnet_protocol_EntityId entity_id = 1;
+}
+
+message bnet_protocol_account_GetGameTimeRemainingInfoRequest {
+	optional .hsproto.bnet_protocol_EntityId game_account_id = 1;
+	optional .hsproto.bnet_protocol_EntityId account_id = 2;
+}
+
+message bnet_protocol_account_GetLicensesRequest {
+	optional .hsproto.bnet_protocol_EntityId target_id = 1;
+	optional bool get_account_licenses = 2;
+	optional bool get_game_account_licenses = 3;
+	optional bool get_dynamic_account_licenses = 4;
+	optional fixed32 program_id = 5;
+	optional bool exclude_unknown_program = 6 [default = false];
+}
+
+message bnet_protocol_account_SubscriberReference {
+	optional uint64 object_id = 1 [default = 0];
+	optional .hsproto.bnet_protocol_EntityId entity_id = 2;
+	optional .hsproto.bnet_protocol_account_AccountFieldOptions account_options = 3;
+	optional .hsproto.bnet_protocol_account_AccountFieldTags account_tags = 4;
+	optional .hsproto.bnet_protocol_account_GameAccountFieldOptions game_account_options = 5;
+	optional .hsproto.bnet_protocol_account_GameAccountFieldTags game_account_tags = 6;
+}
+
+message bnet_protocol_account_SubscriptionUpdateRequest {
+	repeated .hsproto.bnet_protocol_account_SubscriberReference ref = 2;
+}
+
+message bnet_protocol_account_SubscriptionUpdateResponse {
+	repeated .hsproto.bnet_protocol_account_SubscriberReference ref = 1;
+}
+
+message bnet_protocol_attribute_Variant {
+	optional bool bool_value = 2;
+	optional int64 int_value = 3;
+	optional double float_value = 4;
+	optional string string_value = 5;
+	optional bytes blob_value = 6;
+	optional bytes message_value = 7;
+	optional string fourcc_value = 8;
+	optional uint64 uint_value = 9;
+	optional .hsproto.bnet_protocol_EntityId entityid_value = 10;
+}
+
+message bnet_protocol_attribute_Attribute {
+	required string name = 1;
+	required .hsproto.bnet_protocol_attribute_Variant value = 2;
+}
+
+message bnet_protocol_attribute_AttributeFilter {
+	enum Operation {
+		MATCH_NONE = 0;
+		MATCH_ANY = 1;
+		MATCH_ALL = 2;
+		MATCH_ALL_MOST_SPECIFIC = 3;
+	}
+	required .hsproto.bnet_protocol_attribute_AttributeFilter.Operation op = 1;
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 2;
+}
+
+message bnet_protocol_authentication_GameAccountSelectedRequest {
+	required uint32 result = 1;
+	optional .hsproto.bnet_protocol_EntityId game_account = 2;
+}
+
+message bnet_protocol_authentication_LogonResult {
+	required uint32 error_code = 1;
+	optional .hsproto.bnet_protocol_EntityId account = 2;
+	repeated .hsproto.bnet_protocol_EntityId game_account = 3;
+	optional string email = 4;
+	repeated uint32 available_region = 5;
+	optional uint32 connected_region = 6;
+	optional string battle_tag = 7;
+	optional string geoip_country = 8;
+}
+
+message bnet_protocol_authentication_SelectGameAccountRequest {
+	required .hsproto.bnet_protocol_EntityId game_account = 1;
+}
+
+message bnet_protocol_challenge_ChallengeUserRequest {
+	repeated .hsproto.bnet_protocol_challenge_Challenge challenges = 1;
+	required fixed32 context = 2;
+	optional uint32 id = 3;
+	optional uint64 deadline = 4;
+	repeated .hsproto.bnet_protocol_attribute_Attribute attributes = 5;
+	optional .hsproto.bnet_protocol_EntityId game_account_id = 6;
+}
+
+message bnet_protocol_channel_CreateChannelResponse {
+	required uint64 object_id = 1;
+	optional .hsproto.bnet_protocol_EntityId channel_id = 2;
+}
+
+message bnet_protocol_channel_DissolveRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	optional uint32 reason = 2;
+}
+
+message bnet_protocol_channel_FindChannelOptions {
+	optional uint32 start_index = 1 [default = 0];
+	optional uint32 max_results = 2 [default = 16];
+	optional string name = 3;
+	optional fixed32 program = 4;
+	optional fixed32 locale = 5;
+	optional uint32 capacity_full = 6;
+	required .hsproto.bnet_protocol_attribute_AttributeFilter attribute_filter = 7;
+	optional string channel_type = 8;
+}
+
+message bnet_protocol_channel_GetChannelIdResponse {
+	optional .hsproto.bnet_protocol_EntityId channel_id = 1;
+}
+
+message bnet_protocol_channel_GetChannelInfoRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	required .hsproto.bnet_protocol_EntityId channel_id = 2;
+	optional bool fetch_state = 3 [default = false];
+	optional bool fetch_members = 4 [default = false];
+}
+
+message bnet_protocol_channel_invitation_ChannelCount {
+	optional .hsproto.bnet_protocol_EntityId channel_id = 1;
+	optional string channel_type = 2 [default = "default"];
+}
+
+message bnet_protocol_channel_invitation_ChannelCountDescription {
+	required uint32 service_type = 1;
+	required fixed32 program = 2;
+	optional string channel_type = 3 [default = "default"];
+	optional .hsproto.bnet_protocol_EntityId channel_id = 4;
+}
+
+message bnet_protocol_channel_invitation_ChannelInvitationParams {
+	required .hsproto.bnet_protocol_EntityId channel_id = 1;
+	optional bool reserved = 2;
+	optional bool rejoin = 3;
+	required uint32 service_type = 4;
+}
+
+message bnet_protocol_channel_invitation_DecrementChannelCountRequest {
+	required .hsproto.bnet_protocol_EntityId agent_id = 1;
+	optional .hsproto.bnet_protocol_EntityId channel_id = 2;
+	optional uint64 reservation_token = 3;
+}
+
+message bnet_protocol_channel_invitation_IncrementChannelCountRequest {
+	required .hsproto.bnet_protocol_EntityId agent_id = 1;
+	repeated .hsproto.bnet_protocol_channel_invitation_ChannelCountDescription descriptions = 2;
+}
+
+message bnet_protocol_channel_invitation_ListChannelCountRequest {
+	required .hsproto.bnet_protocol_EntityId member_id = 1;
+	required uint32 service_type = 2;
+	optional fixed32 program = 3;
+}
+
+message bnet_protocol_channel_invitation_ListChannelCountResponse {
+	repeated .hsproto.bnet_protocol_channel_invitation_ChannelCount channel = 1;
+}
+
+message bnet_protocol_channel_invitation_RevokeInvitationRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	optional .hsproto.bnet_protocol_EntityId target_id = 2;
+	required fixed64 invitation_id = 3;
+	required .hsproto.bnet_protocol_EntityId channel_id = 4;
+}
+
+message bnet_protocol_channel_invitation_SubscribeRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	required uint64 object_id = 2;
+}
+
+message bnet_protocol_channel_invitation_UnsubscribeRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+}
+
+message bnet_protocol_channel_invitation_UpdateChannelCountRequest {
+	required .hsproto.bnet_protocol_EntityId agent_id = 1;
+	optional uint64 reservation_token = 2;
+	required .hsproto.bnet_protocol_EntityId channel_id = 3;
+}
+
+message bnet_protocol_channel_JoinChannelResponse {
+	optional uint64 object_id = 1;
+	optional bool require_friend_validation = 2 [default = false];
+	repeated .hsproto.bnet_protocol_EntityId privileged_account = 3;
+}
+
+message bnet_protocol_channel_LeaveNotification {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	required .hsproto.bnet_protocol_EntityId member_id = 2;
+	optional uint32 reason = 3;
+}
+
+message bnet_protocol_channel_MemberState {
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 1;
+	repeated uint32 role = 2;
+	optional uint64 privileges = 3 [default = 0];
+	optional .hsproto.bnet_protocol_AccountInfo info = 4;
+	optional bool hidden = 5 [default = false];
+}
+
+message bnet_protocol_channel_invitation_AcceptInvitationRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	optional .hsproto.bnet_protocol_channel_MemberState member_state = 2;
+	required fixed64 invitation_id = 3;
+	required uint64 object_id = 4;
+	optional .hsproto.bnet_protocol_EntityId channel_id = 5;
+	optional uint32 service_type = 6;
+	optional bool local_subscriber = 7 [default = true];
+}
+
+message bnet_protocol_channel_Message {
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 1;
+	optional uint32 role = 2;
+}
+
+message bnet_protocol_channel_RemoveMemberRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	required .hsproto.bnet_protocol_EntityId member_id = 2;
+	optional uint32 reason = 3;
+}
+
+message bnet_protocol_channel_RemoveNotification {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	required .hsproto.bnet_protocol_EntityId member_id = 2;
+	optional uint32 reason = 3;
+}
+
+message bnet_protocol_channel_SendMessageNotification {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	required .hsproto.bnet_protocol_channel_Message message = 2;
+	optional uint64 required_privileges = 3 [default = 0];
+}
+
+message bnet_protocol_channel_SendMessageRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	required .hsproto.bnet_protocol_channel_Message message = 2;
+	optional uint64 required_privileges = 3 [default = 0];
+}
+
+message bnet_protocol_channel_SetRolesRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	repeated uint32 role = 2;
+	repeated .hsproto.bnet_protocol_EntityId member_id = 3;
+}
+
+message bnet_protocol_channel_SubscribeChannelRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	required .hsproto.bnet_protocol_EntityId channel_id = 2;
+	required uint64 object_id = 3;
+}
+
+message bnet_protocol_channel_UnsubscribeMemberRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	required .hsproto.bnet_protocol_EntityId member_id = 2;
+}
+
+message bnet_protocol_friends_AssignRoleRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	required .hsproto.bnet_protocol_EntityId target_id = 2;
+	repeated int32 role = 3;
+}
+
+message bnet_protocol_friends_Friend {
+	required .hsproto.bnet_protocol_EntityId id = 1;
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 2;
+	repeated uint32 role = 3;
+	optional uint64 privileges = 4 [default = 0];
+	optional uint64 attributes_epoch = 5;
+	optional string full_name = 6;
+	optional string battle_tag = 7;
+}
+
+message bnet_protocol_friends_FriendInvitation {
+	optional bool first_received = 1 [default = false];
+	repeated uint32 role = 2;
+}
+
+message bnet_protocol_friends_FriendInvitationParams {
+	optional string target_email = 1;
+	optional string target_battle_tag = 2;
+	optional string inviter_battle_tag = 3;
+	optional string inviter_full_name = 4;
+	optional string invitee_display_name = 5;
+	repeated uint32 role = 6;
+}
+
+message bnet_protocol_friends_FriendNotification {
+	required .hsproto.bnet_protocol_friends_Friend target = 1;
+	optional .hsproto.bnet_protocol_EntityId game_account_id = 2;
+}
+
+message bnet_protocol_friends_GenericFriendRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	required .hsproto.bnet_protocol_EntityId target_id = 2;
+}
+
+message bnet_protocol_friends_GenericFriendResponse {
+	optional .hsproto.bnet_protocol_friends_Friend target_friend = 1;
+}
+
+message bnet_protocol_friends_SubscribeToFriendsRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	required uint64 object_id = 2;
+}
+
+message bnet_protocol_friends_UnsubscribeToFriendsRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	optional uint64 object_id = 2;
+}
+
+message bnet_protocol_friends_UpdateFriendStateNotification {
+	required .hsproto.bnet_protocol_friends_Friend changed_friend = 1;
+	optional .hsproto.bnet_protocol_EntityId game_account_id = 2;
+}
+
+message bnet_protocol_friends_UpdateFriendStateRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	required .hsproto.bnet_protocol_EntityId target_id = 2;
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 3;
+	optional uint64 attributes_epoch = 4;
+}
+
+message bnet_protocol_friends_ViewFriendsRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	required .hsproto.bnet_protocol_EntityId target_id = 2;
+	repeated uint32 role = 3;
+}
+
+message bnet_protocol_friends_ViewFriendsResponse {
+	repeated .hsproto.bnet_protocol_friends_Friend friends = 1;
+}
+
+message bnet_protocol_game_master_ConnectInfo {
+	required .hsproto.bnet_protocol_EntityId member_id = 1;
+	required string host = 2;
+	required int32 port = 3;
+	optional bytes token = 4;
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 5;
+}
+
+message bnet_protocol_game_master_FindGameResponse {
+	optional fixed64 request_id = 1;
+	optional fixed64 factory_id = 2;
+	optional bool queued = 3 [default = false];
+}
+
+message bnet_protocol_game_master_GameHandle {
+	required fixed64 factory_id = 1;
+	required .hsproto.bnet_protocol_EntityId game_id = 2;
+}
+
+message bnet_protocol_game_master_ChangeGameRequest {
+	required .hsproto.bnet_protocol_game_master_GameHandle game_handle = 1;
+	optional bool open = 2;
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 3;
+	optional bool replace = 4 [default = false];
+}
+
+message bnet_protocol_game_master_GameEndedNotification {
+	required .hsproto.bnet_protocol_game_master_GameHandle game_handle = 1;
+	optional uint32 reason = 2 [default = 0];
+}
+
+message bnet_protocol_game_master_GameFoundNotification {
+	required fixed64 request_id = 1;
+	optional uint32 error_code = 2 [default = 0];
+	optional .hsproto.bnet_protocol_game_master_GameHandle game_handle = 3;
+	repeated .hsproto.bnet_protocol_game_master_ConnectInfo connect_info = 4;
+}
+
+message bnet_protocol_game_master_GameProperties {
+	repeated .hsproto.bnet_protocol_attribute_Attribute creation_attributes = 1;
+	optional .hsproto.bnet_protocol_attribute_AttributeFilter filter = 2;
+	optional bool create = 3 [default = false];
+	optional bool open = 4 [default = true];
+	optional fixed32 program_id = 5;
+}
+
+message bnet_protocol_game_master_GameStatsBucket {
+	optional float bucket_min = 1 [default = 0];
+	optional float bucket_max = 2 [default = 4.294967E+09];
+	optional uint32 wait_milliseconds = 3 [default = 0];
+	optional uint32 games_per_hour = 4 [default = 0];
+	optional uint32 active_games = 5 [default = 0];
+	optional uint32 active_players = 6 [default = 0];
+	optional uint32 forming_games = 7 [default = 0];
+	optional uint32 waiting_players = 8 [default = 0];
+	optional uint32 open_joinable_games = 9 [default = 0];
+	optional uint32 players_in_open_joinable_games = 10 [default = 0];
+	optional uint32 open_games_total = 11 [default = 0];
+	optional uint32 players_in_open_games_total = 12 [default = 0];
+}
+
+message bnet_protocol_game_master_GameFactoryDescription {
+	required fixed64 id = 1;
+	optional string name = 2;
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 3;
+	repeated .hsproto.bnet_protocol_game_master_GameStatsBucket stats_bucket = 4;
+	optional fixed64 unseeded_id = 5 [default = 0];
+	optional bool allow_queueing = 6 [default = true];
+}
+
+message bnet_protocol_game_master_FactoryUpdateNotification {
+	enum Operation {
+		ADD = 1;
+		REMOVE = 2;
+		CHANGE = 3;
+	}
+	required .hsproto.bnet_protocol_game_master_FactoryUpdateNotification.Operation op = 1;
+	required .hsproto.bnet_protocol_game_master_GameFactoryDescription description = 2;
+	optional fixed32 program_id = 3;
+}
+
+message bnet_protocol_game_master_GetFactoryInfoRequest {
+	required fixed64 factory_id = 1;
+}
+
+message bnet_protocol_game_master_GetFactoryInfoResponse {
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 1;
+	repeated .hsproto.bnet_protocol_game_master_GameStatsBucket stats_bucket = 2;
+}
+
+message bnet_protocol_game_master_GetGameStatsRequest {
+	required fixed64 factory_id = 1;
+	required .hsproto.bnet_protocol_attribute_AttributeFilter filter = 2;
+}
+
+message bnet_protocol_game_master_GetGameStatsResponse {
+	repeated .hsproto.bnet_protocol_game_master_GameStatsBucket stats_bucket = 1;
+}
+
+message bnet_protocol_game_master_JoinGameResponse {
+	optional fixed64 request_id = 1;
+	optional bool queued = 2 [default = false];
+	repeated .hsproto.bnet_protocol_game_master_ConnectInfo connect_info = 3;
+}
+
+message bnet_protocol_game_master_ListFactoriesRequest {
+	required .hsproto.bnet_protocol_attribute_AttributeFilter filter = 1;
+	optional uint32 start_index = 2 [default = 0];
+	optional uint32 max_results = 3 [default = 100];
+}
+
+message bnet_protocol_game_master_ListFactoriesResponse {
+	repeated .hsproto.bnet_protocol_game_master_GameFactoryDescription description = 1;
+	optional uint32 total_results = 2;
+}
+
+message bnet_protocol_game_master_PlayerLeftNotification {
+	required .hsproto.bnet_protocol_game_master_GameHandle game_handle = 1;
+	required .hsproto.bnet_protocol_EntityId member_id = 2;
+	optional uint32 reason = 3 [default = 1];
+}
+
+message bnet_protocol_game_master_SubscribeRequest {
+	required uint64 object_id = 1;
+}
+
+message bnet_protocol_game_master_SubscribeResponse {
+	optional uint64 subscription_id = 1;
+}
+
+message bnet_protocol_game_master_UnregisterServerRequest {
+}
+
+message bnet_protocol_game_master_UnregisterUtilitiesRequest {
+}
+
+message bnet_protocol_game_master_UnsubscribeRequest {
+	required uint64 subscription_id = 1;
+}
+
+message bnet_protocol_game_utilities_ClientResponse {
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 1;
+}
+
+message bnet_protocol_game_utilities_ServerResponse {
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 1;
+}
+
+message bnet_protocol_Identity {
+	optional .hsproto.bnet_protocol_EntityId account_id = 1;
+	optional .hsproto.bnet_protocol_EntityId game_account_id = 2;
+}
+
+message bnet_protocol_channel_AddMemberRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	required .hsproto.bnet_protocol_Identity member_identity = 2;
+	required .hsproto.bnet_protocol_channel_MemberState member_state = 3;
+	required uint64 object_id = 4;
+	optional bool subscribe = 5 [default = true];
+}
+
+message bnet_protocol_channel_FindChannelRequest {
+	optional .hsproto.bnet_protocol_Identity agent_identity = 1;
+	required .hsproto.bnet_protocol_channel_FindChannelOptions options = 2;
+}
+
+message bnet_protocol_channel_invitation_SuggestInvitationRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	required .hsproto.bnet_protocol_EntityId channel_id = 2;
+	required .hsproto.bnet_protocol_EntityId target_id = 3;
+	optional .hsproto.bnet_protocol_EntityId approval_id = 4;
+	optional .hsproto.bnet_protocol_Identity agent_identity = 5;
+	optional .hsproto.bnet_protocol_AccountInfo agent_info = 6;
+}
+
+message bnet_protocol_channel_JoinChannelRequest {
+	optional .hsproto.bnet_protocol_Identity agent_identity = 1;
+	optional .hsproto.bnet_protocol_channel_MemberState member_state = 2;
+	required .hsproto.bnet_protocol_EntityId channel_id = 3;
+	required uint64 object_id = 4;
+	repeated .hsproto.bnet_protocol_EntityId friend_account_id = 5;
+	optional bool local_subscriber = 6 [default = true];
+}
+
+message bnet_protocol_channel_Member {
+	required .hsproto.bnet_protocol_Identity identity = 1;
+	required .hsproto.bnet_protocol_channel_MemberState state = 2;
+}
+
+message bnet_protocol_channel_JoinNotification {
+	required .hsproto.bnet_protocol_channel_Member member = 1;
+}
+
+message bnet_protocol_channel_UpdateMemberStateNotification {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	repeated .hsproto.bnet_protocol_channel_Member state_change = 2;
+	repeated uint32 removed_role = 3;
+}
+
+message bnet_protocol_channel_UpdateMemberStateRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	repeated .hsproto.bnet_protocol_channel_Member state_change = 2;
+	repeated uint32 removed_role = 3;
+}
+
+message bnet_protocol_game_master_Player {
+	optional .hsproto.bnet_protocol_Identity identity = 1;
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 2;
+}
+
+message bnet_protocol_game_master_CancelGameEntryRequest {
+	required fixed64 request_id = 1;
+	optional fixed64 factory_id = 2;
+	repeated .hsproto.bnet_protocol_game_master_Player player = 3;
+}
+
+message bnet_protocol_game_master_FindGameRequest {
+	repeated .hsproto.bnet_protocol_game_master_Player player = 1;
+	optional fixed64 factory_id = 2;
+	optional .hsproto.bnet_protocol_game_master_GameProperties properties = 3;
+	optional uint64 object_id = 4;
+	optional fixed64 request_id = 5;
+	optional bool advanced_notification = 6 [default = false];
+}
+
+message bnet_protocol_game_master_JoinGameRequest {
+	required .hsproto.bnet_protocol_game_master_GameHandle game_handle = 1;
+	repeated .hsproto.bnet_protocol_game_master_Player player = 2;
+	optional bool advanced_notification = 3 [default = false];
+}
+
+message bnet_protocol_game_utilities_PlayerVariables {
+	required .hsproto.bnet_protocol_Identity identity = 1;
+	optional double rating = 2;
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 3;
+}
+
+message bnet_protocol_game_utilities_GetPlayerVariablesResponse {
+	repeated .hsproto.bnet_protocol_game_utilities_PlayerVariables player_variables = 1;
+}
+
+message bnet_protocol_invitation_GenericRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	optional .hsproto.bnet_protocol_EntityId target_id = 2;
+	required fixed64 invitation_id = 3;
+	optional string invitee_name = 4;
+	optional string inviter_name = 5;
+	repeated uint32 previous_role = 6;
+	repeated uint32 desired_role = 7;
+	optional uint32 reason = 8;
+}
+
+message bnet_protocol_invitation_InvitationParams {
+	optional string invitation_message = 1;
+	optional uint64 expiration_time = 2 [default = 0];
+	optional .hsproto.bnet_protocol_channel_invitation_ChannelInvitationParams channel_params = 121;
+	optional .hsproto.bnet_protocol_friends_FriendInvitationParams friend_params = 119;
+}
+
+message bnet_protocol_invitation_InvitationTarget {
+	optional .hsproto.bnet_protocol_Identity identity = 1;
+	optional string email = 2;
+	optional string battle_tag = 3;
+}
+
+message bnet_protocol_invitation_SendInvitationRequest {
+	optional .hsproto.bnet_protocol_Identity agent_identity = 1;
+	required .hsproto.bnet_protocol_EntityId target_id = 2;
+	required .hsproto.bnet_protocol_invitation_InvitationParams params = 3;
+	optional .hsproto.bnet_protocol_AccountInfo agent_info = 4;
+	optional .hsproto.bnet_protocol_invitation_InvitationTarget target = 5;
+}
+
+message bnet_protocol_invitation_Suggestion {
+	optional .hsproto.bnet_protocol_EntityId channel_id = 1;
+	required .hsproto.bnet_protocol_EntityId suggester_id = 2;
+	required .hsproto.bnet_protocol_EntityId suggestee_id = 3;
+	optional string suggester_name = 4;
+	optional string suggestee_name = 5;
+	optional .hsproto.bnet_protocol_EntityId suggester_account_id = 6;
+}
+
+message bnet_protocol_channel_invitation_SuggestionAddedNotification {
+	required .hsproto.bnet_protocol_invitation_Suggestion suggestion = 1;
+}
+
+message bnet_protocol_invitation_UpdateInvitationRequest {
+	optional .hsproto.bnet_protocol_Identity agent_identity = 1;
+	required fixed64 invitation_id = 2;
+	required .hsproto.bnet_protocol_invitation_InvitationParams params = 3;
+}
+
+message bnet_protocol_NoData {
+}
+
+message bnet_protocol_NORESPONSE {
+}
+
+message bnet_protocol_notification_FindClientRequest {
+	required .hsproto.bnet_protocol_EntityId entity_id = 1;
+}
+
+message bnet_protocol_notification_Notification {
+	optional .hsproto.bnet_protocol_EntityId sender_id = 1;
+	required .hsproto.bnet_protocol_EntityId target_id = 2;
+	required string type = 3;
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 4;
+	optional .hsproto.bnet_protocol_EntityId sender_account_id = 5;
+	optional .hsproto.bnet_protocol_EntityId target_account_id = 6;
+	optional string sender_battle_tag = 7;
+}
+
+message bnet_protocol_notification_RegisterClientRequest {
+	required .hsproto.bnet_protocol_EntityId entity_id = 1;
+}
+
+message bnet_protocol_notification_UnregisterClientRequest {
+	required .hsproto.bnet_protocol_EntityId entity_id = 1;
+}
+
+message bnet_protocol_Path {
+	repeated uint32 ordinal = 1;
+}
+
+message bnet_protocol_presence_FieldKey {
+	required uint32 program = 1;
+	required uint32 group = 2;
+	required uint32 field = 3;
+	optional uint64 index = 4 [default = 0];
+}
+
+message bnet_protocol_presence_Field {
+	required .hsproto.bnet_protocol_presence_FieldKey key = 1;
+	required .hsproto.bnet_protocol_attribute_Variant value = 2;
+}
+
+message bnet_protocol_presence_FieldOperation {
+	enum OperationType {
+		SET = 0;
+		CLEAR = 1;
+	}
+	required .hsproto.bnet_protocol_presence_Field field = 1;
+	optional .hsproto.bnet_protocol_presence_FieldOperation.OperationType operation = 2 [default = SET];
+}
+
+message bnet_protocol_presence_ChannelState {
+	optional .hsproto.bnet_protocol_EntityId entity_id = 1;
+	repeated .hsproto.bnet_protocol_presence_FieldOperation field_operation = 2;
+	optional bool healing = 3 [default = false];
+}
+
+message bnet_protocol_presence_OwnershipRequest {
+	required .hsproto.bnet_protocol_EntityId entity_id = 1;
+	optional bool release_ownership = 2 [default = false];
+}
+
+message bnet_protocol_presence_QueryRequest {
+	required .hsproto.bnet_protocol_EntityId entity_id = 1;
+	repeated .hsproto.bnet_protocol_presence_FieldKey key = 2;
+}
+
+message bnet_protocol_presence_QueryResponse {
+	repeated .hsproto.bnet_protocol_presence_Field field = 2;
+}
+
+message bnet_protocol_presence_RichPresence {
+	required fixed32 program_id = 1;
+	required fixed32 stream_id = 2;
+	required uint32 index = 3;
+}
+
+message bnet_protocol_presence_SubscribeNotificationRequest {
+	required .hsproto.bnet_protocol_EntityId entity_id = 1;
+}
+
+message bnet_protocol_presence_SubscribeRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	required .hsproto.bnet_protocol_EntityId entity_id = 2;
+	required uint64 object_id = 3;
+	repeated fixed32 program_id = 4;
+}
+
+message bnet_protocol_presence_UnsubscribeRequest {
+	optional .hsproto.bnet_protocol_EntityId agent_id = 1;
+	required .hsproto.bnet_protocol_EntityId entity_id = 2;
+}
+
+message bnet_protocol_presence_UpdateRequest {
+	required .hsproto.bnet_protocol_EntityId entity_id = 1;
+	repeated .hsproto.bnet_protocol_presence_FieldOperation field_operation = 2;
+}
+
+message bnet_protocol_Privilege {
+	required string name = 1;
+	required uint32 value = 2;
+}
+
+message bnet_protocol_ProcessId {
+	required uint32 label = 1;
+	required uint32 epoch = 2;
+}
+
+message bnet_protocol_challenge_SendChallengeToUserRequest {
+	optional .hsproto.bnet_protocol_ProcessId peer_id = 1;
+	optional .hsproto.bnet_protocol_EntityId game_account_id = 2;
+	repeated .hsproto.bnet_protocol_challenge_Challenge challenges = 3;
+	required fixed32 context = 4;
+	optional uint64 timeout = 5;
+	repeated .hsproto.bnet_protocol_attribute_Attribute attributes = 6;
+}
+
+message bnet_protocol_connection_ConnectRequest {
+	optional .hsproto.bnet_protocol_ProcessId client_id = 1;
+	optional .hsproto.bnet_protocol_connection_BindRequest bind_request = 2;
+}
+
+message bnet_protocol_connection_ConnectResponse {
+	required .hsproto.bnet_protocol_ProcessId server_id = 1;
+	optional .hsproto.bnet_protocol_ProcessId client_id = 2;
+	optional uint32 bind_result = 3;
+	optional .hsproto.bnet_protocol_connection_BindResponse bind_response = 4;
+	optional .hsproto.bnet_protocol_connection_ConnectionMeteringContentHandles content_handle_array = 5;
+	optional uint64 server_time = 6;
+}
+
+message bnet_protocol_game_utilities_ClientRequest {
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 1;
+	optional .hsproto.bnet_protocol_ProcessId host = 2;
+	optional .hsproto.bnet_protocol_EntityId bnet_account_id = 3;
+	optional .hsproto.bnet_protocol_EntityId game_account_id = 4;
+}
+
+message bnet_protocol_game_utilities_GameAccountOfflineNotification {
+	required .hsproto.bnet_protocol_EntityId game_account_id = 1;
+	optional .hsproto.bnet_protocol_ProcessId host = 2;
+}
+
+message bnet_protocol_game_utilities_GameAccountOnlineNotification {
+	required .hsproto.bnet_protocol_EntityId game_account_id = 1;
+	optional .hsproto.bnet_protocol_ProcessId host = 2;
+}
+
+message bnet_protocol_game_utilities_GetPlayerVariablesRequest {
+	repeated .hsproto.bnet_protocol_game_utilities_PlayerVariables player_variables = 1;
+	optional .hsproto.bnet_protocol_ProcessId host = 2;
+}
+
+message bnet_protocol_game_utilities_PresenceChannelCreatedRequest {
+	required .hsproto.bnet_protocol_EntityId id = 1;
+	optional .hsproto.bnet_protocol_EntityId game_account_id = 3;
+	optional .hsproto.bnet_protocol_EntityId bnet_account_id = 4;
+	optional .hsproto.bnet_protocol_ProcessId host = 5;
+}
+
+message bnet_protocol_game_utilities_ServerRequest {
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 1;
+	required fixed32 program = 2;
+	optional .hsproto.bnet_protocol_ProcessId host = 3;
+}
+
+message bnet_protocol_notification_FindClientResponse {
+	required uint32 label = 1;
+	optional .hsproto.bnet_protocol_ProcessId client_process_id = 2;
+}
+
+message bnet_protocol_ObjectAddress {
+	required .hsproto.bnet_protocol_ProcessId host = 1;
+	optional uint64 object_id = 2 [default = 0];
+}
+
+message bnet_protocol_ErrorInfo {
+	required .hsproto.bnet_protocol_ObjectAddress object_address = 1;
+	required uint32 status = 2;
+	required uint32 service_hash = 3;
+	required uint32 method_id = 4;
+}
+
+message bnet_protocol_Header {
+	required uint32 service_id = 1;
+	optional uint32 method_id = 2;
+	required uint32 token = 3;
+	optional uint64 object_id = 4 [default = 0];
+	optional uint32 size = 5 [default = 0];
+	optional uint32 status = 6 [default = 0];
+	repeated .hsproto.bnet_protocol_ErrorInfo error = 7;
+	optional uint64 timeout = 8;
+}
+
+message bnet_protocol_profanity_WordFilter {
+	required string type = 1;
+	required string regex = 2;
+}
+
+message bnet_protocol_profanity_WordFilters {
+	repeated .hsproto.bnet_protocol_profanity_WordFilter filters = 1;
+}
+
+message bnet_protocol_resources_ContentHandleRequest {
+	required fixed32 program_id = 1;
+	required fixed32 stream_id = 2;
+	optional fixed32 locale = 3 [default = 1701729619];
+}
+
+message bnet_protocol_Role {
+	required uint32 id = 1;
+	required string name = 2;
+	repeated string privilege = 3;
+	repeated uint32 assignable_role = 4;
+	optional bool required = 5 [default = false];
+	optional bool unique = 6 [default = false];
+	optional uint32 relegation_role = 7;
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 8;
+}
+
+message bnet_protocol_RoleSet {
+	required string program = 1;
+	required string service = 2;
+	optional string subtype = 3 [default = "default"];
+	repeated .hsproto.bnet_protocol_Role role = 4;
+	repeated uint32 default_role = 5;
+	optional int32 max_members = 6;
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 7;
+}
+
+message bnet_protocol_RoleSetConfig {
+	repeated .hsproto.bnet_protocol_Privilege privilege = 1;
+	required .hsproto.bnet_protocol_RoleSet role_set = 2;
+}
+
+message bnet_protocol_server_pool_GetLoadRequest {
+}
+
+message bnet_protocol_server_pool_PoolStateRequest {
+}
+
+message bnet_protocol_server_pool_ServerState {
+	optional float current_load = 1 [default = 1];
+	optional uint32 game_count = 2 [default = 0];
+	optional uint32 player_count = 3 [default = 0];
+}
+
+message bnet_protocol_game_master_RegisterServerRequest {
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 1;
+	optional .hsproto.bnet_protocol_server_pool_ServerState state = 2;
+	required fixed32 program_id = 3;
+}
+
+message bnet_protocol_game_master_RegisterUtilitiesRequest {
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 1;
+	optional .hsproto.bnet_protocol_server_pool_ServerState state = 2;
+	required fixed32 program_id = 3;
+}
+
+message bnet_protocol_server_pool_ServerInfo {
+	required .hsproto.bnet_protocol_ProcessId host = 1;
+	optional bool replace = 2 [default = false];
+	optional .hsproto.bnet_protocol_server_pool_ServerState state = 3;
+	repeated .hsproto.bnet_protocol_attribute_Attribute attribute = 4;
+	optional fixed32 program_id = 5;
+}
+
+message bnet_protocol_server_pool_PoolStateResponse {
+	repeated .hsproto.bnet_protocol_server_pool_ServerInfo info = 1;
+}
+
+message BobNetProto_AutoLogin {
+	enum PacketID {
+		ID = 103;
+	}
+	required string user = 1;
+	required string pwd = 2;
+	required int32 build_id = 3;
+	required string debug_name = 4;
+	required int32 source = 5;
+}
+
+message BobNetProto_Deadend {
+	enum PacketID {
+		ID = 169;
+	}
+	optional string reply1 = 1;
+	optional string reply2 = 2;
+	optional string reply3 = 3;
+}
+
+message BobNetProto_DeadendUtil {
+	enum PacketID {
+		ID = 167;
+	}
+	optional string reply1 = 1;
+	optional string reply2 = 2;
+	optional string reply3 = 3;
+}
+
+message BobNetProto_DebugConsoleCmdList {
+	message DebugConsoleCmd {
+		message DebugConsoleCmdParam {
+			required string param_type = 1;
+			required string param_name = 2;
+		}
+		required string name = 1;
+		repeated .hsproto.BobNetProto_DebugConsoleCmdList.DebugConsoleCmd.DebugConsoleCmdParam params = 2;
+	}
+	enum PacketID {
+		ID = 146;
+	}
+	repeated .hsproto.BobNetProto_DebugConsoleCmdList.DebugConsoleCmd commands = 1;
+}
+
+message BobNetProto_DebugConsoleCommand {
+	enum PacketID {
+		ID = 123;
+	}
+	required string command = 1;
+}
+
+message BobNetProto_DebugConsoleGetCmdList {
+	enum PacketID {
+		ID = 125;
+	}
+}
+
+message BobNetProto_DebugConsoleGetZones {
+	enum PacketID {
+		ID = 147;
+	}
+}
+
+message BobNetProto_DebugConsoleResponse {
+	enum PacketID {
+		ID = 124;
+	}
+	enum ResponseType {
+		CONSOLE_OUTPUT = 0;
+		LOG_MESSAGE = 1;
+	}
+	required string response = 1;
+	required .hsproto.BobNetProto_DebugConsoleResponse.ResponseType response_type = 2;
+}
+
+message BobNetProto_DebugConsoleUpdateFromPane {
+	enum PacketID {
+		ID = 145;
+	}
+	required string name = 1;
+	required string value = 2;
+}
+
+message BobNetProto_DebugConsoleZones {
+	message DebugConsoleZone {
+		required string name = 1;
+		required uint32 id = 2;
+	}
+	enum PacketID {
+		ID = 148;
+	}
+	repeated .hsproto.BobNetProto_DebugConsoleZones.DebugConsoleZone zones = 1;
+}
+
+message BobNetProto_DebugPaneDelItems {
+	message DebugPaneDelItem {
+		required string name = 1;
+	}
+	enum PacketID {
+		ID = 143;
+	}
+	repeated .hsproto.BobNetProto_DebugPaneDelItems.DebugPaneDelItem items = 1;
+}
+
+message BobNetProto_DebugPaneNewItems {
+	message DebugPaneNewItem {
+		required string name = 1;
+		required string value = 2;
+	}
+	enum PacketID {
+		ID = 142;
+	}
+	repeated .hsproto.BobNetProto_DebugPaneNewItems.DebugPaneNewItem items = 1;
+}
+
+message BobNetProto_PACKETTYPES {
+	enum BobNetCount {
+		COUNT = 500;
+	}
+}
+
+message BobNetProto_Ping {
+	enum PacketID {
+		ID = 115;
+	}
+}
+
+message BobNetProto_Pong {
+	enum PacketID {
+		ID = 116;
+	}
+}
+
+message PegasusGame_ChooseEntities {
+	enum PacketID {
+		ID = 3;
+	}
+	required int32 id = 1;
+	repeated int32 entities = 2;
+}
+
+message PegasusGame_ClientPacket {
+	enum PacketID {
+		ID = 6;
+	}
+	required bytes packet = 1;
+}
+
+message PegasusGame_DebugMessage {
+	enum PacketID {
+		ID = 5;
+	}
+	required string message = 1;
+}
+
+message PegasusGame_EntityChoice {
+	enum PacketID {
+		ID = 17;
+	}
+	required int32 id = 1;
+	required int32 choice_type = 2;
+	required bool cancelable = 3;
+	required int32 count_min = 4;
+	required int32 count_max = 5;
+	repeated int32 entities = 6;
+	optional int32 source = 7;
+}
+
+message PegasusGame_ForcedEntityChoice {
+	enum PacketID {
+		ID = 13;
+	}
+	required int32 id = 1;
+	repeated int32 entities = 2;
+}
+
+message PegasusGame_GameCanceled {
+	enum PacketID {
+		ID = 12;
+	}
+	enum Reason {
+		OPPONENT_TIMEOUT = 1;
+	}
+	required .hsproto.PegasusGame_GameCanceled.Reason reason = 1;
+}
+
+message PegasusGame_GameSetup {
+	enum PacketID {
+		ID = 16;
+	}
+	required int32 board = 1;
+	required int32 max_secrets_per_player = 2;
+	required int32 max_friendly_minions_per_player = 3;
+	optional int32 keep_alive_frequency = 4;
+}
+
+message PegasusGame_GetGameState {
+	enum PacketID {
+		ID = 1;
+	}
+}
+
+message PegasusGame_MouseInfo {
+	required int32 arrow_origin = 1;
+	required int32 held_card = 2;
+	required int32 over_card = 3;
+	required int32 x = 4;
+	required int32 y = 5;
+}
+
+message PegasusGame_NAckOption {
+	enum PacketID {
+		ID = 10;
+	}
+	required int32 id = 1;
+}
+
+message PegasusGame_Notification {
+	enum PacketID {
+		ID = 21;
+	}
+	enum Type {
+		IN_HAND_CARD_CAP = 1;
+		MANA_CAP = 2;
+	}
+	required .hsproto.PegasusGame_Notification.Type type = 1;
+}
+
+message PegasusGame_PowerHistoryEnd {
+}
+
+message PegasusGame_PowerHistoryHide {
+	required int32 entity = 1;
+	required int32 zone = 2;
+}
+
+message PegasusGame_PowerHistoryMetaData {
+	enum MetaType {
+		META_TARGET = 0;
+		META_DAMAGE = 1;
+		META_HEALING = 2;
+	}
+	repeated int32 info = 2;
+	optional .hsproto.PegasusGame_PowerHistoryMetaData.MetaType meta_type = 3 [default = META_TARGET];
+	optional int32 data = 4;
+}
+
+message PegasusGame_PowerHistoryStart {
+	enum Type {
+		ATTACK = 1;
+		CONTINUOUS = 2;
+		POWER = 3;
+		SCRIPT = 4;
+		TRIGGER = 5;
+		DEATHS = 6;
+		PLAY = 7;
+		FATIGUE = 8;
+	}
+	required .hsproto.PegasusGame_PowerHistoryStart.Type type = 1;
+	required int32 index = 2;
+	required int32 source = 3;
+	required int32 target = 4;
+}
+
+message PegasusGame_PowerHistoryTagChange {
+	required int32 entity = 1;
+	required int32 tag = 2;
+	required int32 value = 3;
+}
+
+message PegasusGame_ServerResult {
+	enum Code {
+		RESULT_OK = 0;
+		RESULT_RETRY = 1;
+		RESULT_NOT_EXISTS = 2;
+	}
+	enum Constants {
+		DEFAULT_RETRY_SECONDS = 2;
+	}
+	enum PacketID {
+		ID = 23;
+	}
+	required int32 result_code = 1;
+	optional float retry_delay_seconds = 2;
+}
+
+message PegasusGame_SubOption {
+	required int32 id = 1;
+	repeated int32 targets = 3;
+}
+
+message PegasusGame_Option {
+	enum Type {
+		PASS = 1;
+		END_TURN = 2;
+		POWER = 3;
+	}
+	required .hsproto.PegasusGame_Option.Type type = 1;
+	optional .hsproto.PegasusGame_SubOption main_option = 2;
+	repeated .hsproto.PegasusGame_SubOption sub_options = 3;
+}
+
+message PegasusGame_AllOptions {
+	enum PacketID {
+		ID = 14;
+	}
+	required int32 id = 1;
+	repeated .hsproto.PegasusGame_Option options = 2;
+}
+
+message PegasusGame_Tag {
+	required int32 name = 1;
+	required int32 value = 2;
+}
+
+message PegasusGame_Entity {
+	required int32 id = 1;
+	repeated .hsproto.PegasusGame_Tag tags = 2;
+}
+
+message PegasusGame_PowerHistoryEntity {
+	required int32 entity = 1;
+	required string name = 2;
+	repeated .hsproto.PegasusGame_Tag tags = 3;
+}
+
+message PegasusGame_TurnTimer {
+	enum PacketID {
+		ID = 9;
+	}
+	required int32 seconds = 1;
+	required int32 turn = 2;
+	required bool show = 3;
+}
+
+message PegasusGame_UserUI {
+	enum PacketID {
+		ID = 15;
+	}
+	optional .hsproto.PegasusGame_MouseInfo mouse_info = 1;
+	optional int32 emote = 2;
+	optional int32 player_id = 3;
+}
+
+message PegasusShared_AdventureProgress {
+	enum Flags {
+		OWNED = 1;
+		DEFEAT_HEROIC_MISSION_1 = 2;
+		DEFEAT_HEROIC_MISSION_2 = 4;
+		DEFEAT_HEROIC_MISSION_3 = 8;
+		DEFEAT_HEROIC_MISSION_4 = 16;
+		DEFEAT_CLASS_CHALLENGE_MISSION_1 = 256;
+		DEFEAT_CLASS_CHALLENGE_MISSION_2 = 512;
+	}
+	required int32 wing_id = 1;
+	required int32 progress = 2;
+	optional int32 ack = 3 [default = 0];
+	required uint64 flags = 4;
+}
+
+enum PegasusShared_BattlePayProvider {
+	BP_PROVIDER_BLIZZARD = 1;
+	BP_PROVIDER_APPLE = 2;
+	BP_PROVIDER_GOOGLE_PLAY = 3;
+	BP_PROVIDER_AMAZON = 4;
+}
+
+enum PegasusShared_BnetGameType {
+	BGT_UNKNOWN = 0;
+	BGT_FRIENDS = 1;
+	BGT_RANKED = 2;
+	BGT_ARENA = 3;
+	BGT_VS_AI = 4;
+	BGT_TUTORIAL = 5;
+	BGT_ASYNC = 6;
+	BGT_NEWBIE = 9;
+	BGT_NORMAL = 10;
+	BGT_TEST1 = 11;
+	BGT_TEST2 = 12;
+	BGT_TEST3 = 13;
+	BGT_LAST = 14;
+}
+
+message PegasusShared_BnetId {
+	required uint64 hi = 1;
+	required uint64 lo = 2;
+}
+
+message PegasusGame_InviteToSpectate {
+	enum PacketID {
+		ID = 25;
+	}
+	optional .hsproto.PegasusShared_BnetId target_bnet_account_id = 1;
+	required .hsproto.PegasusShared_BnetId target_game_account_id = 2;
+}
+
+message PegasusGame_Player {
+	required int32 id = 1;
+	required .hsproto.PegasusShared_BnetId game_account_id = 2;
+	required int32 card_back = 3;
+	required .hsproto.PegasusGame_Entity entity = 4;
+}
+
+message PegasusGame_PowerHistoryCreateGame {
+	required .hsproto.PegasusGame_Entity game_entity = 1;
+	repeated .hsproto.PegasusGame_Player players = 2;
+}
+
+message PegasusGame_PowerHistoryData {
+	optional .hsproto.PegasusGame_PowerHistoryEntity full_entity = 1;
+	optional .hsproto.PegasusGame_PowerHistoryEntity show_entity = 2;
+	optional .hsproto.PegasusGame_PowerHistoryHide hide_entity = 3;
+	optional .hsproto.PegasusGame_PowerHistoryTagChange tag_change = 4;
+	optional .hsproto.PegasusGame_PowerHistoryCreateGame create_game = 5;
+	optional .hsproto.PegasusGame_PowerHistoryStart power_start = 6;
+	optional .hsproto.PegasusGame_PowerHistoryEnd power_end = 7;
+	optional .hsproto.PegasusGame_PowerHistoryMetaData meta_data = 8;
+}
+
+message PegasusGame_PowerHistory {
+	enum PacketID {
+		ID = 19;
+	}
+	repeated .hsproto.PegasusGame_PowerHistoryData list = 1;
+}
+
+message PegasusGame_RemoveSpectators {
+	enum PacketID {
+		ID = 26;
+	}
+	repeated .hsproto.PegasusShared_BnetId target_gameaccount_ids = 1;
+	optional bool kick_all_spectators = 2 [default = false];
+	optional bool regenerate_spectator_password = 3 [default = false];
+}
+
+message PegasusGame_SpectatorChange {
+	required .hsproto.PegasusShared_BnetId game_account_id = 1;
+	required bool is_removed = 2;
+}
+
+message PegasusGame_SpectatorRemoved {
+	enum SpectatorRemovedReason {
+		SPECTATOR_REMOVED_REASON_KICKED = 0;
+		SPECTATOR_REMOVED_REASON_GAMEOVER = 1;
+	}
+	required int32 reason_code = 1;
+	optional .hsproto.PegasusShared_BnetId removed_by = 2;
+}
+
+message PegasusShared_CardDef {
+	required int32 asset = 1;
+	optional int32 premium = 2;
+}
+
+enum PegasusShared_DatabaseAction {
+	DB_A_UNKNOWN = 0;
+	DB_A_GET_DECK = 1;
+	DB_A_CREATE_DECK = 2;
+	DB_A_RENAME_DECK = 3;
+	DB_A_DELETE_DECK = 4;
+	DB_A_SET_DECK = 5;
+	DB_A_OPEN_BOOSTER = 6;
+	DB_A_GAMES_INFO = 7;
+}
+
+enum PegasusShared_DatabaseResult {
+	DB_E_SQL_EX = -1;
+	DB_E_UNKNOWN = 0;
+	DB_E_SUCCESS = 1;
+	DB_E_NOT_OWNED = 2;
+	DB_E_CONSTRAINT = 3;
+	DB_E_NOT_FOUND = 4;
+	DB_E_EXCEPTION = 9;
+}
+
+message PegasusShared_Date {
+	required int32 year = 1;
+	required int32 month = 2;
+	required int32 day = 3;
+	required int32 hours = 4;
+	required int32 min = 5;
+	required int32 sec = 6;
+}
+
+message PegasusShared_CardStack {
+	required .hsproto.PegasusShared_CardDef card_def = 1;
+	required .hsproto.PegasusShared_Date latest_insert_date = 2;
+	required int32 num_seen = 515;
+}
+
+message PegasusShared_DeckCardData {
+	required .hsproto.PegasusShared_CardDef def = 1;
+	required int32 handle = 2;
+	optional int32 qty = 3;
+	required int32 prev = 5;
+}
+
+message PegasusShared_DeckInfo {
+	enum DeckType {
+		NORMAL_DECK = 1;
+		AI_DECK = 2;
+		DRAFT_DECK = 4;
+		PRECON_DECK = 5;
+	}
+	required int64 id = 1;
+	required string name = 2;
+	required int32 card_back = 3;
+	required int32 hero = 4;
+	required .hsproto.PegasusShared_DeckInfo.DeckType deck_type = 5;
+	required int64 validity = 6;
+	required int32 hero_premium = 7;
+	required bool card_back_override = 8;
+}
+
+enum PegasusShared_GameType {
+	GT_UNKNOWN = 0;
+	GT_VS_AI = 1;
+	GT_VS_FRIEND = 2;
+	GT_TUTORIAL = 4;
+	GT_ARENA = 5;
+	GT_TEST = 6;
+	GT_RANKED = 7;
+	GT_UNRANKED = 8;
+	GT_LAST = 14;
+}
+
+message PegasusShared_Platform {
+	required int32 os = 1;
+	required int32 screen = 2;
+	required string name = 3;
+	optional int32 store = 4;
+}
+
+message BobNetProto_AuroraHandshake {
+	enum PacketID {
+		ID = 168;
+	}
+	required int32 game_handle = 1;
+	required string password = 2;
+	required int64 client_handle = 3;
+	optional int32 mission = 4;
+	required string version = 5;
+	required int32 old_platform = 6;
+	optional .hsproto.PegasusShared_Platform platform = 7;
+}
+
+message PegasusGame_ChooseOption {
+	enum PacketID {
+		ID = 2;
+	}
+	required int32 id = 1;
+	required int32 index = 2;
+	required int32 target = 3;
+	optional int32 sub_option = 4;
+	optional int32 position = 5;
+	required int32 old_platform = 6;
+	optional .hsproto.PegasusShared_Platform platform = 7;
+}
+
+message PegasusGame_GiveUp {
+	enum PacketID {
+		ID = 11;
+	}
+	required int32 old_platform = 1;
+	optional .hsproto.PegasusShared_Platform platform = 2;
+}
+
+message PegasusGame_SpectatorHandshake {
+	enum PacketID {
+		ID = 22;
+	}
+	required int32 game_handle = 1;
+	required string password = 2;
+	required string version = 3;
+	required .hsproto.PegasusShared_Platform platform = 4;
+	required .hsproto.PegasusShared_BnetId game_account_id = 5;
+}
+
+message PegasusGame_SpectatorNotify {
+	enum PacketID {
+		ID = 24;
+	}
+	required int32 player_id = 1;
+	optional .hsproto.PegasusGame_ChooseOption choose_option = 2;
+	optional .hsproto.PegasusGame_ChooseEntities choose_entities = 3;
+	repeated .hsproto.PegasusGame_SpectatorChange spectator_change = 4;
+	optional string spectator_password_update = 5;
+	optional .hsproto.PegasusGame_SpectatorRemoved spectator_removed = 6;
+}
+
+message PegasusShared_PlayQueueInfo {
+	required .hsproto.PegasusShared_BnetGameType game_type = 1;
+}
+
+message PegasusShared_ProfileNoticeAdventureProgress {
+	enum NoticeID {
+		ID = 14;
+	}
+	required int32 wing_id = 1;
+}
+
+message PegasusShared_ProfileNoticeBonusStars {
+	enum NoticeID {
+		ID = 12;
+	}
+	required int32 star_level = 1;
+	required int32 stars = 2;
+}
+
+message PegasusShared_ProfileNoticeCardBack {
+	enum NoticeID {
+		ID = 11;
+	}
+	required int32 card_back = 1;
+}
+
+message PegasusShared_ProfileNoticeDisconnectedGameResult {
+	enum GameResult {
+		GR_UNKNOWN = 0;
+		GR_PLAYING = 1;
+		GR_WINNER = 2;
+		GR_TIE = 3;
+	}
+	enum NoticeID {
+		ID = 4;
+	}
+	enum PlayerResult {
+		PR_UNKNOWN = 0;
+		PR_WON = 1;
+		PR_LOST = 2;
+		PR_DISCONNECTED = 3;
+		PR_QUIT = 4;
+	}
+	optional .hsproto.PegasusShared_GameType game_type = 8 [default = GT_UNKNOWN];
+	optional int32 mission_id = 9;
+	optional .hsproto.PegasusShared_ProfileNoticeDisconnectedGameResult.GameResult game_result = 10 [default = GR_UNKNOWN];
+	optional .hsproto.PegasusShared_ProfileNoticeDisconnectedGameResult.PlayerResult your_result = 11 [default = PR_UNKNOWN];
+	optional .hsproto.PegasusShared_ProfileNoticeDisconnectedGameResult.PlayerResult opponent_result = 12 [default = PR_UNKNOWN];
+}
+
+message PegasusShared_ProfileNoticeMedal {
+	enum NoticeID {
+		ID = 1;
+	}
+	required int32 star_level = 1;
+	optional int32 legend_rank = 2;
+}
+
+message PegasusShared_ProfileNoticePreconDeck {
+	enum NoticeID {
+		ID = 5;
+	}
+	required int64 deck = 1;
+	required int32 hero = 2;
+}
+
+message PegasusShared_ProfileNoticePurchase {
+	enum NoticeID {
+		ID = 10;
+	}
+	required string product_id = 1;
+	optional int64 data = 2;
+	optional int32 currency = 3;
+}
+
+message PegasusShared_ProfileNoticeRewardBooster {
+	enum NoticeID {
+		ID = 2;
+	}
+	required int32 booster_type = 1;
+	required int32 booster_count = 2;
+}
+
+message PegasusShared_ProfileNoticeRewardCard {
+	enum NoticeID {
+		ID = 3;
+	}
+	required .hsproto.PegasusShared_CardDef card = 1;
+	optional int32 quantity = 2;
+}
+
+message PegasusShared_ProfileNoticeRewardCard2x {
+	enum NoticeID {
+		ID = 13;
+	}
+}
+
+message PegasusShared_ProfileNoticeRewardDust {
+	enum NoticeID {
+		ID = 6;
+	}
+	required int32 amount = 1;
+}
+
+message PegasusShared_ProfileNoticeRewardForge {
+	enum NoticeID {
+		ID = 8;
+	}
+	required int32 quantity = 1;
+}
+
+message PegasusShared_ProfileNoticeRewardGold {
+	enum NoticeID {
+		ID = 9;
+	}
+	required int32 amount = 1;
+}
+
+message PegasusShared_ProfileNoticeRewardMount {
+	enum NoticeID {
+		ID = 7;
+	}
+	required int32 mount_id = 1;
+}
+
+enum PegasusShared_ProtocolVersion {
+	PV_MAJOR = 2;
+	PV_MINOR = 6;
+	PV_PATCH = 0;
+	PV_SKU = 0;
+	option allow_alias = true;
+}
+
+message PegasusUtil_AccountLicenseAchieveResponse {
+	enum PacketID {
+		ID = 311;
+	}
+	enum Result {
+		INVALID_ACHIEVE = 1;
+		NOT_ACTIVE = 2;
+		IN_PROGRESS = 3;
+		COMPLETE = 4;
+		STATUS_UNKNOWN = 5;
+	}
+	required int32 achieve = 1;
+	required .hsproto.PegasusUtil_AccountLicenseAchieveResponse.Result result = 2;
+}
+
+message PegasusUtil_Achieve {
+	required int32 id = 1;
+	required int32 progress = 2;
+	required int32 ack_progress = 3;
+	optional int32 completion_count = 4;
+	optional bool active = 5;
+	optional int32 started_count = 6;
+	optional .hsproto.PegasusShared_Date date_given = 7;
+	optional .hsproto.PegasusShared_Date date_completed = 8;
+	optional bool do_not_ack = 9;
+}
+
+message PegasusUtil_AchieveInfo {
+	required string desc = 1;
+	required int32 type = 2;
+	required int32 quota = 3;
+	required int32 reward = 4;
+	required int64 data1 = 5;
+	required int64 data2 = 6;
+}
+
+message PegasusUtil_Achieves {
+	enum PacketID {
+		ID = 252;
+	}
+	repeated .hsproto.PegasusUtil_Achieve list = 1;
+}
+
+message PegasusUtil_AckAchieveProgress {
+	enum PacketID {
+		ID = 243;
+		System = 0;
+	}
+	required int32 id = 1;
+	required int32 ack_progress = 2;
+}
+
+message PegasusUtil_AckCardSeen {
+	enum PacketID {
+		ID = 223;
+		System = 0;
+	}
+	repeated .hsproto.PegasusShared_CardDef card_defs = 1;
+}
+
+message PegasusUtil_AckNotice {
+	enum PacketID {
+		ID = 213;
+		System = 0;
+	}
+	required int64 entry = 1;
+}
+
+message PegasusUtil_AcknowledgeBanner {
+	enum PacketID {
+		ID = 309;
+		System = 0;
+	}
+	required int32 banner = 1;
+}
+
+message PegasusUtil_AckWingProgress {
+	enum PacketID {
+		ID = 308;
+		System = 0;
+	}
+	required int32 wing = 1;
+	required int32 ack = 2;
+}
+
+message PegasusUtil_AdventureOptions {
+	required int32 adventure_id = 1;
+	required uint64 options = 2;
+}
+
+message PegasusUtil_AdventureProgressResponse {
+	enum PacketID {
+		ID = 306;
+	}
+	repeated .hsproto.PegasusShared_AdventureProgress list = 1;
+}
+
+message PegasusUtil_ArcaneDustBalance {
+	enum PacketID {
+		ID = 262;
+	}
+	required int64 balance = 1;
+}
+
+message PegasusUtil_AssetsVersionResponse {
+	enum PacketID {
+		ID = 304;
+	}
+	required int32 version = 1;
+}
+
+message PegasusUtil_AtlasAchieve {
+	required int32 id = 1;
+	required int32 progress = 2;
+	required bool is_complete = 3;
+	required int32 ack_value = 4;
+	optional .hsproto.PegasusShared_Date date_completed = 5;
+	optional int32 completion_count = 6;
+	optional bool active = 7;
+}
+
+message PegasusUtil_AtlasAchieveInfo {
+	enum PacketID {
+		ID = 108;
+	}
+	repeated .hsproto.PegasusUtil_AchieveInfo info = 1;
+}
+
+message PegasusUtil_AtlasAchieves {
+	enum PacketID {
+		ID = 107;
+	}
+	repeated .hsproto.PegasusUtil_AtlasAchieve info = 1;
+}
+
+message PegasusUtil_AtlasAddBooster {
+	enum PacketID {
+		ID = 413;
+	}
+	required uint64 account_id = 1;
+	required int32 type = 2;
+}
+
+message PegasusUtil_AtlasAddCard {
+	enum PacketID {
+		ID = 405;
+	}
+	required uint64 account_id = 1;
+	required .hsproto.PegasusShared_CardDef card_def = 2;
+	optional bool is_seen = 3;
+}
+
+message PegasusUtil_AtlasAddCardBack {
+	enum PacketID {
+		ID = 422;
+	}
+	required uint64 account_id = 1;
+	required int32 card_back = 2;
+}
+
+message PegasusUtil_AtlasAddDraft {
+	enum PacketID {
+		ID = 416;
+	}
+	required uint64 account_id = 1;
+}
+
+message PegasusUtil_AtlasBoosterHistory {
+	required int32 action = 1;
+	required .hsproto.PegasusShared_Date when = 2;
+}
+
+message PegasusUtil_AtlasBooster {
+	required uint64 booster_id = 1;
+	required bool is_open = 2;
+	required int32 type = 3;
+	required uint64 license = 4;
+	repeated .hsproto.PegasusUtil_AtlasBoosterHistory history = 5;
+}
+
+message PegasusUtil_AtlasBoosters {
+	enum PacketID {
+		ID = 109;
+	}
+	repeated .hsproto.PegasusUtil_AtlasBooster info = 1;
+}
+
+message PegasusUtil_AtlasCardBackHistory {
+	required int32 card_back = 1;
+	required int32 action = 2;
+	required .hsproto.PegasusShared_Date when = 3;
+	optional int64 data1 = 4;
+	optional int64 data2 = 5;
+}
+
+message PegasusUtil_AtlasCardBacks {
+	enum PacketID {
+		ID = 112;
+	}
+	repeated int32 card_backs = 1;
+	repeated .hsproto.PegasusUtil_AtlasCardBackHistory history = 2;
+}
+
+message PegasusUtil_AtlasCardHistory {
+	required uint32 action = 1;
+	required .hsproto.PegasusShared_Date action_date = 2;
+	required uint64 data = 3;
+}
+
+message PegasusUtil_AtlasCardDetail {
+	required uint64 card_id = 1;
+	required uint32 deleted = 2;
+	required bool is_seen = 3;
+	required .hsproto.PegasusShared_Date insert_date = 4;
+	repeated .hsproto.PegasusUtil_AtlasCardHistory history = 5;
+}
+
+message PegasusUtil_AtlasCardDetails {
+	enum PacketID {
+		ID = 103;
+	}
+	repeated .hsproto.PegasusUtil_AtlasCardDetail details = 1;
+}
+
+message PegasusUtil_AtlasChangeArcaneDust {
+	enum PacketID {
+		ID = 407;
+	}
+	required uint64 account_id = 1;
+	required int64 delta = 2;
+}
+
+message PegasusUtil_AtlasChangeBonusGold {
+	enum PacketID {
+		ID = 420;
+	}
+	required uint64 account_id = 1;
+	required int64 delta = 2;
+}
+
+message PegasusUtil_AtlasChangeGold {
+	enum PacketID {
+		ID = 418;
+	}
+	required uint64 account_id = 1;
+	required int64 delta = 2;
+}
+
+message PegasusUtil_AtlasCollection {
+	enum PacketID {
+		ID = 102;
+	}
+	repeated .hsproto.PegasusShared_CardStack stacks = 1;
+}
+
+message PegasusUtil_AtlasCurrencyHistory {
+	required int32 currency = 1;
+	required int64 amount = 2;
+	required int32 action = 3;
+	required .hsproto.PegasusShared_Date when = 4;
+	optional int64 data1 = 5;
+}
+
+message PegasusUtil_AtlasCurrencyDetails {
+	enum PacketID {
+		ID = 111;
+	}
+	repeated .hsproto.PegasusUtil_AtlasCurrencyHistory history = 1;
+}
+
+message PegasusUtil_AtlasCurrentDraft {
+	required uint64 deck_id = 1;
+	required int32 slot = 2;
+	required int32 wins = 3;
+	required int32 losses = 4;
+}
+
+message PegasusUtil_AtlasDeckCard {
+	required .hsproto.PegasusShared_CardDef def = 1;
+	optional int32 qty = 2;
+}
+
+message PegasusUtil_AtlasDeck {
+	required .hsproto.PegasusShared_DeckInfo header = 1;
+	repeated .hsproto.PegasusUtil_AtlasDeckCard cards = 2;
+}
+
+message PegasusUtil_AtlasDecks {
+	enum PacketID {
+		ID = 104;
+	}
+	repeated .hsproto.PegasusUtil_AtlasDeck decks = 1;
+}
+
+message PegasusUtil_AtlasDraftHistory {
+	required uint64 deck_id = 1;
+	required int32 action = 2;
+	required .hsproto.PegasusShared_Date when = 3;
+	optional int64 data1 = 4;
+	optional int64 data2 = 5;
+	optional int64 data3 = 6;
+	optional int64 data4 = 7;
+}
+
+message PegasusUtil_AtlasDraftTicketHistory {
+	required int32 action = 1;
+	required .hsproto.PegasusShared_Date when = 2;
+}
+
+message PegasusUtil_AtlasDraftTicket {
+	required uint64 ticket_id = 1;
+	required bool was_used = 2;
+	required string license = 3;
+	repeated .hsproto.PegasusUtil_AtlasDraftTicketHistory history = 4;
+}
+
+message PegasusUtil_AtlasDrafts {
+	enum PacketID {
+		ID = 110;
+	}
+	repeated .hsproto.PegasusUtil_AtlasDraftTicket tickets = 1;
+	optional .hsproto.PegasusUtil_AtlasCurrentDraft current_draft = 2;
+	repeated .hsproto.PegasusUtil_AtlasDraftHistory history = 3;
+}
+
+message PegasusUtil_AtlasError {
+	enum ErrorType {
+		BNET_ERROR = 1;
+		PEGASUS_ERROR = 2;
+	}
+	enum PacketID {
+		ID = 101;
+	}
+	required .hsproto.PegasusUtil_AtlasError.ErrorType type = 1;
+	required int32 error = 2;
+}
+
+message PegasusUtil_AtlasGetAchieveInfo {
+	enum PacketID {
+		ID = 411;
+	}
+	required uint64 account_id = 1;
+	required uint64 achieve_id = 2;
+}
+
+message PegasusUtil_AtlasGetAchieves {
+	enum PacketID {
+		ID = 410;
+	}
+	required uint64 account_id = 1;
+}
+
+message PegasusUtil_AtlasGetAdventureProgress {
+	enum PacketID {
+		ID = 426;
+	}
+	required uint64 account_id = 1;
+}
+
+message PegasusUtil_AtlasGetBoosters {
+	enum PacketID {
+		ID = 412;
+	}
+	required uint64 account_id = 1;
+	optional .hsproto.PegasusShared_Date start_date = 2;
+	optional .hsproto.PegasusShared_Date end_date = 3;
+}
+
+message PegasusUtil_AtlasGetCardBacks {
+	enum PacketID {
+		ID = 421;
+	}
+	required uint64 account_id = 1;
+	optional .hsproto.PegasusShared_Date start_date = 2;
+	optional .hsproto.PegasusShared_Date end_date = 3;
+}
+
+message PegasusUtil_AtlasGetCardDetails {
+	enum PacketID {
+		ID = 403;
+	}
+	required uint64 account_id = 1;
+	required .hsproto.PegasusShared_CardDef card_def = 2;
+	optional .hsproto.PegasusShared_Date start_date = 3;
+	optional .hsproto.PegasusShared_Date end_date = 4;
+}
+
+message PegasusUtil_AtlasGetCollection {
+	enum PacketID {
+		ID = 402;
+	}
+	required uint64 account_id = 1;
+}
+
+message PegasusUtil_AtlasGetCurrencyDetails {
+	enum PacketID {
+		ID = 419;
+	}
+	required uint64 account_id = 1;
+	optional .hsproto.PegasusShared_Date start_date = 2;
+	optional .hsproto.PegasusShared_Date end_date = 3;
+}
+
+message PegasusUtil_AtlasGetDecks {
+	enum PacketID {
+		ID = 404;
+	}
+	required uint64 account_id = 1;
+}
+
+message PegasusUtil_AtlasGetDrafts {
+	enum PacketID {
+		ID = 415;
+	}
+	required uint64 account_id = 1;
+	optional .hsproto.PegasusShared_Date start_date = 2;
+	optional .hsproto.PegasusShared_Date end_date = 3;
+}
+
+message PegasusUtil_AtlasGetOrders {
+	enum PacketID {
+		ID = 409;
+	}
+	required uint64 account_id = 1;
+}
+
+message PegasusUtil_AtlasGetPlayerInfo {
+	enum PacketID {
+		ID = 401;
+	}
+	required uint64 account_id = 1;
+}
+
+message PegasusUtil_AtlasOrder {
+	required int64 id = 1;
+	required int32 type = 2;
+	required int32 status = 3;
+	required int64 data = 4;
+	required int64 first_data = 5;
+	required string order = 6;
+	required int64 wallet = 7;
+	required string err_str = 8;
+	required string ip_address = 9;
+	required string challenge_id = 10;
+	required .hsproto.PegasusShared_BattlePayProvider provider = 11;
+	optional string third_party_id = 12;
+	optional string product_id = 13;
+	optional .hsproto.PegasusShared_Date insert_date = 14;
+	optional .hsproto.PegasusShared_Date last_update = 15;
+	optional string third_party_user_id = 16;
+}
+
+message PegasusUtil_AtlasOrders {
+	enum PacketID {
+		ID = 106;
+	}
+	repeated .hsproto.PegasusUtil_AtlasOrder orders = 1;
+}
+
+message PegasusUtil_AtlasReleaseMobilePurchaseLock {
+	enum PacketID {
+		ID = 425;
+	}
+	required uint64 account_id = 1;
+}
+
+message PegasusUtil_AtlasRemoveBooster {
+	enum PacketID {
+		ID = 414;
+	}
+	required uint64 account_id = 1;
+	required uint64 booster_id = 2;
+}
+
+message PegasusUtil_AtlasRemoveCard {
+	enum PacketID {
+		ID = 406;
+	}
+	required uint64 account_id = 1;
+	required uint64 card_id = 2;
+}
+
+message PegasusUtil_AtlasRemoveCardBack {
+	enum PacketID {
+		ID = 423;
+	}
+	required uint64 account_id = 1;
+	required int32 card_back = 2;
+}
+
+message PegasusUtil_AtlasRemoveDraft {
+	enum PacketID {
+		ID = 417;
+	}
+	required uint64 account_id = 1;
+	required uint64 ticket_id = 2;
+}
+
+message PegasusUtil_AtlasRestoreCard {
+	enum PacketID {
+		ID = 408;
+	}
+	required uint64 account_id = 1;
+	required uint64 card_id = 2;
+}
+
+message PegasusUtil_AtlasSetAdventureProgress {
+	enum PacketID {
+		ID = 427;
+	}
+	required uint64 account_id = 1;
+	required int32 wing_id = 2;
+	optional int32 progress = 3;
+	optional uint64 add_wing_flags = 4;
+	optional uint64 remove_wing_flags = 5;
+	optional int32 progress_ack = 6;
+}
+
+message PegasusUtil_AtlasSuccess {
+	enum PacketID {
+		ID = 105;
+	}
+}
+
+message PegasusUtil_AtlasWingProgress {
+	required .hsproto.PegasusShared_AdventureProgress progress = 1;
+	required .hsproto.PegasusShared_Date last_update = 2;
+}
+
+message PegasusUtil_AtlasAdventureProgress {
+	enum PacketID {
+		ID = 113;
+	}
+	repeated .hsproto.PegasusUtil_AtlasWingProgress list = 1;
+}
+
+message PegasusUtil_BoosterCard {
+	required .hsproto.PegasusShared_CardDef card_def = 1;
+	required .hsproto.PegasusShared_Date insert_date = 2;
+}
+
+message PegasusUtil_BoosterContent {
+	enum PacketID {
+		ID = 226;
+	}
+	repeated .hsproto.PegasusUtil_BoosterCard list = 1;
+}
+
+message PegasusUtil_BoosterInfo {
+	required int32 type = 2;
+}
+
+message PegasusUtil_AtlasPlayer {
+	enum PacketID {
+		ID = 100;
+	}
+	required int64 player_id = 1;
+	required int32 games_started = 2;
+	required int32 games_completed = 3;
+	required int32 games_won = 4;
+	required int32 games_lost = 5;
+	required int32 deleted_reason = 6;
+	required int32 deck_limit = 7;
+	required int64 campaign_progress = 8;
+	required int64 random_deck_id = 9;
+	required int64 arcane_dust = 10;
+	required int64 last_game_id = 11;
+	required int32 craft_asset_id = 12;
+	required int32 craft_premium = 13;
+	required int32 craft_count = 14;
+	required int64 battlepay_id = 15;
+	repeated .hsproto.PegasusUtil_BoosterInfo booster_list = 16;
+	required int64 gold = 17;
+	required int64 bonus_gold = 18;
+	required int32 default_card_back = 19;
+}
+
+message PegasusUtil_BoosterList {
+	enum PacketID {
+		ID = 224;
+	}
+	repeated .hsproto.PegasusUtil_BoosterInfo list = 1;
+}
+
+message PegasusUtil_BoosterTally {
+	required bool is_open = 1;
+	required int32 type_id = 2;
+	required bool is_bought = 3;
+	required int32 source_id = 4;
+}
+
+message PegasusUtil_BoosterTallyList {
+	enum PacketID {
+		ID = 313;
+	}
+	repeated .hsproto.PegasusUtil_BoosterTally list = 1;
+}
+
+message PegasusUtil_BoughtSoldCard {
+	enum PacketID {
+		ID = 258;
+	}
+	enum Result {
+		FAILED = 1;
+		SOLD = 2;
+		BOUGHT = 3;
+		SOULBOUND = 4;
+		WRONG_SELL_PRICE = 5;
+		WRONG_BUY_PRICE = 6;
+		MISSING_ACHIEVE = 7;
+	}
+	required .hsproto.PegasusShared_CardDef def = 1;
+	required int32 amount = 2;
+	required .hsproto.PegasusUtil_BoughtSoldCard.Result result = 3;
+	optional bool nerfed = 644;
+	optional int32 unit_sell_price = 6;
+	optional int32 unit_buy_price = 7;
+}
+
+message PegasusUtil_BundleItem {
+	required int32 product_type = 1;
+	required int32 data = 2;
+	required int32 quantity = 3;
+}
+
+message PegasusUtil_Bundle {
+	required string id = 1;
+	required double cost = 2;
+	optional string apple_id = 3;
+	optional string google_play_id = 4;
+	repeated .hsproto.PegasusUtil_BundleItem items = 5;
+	optional int64 gold_cost = 6;
+	optional string amazon_id = 7;
+	optional string product_event_name = 9;
+}
+
+message PegasusUtil_BuySellCard {
+	enum PacketID {
+		ID = 257;
+		System = 0;
+	}
+	required .hsproto.PegasusShared_CardDef def = 1;
+	required bool buying = 386;
+	optional int32 unit_sell_price = 4;
+	optional int32 unit_buy_price = 5;
+}
+
+message PegasusUtil_CancelPurchase {
+	enum PacketID {
+		ID = 274;
+		System = 1;
+	}
+	enum ThirdPartyCancelReason {
+		PROVIDER_REPORTED_FAILURE = 1;
+		NOT_RECOGNIZED_BY_PROVIDER = 2;
+		USER_CANCELED_BEFORE_PAYMENT = 3;
+		USER_CANCELING_TO_UNBLOCK = 4;
+	}
+	required bool is_auto_cancel = 1;
+	optional .hsproto.PegasusUtil_CancelPurchase.ThirdPartyCancelReason third_party_reason = 2 [default = PROVIDER_REPORTED_FAILURE];
+	required string device_id = 3;
+}
+
+message PegasusUtil_CancelPurchaseResponse {
+	enum CancelResult {
+		CR_SUCCESS = 1;
+		CR_NOT_ALLOWED = 2;
+		CR_NOTHING_TO_CANCEL = 3;
+	}
+	enum PacketID {
+		ID = 275;
+	}
+	required .hsproto.PegasusUtil_CancelPurchaseResponse.CancelResult result = 1;
+	optional int64 transaction_id = 2;
+	optional string product_id = 3;
+	optional int32 currency = 4;
+}
+
+message PegasusUtil_CancelQuest {
+	enum PacketID {
+		ID = 281;
+		System = 0;
+	}
+	required int32 quest_id = 1;
+}
+
+message PegasusUtil_CancelQuestResponse {
+	enum PacketID {
+		ID = 282;
+	}
+	required int32 quest_id = 1;
+	required bool success = 2;
+	optional .hsproto.PegasusShared_Date next_quest_cancel = 3;
+}
+
+message PegasusUtil_CardBacks {
+	enum PacketID {
+		ID = 236;
+		System = 0;
+	}
+	required int32 default_card_back = 1;
+	repeated int32 card_backs = 2;
+}
+
+message PegasusUtil_CardUseCount {
+	required int32 asset = 1;
+}
+
+message PegasusUtil_CardValue {
+	required .hsproto.PegasusShared_CardDef card = 1;
+	required int32 buy = 2;
+	required int32 sell = 3;
+	required bool nerfed = 4;
+}
+
+message PegasusUtil_CardValues {
+	enum PacketID {
+		ID = 260;
+	}
+	repeated .hsproto.PegasusUtil_CardValue cards = 1;
+	required int32 card_nerf_index = 2;
+}
+
+message PegasusUtil_CheckAccountLicenseAchieve {
+	enum PacketID {
+		ID = 297;
+		System = 1;
+	}
+	required int32 achieve = 1;
+}
+
+message PegasusUtil_CheckAccountLicenses {
+	enum PacketID {
+		ID = 267;
+		System = 0;
+	}
+}
+
+message PegasusUtil_CheckGameLicenses {
+	enum PacketID {
+		ID = 276;
+		System = 1;
+	}
+}
+
+message PegasusUtil_CheckLicensesResponse {
+	enum PacketID {
+		ID = 277;
+	}
+	required bool account_level = 1;
+	required bool success = 2;
+}
+
+message PegasusUtil_ClientOption {
+	required int32 index = 1;
+	optional bool as_bool = 2;
+	optional int32 as_int32 = 3;
+	optional int64 as_int64 = 4;
+	optional float as_float = 5;
+	optional uint64 as_uint64 = 6;
+}
+
+message PegasusUtil_ClientOptions {
+	enum PacketID {
+		ID = 241;
+	}
+	repeated .hsproto.PegasusUtil_ClientOption options = 1;
+	optional bool failed = 2;
+}
+
+message PegasusUtil_CloseCardMarket {
+	enum PacketID {
+		ID = 263;
+		System = 0;
+	}
+}
+
+message PegasusUtil_Collection {
+	enum PacketID {
+		ID = 207;
+	}
+	repeated .hsproto.PegasusShared_CardStack stacks = 1;
+}
+
+message PegasusUtil_CreateDeck {
+	enum PacketID {
+		ID = 209;
+		System = 0;
+	}
+	required string name = 1;
+	required int32 hero = 2;
+	required int32 hero_premium = 3;
+}
+
+message PegasusUtil_DBAction {
+	enum PacketID {
+		ID = 216;
+	}
+	required .hsproto.PegasusShared_DatabaseAction action = 1;
+	required .hsproto.PegasusShared_DatabaseResult result = 2;
+	optional int64 meta_data = 3;
+}
+
+message PegasusUtil_DebugAuth {
+	enum PacketID {
+		ID = 206;
+	}
+	enum Result {
+		UNKNOWN = 0;
+		VALID = 1;
+		BAD_USER = 2;
+		BAD_PASSWORD = 3;
+	}
+	required .hsproto.PegasusUtil_DebugAuth.Result result = 1;
+	required int64 player_id = 2;
+}
+
+message PegasusUtil_DeckContents {
+	enum PacketID {
+		ID = 215;
+	}
+	required int64 deck = 1;
+	repeated .hsproto.PegasusShared_DeckCardData cards = 2;
+}
+
+message PegasusUtil_DeckCreated {
+	enum PacketID {
+		ID = 217;
+	}
+	required .hsproto.PegasusShared_DeckInfo info = 1;
+}
+
+message PegasusUtil_DeckDeleted {
+	enum PacketID {
+		ID = 218;
+	}
+	required int64 deck = 1;
+}
+
+message PegasusUtil_DeckGainedCard {
+	enum PacketID {
+		ID = 220;
+	}
+	required int64 deck = 1;
+	required int64 card = 2;
+}
+
+message PegasusUtil_DeckList {
+	enum PacketID {
+		ID = 202;
+	}
+	repeated .hsproto.PegasusShared_DeckInfo decks = 1;
+}
+
+message PegasusUtil_DeckLostCard {
+	enum PacketID {
+		ID = 221;
+	}
+	required int64 deck = 1;
+	required int64 card = 2;
+}
+
+message PegasusUtil_DeckRenamed {
+	enum PacketID {
+		ID = 219;
+	}
+	required int64 deck = 1;
+	required string name = 2;
+}
+
+message PegasusUtil_DeckSetData {
+	enum PacketID {
+		ID = 222;
+		System = 0;
+	}
+	required int64 deck = 1;
+	repeated .hsproto.PegasusShared_DeckCardData cards = 2;
+}
+
+message PegasusUtil_DeleteDeck {
+	enum PacketID {
+		ID = 210;
+		System = 0;
+	}
+	required int64 deck = 1;
+}
+
+message PegasusUtil_DevBnetIdentify {
+	enum PacketID {
+		ID = 259;
+		System = 0;
+	}
+	required string name = 1;
+}
+
+message PegasusUtil_Disconnected {
+	enum PacketID {
+		ID = 289;
+	}
+	optional string address = 1;
+	optional int32 game_handle = 2;
+	optional int64 client_handle = 3;
+	optional int32 port = 4;
+	optional string version = 5;
+	optional string aurora_password = 6;
+	optional int32 scenario = 7;
+}
+
+message PegasusUtil_DoPurchase {
+	enum PacketID {
+		ID = 273;
+		System = 1;
+	}
+}
+
+message PegasusUtil_DraftAckRewards {
+	enum PacketID {
+		ID = 287;
+		System = 0;
+	}
+	required int64 deck_id = 1;
+	required int32 slot = 2;
+}
+
+message PegasusUtil_DraftBegin {
+	enum PacketID {
+		ID = 235;
+		System = 0;
+	}
+}
+
+message PegasusUtil_DraftBeginning {
+	enum PacketID {
+		ID = 246;
+	}
+	required int64 deck_id = 1;
+	repeated int32 choices = 2;
+}
+
+message PegasusUtil_DraftChosen {
+	enum PacketID {
+		ID = 249;
+	}
+	required int32 asset = 1;
+	repeated int32 next_choices = 2;
+}
+
+message PegasusUtil_DraftError {
+	enum ErrorCode {
+		DE_UNKNOWN = 0;
+		DE_NO_LICENSE = 1;
+		DE_RETIRE_FIRST = 2;
+		DE_NOT_IN_DRAFT = 3;
+		DE_BAD_DECK = 4;
+		DE_BAD_SLOT = 5;
+		DE_BAD_INDEX = 6;
+		DE_NOT_IN_DRAFT_BUT_COULD_BE = 7;
+		DE_FEATURE_DISABLED = 8;
+	}
+	enum PacketID {
+		ID = 251;
+	}
+	required .hsproto.PegasusUtil_DraftError.ErrorCode error_code = 1;
+}
+
+message PegasusUtil_DraftGetPicksAndContents {
+	enum PacketID {
+		ID = 244;
+		System = 0;
+	}
+}
+
+message PegasusUtil_DraftMakePick {
+	enum PacketID {
+		ID = 245;
+		System = 0;
+	}
+	required int64 deck_id = 1;
+	required int32 slot = 2;
+	required int32 index = 3;
+}
+
+message PegasusUtil_DraftRetire {
+	enum PacketID {
+		ID = 242;
+		System = 0;
+	}
+	required int64 deck_id = 1;
+	required int32 slot = 2;
+}
+
+message PegasusUtil_DraftRewardBag {
+	optional .hsproto.PegasusShared_ProfileNoticeRewardBooster reward_booster = 1;
+	optional .hsproto.PegasusShared_ProfileNoticeRewardCard reward_card = 2;
+	optional .hsproto.PegasusShared_ProfileNoticeRewardDust reward_dust = 3;
+	optional .hsproto.PegasusShared_ProfileNoticeRewardGold reward_gold = 4;
+}
+
+message PegasusUtil_DraftRewardChest {
+	optional .hsproto.PegasusUtil_DraftRewardBag bag1 = 1;
+	optional .hsproto.PegasusUtil_DraftRewardBag bag2 = 2;
+	optional .hsproto.PegasusUtil_DraftRewardBag bag3 = 3;
+	optional .hsproto.PegasusUtil_DraftRewardBag bag4 = 4;
+	optional .hsproto.PegasusUtil_DraftRewardBag bag5 = 5;
+}
+
+message PegasusUtil_DraftChoicesAndContents {
+	enum PacketID {
+		ID = 248;
+	}
+	required int64 deck_id = 1;
+	required int32 slot = 2;
+	repeated int32 choices = 3;
+	required int32 hero = 4;
+	repeated .hsproto.PegasusShared_DeckCardData cards = 5;
+	required int32 wins = 6;
+	required int32 losses = 7;
+	optional .hsproto.PegasusUtil_DraftRewardChest chest = 8;
+}
+
+message PegasusUtil_DraftRetired {
+	enum PacketID {
+		ID = 247;
+	}
+	required int64 deck_id = 1;
+	required .hsproto.PegasusUtil_DraftRewardChest chest = 2;
+}
+
+message PegasusUtil_DraftRewardsAcked {
+	enum PacketID {
+		ID = 288;
+	}
+	required int64 deck_id = 1;
+}
+
+message PegasusUtil_DroppedRequest {
+	enum PacketID {
+		ID = 0;
+	}
+}
+
+message PegasusUtil_Error37 {
+	enum PacketID {
+		ID = 266;
+	}
+	enum ThrottleReason {
+		TR_DB_LOAD = 0;
+	}
+	required .hsproto.PegasusUtil_Error37.ThrottleReason reason = 1;
+	required int64 retry_millis = 2;
+}
+
+message PegasusUtil_GamesInfo {
+	enum PacketID {
+		ID = 208;
+	}
+	required int32 games_started = 1;
+	required int32 games_won = 2;
+	required int32 games_lost = 3;
+	required int32 free_reward_progress = 4;
+}
+
+message PegasusUtil_GetAccountInfo {
+	enum PacketID {
+		ID = 201;
+		System = 0;
+	}
+	enum Request {
+		LAST_LOGIN = 1;
+		DECK_LIST = 2;
+		COLLECTION = 3;
+		MEDAL_INFO = 4;
+		MEDAL_HISTORY = 5;
+		BOOSTERS = 6;
+		CARD_BACKS = 7;
+		PLAYER_RECORD = 8;
+		GAMES_PLAYED = 9;
+		DECK_LIMIT = 10;
+		CAMPAIGN_INFO = 11;
+		NOTICES = 12;
+		MOTD = 13;
+		CLIENT_OPTIONS = 14;
+		CARD_VALUES = 15;
+		DISCONNECTED = 16;
+		ARCANE_DUST_BALANCE = 17;
+		FEATURES = 18;
+		REWARD_PROGRESS = 19;
+		GOLD_BALANCE = 20;
+		HERO_XP = 21;
+		PVP_QUEUE = 22;
+		MASSIVE_LOGIN = 23;
+		BOOSTER_TALLY = 24;
+	}
+	required .hsproto.PegasusUtil_GetAccountInfo.Request request = 1;
+}
+
+message PegasusUtil_GetAchieves {
+	enum PacketID {
+		ID = 253;
+		System = 0;
+	}
+	optional bool only_active_or_new_complete = 1;
+}
+
+message PegasusUtil_GetAdventureProgress {
+	enum PacketID {
+		ID = 305;
+		System = 0;
+	}
+}
+
+message PegasusUtil_GetAssetsVersion {
+	enum PacketID {
+		ID = 303;
+		System = 0;
+	}
+}
+
+message PegasusUtil_GetBattlePayConfig {
+	enum PacketID {
+		ID = 237;
+		System = 1;
+	}
+}
+
+message PegasusUtil_GetBattlePayStatus {
+	enum PacketID {
+		ID = 255;
+		System = 1;
+	}
+}
+
+message PegasusUtil_GetDeck {
+	enum PacketID {
+		ID = 214;
+		System = 0;
+	}
+	required int64 deck = 1;
+}
+
+message PegasusUtil_GetOptions {
+	enum PacketID {
+		ID = 240;
+		System = 0;
+	}
+	repeated int32 keys = 1;
+}
+
+message PegasusUtil_GetPurchaseMethod {
+	enum PacketID {
+		ID = 250;
+		System = 1;
+	}
+	required string product_id = 1;
+	required int32 quantity = 2;
+	required int32 currency = 3;
+	required string device_id = 4;
+}
+
+message PegasusUtil_GetThirdPartyPurchaseStatus {
+	enum PacketID {
+		ID = 294;
+		System = 1;
+	}
+	required string third_party_id = 1;
+}
+
+message PegasusUtil_GoldBalance {
+	enum PacketID {
+		ID = 278;
+	}
+	required int64 capped_balance = 1;
+	required int64 bonus_balance = 2;
+	required int64 cap = 3;
+	required int64 cap_warning = 4;
+}
+
+message PegasusUtil_GoldCostBooster {
+	required int64 cost = 1;
+	required int32 pack_type = 2;
+}
+
+message PegasusUtil_BattlePayConfigResponse {
+	enum PacketID {
+		ID = 238;
+	}
+	repeated .hsproto.PegasusUtil_Bundle bundles = 1;
+	optional int32 currency = 2;
+	optional bool unavailable = 4;
+	optional int32 secs_before_auto_cancel = 5;
+	repeated .hsproto.PegasusUtil_GoldCostBooster gold_cost_boosters = 6;
+	optional int64 gold_cost_arena = 7;
+}
+
+message PegasusUtil_GuardianTrack {
+	enum PacketID {
+		ID = 261;
+		System = 0;
+	}
+	required int32 what = 1;
+}
+
+message PegasusUtil_GuardianVars {
+	enum PacketID {
+		ID = 264;
+	}
+	optional bool tourney = 1;
+	optional bool practice = 2;
+	optional bool casual = 3;
+	optional bool forge = 4;
+	optional bool friendly = 5;
+	optional bool manager = 6;
+	optional bool crafting = 7;
+	optional bool hunter = 8;
+	optional bool mage = 9;
+	optional bool paladin = 10;
+	optional bool priest = 11;
+	optional bool rogue = 12;
+	optional bool shaman = 13;
+	optional bool warlock = 14;
+	optional bool warrior = 15;
+	optional int32 show_user_u_i = 16;
+	optional bool store = 17;
+	optional bool battle_pay = 18;
+	optional bool buy_with_gold = 19;
+}
+
+message PegasusUtil_MassDisenchantRequest {
+	enum PacketID {
+		ID = 268;
+		System = 0;
+	}
+}
+
+message PegasusUtil_MassDisenchantResponse {
+	enum PacketID {
+		ID = 269;
+	}
+	required int32 amount = 1;
+}
+
+message PegasusUtil_MedalHistoryInfo {
+	required int32 season = 1;
+	required .hsproto.PegasusShared_Date when = 2;
+	required int32 stars = 3;
+	required int32 star_level = 4;
+	required int32 level_start = 5;
+	required int32 level_end = 6;
+	optional int32 legend_rank = 7;
+}
+
+message PegasusUtil_MedalHistory {
+	enum PacketID {
+		ID = 234;
+	}
+	repeated .hsproto.PegasusUtil_MedalHistoryInfo medals = 1;
+}
+
+message PegasusUtil_MedalInfo {
+	enum PacketID {
+		ID = 232;
+	}
+	required int32 season_wins = 3;
+	required int32 stars = 6;
+	required int32 streak = 7;
+	required int32 star_level = 8;
+	required int32 level_start = 9;
+	required int32 level_end = 10;
+	required bool can_lose = 11;
+	optional int32 legend_rank = 13;
+}
+
+message PegasusUtil_NearbyPlayer {
+	required uint64 bnet_id_hi = 1;
+	required uint64 bnet_id_lo = 2;
+	required uint64 session_start_time = 3;
+}
+
+message PegasusUtil_NextHeroLevelReward {
+	required int32 level = 1;
+	optional .hsproto.PegasusShared_ProfileNoticeRewardBooster reward_booster = 2;
+	optional .hsproto.PegasusShared_ProfileNoticeRewardCard reward_card = 3;
+	optional .hsproto.PegasusShared_ProfileNoticeRewardDust reward_dust = 4;
+	optional .hsproto.PegasusShared_ProfileNoticeRewardGold reward_gold = 5;
+	optional .hsproto.PegasusShared_ProfileNoticeRewardMount reward_mount = 6;
+	optional .hsproto.PegasusShared_ProfileNoticeRewardForge reward_forge = 7;
+}
+
+message PegasusUtil_HeroXPInfo {
+	required int32 class_id = 1;
+	required int32 level = 2;
+	required int64 curr_xp = 3;
+	required int64 max_xp = 4;
+	optional .hsproto.PegasusUtil_NextHeroLevelReward next_reward = 5;
+}
+
+message PegasusUtil_HeroXP {
+	enum PacketID {
+		ID = 283;
+	}
+	repeated .hsproto.PegasusUtil_HeroXPInfo xp_infos = 1;
+}
+
+message PegasusUtil_NOP {
+	enum PacketID {
+		ID = 254;
+	}
+}
+
+message PegasusUtil_OneClientTracking {
+	enum Level {
+		L_INFO = 1;
+		L_WARNING = 2;
+		L_ERROR = 3;
+	}
+	required .hsproto.PegasusUtil_OneClientTracking.Level level = 1;
+	required int32 what = 2;
+	required uint64 timestamp = 4;
+	optional string message = 3;
+}
+
+message PegasusUtil_ClientTracking {
+	enum PacketID {
+		ID = 228;
+		System = 0;
+	}
+	repeated .hsproto.PegasusUtil_OneClientTracking info = 4;
+}
+
+message PegasusUtil_OpenBooster {
+	enum PacketID {
+		ID = 225;
+		System = 0;
+	}
+	required int32 booster_type = 2;
+}
+
+message PegasusUtil_PlayerRecord {
+	required int32 type = 1;
+	optional int32 data = 2;
+	required int32 wins = 3;
+	required int32 losses = 4;
+	optional int32 ties = 5;
+}
+
+message PegasusUtil_PlayerRecords {
+	enum PacketID {
+		ID = 270;
+	}
+	repeated .hsproto.PegasusUtil_PlayerRecord records = 1;
+}
+
+message PegasusUtil_PlayQueue {
+	enum PacketID {
+		ID = 286;
+	}
+	required .hsproto.PegasusShared_PlayQueueInfo queue = 1;
+}
+
+message PegasusUtil_ProfileDeckLimit {
+	enum PacketID {
+		ID = 231;
+	}
+	required int32 deck_limit = 1;
+}
+
+message PegasusUtil_ProfileLastLogin {
+	enum PacketID {
+		ID = 227;
+	}
+	required .hsproto.PegasusShared_Date last_login = 1;
+}
+
+message PegasusUtil_ProfileNotice {
+	required int64 entry = 1;
+	optional .hsproto.PegasusShared_ProfileNoticeMedal medal = 2;
+	optional .hsproto.PegasusShared_ProfileNoticeRewardBooster reward_booster = 3;
+	optional .hsproto.PegasusShared_ProfileNoticeRewardCard reward_card = 4;
+	optional .hsproto.PegasusShared_ProfileNoticePreconDeck precon_deck = 6;
+	optional .hsproto.PegasusShared_ProfileNoticeRewardDust reward_dust = 7;
+	optional .hsproto.PegasusShared_ProfileNoticeRewardGold reward_gold = 8;
+	optional .hsproto.PegasusShared_ProfileNoticeRewardMount reward_mount = 9;
+	optional .hsproto.PegasusShared_ProfileNoticeRewardForge reward_forge = 10;
+	required int32 origin = 11;
+	optional int64 origin_data = 12;
+	required .hsproto.PegasusShared_Date when = 13;
+	optional .hsproto.PegasusShared_ProfileNoticePurchase purchase = 14;
+	optional .hsproto.PegasusShared_ProfileNoticeCardBack reward_card_back = 15;
+	optional .hsproto.PegasusShared_ProfileNoticeDisconnectedGameResult dc_game_result = 16;
+	optional .hsproto.PegasusShared_ProfileNoticeBonusStars bonus_stars = 17;
+	optional .hsproto.PegasusShared_ProfileNoticeAdventureProgress adventure_progress = 18;
+}
+
+message PegasusUtil_ProfileNotices {
+	enum PacketID {
+		ID = 212;
+	}
+	repeated .hsproto.PegasusUtil_ProfileNotice list = 1;
+}
+
+message PegasusUtil_ProfileProgress {
+	enum PacketID {
+		ID = 233;
+	}
+	required int64 progress = 1;
+	required int32 best_forge = 2;
+	optional .hsproto.PegasusShared_Date last_forge = 3;
+	optional int32 display_banner = 4 [default = 0];
+	repeated .hsproto.PegasusUtil_AdventureOptions adventure_options = 5;
+}
+
+message PegasusUtil_PurchaseError {
+	enum Error {
+		E_UNKNOWN = -1;
+		E_SUCCESS = 0;
+		E_STILL_IN_PROGRESS = 1;
+		E_INVALID_BNET = 2;
+		E_SERVICE_NA = 3;
+		E_PURCHASE_IN_PROGRESS = 4;
+		E_DATABASE = 5;
+		E_INVALID_QUANTITY = 6;
+		E_DUPLICATE_LICENSE = 7;
+		E_REQUEST_NOT_SENT = 8;
+		E_NO_ACTIVE_BPAY = 9;
+		E_FAILED_RISK = 10;
+		E_CANCELED = 11;
+		E_WAIT_MOP = 12;
+		E_WAIT_CLIENT_CONFIRM = 13;
+		E_WAIT_CLIENT_RISK = 14;
+		E_PRODUCT_NA = 15;
+		E_RISK_TIMEOUT = 16;
+		E_PRODUCT_ALREADY_OWNED = 17;
+		E_WAIT_THIRD_PARTY_RECEIPT = 18;
+		E_PRODUCT_EVENT_HAS_ENDED = 19;
+		E_BP_GENERIC_FAIL = 100;
+		E_BP_INVALID_CC_EXPIRY = 101;
+		E_BP_RISK_ERROR = 102;
+		E_BP_NO_VALID_PAYMENT = 103;
+		E_BP_PAYMENT_AUTH = 104;
+		E_BP_PROVIDER_DENIED = 105;
+		E_BP_PURCHASE_BAN = 106;
+		E_BP_SPENDING_LIMIT = 107;
+		E_BP_PARENTAL_CONTROL = 108;
+		E_BP_THROTTLED = 109;
+		E_BP_THIRD_PARTY_BAD_RECEIPT = 110;
+		E_BP_THIRD_PARTY_RECEIPT_USED = 111;
+		E_BP_PRODUCT_UNIQUENESS_VIOLATED = 112;
+		E_BP_REGION_IS_DOWN = 113;
+	}
+	required .hsproto.PegasusUtil_PurchaseError.Error error = 1;
+	optional string purchase_in_progress = 2;
+	optional string error_code = 3;
+}
+
+message PegasusUtil_BattlePayStatusResponse {
+	enum PacketID {
+		ID = 265;
+	}
+	enum PurchaseState {
+		PS_READY = 0;
+		PS_CHECK_RESULTS = 1;
+		PS_ERROR = 2;
+	}
+	required .hsproto.PegasusUtil_BattlePayStatusResponse.PurchaseState status = 1;
+	optional string product_id = 2;
+	optional .hsproto.PegasusUtil_PurchaseError purchase_error = 3;
+	required bool battle_pay_available = 4;
+	optional int64 transaction_id = 5;
+	optional string third_party_id = 6;
+	optional int32 currency = 7;
+	optional .hsproto.PegasusShared_BattlePayProvider provider = 8 [default = BP_PROVIDER_BLIZZARD];
+}
+
+message PegasusUtil_PurchaseMethod {
+	enum PacketID {
+		ID = 272;
+	}
+	optional string product_id = 1;
+	optional int32 quantity = 2;
+	optional int32 currency = 3;
+	optional string wallet_name = 4;
+	optional bool use_ebalance = 5;
+	optional .hsproto.PegasusUtil_PurchaseError error = 6;
+	optional int64 transaction_id = 7;
+	optional bool is_zero_cost_license = 8;
+}
+
+message PegasusUtil_PurchaseResponse {
+	enum PacketID {
+		ID = 256;
+	}
+	required .hsproto.PegasusUtil_PurchaseError error = 1;
+	optional int64 transaction_id = 2;
+	optional string product_id = 3;
+	optional string third_party_id = 4;
+	optional int32 currency = 5;
+	optional bool is_zero_cost_license = 6;
+}
+
+message PegasusUtil_PurchaseWithGold {
+	enum PacketID {
+		ID = 279;
+		System = 0;
+	}
+	required int32 quantity = 1;
+	required int32 product = 2;
+	optional int32 data = 3;
+}
+
+message PegasusUtil_PurchaseWithGoldResponse {
+	enum PacketID {
+		ID = 280;
+	}
+	enum PurchaseResult {
+		PR_SUCCESS = 1;
+		PR_INSUFFICIENT_FUNDS = 2;
+		PR_PRODUCT_NA = 3;
+		PR_FEATURE_NA = 4;
+		PR_INVALID_QUANTITY = 5;
+	}
+	required .hsproto.PegasusUtil_PurchaseWithGoldResponse.PurchaseResult result = 1;
+	optional int64 gold_used = 2;
+}
+
+message PegasusUtil_RenameDeck {
+	enum PacketID {
+		ID = 211;
+		System = 0;
+	}
+	required int64 deck = 1;
+	required string name = 2;
+}
+
+message PegasusUtil_RewardProgress {
+	enum PacketID {
+		ID = 271;
+	}
+	required .hsproto.PegasusShared_Date season_end = 1;
+	required int32 wins_per_gold = 2;
+	required int32 gold_per_reward = 3;
+	required int32 max_gold_per_day = 4;
+	required int32 season_number = 5;
+	optional int32 pack_id = 8;
+	required int32 xp_solo_limit = 9;
+	required int32 max_hero_level = 10;
+	required .hsproto.PegasusShared_Date next_quest_cancel = 11;
+	required float event_timing_mod = 12;
+}
+
+message PegasusUtil_SetAdventureOptions {
+	enum PacketID {
+		ID = 310;
+		System = 0;
+	}
+	required .hsproto.PegasusUtil_AdventureOptions adventure_options = 1;
+}
+
+message PegasusUtil_SetCardBack {
+	enum PacketID {
+		ID = 291;
+		System = 0;
+	}
+	required int32 card_back = 1;
+	optional int64 deck_id = 2;
+}
+
+message PegasusUtil_SetCardBackResponse {
+	enum PacketID {
+		ID = 292;
+	}
+	required bool success = 1;
+	required int32 card_back = 2;
+	optional int64 deck_id = 3;
+}
+
+message PegasusUtil_SetOptions {
+	enum PacketID {
+		ID = 239;
+		System = 0;
+	}
+	repeated .hsproto.PegasusUtil_ClientOption options = 1;
+}
+
+message PegasusUtil_SetProgress {
+	enum PacketID {
+		ID = 230;
+		System = 0;
+	}
+	required int64 value = 1;
+}
+
+message PegasusUtil_SetProgressResponse {
+	enum PacketID {
+		ID = 296;
+	}
+	enum Result {
+		SUCCESS = 1;
+		FAILED = 2;
+		ALREADY_DONE = 3;
+	}
+	required .hsproto.PegasusUtil_SetProgressResponse.Result result = 1;
+	optional int64 progress = 2;
+}
+
+message PegasusUtil_SpecialEventTiming {
+	required string event = 1;
+	optional uint64 start = 2;
+	optional uint64 end = 3;
+}
+
+message PegasusUtil_MassiveLoginReply {
+	enum PacketID {
+		ID = 300;
+	}
+	required .hsproto.PegasusUtil_ProfileProgress profile_progress = 1;
+	required .hsproto.PegasusUtil_MedalInfo medal_info = 2;
+	required .hsproto.PegasusUtil_DeckList deck_list = 3;
+	required .hsproto.PegasusUtil_ProfileDeckLimit profile_deck_limit = 4;
+	required .hsproto.PegasusUtil_GoldBalance gold_balance = 5;
+	required .hsproto.PegasusUtil_ArcaneDustBalance arcane_dust_balance = 6;
+	required .hsproto.PegasusUtil_RewardProgress reward_progress = 7;
+	required .hsproto.PegasusUtil_PlayerRecords player_records = 8;
+	required .hsproto.PegasusUtil_CardBacks card_backs = 9;
+	repeated .hsproto.PegasusUtil_SpecialEventTiming special_event_timing = 10;
+}
+
+message PegasusUtil_Subscribe {
+	enum PacketID {
+		ID = 314;
+	}
+}
+
+message PegasusUtil_SubscribeResponse {
+	enum Features {
+		F_SYSTEM_0 = 1;
+		F_SYSTEM_1 = 2;
+	}
+	enum PacketID {
+		ID = 315;
+	}
+	optional uint64 route = 1;
+	optional uint64 supported_features = 2;
+	optional uint64 keep_alive_secs = 3;
+}
+
+message PegasusUtil_ThirdPartyPurchaseStatusResponse {
+	enum PacketID {
+		ID = 295;
+	}
+	enum Status {
+		NOT_FOUND = 1;
+		SUCCEEDED = 2;
+		FAILED = 3;
+		IN_PROGRESS = 4;
+	}
+	required string third_party_id = 1;
+	required .hsproto.PegasusUtil_ThirdPartyPurchaseStatusResponse.Status status = 2;
+}
+
+message PegasusUtil_ThirdPartyReceiptData {
+	optional string third_party_id = 1;
+	optional string receipt = 2;
+	optional string third_party_user_id = 3;
+}
+
+message PegasusUtil_StartThirdPartyPurchase {
+	enum PacketID {
+		ID = 312;
+		System = 1;
+	}
+	required .hsproto.PegasusShared_BattlePayProvider provider = 1;
+	required string product_id = 2;
+	required int32 quantity = 3;
+	optional .hsproto.PegasusUtil_ThirdPartyReceiptData dangling_receipt_data = 4;
+	required string device_id = 5;
+}
+
+message PegasusUtil_SubmitThirdPartyReceipt {
+	enum PacketID {
+		ID = 293;
+		System = 1;
+	}
+	required .hsproto.PegasusUtil_ThirdPartyReceiptData receipt_data = 1;
+	required int64 transaction_id = 2;
+}
+
+message PegasusUtil_TriggerEventResponse {
+	enum PacketID {
+		ID = 299;
+	}
+	required int32 event_id = 1;
+	required bool success = 2;
+}
+
+message PegasusUtil_TriggerLaunchDayEvent {
+	enum PacketID {
+		ID = 298;
+		System = 0;
+	}
+	required .hsproto.PegasusUtil_NearbyPlayer last_played = 1;
+	required .hsproto.PegasusUtil_NearbyPlayer other_player = 2;
+}
+
+message PegasusUtil_UpdateLogin {
+	enum PacketID {
+		ID = 205;
+		System = 0;
+	}
+	optional bool reply_required = 1;
+	optional string referral = 2;
+}
+
+message PegasusUtil_UpdateLoginComplete {
+	enum PacketID {
+		ID = 307;
+	}
+}
+
+message PegasusUtil_UtilAuth {
+	enum PacketID {
+		ID = 204;
+	}
+	enum Result {
+		UNKNOWN = 0;
+		ALLOWED = 1;
+		INVALID = 2;
+		NO_SERVER = 3;
+	}
+	required .hsproto.PegasusUtil_UtilAuth.Result result = 1;
+}
+
+message PegasusUtil_UtilHandshake {
+	enum PacketID {
+		ID = 203;
+	}
+	required int32 client_handle = 1;
+	required int32 password = 2;
+}
+
+message PegasusUtil_ValidateAchieve {
+	enum PacketID {
+		ID = 284;
+		System = 0;
+	}
+	required int32 achieve = 1;
+}
+
+message PegasusUtil_ValidateAchieveResponse {
+	enum PacketID {
+		ID = 285;
+	}
+	required int32 achieve = 1;
+}
+
+enum SimpleJSON_JSONBinaryTag {
+	Array = 1;
+	Class = 2;
+	Value = 3;
+	IntValue = 4;
+	DoubleValue = 5;
+	BoolValue = 6;
+	FloatValue = 7;
+}
+
+enum SpectatorProto_Constants {
+	DEFAULT_PORT = 3724;
+}
+
+message SpectatorProto_JoinInfo {
+	optional string server_ip_address = 1;
+	optional uint32 server_port = 2;
+	optional int32 game_handle = 3;
+	optional string secret_key = 4;
+	optional bool is_joinable = 5;
+	optional int32 current_num_spectators = 6;
+	optional int32 max_num_spectators = 7;
+	optional .hsproto.PegasusShared_GameType game_type = 8 [default = GT_UNKNOWN];
+	optional int32 mission_id = 9;
+	repeated .hsproto.PegasusShared_BnetId spectated_players = 10;
+	optional .hsproto.PegasusShared_BnetId party_id = 11;
+}
+
+message SpectatorProto_Invite {
+	required .hsproto.PegasusShared_BnetId inviter_game_account_id = 1;
+	required .hsproto.SpectatorProto_JoinInfo join_info = 2;
+}
+
+message SpectatorProto_PartyServerInfo {
+	optional string server_ip_address = 1;
+	optional uint32 server_port = 2;
+	optional int32 game_handle = 3;
+	optional string secret_key = 4;
+	optional .hsproto.PegasusShared_GameType game_type = 5 [default = GT_UNKNOWN];
+	optional int32 mission_id = 6;
+}
+
