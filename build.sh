@@ -1,6 +1,7 @@
 #!/bin/sh
 basedir=$(readlink -e $(dirname "$0"))
 protodir="$basedir/proto/"
+flatproto="$basedir/proto-flat/"
 
 
 ##
@@ -30,4 +31,4 @@ mv "$outdir" "$finaldir"
 outdir="$basedir/go/"
 
 mkdir -p "$outdir"
-find "$protodir" -type f -name "*.proto" -exec protoc --proto_path="$protodir" --go_out="$outdir" {} \;
+find "$flatproto" -type f -name "*.proto" -exec protoc --proto_path="$flatproto" --go_out="$outdir" {} \;
