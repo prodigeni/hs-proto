@@ -22,3 +22,12 @@ find "$outdir" -name '*.py' -exec python3 "$basedir/python/relativize_module.py"
 
 # Final move
 mv "$outdir" "$finaldir"
+
+
+##
+# Go protos
+
+outdir="$basedir/go/"
+
+mkdir -p "$outdir"
+find "$protodir" -type f -name "*.proto" -exec protoc --proto_path="$protodir" --go_out="$outdir" {} \;
