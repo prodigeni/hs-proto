@@ -12,8 +12,8 @@ message AccountLevelInfo {
 }
 
 message AccountServiceRegion {
-	optional uint32 id = 1;
-	optional string shard = 2;
+	required uint32 id = 1;
+	required string shard = 2;
 }
 
 message AccountServiceConfig {
@@ -34,7 +34,7 @@ message CreateGameAccountRequest {
 }
 
 message CredentialUpdateRequest {
-	optional .bnet.protocol.account.AccountId account = 1;
+	required .bnet.protocol.account.AccountId account = 1;
 	repeated .bnet.protocol.account.AccountCredential old_credentials = 2;
 	repeated .bnet.protocol.account.AccountCredential new_credentials = 3;
 	optional uint32 region = 4;
@@ -44,16 +44,16 @@ message CredentialUpdateResponse {
 }
 
 message CurrencyRestriction {
-	optional string currency = 1;
-	optional string authenticator_cap = 2;
-	optional string soft_cap = 3;
+	required string currency = 1;
+	required string authenticator_cap = 2;
+	required string soft_cap = 3;
 }
 
 message FlagUpdateRequest {
-	optional .bnet.protocol.account.AccountId account = 1;
+	required .bnet.protocol.account.AccountId account = 1;
 	optional uint32 region = 2;
-	optional uint64 flag = 3;
-	optional bool active = 4;
+	required uint64 flag = 3;
+	required bool active = 4;
 }
 
 message FlagUpdateResponse {
@@ -73,9 +73,9 @@ message GameAccountFieldTags {
 }
 
 message GameAccountHandle {
-	optional fixed32 id = 1;
-	optional fixed32 program = 2;
-	optional uint32 region = 3;
+	required fixed32 id = 1;
+	required fixed32 program = 2;
+	required uint32 region = 3;
 }
 
 message AccountReference {
@@ -83,7 +83,7 @@ message AccountReference {
 	optional string email = 2;
 	optional .bnet.protocol.account.GameAccountHandle handle = 3;
 	optional string battle_tag = 4;
-	optional uint32 region = 10;
+	optional uint32 region = 10 [default = 0];
 }
 
 message CacheExpireRequest {
@@ -93,13 +93,13 @@ message CacheExpireRequest {
 }
 
 message GameAccountBlob {
-	optional .bnet.protocol.account.GameAccountHandle game_account = 1;
-	optional string name = 2;
-	optional uint32 realm_permissions = 3;
-	optional uint32 status = 4;
-	optional uint64 flags = 5;
-	optional uint32 billing_flags = 6;
-	optional uint64 cache_expiration = 7;
+	required .bnet.protocol.account.GameAccountHandle game_account = 1;
+	optional string name = 2 [default = ""];
+	optional uint32 realm_permissions = 3 [default = 0];
+	required uint32 status = 4;
+	optional uint64 flags = 5 [default = 0];
+	optional uint32 billing_flags = 6 [default = 0];
+	required uint64 cache_expiration = 7;
 	optional uint64 subscription_expiration = 10;
 	optional uint32 units_remaining = 11;
 	optional uint64 status_expiration = 12;
@@ -113,8 +113,8 @@ message GameAccountBlobList {
 }
 
 message GameAccountLink {
-	optional .bnet.protocol.account.GameAccountHandle game_account = 1;
-	optional string name = 2;
+	required .bnet.protocol.account.GameAccountHandle game_account = 1;
+	required string name = 2;
 }
 
 message GameAccountList {
@@ -197,14 +197,14 @@ message GameTimeRemainingInfo {
 
 message GetAccountRequest {
 	optional .bnet.protocol.account.AccountReference ref = 1;
-	optional bool fetch_all = 10;
-	optional bool fetch_blob = 11;
-	optional bool fetch_id = 12;
-	optional bool fetch_email = 13;
-	optional bool fetch_battle_tag = 14;
-	optional bool fetch_full_name = 15;
-	optional bool fetch_links = 16;
-	optional bool fetch_parental_controls = 17;
+	optional bool fetch_all = 10 [default = false];
+	optional bool fetch_blob = 11 [default = false];
+	optional bool fetch_id = 12 [default = false];
+	optional bool fetch_email = 13 [default = false];
+	optional bool fetch_battle_tag = 14 [default = false];
+	optional bool fetch_full_name = 15 [default = false];
+	optional bool fetch_links = 16 [default = false];
+	optional bool fetch_parental_controls = 17 [default = false];
 }
 
 message GetCAISInfoResponse {
@@ -212,8 +212,8 @@ message GetCAISInfoResponse {
 }
 
 message GetEBalanceRequest {
-	optional .bnet.protocol.account.AccountId account_id = 1;
-	optional string currency = 2;
+	required .bnet.protocol.account.AccountId account_id = 1;
+	required string currency = 2;
 	optional uint32 currency_home_region = 3;
 }
 
@@ -247,8 +247,8 @@ message GetLicensesResponse {
 }
 
 message GetWalletListRequest {
-	optional .bnet.protocol.account.AccountId account_id = 1;
-	optional bool refresh = 2;
+	required .bnet.protocol.account.AccountId account_id = 1;
+	optional bool refresh = 2 [default = false];
 }
 
 message IsIgrAddressRequest {
@@ -266,14 +266,14 @@ message ParentalControlInfo {
 }
 
 message AccountBlob {
-	optional fixed32 id = 2;
-	optional uint32 region = 3;
+	required fixed32 id = 2;
+	required uint32 region = 3;
 	repeated string email = 4;
-	optional uint64 flags = 5;
+	required uint64 flags = 5;
 	optional uint64 secure_release = 6;
 	optional uint64 whitelist_start = 7;
 	optional uint64 whitelist_end = 8;
-	optional string full_name = 10;
+	required string full_name = 10;
 	repeated .bnet.protocol.account.AccountLicense licenses = 20;
 	repeated .bnet.protocol.account.AccountCredential credentials = 21;
 	repeated .bnet.protocol.account.GameAccountLink account_links = 22;
@@ -281,10 +281,10 @@ message AccountBlob {
 	optional fixed32 default_currency = 25;
 	optional uint32 legal_region = 26;
 	optional fixed32 legal_locale = 27;
-	optional uint64 cache_expiration = 30;
+	required uint64 cache_expiration = 30;
 	optional .bnet.protocol.account.ParentalControlInfo parental_control_info = 31;
-	optional string country = 32;
-	optional uint32 preferred_region = 33;
+	optional string country = 48;
+	optional uint32 preferred_region = 49;
 }
 
 message AccountBlobList {
@@ -365,11 +365,11 @@ message GetAccountStateResponse {
 }
 
 message Wallet {
-	optional uint32 region = 1;
-	optional uint64 wallet_id = 2;
-	optional uint32 wallet_type = 3;
+	required uint32 region = 1;
+	required uint64 wallet_id = 2;
+	required uint32 wallet_type = 3;
 	optional string description = 4;
-	optional uint32 country_id = 5;
+	required uint32 country_id = 5;
 	optional string state = 6;
 	optional string city = 7;
 	optional string postal_code = 8;
@@ -428,11 +428,11 @@ message GetLicensesRequest {
 	optional bool get_game_account_licenses = 3;
 	optional bool get_dynamic_account_licenses = 4;
 	optional fixed32 program_id = 5;
-	optional bool exclude_unknown_program = 6;
+	optional bool exclude_unknown_program = 6 [default = false];
 }
 
 message SubscriberReference {
-	optional uint64 object_id = 1;
+	optional uint64 object_id = 1 [default = 0];
 	optional .bnet.protocol.EntityId entity_id = 2;
 	optional .bnet.protocol.account.AccountFieldOptions account_options = 3;
 	optional .bnet.protocol.account.AccountFieldTags account_tags = 4;

@@ -7,7 +7,7 @@ message ChooseEntities {
 	enum PacketID {
 		ID = 3;
 	}
-	optional int32 id = 1;
+	required int32 id = 1;
 	repeated int32 entities = 2;
 }
 
@@ -15,25 +15,25 @@ message ClientPacket {
 	enum PacketID {
 		ID = 6;
 	}
-	optional bytes packet = 1;
+	required bytes packet = 1;
 }
 
 message DebugMessage {
 	enum PacketID {
 		ID = 5;
 	}
-	optional string message = 1;
+	required string message = 1;
 }
 
 message EntityChoice {
 	enum PacketID {
 		ID = 17;
 	}
-	optional int32 id = 1;
-	optional int32 choice_type = 2;
-	optional bool cancelable = 3;
-	optional int32 count_min = 4;
-	optional int32 count_max = 5;
+	required int32 id = 1;
+	required int32 choice_type = 2;
+	required bool cancelable = 3;
+	required int32 count_min = 4;
+	required int32 count_max = 5;
 	repeated int32 entities = 6;
 	optional int32 source = 7;
 }
@@ -42,7 +42,7 @@ message ForcedEntityChoice {
 	enum PacketID {
 		ID = 13;
 	}
-	optional int32 id = 1;
+	required int32 id = 1;
 	repeated int32 entities = 2;
 }
 
@@ -53,16 +53,16 @@ message GameCanceled {
 	enum Reason {
 		OPPONENT_TIMEOUT = 1;
 	}
-	optional .PegasusGame.GameCanceled.Reason reason = 1 [default = OPPONENT_TIMEOUT];
+	required .PegasusGame.GameCanceled.Reason reason = 1;
 }
 
 message GameSetup {
 	enum PacketID {
 		ID = 16;
 	}
-	optional int32 board = 1;
-	optional int32 max_secrets_per_player = 2;
-	optional int32 max_friendly_minions_per_player = 3;
+	required int32 board = 1;
+	required int32 max_secrets_per_player = 2;
+	required int32 max_friendly_minions_per_player = 3;
 	optional int32 keep_alive_frequency = 4;
 }
 
@@ -73,18 +73,18 @@ message GetGameState {
 }
 
 message MouseInfo {
-	optional int32 arrow_origin = 1;
-	optional int32 held_card = 2;
-	optional int32 over_card = 3;
-	optional int32 x = 4;
-	optional int32 y = 5;
+	required int32 arrow_origin = 1;
+	required int32 held_card = 2;
+	required int32 over_card = 3;
+	required int32 x = 4;
+	required int32 y = 5;
 }
 
 message NAckOption {
 	enum PacketID {
 		ID = 10;
 	}
-	optional int32 id = 1;
+	required int32 id = 1;
 }
 
 message Notification {
@@ -95,15 +95,15 @@ message Notification {
 		IN_HAND_CARD_CAP = 1;
 		MANA_CAP = 2;
 	}
-	optional .PegasusGame.Notification.Type type = 1 [default = IN_HAND_CARD_CAP];
+	required .PegasusGame.Notification.Type type = 1;
 }
 
 message PowerHistoryEnd {
 }
 
 message PowerHistoryHide {
-	optional int32 entity = 1;
-	optional int32 zone = 2;
+	required int32 entity = 1;
+	required int32 zone = 2;
 }
 
 message PowerHistoryMetaData {
@@ -113,7 +113,7 @@ message PowerHistoryMetaData {
 		META_HEALING = 2;
 	}
 	repeated int32 info = 2;
-	optional .PegasusGame.PowerHistoryMetaData.MetaType meta_type = 3;
+	optional .PegasusGame.PowerHistoryMetaData.MetaType meta_type = 3 [default = META_TARGET];
 	optional int32 data = 4;
 }
 
@@ -128,16 +128,16 @@ message PowerHistoryStart {
 		PLAY = 7;
 		FATIGUE = 8;
 	}
-	optional .PegasusGame.PowerHistoryStart.Type type = 1 [default = ATTACK];
-	optional int32 index = 2;
-	optional int32 source = 3;
-	optional int32 target = 4;
+	required .PegasusGame.PowerHistoryStart.Type type = 1;
+	required int32 index = 2;
+	required int32 source = 3;
+	required int32 target = 4;
 }
 
 message PowerHistoryTagChange {
-	optional int32 entity = 1;
-	optional int32 tag = 2;
-	optional int32 value = 3;
+	required int32 entity = 1;
+	required int32 tag = 2;
+	required int32 value = 3;
 }
 
 message ServerResult {
@@ -152,12 +152,12 @@ message ServerResult {
 	enum PacketID {
 		ID = 23;
 	}
-	optional int32 result_code = 1;
+	required int32 result_code = 1;
 	optional float retry_delay_seconds = 2;
 }
 
 message SubOption {
-	optional int32 id = 1;
+	required int32 id = 1;
 	repeated int32 targets = 3;
 }
 
@@ -167,7 +167,7 @@ message Option {
 		END_TURN = 2;
 		POWER = 3;
 	}
-	optional .PegasusGame.Option.Type type = 1 [default = PASS];
+	required .PegasusGame.Option.Type type = 1;
 	optional .PegasusGame.SubOption main_option = 2;
 	repeated .PegasusGame.SubOption sub_options = 3;
 }
@@ -176,23 +176,23 @@ message AllOptions {
 	enum PacketID {
 		ID = 14;
 	}
-	optional int32 id = 1;
+	required int32 id = 1;
 	repeated .PegasusGame.Option options = 2;
 }
 
 message Tag {
-	optional int32 name = 1;
-	optional int32 value = 2;
+	required int32 name = 1;
+	required int32 value = 2;
 }
 
 message Entity {
-	optional int32 id = 1;
+	required int32 id = 1;
 	repeated .PegasusGame.Tag tags = 2;
 }
 
 message PowerHistoryEntity {
-	optional int32 entity = 1;
-	optional string name = 2;
+	required int32 entity = 1;
+	required string name = 2;
 	repeated .PegasusGame.Tag tags = 3;
 }
 
@@ -200,9 +200,9 @@ message TurnTimer {
 	enum PacketID {
 		ID = 9;
 	}
-	optional int32 seconds = 1;
-	optional int32 turn = 2;
-	optional bool show = 3;
+	required int32 seconds = 1;
+	required int32 turn = 2;
+	required bool show = 3;
 }
 
 message UserUI {
@@ -218,19 +218,19 @@ message InviteToSpectate {
 	enum PacketID {
 		ID = 25;
 	}
-	optional .PegasusShared.BnetId targetBnetAccountId = 1;
-	optional .PegasusShared.BnetId targetGameAccountId = 2;
+	optional .PegasusShared.BnetId target_bnet_account_id = 1;
+	required .PegasusShared.BnetId target_game_account_id = 2;
 }
 
 message Player {
-	optional int32 id = 1;
-	optional .PegasusShared.BnetId gameAccountId = 2;
-	optional int32 card_back = 3;
-	optional .PegasusGame.Entity entity = 4;
+	required int32 id = 1;
+	required .PegasusShared.BnetId game_account_id = 2;
+	required int32 card_back = 3;
+	required .PegasusGame.Entity entity = 4;
 }
 
 message PowerHistoryCreateGame {
-	optional .PegasusGame.Entity game_entity = 1;
+	required .PegasusGame.Entity game_entity = 1;
 	repeated .PegasusGame.Player players = 2;
 }
 
@@ -257,13 +257,13 @@ message RemoveSpectators {
 		ID = 26;
 	}
 	repeated .PegasusShared.BnetId target_gameaccount_ids = 1;
-	optional bool kick_all_spectators = 2;
-	optional bool regenerate_spectator_password = 3;
+	optional bool kick_all_spectators = 2 [default = false];
+	optional bool regenerate_spectator_password = 3 [default = false];
 }
 
 message SpectatorChange {
-	optional .PegasusShared.BnetId gameAccountId = 1;
-	optional bool is_removed = 2;
+	required .PegasusShared.BnetId game_account_id = 1;
+	required bool is_removed = 2;
 }
 
 message SpectatorRemoved {
@@ -271,7 +271,7 @@ message SpectatorRemoved {
 		SPECTATOR_REMOVED_REASON_KICKED = 0;
 		SPECTATOR_REMOVED_REASON_GAMEOVER = 1;
 	}
-	optional int32 reason_code = 1;
+	required int32 reason_code = 1;
 	optional .PegasusShared.BnetId removed_by = 2;
 }
 
@@ -279,12 +279,12 @@ message ChooseOption {
 	enum PacketID {
 		ID = 2;
 	}
-	optional int32 id = 1;
-	optional int32 index = 2;
-	optional int32 target = 3;
-	optional int32 subOption = 4;
+	required int32 id = 1;
+	required int32 index = 2;
+	required int32 target = 3;
+	optional int32 sub_option = 4;
 	optional int32 position = 5;
-	optional int32 old_platform = 6;
+	required int32 old_platform = 6;
 	optional .PegasusShared.Platform platform = 7;
 }
 
@@ -292,7 +292,7 @@ message GiveUp {
 	enum PacketID {
 		ID = 11;
 	}
-	optional int32 old_platform = 1;
+	required int32 old_platform = 1;
 	optional .PegasusShared.Platform platform = 2;
 }
 
@@ -300,18 +300,18 @@ message SpectatorHandshake {
 	enum PacketID {
 		ID = 22;
 	}
-	optional int32 game_handle = 1;
-	optional string password = 2;
-	optional string version = 3;
-	optional .PegasusShared.Platform platform = 4;
-	optional .PegasusShared.BnetId gameAccountId = 5;
+	required int32 game_handle = 1;
+	required string password = 2;
+	required string version = 3;
+	required .PegasusShared.Platform platform = 4;
+	required .PegasusShared.BnetId game_account_id = 5;
 }
 
 message SpectatorNotify {
 	enum PacketID {
 		ID = 24;
 	}
-	optional int32 player_id = 1;
+	required int32 player_id = 1;
 	optional .PegasusGame.ChooseOption choose_option = 2;
 	optional .PegasusGame.ChooseEntities choose_entities = 3;
 	repeated .PegasusGame.SpectatorChange spectator_change = 4;

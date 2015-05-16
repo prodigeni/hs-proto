@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='bnet/protocol/account_0.proto',
   package='bnet.protocol.account',
   syntax='proto2',
-  serialized_pb=_b('\n\x1d\x62net/protocol/account_0.proto\x12\x15\x62net.protocol.account\"-\n\x11\x41\x63\x63ountCredential\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"\xe3\x01\n\x13\x41\x63\x63ountFieldOptions\x12\x12\n\nall_fields\x18\x01 \x01(\x08\x12 \n\x18\x66ield_account_level_info\x18\x02 \x01(\x08\x12\x1a\n\x12\x66ield_privacy_info\x18\x03 \x01(\x08\x12#\n\x1b\x66ield_parental_control_info\x18\x04 \x01(\x08\x12\x1d\n\x15\x66ield_game_level_info\x18\x06 \x01(\x08\x12\x19\n\x11\x66ield_game_status\x18\x07 \x01(\x08\x12\x1b\n\x13\x66ield_game_accounts\x18\x08 \x01(\x08\"\x17\n\tAccountId\x12\n\n\x02id\x18\x01 \x01(\x07\"-\n\x0e\x41\x63\x63ountLicense\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0f\n\x07\x65xpires\x18\x02 \x01(\x04')
+  serialized_pb=_b('\n\x1d\x62net/protocol/account_0.proto\x12\x15\x62net.protocol.account\"-\n\x11\x41\x63\x63ountCredential\x12\n\n\x02id\x18\x01 \x02(\r\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"\xe3\x01\n\x13\x41\x63\x63ountFieldOptions\x12\x12\n\nall_fields\x18\x01 \x01(\x08\x12 \n\x18\x66ield_account_level_info\x18\x02 \x01(\x08\x12\x1a\n\x12\x66ield_privacy_info\x18\x03 \x01(\x08\x12#\n\x1b\x66ield_parental_control_info\x18\x04 \x01(\x08\x12\x1d\n\x15\x66ield_game_level_info\x18\x06 \x01(\x08\x12\x19\n\x11\x66ield_game_status\x18\x07 \x01(\x08\x12\x1b\n\x13\x66ield_game_accounts\x18\x08 \x01(\x08\"\x17\n\tAccountId\x12\n\n\x02id\x18\x01 \x02(\x07\"-\n\x0e\x41\x63\x63ountLicense\x12\n\n\x02id\x18\x01 \x02(\r\x12\x0f\n\x07\x65xpires\x18\x02 \x01(\x04')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -35,7 +35,7 @@ _ACCOUNTCREDENTIAL = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='bnet.protocol.account.AccountCredential.id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -146,7 +146,7 @@ _ACCOUNTID = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='bnet.protocol.account.AccountId.id', index=0,
-      number=1, type=7, cpp_type=3, label=1,
+      number=1, type=7, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -177,7 +177,7 @@ _ACCOUNTLICENSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='bnet.protocol.account.AccountLicense.id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,

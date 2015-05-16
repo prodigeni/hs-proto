@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='bnet/protocol_1.proto',
   package='bnet.protocol',
   syntax='proto2',
-  serialized_pb=_b('\n\x15\x62net/protocol_1.proto\x12\rbnet.protocol\x1a\x15\x62net/protocol_0.proto\x1a\x1d\x62net/protocol/attribute.proto\"J\n\rObjectAddress\x12&\n\x04host\x18\x01 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\x12\x11\n\tobject_id\x18\x02 \x01(\x04\"z\n\tErrorInfo\x12\x34\n\x0eobject_address\x18\x01 \x01(\x0b\x32\x1c.bnet.protocol.ObjectAddress\x12\x0e\n\x06status\x18\x02 \x01(\r\x12\x14\n\x0cservice_hash\x18\x03 \x01(\r\x12\x11\n\tmethod_id\x18\x04 \x01(\r\"\xa9\x01\n\x06Header\x12\x12\n\nservice_id\x18\x01 \x01(\r\x12\x11\n\tmethod_id\x18\x02 \x01(\r\x12\r\n\x05token\x18\x03 \x01(\r\x12\x11\n\tobject_id\x18\x04 \x01(\x04\x12\x0c\n\x04size\x18\x05 \x01(\r\x12\x0e\n\x06status\x18\x06 \x01(\r\x12\'\n\x05\x65rror\x18\x07 \x03(\x0b\x32\x18.bnet.protocol.ErrorInfo\x12\x0f\n\x07timeout\x18\x08 \x01(\x04\"\xbe\x01\n\x04Role\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x11\n\tprivilege\x18\x03 \x03(\t\x12\x17\n\x0f\x61ssignable_role\x18\x04 \x03(\r\x12\x10\n\x08required\x18\x05 \x01(\x08\x12\x0e\n\x06unique\x18\x06 \x01(\x08\x12\x17\n\x0frelegation_role\x18\x07 \x01(\r\x12\x35\n\tattribute\x18\x08 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\"\xca\x01\n\x07RoleSet\x12\x0f\n\x07program\x18\x01 \x01(\t\x12\x0f\n\x07service\x18\x02 \x01(\t\x12\x18\n\x07subtype\x18\x03 \x01(\t:\x07\x64\x65\x66\x61ult\x12!\n\x04role\x18\x04 \x03(\x0b\x32\x13.bnet.protocol.Role\x12\x14\n\x0c\x64\x65\x66\x61ult_role\x18\x05 \x03(\r\x12\x13\n\x0bmax_members\x18\x06 \x01(\x05\x12\x35\n\tattribute\x18\x07 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\"f\n\rRoleSetConfig\x12+\n\tprivilege\x18\x01 \x03(\x0b\x32\x18.bnet.protocol.Privilege\x12(\n\x08role_set\x18\x02 \x01(\x0b\x32\x16.bnet.protocol.RoleSet')
+  serialized_pb=_b('\n\x15\x62net/protocol_1.proto\x12\rbnet.protocol\x1a\x15\x62net/protocol_0.proto\x1a\x1d\x62net/protocol/attribute.proto\"M\n\rObjectAddress\x12&\n\x04host\x18\x01 \x02(\x0b\x32\x18.bnet.protocol.ProcessId\x12\x14\n\tobject_id\x18\x02 \x01(\x04:\x01\x30\"z\n\tErrorInfo\x12\x34\n\x0eobject_address\x18\x01 \x02(\x0b\x32\x1c.bnet.protocol.ObjectAddress\x12\x0e\n\x06status\x18\x02 \x02(\r\x12\x14\n\x0cservice_hash\x18\x03 \x02(\r\x12\x11\n\tmethod_id\x18\x04 \x02(\r\"\xb2\x01\n\x06Header\x12\x12\n\nservice_id\x18\x01 \x02(\r\x12\x11\n\tmethod_id\x18\x02 \x01(\r\x12\r\n\x05token\x18\x03 \x02(\r\x12\x14\n\tobject_id\x18\x04 \x01(\x04:\x01\x30\x12\x0f\n\x04size\x18\x05 \x01(\r:\x01\x30\x12\x11\n\x06status\x18\x06 \x01(\r:\x01\x30\x12\'\n\x05\x65rror\x18\x07 \x03(\x0b\x32\x18.bnet.protocol.ErrorInfo\x12\x0f\n\x07timeout\x18\x08 \x01(\x04\"\xcc\x01\n\x04Role\x12\n\n\x02id\x18\x01 \x02(\r\x12\x0c\n\x04name\x18\x02 \x02(\t\x12\x11\n\tprivilege\x18\x03 \x03(\t\x12\x17\n\x0f\x61ssignable_role\x18\x04 \x03(\r\x12\x17\n\x08required\x18\x05 \x01(\x08:\x05\x66\x61lse\x12\x15\n\x06unique\x18\x06 \x01(\x08:\x05\x66\x61lse\x12\x17\n\x0frelegation_role\x18\x07 \x01(\r\x12\x35\n\tattribute\x18\x08 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\"\xca\x01\n\x07RoleSet\x12\x0f\n\x07program\x18\x01 \x02(\t\x12\x0f\n\x07service\x18\x02 \x02(\t\x12\x18\n\x07subtype\x18\x03 \x01(\t:\x07\x64\x65\x66\x61ult\x12!\n\x04role\x18\x04 \x03(\x0b\x32\x13.bnet.protocol.Role\x12\x14\n\x0c\x64\x65\x66\x61ult_role\x18\x05 \x03(\r\x12\x13\n\x0bmax_members\x18\x06 \x01(\x05\x12\x35\n\tattribute\x18\x07 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\"f\n\rRoleSetConfig\x12+\n\tprivilege\x18\x01 \x03(\x0b\x32\x18.bnet.protocol.Privilege\x12(\n\x08role_set\x18\x02 \x02(\x0b\x32\x16.bnet.protocol.RoleSet')
   ,
   dependencies=[bnet_dot_protocol__0__pb2.DESCRIPTOR,bnet_dot_protocol_dot_attribute__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -38,7 +38,7 @@ _OBJECTADDRESS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='host', full_name='bnet.protocol.ObjectAddress.host', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -46,7 +46,7 @@ _OBJECTADDRESS = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='object_id', full_name='bnet.protocol.ObjectAddress.object_id', index=1,
       number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -63,7 +63,7 @@ _OBJECTADDRESS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=94,
-  serialized_end=168,
+  serialized_end=171,
 )
 
 
@@ -76,28 +76,28 @@ _ERRORINFO = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='object_address', full_name='bnet.protocol.ErrorInfo.object_address', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='status', full_name='bnet.protocol.ErrorInfo.status', index=1,
-      number=2, type=13, cpp_type=3, label=1,
+      number=2, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='service_hash', full_name='bnet.protocol.ErrorInfo.service_hash', index=2,
-      number=3, type=13, cpp_type=3, label=1,
+      number=3, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='method_id', full_name='bnet.protocol.ErrorInfo.method_id', index=3,
-      number=4, type=13, cpp_type=3, label=1,
+      number=4, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -114,8 +114,8 @@ _ERRORINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=170,
-  serialized_end=292,
+  serialized_start=173,
+  serialized_end=295,
 )
 
 
@@ -128,7 +128,7 @@ _HEADER = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='service_id', full_name='bnet.protocol.Header.service_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -142,7 +142,7 @@ _HEADER = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='token', full_name='bnet.protocol.Header.token', index=2,
-      number=3, type=13, cpp_type=3, label=1,
+      number=3, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -150,21 +150,21 @@ _HEADER = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='object_id', full_name='bnet.protocol.Header.object_id', index=3,
       number=4, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='size', full_name='bnet.protocol.Header.size', index=4,
       number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='status', full_name='bnet.protocol.Header.status', index=5,
       number=6, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -194,8 +194,8 @@ _HEADER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=295,
-  serialized_end=464,
+  serialized_start=298,
+  serialized_end=476,
 )
 
 
@@ -208,14 +208,14 @@ _ROLE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='bnet.protocol.Role.id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='name', full_name='bnet.protocol.Role.name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -237,14 +237,14 @@ _ROLE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='required', full_name='bnet.protocol.Role.required', index=4,
       number=5, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='unique', full_name='bnet.protocol.Role.unique', index=5,
       number=6, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -274,8 +274,8 @@ _ROLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=467,
-  serialized_end=657,
+  serialized_start=479,
+  serialized_end=683,
 )
 
 
@@ -288,14 +288,14 @@ _ROLESET = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='program', full_name='bnet.protocol.RoleSet.program', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='service', full_name='bnet.protocol.RoleSet.service', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -347,8 +347,8 @@ _ROLESET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=660,
-  serialized_end=862,
+  serialized_start=686,
+  serialized_end=888,
 )
 
 
@@ -368,7 +368,7 @@ _ROLESETCONFIG = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='role_set', full_name='bnet.protocol.RoleSetConfig.role_set', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -385,8 +385,8 @@ _ROLESETCONFIG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=864,
-  serialized_end=966,
+  serialized_start=890,
+  serialized_end=992,
 )
 
 _OBJECTADDRESS.fields_by_name['host'].message_type = bnet_dot_protocol__0__pb2._PROCESSID

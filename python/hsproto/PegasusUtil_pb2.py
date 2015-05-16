@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='PegasusUtil.proto',
   package='PegasusUtil',
   syntax='proto2',
-  serialized_pb=_b('\n\x11PegasusUtil.proto\x12\x0bPegasusUtil\x1a\x13PegasusShared.proto\"\xfb\x01\n\x1d\x41\x63\x63ountLicenseAchieveResponse\x12\x0f\n\x07\x61\x63hieve\x18\x01 \x01(\x05\x12R\n\x06result\x18\x02 \x01(\x0e\x32\x31.PegasusUtil.AccountLicenseAchieveResponse.Result:\x0fINVALID_ACHIEVE\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xb7\x02\"`\n\x06Result\x12\x13\n\x0fINVALID_ACHIEVE\x10\x01\x12\x0e\n\nNOT_ACTIVE\x10\x02\x12\x0f\n\x0bIN_PROGRESS\x10\x03\x12\x0c\n\x08\x43OMPLETE\x10\x04\x12\x12\n\x0eSTATUS_UNKNOWN\x10\x05\"\xe8\x01\n\x07\x41\x63hieve\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x10\n\x08progress\x18\x02 \x01(\x05\x12\x14\n\x0c\x61\x63k_progress\x18\x03 \x01(\x05\x12\x18\n\x10\x63ompletion_count\x18\x04 \x01(\x05\x12\x0e\n\x06\x61\x63tive\x18\x05 \x01(\x08\x12\x15\n\rstarted_count\x18\x06 \x01(\x05\x12\'\n\ndate_given\x18\x07 \x01(\x0b\x32\x13.PegasusShared.Date\x12+\n\x0e\x64\x61te_completed\x18\x08 \x01(\x0b\x32\x13.PegasusShared.Date\x12\x12\n\ndo_not_ack\x18\t \x01(\x08\"f\n\x0b\x41\x63hieveInfo\x12\x0c\n\x04\x64\x65sc\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\x05\x12\r\n\x05quota\x18\x03 \x01(\x05\x12\x0e\n\x06reward\x18\x04 \x01(\x05\x12\r\n\x05\x64\x61ta1\x18\x05 \x01(\x03\x12\r\n\x05\x64\x61ta2\x18\x06 \x01(\x03\"C\n\x08\x41\x63hieves\x12\"\n\x04list\x18\x01 \x03(\x0b\x32\x14.PegasusUtil.Achieve\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xfc\x01\"W\n\x12\x41\x63kAchieveProgress\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x14\n\x0c\x61\x63k_progress\x18\x02 \x01(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xf3\x01\x12\n\n\x06System\x10\x00\"Y\n\x0b\x41\x63kCardSeen\x12)\n\tcard_defs\x18\x01 \x03(\x0b\x32\x16.PegasusShared.CardDef\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xdf\x01\x12\n\n\x06System\x10\x00\";\n\tAckNotice\x12\r\n\x05\x65ntry\x18\x01 \x01(\x03\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xd5\x01\x12\n\n\x06System\x10\x00\"D\n\x11\x41\x63knowledgeBanner\x12\x0e\n\x06\x62\x61nner\x18\x01 \x01(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xb5\x02\x12\n\n\x06System\x10\x00\"M\n\x0f\x41\x63kWingProgress\x12\x0c\n\x04wing\x18\x01 \x01(\x05\x12\x0b\n\x03\x61\x63k\x18\x02 \x01(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xb4\x02\x12\n\n\x06System\x10\x00\"9\n\x10\x41\x64ventureOptions\x12\x14\n\x0c\x61\x64venture_id\x18\x01 \x01(\x05\x12\x0f\n\x07options\x18\x02 \x01(\x04\"`\n\x19\x41\x64ventureProgressResponse\x12.\n\x04list\x18\x01 \x03(\x0b\x32 .PegasusShared.AdventureProgress\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xb2\x02\"9\n\x11\x41rcaneDustBalance\x12\x0f\n\x07\x62\x61lance\x18\x01 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x86\x02\"=\n\x15\x41ssetsVersionResponse\x12\x0f\n\x07version\x18\x01 \x01(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xb0\x02\"\xab\x01\n\x0c\x41tlasAchieve\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x10\n\x08progress\x18\x02 \x01(\x05\x12\x13\n\x0bis_complete\x18\x03 \x01(\x08\x12\x11\n\tack_value\x18\x04 \x01(\x05\x12+\n\x0e\x64\x61te_completed\x18\x05 \x01(\x0b\x32\x13.PegasusShared.Date\x12\x18\n\x10\x63ompletion_count\x18\x06 \x01(\x05\x12\x0e\n\x06\x61\x63tive\x18\x07 \x01(\x08\"N\n\x10\x41tlasAchieveInfo\x12&\n\x04info\x18\x01 \x03(\x0b\x32\x18.PegasusUtil.AchieveInfo\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10l\"L\n\rAtlasAchieves\x12\'\n\x04info\x18\x01 \x03(\x0b\x32\x19.PegasusUtil.AtlasAchieve\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10k\"H\n\x0f\x41tlasAddBooster\x12\x12\n\naccount_id\x18\x01 \x01(\x04\x12\x0c\n\x04type\x18\x02 \x01(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9d\x03\"r\n\x0c\x41tlasAddCard\x12\x12\n\naccount_id\x18\x01 \x01(\x04\x12(\n\x08\x63\x61rd_def\x18\x02 \x01(\x0b\x32\x16.PegasusShared.CardDef\x12\x0f\n\x07is_seen\x18\x03 \x01(\x08\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x95\x03\"N\n\x10\x41tlasAddCardBack\x12\x12\n\naccount_id\x18\x01 \x01(\x04\x12\x11\n\tcard_back\x18\x02 \x01(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa6\x03\"8\n\rAtlasAddDraft\x12\x12\n\naccount_id\x18\x01 \x01(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa0\x03\"H\n\x13\x41tlasBoosterHistory\x12\x0e\n\x06\x61\x63tion\x18\x01 \x01(\x05\x12!\n\x04when\x18\x02 \x01(\x0b\x32\x13.PegasusShared.Date\"\x85\x01\n\x0c\x41tlasBooster\x12\x12\n\nbooster_id\x18\x01 \x01(\x04\x12\x0f\n\x07is_open\x18\x02 \x01(\x08\x12\x0c\n\x04type\x18\x03 \x01(\x05\x12\x0f\n\x07license\x18\x04 \x01(\x04\x12\x31\n\x07history\x18\x05 \x03(\x0b\x32 .PegasusUtil.AtlasBoosterHistory\"L\n\rAtlasBoosters\x12\'\n\x04info\x18\x01 \x03(\x0b\x32\x19.PegasusUtil.AtlasBooster\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10m\"z\n\x14\x41tlasCardBackHistory\x12\x11\n\tcard_back\x18\x01 \x01(\x05\x12\x0e\n\x06\x61\x63tion\x18\x02 \x01(\x05\x12!\n\x04when\x18\x03 \x01(\x0b\x32\x13.PegasusShared.Date\x12\r\n\x05\x64\x61ta1\x18\x04 \x01(\x03\x12\r\n\x05\x64\x61ta2\x18\x05 \x01(\x03\"l\n\x0e\x41tlasCardBacks\x12\x12\n\ncard_backs\x18\x01 \x03(\x05\x12\x32\n\x07history\x18\x02 \x03(\x0b\x32!.PegasusUtil.AtlasCardBackHistory\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10p\"Z\n\x10\x41tlasCardHistory\x12\x0e\n\x06\x61\x63tion\x18\x01 \x01(\r\x12(\n\x0b\x61\x63tion_date\x18\x02 \x01(\x0b\x32\x13.PegasusShared.Date\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\x04\"\x9e\x01\n\x0f\x41tlasCardDetail\x12\x0f\n\x07\x63\x61rd_id\x18\x01 \x01(\x04\x12\x0f\n\x07\x64\x65leted\x18\x02 \x01(\r\x12\x0f\n\x07is_seen\x18\x03 \x01(\x08\x12(\n\x0binsert_date\x18\x04 \x01(\x0b\x32\x13.PegasusShared.Date\x12.\n\x07history\x18\x05 \x03(\x0b\x32\x1d.PegasusUtil.AtlasCardHistory\"U\n\x10\x41tlasCardDetails\x12-\n\x07\x64\x65tails\x18\x01 \x03(\x0b\x32\x1c.PegasusUtil.AtlasCardDetail\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10g\"O\n\x15\x41tlasChangeArcaneDust\x12\x12\n\naccount_id\x18\x01 \x01(\x04\x12\r\n\x05\x64\x65lta\x18\x02 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x97\x03\"N\n\x14\x41tlasChangeBonusGold\x12\x12\n\naccount_id\x18\x01 \x01(\x04\x12\r\n\x05\x64\x65lta\x18\x02 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa4\x03\"I\n\x0f\x41tlasChangeGold\x12\x12\n\naccount_id\x18\x01 \x01(\x04\x12\r\n\x05\x64\x65lta\x18\x02 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa2\x03\"O\n\x0f\x41tlasCollection\x12(\n\x06stacks\x18\x01 \x03(\x0b\x32\x18.PegasusShared.CardStack\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x66\"z\n\x14\x41tlasCurrencyHistory\x12\x10\n\x08\x63urrency\x18\x01 \x01(\x05\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x03\x12\x0e\n\x06\x61\x63tion\x18\x03 \x01(\x05\x12!\n\x04when\x18\x04 \x01(\x0b\x32\x13.PegasusShared.Date\x12\r\n\x05\x64\x61ta1\x18\x05 \x01(\x03\"^\n\x14\x41tlasCurrencyDetails\x12\x32\n\x07history\x18\x01 \x03(\x0b\x32!.PegasusUtil.AtlasCurrencyHistory\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10o\"P\n\x11\x41tlasCurrentDraft\x12\x0f\n\x07\x64\x65\x63k_id\x18\x01 \x01(\x04\x12\x0c\n\x04slot\x18\x02 \x01(\x05\x12\x0c\n\x04wins\x18\x03 \x01(\x05\x12\x0e\n\x06losses\x18\x04 \x01(\x05\"A\n\rAtlasDeckCard\x12#\n\x03\x64\x65\x66\x18\x01 \x01(\x0b\x32\x16.PegasusShared.CardDef\x12\x0b\n\x03qty\x18\x02 \x01(\x05\"_\n\tAtlasDeck\x12\'\n\x06header\x18\x01 \x01(\x0b\x32\x17.PegasusShared.DeckInfo\x12)\n\x05\x63\x61rds\x18\x02 \x03(\x0b\x32\x1a.PegasusUtil.AtlasDeckCard\"G\n\nAtlasDecks\x12%\n\x05\x64\x65\x63ks\x18\x01 \x03(\x0b\x32\x16.PegasusUtil.AtlasDeck\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10h\"\x93\x01\n\x11\x41tlasDraftHistory\x12\x0f\n\x07\x64\x65\x63k_id\x18\x01 \x01(\x04\x12\x0e\n\x06\x61\x63tion\x18\x02 \x01(\x05\x12!\n\x04when\x18\x03 \x01(\x0b\x32\x13.PegasusShared.Date\x12\r\n\x05\x64\x61ta1\x18\x04 \x01(\x03\x12\r\n\x05\x64\x61ta2\x18\x05 \x01(\x03\x12\r\n\x05\x64\x61ta3\x18\x06 \x01(\x03\x12\r\n\x05\x64\x61ta4\x18\x07 \x01(\x03\"L\n\x17\x41tlasDraftTicketHistory\x12\x0e\n\x06\x61\x63tion\x18\x01 \x01(\x05\x12!\n\x04when\x18\x02 \x01(\x0b\x32\x13.PegasusShared.Date\"\x7f\n\x10\x41tlasDraftTicket\x12\x11\n\tticket_id\x18\x01 \x01(\x04\x12\x10\n\x08was_used\x18\x02 \x01(\x08\x12\x0f\n\x07license\x18\x03 \x01(\t\x12\x35\n\x07history\x18\x04 \x03(\x0b\x32$.PegasusUtil.AtlasDraftTicketHistory\"\xb9\x01\n\x0b\x41tlasDrafts\x12.\n\x07tickets\x18\x01 \x03(\x0b\x32\x1d.PegasusUtil.AtlasDraftTicket\x12\x35\n\rcurrent_draft\x18\x02 \x01(\x0b\x32\x1e.PegasusUtil.AtlasCurrentDraft\x12/\n\x07history\x18\x03 \x03(\x0b\x32\x1e.PegasusUtil.AtlasDraftHistory\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10n\"\x9c\x01\n\nAtlasError\x12;\n\x04type\x18\x01 \x01(\x0e\x32!.PegasusUtil.AtlasError.ErrorType:\nBNET_ERROR\x12\r\n\x05\x65rror\x18\x02 \x01(\x05\".\n\tErrorType\x12\x0e\n\nBNET_ERROR\x10\x01\x12\x11\n\rPEGASUS_ERROR\x10\x02\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x65\"R\n\x13\x41tlasGetAchieveInfo\x12\x12\n\naccount_id\x18\x01 \x01(\x04\x12\x12\n\nachieve_id\x18\x02 \x01(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9b\x03\";\n\x10\x41tlasGetAchieves\x12\x12\n\naccount_id\x18\x01 \x01(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9a\x03\"D\n\x19\x41tlasGetAdventureProgress\x12\x12\n\naccount_id\x18\x01 \x01(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xaa\x03\"\x8b\x01\n\x10\x41tlasGetBoosters\x12\x12\n\naccount_id\x18\x01 \x01(\x04\x12\'\n\nstart_date\x18\x02 \x01(\x0b\x32\x13.PegasusShared.Date\x12%\n\x08\x65nd_date\x18\x03 \x01(\x0b\x32\x13.PegasusShared.Date\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9c\x03\"\x8c\x01\n\x11\x41tlasGetCardBacks\x12\x12\n\naccount_id\x18\x01 \x01(\x04\x12\'\n\nstart_date\x18\x02 \x01(\x0b\x32\x13.PegasusShared.Date\x12%\n\x08\x65nd_date\x18\x03 \x01(\x0b\x32\x13.PegasusShared.Date\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa5\x03\"\xb8\x01\n\x13\x41tlasGetCardDetails\x12\x12\n\naccount_id\x18\x01 \x01(\x04\x12(\n\x08\x63\x61rd_def\x18\x02 \x01(\x0b\x32\x16.PegasusShared.CardDef\x12\'\n\nstart_date\x18\x03 \x01(\x0b\x32\x13.PegasusShared.Date\x12%\n\x08\x65nd_date\x18\x04 \x01(\x0b\x32\x13.PegasusShared.Date\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x93\x03\"=\n\x12\x41tlasGetCollection\x12\x12\n\naccount_id\x18\x01 \x01(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x92\x03\"\x92\x01\n\x17\x41tlasGetCurrencyDetails\x12\x12\n\naccount_id\x18\x01 \x01(\x04\x12\'\n\nstart_date\x18\x02 \x01(\x0b\x32\x13.PegasusShared.Date\x12%\n\x08\x65nd_date\x18\x03 \x01(\x0b\x32\x13.PegasusShared.Date\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa3\x03\"8\n\rAtlasGetDecks\x12\x12\n\naccount_id\x18\x01 \x01(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x94\x03\"\x89\x01\n\x0e\x41tlasGetDrafts\x12\x12\n\naccount_id\x18\x01 \x01(\x04\x12\'\n\nstart_date\x18\x02 \x01(\x0b\x32\x13.PegasusShared.Date\x12%\n\x08\x65nd_date\x18\x03 \x01(\x0b\x32\x13.PegasusShared.Date\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9f\x03\"9\n\x0e\x41tlasGetOrders\x12\x12\n\naccount_id\x18\x01 \x01(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x99\x03\"=\n\x12\x41tlasGetPlayerInfo\x12\x12\n\naccount_id\x18\x01 \x01(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x91\x03\"\x99\x03\n\nAtlasOrder\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0c\n\x04type\x18\x02 \x01(\x05\x12\x0e\n\x06status\x18\x03 \x01(\x05\x12\x0c\n\x04\x64\x61ta\x18\x04 \x01(\x03\x12\x12\n\nfirst_data\x18\x05 \x01(\x03\x12\r\n\x05order\x18\x06 \x01(\t\x12\x0e\n\x06wallet\x18\x07 \x01(\x03\x12\x0f\n\x07\x65rr_str\x18\x08 \x01(\t\x12\x12\n\nip_address\x18\t \x01(\t\x12\x14\n\x0c\x63hallenge_id\x18\n \x01(\t\x12H\n\x08provider\x18\x0b \x01(\x0e\x32 .PegasusShared.BattlePayProvider:\x14\x42P_PROVIDER_BLIZZARD\x12\x16\n\x0ethird_party_id\x18\x0c \x01(\t\x12\x12\n\nproduct_id\x18\r \x01(\t\x12(\n\x0binsert_date\x18\x0e \x01(\x0b\x32\x13.PegasusShared.Date\x12(\n\x0blast_update\x18\x0f \x01(\x0b\x32\x13.PegasusShared.Date\x12\x1b\n\x13third_party_user_id\x18\x10 \x01(\t\"J\n\x0b\x41tlasOrders\x12\'\n\x06orders\x18\x01 \x03(\x0b\x32\x17.PegasusUtil.AtlasOrder\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10j\"I\n\x1e\x41tlasReleaseMobilePurchaseLock\x12\x12\n\naccount_id\x18\x01 \x01(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa9\x03\"Q\n\x12\x41tlasRemoveBooster\x12\x12\n\naccount_id\x18\x01 \x01(\x04\x12\x12\n\nbooster_id\x18\x02 \x01(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9e\x03\"K\n\x0f\x41tlasRemoveCard\x12\x12\n\naccount_id\x18\x01 \x01(\x04\x12\x0f\n\x07\x63\x61rd_id\x18\x02 \x01(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x96\x03\"Q\n\x13\x41tlasRemoveCardBack\x12\x12\n\naccount_id\x18\x01 \x01(\x04\x12\x11\n\tcard_back\x18\x02 \x01(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa7\x03\"N\n\x10\x41tlasRemoveDraft\x12\x12\n\naccount_id\x18\x01 \x01(\x04\x12\x11\n\tticket_id\x18\x02 \x01(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa1\x03\"L\n\x10\x41tlasRestoreCard\x12\x12\n\naccount_id\x18\x01 \x01(\x04\x12\x0f\n\x07\x63\x61rd_id\x18\x02 \x01(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x98\x03\"\xb0\x01\n\x19\x41tlasSetAdventureProgress\x12\x12\n\naccount_id\x18\x01 \x01(\x04\x12\x0f\n\x07wing_id\x18\x02 \x01(\x05\x12\x10\n\x08progress\x18\x03 \x01(\x05\x12\x16\n\x0e\x61\x64\x64_wing_flags\x18\x04 \x01(\x04\x12\x19\n\x11remove_wing_flags\x18\x05 \x01(\x04\x12\x14\n\x0cprogress_ack\x18\x06 \x01(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xab\x03\"\"\n\x0c\x41tlasSuccess\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10i\"q\n\x11\x41tlasWingProgress\x12\x32\n\x08progress\x18\x01 \x01(\x0b\x32 .PegasusShared.AdventureProgress\x12(\n\x0blast_update\x18\x02 \x01(\x0b\x32\x13.PegasusShared.Date\"Z\n\x16\x41tlasAdventureProgress\x12,\n\x04list\x18\x01 \x03(\x0b\x32\x1e.PegasusUtil.AtlasWingProgress\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10q\"a\n\x0b\x42oosterCard\x12(\n\x08\x63\x61rd_def\x18\x01 \x01(\x0b\x32\x16.PegasusShared.CardDef\x12(\n\x0binsert_date\x18\x02 \x01(\x0b\x32\x13.PegasusShared.Date\"M\n\x0e\x42oosterContent\x12&\n\x04list\x18\x01 \x03(\x0b\x32\x18.PegasusUtil.BoosterCard\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xe2\x01\"*\n\x0b\x42oosterInfo\x12\x0c\n\x04type\x18\x02 \x01(\x05\x12\r\n\x05\x63ount\x18\x03 \x01(\x05\"\xdc\x03\n\x0b\x41tlasPlayer\x12\x11\n\tplayer_id\x18\x01 \x01(\x03\x12\x15\n\rgames_started\x18\x02 \x01(\x05\x12\x17\n\x0fgames_completed\x18\x03 \x01(\x05\x12\x11\n\tgames_won\x18\x04 \x01(\x05\x12\x12\n\ngames_lost\x18\x05 \x01(\x05\x12\x16\n\x0e\x64\x65leted_reason\x18\x06 \x01(\x05\x12\x12\n\ndeck_limit\x18\x07 \x01(\x05\x12\x19\n\x11\x63\x61mpaign_progress\x18\x08 \x01(\x03\x12\x16\n\x0erandom_deck_id\x18\t \x01(\x03\x12\x13\n\x0b\x61rcane_dust\x18\n \x01(\x03\x12\x14\n\x0clast_game_id\x18\x0b \x01(\x03\x12\x16\n\x0e\x63raft_asset_id\x18\x0c \x01(\x05\x12\x15\n\rcraft_premium\x18\r \x01(\x05\x12\x13\n\x0b\x63raft_count\x18\x0e \x01(\x05\x12\x14\n\x0c\x62\x61ttlepay_id\x18\x0f \x01(\x03\x12.\n\x0c\x62ooster_list\x18\x10 \x03(\x0b\x32\x18.PegasusUtil.BoosterInfo\x12\x0c\n\x04gold\x18\x11 \x01(\x03\x12\x12\n\nbonus_gold\x18\x12 \x01(\x03\x12\x19\n\x11\x64\x65\x66\x61ult_card_back\x18\x13 \x01(\x05\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x64\"J\n\x0b\x42oosterList\x12&\n\x04list\x18\x01 \x03(\x0b\x32\x18.PegasusUtil.BoosterInfo\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xe0\x01\"e\n\x0c\x42oosterTally\x12\x0f\n\x07is_open\x18\x01 \x01(\x08\x12\x0f\n\x07type_id\x18\x02 \x01(\x05\x12\x11\n\tis_bought\x18\x03 \x01(\x08\x12\x11\n\tsource_id\x18\x04 \x01(\x05\x12\r\n\x05\x63ount\x18\x05 \x01(\x05\"P\n\x10\x42oosterTallyList\x12\'\n\x04list\x18\x01 \x03(\x0b\x32\x19.PegasusUtil.BoosterTally\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xb9\x02\"\xe1\x02\n\x0e\x42oughtSoldCard\x12#\n\x03\x64\x65\x66\x18\x01 \x01(\x0b\x32\x16.PegasusShared.CardDef\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x05\x12:\n\x06result\x18\x03 \x01(\x0e\x32\".PegasusUtil.BoughtSoldCard.Result:\x06\x46\x41ILED\x12\r\n\x05\x63ount\x18\x04 \x01(\x05\x12\x0e\n\x06nerfed\x18\x05 \x01(\x08\x12\x17\n\x0funit_sell_price\x18\x06 \x01(\x05\x12\x16\n\x0eunit_buy_price\x18\x07 \x01(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x82\x02\"y\n\x06Result\x12\n\n\x06\x46\x41ILED\x10\x01\x12\x08\n\x04SOLD\x10\x02\x12\n\n\x06\x42OUGHT\x10\x03\x12\r\n\tSOULBOUND\x10\x04\x12\x14\n\x10WRONG_SELL_PRICE\x10\x05\x12\x13\n\x0fWRONG_BUY_PRICE\x10\x06\x12\x13\n\x0fMISSING_ACHIEVE\x10\x07\"B\n\nBundleItem\x12\x14\n\x0cproduct_type\x18\x01 \x01(\x05\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x05\x12\x10\n\x08quantity\x18\x03 \x01(\x05\"\xb6\x01\n\x06\x42undle\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04\x63ost\x18\x02 \x01(\x01\x12\x10\n\x08\x61pple_id\x18\x03 \x01(\t\x12\x16\n\x0egoogle_play_id\x18\x04 \x01(\t\x12&\n\x05items\x18\x05 \x03(\x0b\x32\x17.PegasusUtil.BundleItem\x12\x11\n\tgold_cost\x18\x06 \x01(\x03\x12\x11\n\tamazon_id\x18\x07 \x01(\t\x12\x1a\n\x12product_event_name\x18\t \x01(\t\"\xa3\x01\n\x0b\x42uySellCard\x12#\n\x03\x64\x65\x66\x18\x01 \x01(\x0b\x32\x16.PegasusShared.CardDef\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\x0e\n\x06\x62uying\x18\x03 \x01(\x08\x12\x17\n\x0funit_sell_price\x18\x04 \x01(\x05\x12\x16\n\x0eunit_buy_price\x18\x05 \x01(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x81\x02\x12\n\n\x06System\x10\x00\"\xcf\x02\n\x0e\x43\x61ncelPurchase\x12\x16\n\x0eis_auto_cancel\x18\x01 \x01(\x08\x12i\n\x12third_party_reason\x18\x02 \x01(\x0e\x32\x32.PegasusUtil.CancelPurchase.ThirdPartyCancelReason:\x19PROVIDER_REPORTED_FAILURE\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x92\x02\x12\n\n\x06System\x10\x01\"\x98\x01\n\x16ThirdPartyCancelReason\x12\x1d\n\x19PROVIDER_REPORTED_FAILURE\x10\x01\x12\x1e\n\x1aNOT_RECOGNIZED_BY_PROVIDER\x10\x02\x12 \n\x1cUSER_CANCELED_BEFORE_PAYMENT\x10\x03\x12\x1d\n\x19USER_CANCELING_TO_UNBLOCK\x10\x04\"\x87\x02\n\x16\x43\x61ncelPurchaseResponse\x12L\n\x06result\x18\x01 \x01(\x0e\x32\x30.PegasusUtil.CancelPurchaseResponse.CancelResult:\nCR_SUCCESS\x12\x16\n\x0etransaction_id\x18\x02 \x01(\x03\x12\x12\n\nproduct_id\x18\x03 \x01(\t\x12\x10\n\x08\x63urrency\x18\x04 \x01(\x05\"L\n\x0c\x43\x61ncelResult\x12\x0e\n\nCR_SUCCESS\x10\x01\x12\x12\n\x0e\x43R_NOT_ALLOWED\x10\x02\x12\x18\n\x14\x43R_NOTHING_TO_CANCEL\x10\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x93\x02\"@\n\x0b\x43\x61ncelQuest\x12\x10\n\x08quest_id\x18\x01 \x01(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x99\x02\x12\n\n\x06System\x10\x00\"}\n\x13\x43\x61ncelQuestResponse\x12\x10\n\x08quest_id\x18\x01 \x01(\x05\x12\x0f\n\x07success\x18\x02 \x01(\x08\x12.\n\x11next_quest_cancel\x18\x03 \x01(\x0b\x32\x13.PegasusShared.Date\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9a\x02\"[\n\tCardBacks\x12\x19\n\x11\x64\x65\x66\x61ult_card_back\x18\x01 \x01(\x05\x12\x12\n\ncard_backs\x18\x02 \x03(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xec\x01\x12\n\n\x06System\x10\x00\",\n\x0c\x43\x61rdUseCount\x12\r\n\x05\x61sset\x18\x01 \x01(\x05\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\"\\\n\tCardValue\x12$\n\x04\x63\x61rd\x18\x01 \x01(\x0b\x32\x16.PegasusShared.CardDef\x12\x0b\n\x03\x62uy\x18\x02 \x01(\x05\x12\x0c\n\x04sell\x18\x03 \x01(\x05\x12\x0e\n\x06nerfed\x18\x04 \x01(\x08\"a\n\nCardValues\x12%\n\x05\x63\x61rds\x18\x01 \x03(\x0b\x32\x16.PegasusUtil.CardValue\x12\x17\n\x0f\x63\x61rd_nerf_index\x18\x02 \x01(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x84\x02\"N\n\x1a\x43heckAccountLicenseAchieve\x12\x0f\n\x07\x61\x63hieve\x18\x01 \x01(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xa9\x02\x12\n\n\x06System\x10\x01\"7\n\x14\x43heckAccountLicenses\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x8b\x02\x12\n\n\x06System\x10\x00\"4\n\x11\x43heckGameLicenses\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x94\x02\x12\n\n\x06System\x10\x01\"T\n\x15\x43heckLicensesResponse\x12\x15\n\raccount_level\x18\x01 \x01(\x08\x12\x0f\n\x07success\x18\x02 \x01(\x08\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x95\x02\"w\n\x0c\x43lientOption\x12\r\n\x05index\x18\x01 \x01(\x05\x12\x0f\n\x07\x61s_bool\x18\x02 \x01(\x08\x12\x10\n\x08\x61s_int32\x18\x03 \x01(\x05\x12\x10\n\x08\x61s_int64\x18\x04 \x01(\x03\x12\x10\n\x08\x61s_float\x18\x05 \x01(\x02\x12\x11\n\tas_uint64\x18\x06 \x01(\x04\"`\n\rClientOptions\x12*\n\x07options\x18\x01 \x03(\x0b\x32\x19.PegasusUtil.ClientOption\x12\x0e\n\x06\x66\x61iled\x18\x02 \x01(\x08\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xf1\x01\"2\n\x0f\x43loseCardMarket\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x87\x02\x12\n\n\x06System\x10\x00\"K\n\nCollection\x12(\n\x06stacks\x18\x01 \x03(\x0b\x32\x18.PegasusShared.CardStack\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xcf\x01\"_\n\nCreateDeck\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04hero\x18\x02 \x01(\x05\x12\x14\n\x0chero_premium\x18\x03 \x01(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xd1\x01\x12\n\n\x06System\x10\x00\"\x9d\x01\n\x08\x44\x42\x41\x63tion\x12-\n\x06\x61\x63tion\x18\x01 \x01(\x0e\x32\x1d.PegasusShared.DatabaseAction\x12:\n\x06result\x18\x02 \x01(\x0e\x32\x1d.PegasusShared.DatabaseResult:\x0b\x44\x42_E_SQL_EX\x12\x11\n\tmeta_data\x18\x03 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xd8\x01\"\xa4\x01\n\tDebugAuth\x12-\n\x06result\x18\x01 \x01(\x0e\x32\x1d.PegasusUtil.DebugAuth.Result\x12\x11\n\tplayer_id\x18\x02 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xce\x01\"@\n\x06Result\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05VALID\x10\x01\x12\x0c\n\x08\x42\x41\x44_USER\x10\x02\x12\x10\n\x0c\x42\x41\x44_PASSWORD\x10\x03\"]\n\x0c\x44\x65\x63kContents\x12\x0c\n\x04\x64\x65\x63k\x18\x01 \x01(\x03\x12*\n\x05\x63\x61rds\x18\x02 \x03(\x0b\x32\x1b.PegasusShared.DeckCardData\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xd7\x01\"I\n\x0b\x44\x65\x63kCreated\x12%\n\x04info\x18\x01 \x01(\x0b\x32\x17.PegasusShared.DeckInfo\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xd9\x01\"0\n\x0b\x44\x65\x63kDeleted\x12\x0c\n\x04\x64\x65\x63k\x18\x01 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xda\x01\"A\n\x0e\x44\x65\x63kGainedCard\x12\x0c\n\x04\x64\x65\x63k\x18\x01 \x01(\x03\x12\x0c\n\x04\x63\x61rd\x18\x02 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xdc\x01\"G\n\x08\x44\x65\x63kList\x12&\n\x05\x64\x65\x63ks\x18\x01 \x03(\x0b\x32\x17.PegasusShared.DeckInfo\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xca\x01\"?\n\x0c\x44\x65\x63kLostCard\x12\x0c\n\x04\x64\x65\x63k\x18\x01 \x01(\x03\x12\x0c\n\x04\x63\x61rd\x18\x02 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xdd\x01\">\n\x0b\x44\x65\x63kRenamed\x12\x0c\n\x04\x64\x65\x63k\x18\x01 \x01(\x03\x12\x0c\n\x04name\x18\x02 \x01(\t\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xdb\x01\"h\n\x0b\x44\x65\x63kSetData\x12\x0c\n\x04\x64\x65\x63k\x18\x01 \x01(\x03\x12*\n\x05\x63\x61rds\x18\x02 \x03(\x0b\x32\x1b.PegasusShared.DeckCardData\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xde\x01\x12\n\n\x06System\x10\x00\";\n\nDeleteDeck\x12\x0c\n\x04\x64\x65\x63k\x18\x01 \x01(\x03\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xd2\x01\x12\n\n\x06System\x10\x00\"@\n\x0f\x44\x65vBnetIdentify\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x83\x02\x12\n\n\x06System\x10\x00\"\xaa\x01\n\x0c\x44isconnected\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\x12\x13\n\x0bgame_handle\x18\x02 \x01(\x05\x12\x15\n\rclient_handle\x18\x03 \x01(\x03\x12\x0c\n\x04port\x18\x04 \x01(\x05\x12\x0f\n\x07version\x18\x05 \x01(\t\x12\x17\n\x0f\x61urora_password\x18\x06 \x01(\t\x12\x10\n\x08scenario\x18\x07 \x01(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa1\x02\"-\n\nDoPurchase\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x91\x02\x12\n\n\x06System\x10\x01\"Q\n\x0f\x44raftAckRewards\x12\x0f\n\x07\x64\x65\x63k_id\x18\x01 \x01(\x03\x12\x0c\n\x04slot\x18\x02 \x01(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x9f\x02\x12\n\n\x06System\x10\x00\"-\n\nDraftBegin\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xeb\x01\x12\n\n\x06System\x10\x00\"G\n\x0e\x44raftBeginning\x12\x0f\n\x07\x64\x65\x63k_id\x18\x01 \x01(\x03\x12\x0f\n\x07\x63hoices\x18\x02 \x03(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xf6\x01\"G\n\x0b\x44raftChosen\x12\r\n\x05\x61sset\x18\x01 \x01(\x05\x12\x14\n\x0cnext_choices\x18\x02 \x03(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xf9\x01\"\xa2\x02\n\nDraftError\x12\x35\n\nerror_code\x18\x01 \x01(\x0e\x32!.PegasusUtil.DraftError.ErrorCode\"\xc7\x01\n\tErrorCode\x12\x0e\n\nDE_UNKNOWN\x10\x00\x12\x11\n\rDE_NO_LICENSE\x10\x01\x12\x13\n\x0f\x44\x45_RETIRE_FIRST\x10\x02\x12\x13\n\x0f\x44\x45_NOT_IN_DRAFT\x10\x03\x12\x0f\n\x0b\x44\x45_BAD_DECK\x10\x04\x12\x0f\n\x0b\x44\x45_BAD_SLOT\x10\x05\x12\x10\n\x0c\x44\x45_BAD_INDEX\x10\x06\x12 \n\x1c\x44\x45_NOT_IN_DRAFT_BUT_COULD_BE\x10\x07\x12\x17\n\x13\x44\x45_FEATURE_DISABLED\x10\x08\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xfb\x01\";\n\x18\x44raftGetPicksAndContents\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xf4\x01\x12\n\n\x06System\x10\x00\"^\n\rDraftMakePick\x12\x0f\n\x07\x64\x65\x63k_id\x18\x01 \x01(\x03\x12\x0c\n\x04slot\x18\x02 \x01(\x05\x12\r\n\x05index\x18\x03 \x01(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xf5\x01\x12\n\n\x06System\x10\x00\"M\n\x0b\x44raftRetire\x12\x0f\n\x07\x64\x65\x63k_id\x18\x01 \x01(\x03\x12\x0c\n\x04slot\x18\x02 \x01(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xf2\x01\x12\n\n\x06System\x10\x00\"\x8a\x02\n\x0e\x44raftRewardBag\x12\x41\n\x0ereward_booster\x18\x01 \x01(\x0b\x32).PegasusShared.ProfileNoticeRewardBooster\x12;\n\x0breward_card\x18\x02 \x01(\x0b\x32&.PegasusShared.ProfileNoticeRewardCard\x12;\n\x0breward_dust\x18\x03 \x01(\x0b\x32&.PegasusShared.ProfileNoticeRewardDust\x12;\n\x0breward_gold\x18\x04 \x01(\x0b\x32&.PegasusShared.ProfileNoticeRewardGold\"\xe9\x01\n\x10\x44raftRewardChest\x12)\n\x04\x62\x61g1\x18\x01 \x01(\x0b\x32\x1b.PegasusUtil.DraftRewardBag\x12)\n\x04\x62\x61g2\x18\x02 \x01(\x0b\x32\x1b.PegasusUtil.DraftRewardBag\x12)\n\x04\x62\x61g3\x18\x03 \x01(\x0b\x32\x1b.PegasusUtil.DraftRewardBag\x12)\n\x04\x62\x61g4\x18\x04 \x01(\x0b\x32\x1b.PegasusUtil.DraftRewardBag\x12)\n\x04\x62\x61g5\x18\x05 \x01(\x0b\x32\x1b.PegasusUtil.DraftRewardBag\"\xe4\x01\n\x17\x44raftChoicesAndContents\x12\x0f\n\x07\x64\x65\x63k_id\x18\x01 \x01(\x03\x12\x0c\n\x04slot\x18\x02 \x01(\x05\x12\x0f\n\x07\x63hoices\x18\x03 \x03(\x05\x12\x0c\n\x04hero\x18\x04 \x01(\x05\x12*\n\x05\x63\x61rds\x18\x05 \x03(\x0b\x32\x1b.PegasusShared.DeckCardData\x12\x0c\n\x04wins\x18\x06 \x01(\x05\x12\x0e\n\x06losses\x18\x07 \x01(\x05\x12,\n\x05\x63hest\x18\x08 \x01(\x0b\x32\x1d.PegasusUtil.DraftRewardChest\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xf8\x01\"b\n\x0c\x44raftRetired\x12\x0f\n\x07\x64\x65\x63k_id\x18\x01 \x01(\x03\x12,\n\x05\x63hest\x18\x02 \x01(\x0b\x32\x1d.PegasusUtil.DraftRewardChest\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xf7\x01\"9\n\x11\x44raftRewardsAcked\x12\x0f\n\x07\x64\x65\x63k_id\x18\x01 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa0\x02\"$\n\x0e\x44roppedRequest\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x00\"\x8b\x01\n\x07\x45rror37\x12\x33\n\x06reason\x18\x01 \x01(\x0e\x32#.PegasusUtil.Error37.ThrottleReason\x12\x14\n\x0cretry_millis\x18\x02 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x8a\x02\" \n\x0eThrottleReason\x12\x0e\n\nTR_DB_LOAD\x10\x00\"|\n\tGamesInfo\x12\x15\n\rgames_started\x18\x01 \x01(\x05\x12\x11\n\tgames_won\x18\x02 \x01(\x05\x12\x12\n\ngames_lost\x18\x03 \x01(\x05\x12\x1c\n\x14\x66ree_reward_progress\x18\x04 \x01(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xd0\x01\"\x95\x04\n\x0eGetAccountInfo\x12@\n\x07request\x18\x01 \x01(\x0e\x32#.PegasusUtil.GetAccountInfo.Request:\nLAST_LOGIN\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xc9\x01\x12\n\n\x06System\x10\x00\"\x9f\x03\n\x07Request\x12\x0e\n\nLAST_LOGIN\x10\x01\x12\r\n\tDECK_LIST\x10\x02\x12\x0e\n\nCOLLECTION\x10\x03\x12\x0e\n\nMEDAL_INFO\x10\x04\x12\x11\n\rMEDAL_HISTORY\x10\x05\x12\x0c\n\x08\x42OOSTERS\x10\x06\x12\x0e\n\nCARD_BACKS\x10\x07\x12\x11\n\rPLAYER_RECORD\x10\x08\x12\x10\n\x0cGAMES_PLAYED\x10\t\x12\x0e\n\nDECK_LIMIT\x10\n\x12\x11\n\rCAMPAIGN_INFO\x10\x0b\x12\x0b\n\x07NOTICES\x10\x0c\x12\x08\n\x04MOTD\x10\r\x12\x12\n\x0e\x43LIENT_OPTIONS\x10\x0e\x12\x0f\n\x0b\x43\x41RD_VALUES\x10\x0f\x12\x10\n\x0c\x44ISCONNECTED\x10\x10\x12\x17\n\x13\x41RCANE_DUST_BALANCE\x10\x11\x12\x0c\n\x08\x46\x45\x41TURES\x10\x12\x12\x13\n\x0fREWARD_PROGRESS\x10\x13\x12\x10\n\x0cGOLD_BALANCE\x10\x14\x12\x0b\n\x07HERO_XP\x10\x15\x12\r\n\tPVP_QUEUE\x10\x16\x12\x11\n\rMASSIVE_LOGIN\x10\x17\x12\x11\n\rBOOSTER_TALLY\x10\x18\"S\n\x0bGetAchieves\x12#\n\x1bonly_active_or_new_complete\x18\x01 \x01(\x08\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xfd\x01\x12\n\n\x06System\x10\x00\"7\n\x14GetAdventureProgress\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xb1\x02\x12\n\n\x06System\x10\x00\"3\n\x10GetAssetsVersion\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xaf\x02\x12\n\n\x06System\x10\x00\"5\n\x12GetBattlePayConfig\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xed\x01\x12\n\n\x06System\x10\x01\"5\n\x12GetBattlePayStatus\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xff\x01\x12\n\n\x06System\x10\x01\"8\n\x07GetDeck\x12\x0c\n\x04\x64\x65\x63k\x18\x01 \x01(\x03\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xd6\x01\x12\n\n\x06System\x10\x00\";\n\nGetOptions\x12\x0c\n\x04keys\x18\x01 \x03(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xf0\x01\x12\n\n\x06System\x10\x00\"l\n\x11GetPurchaseMethod\x12\x12\n\nproduct_id\x18\x01 \x01(\t\x12\x10\n\x08quantity\x18\x02 \x01(\x05\x12\x10\n\x08\x63urrency\x18\x03 \x01(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xfa\x01\x12\n\n\x06System\x10\x01\"V\n\x1bGetThirdPartyPurchaseStatus\x12\x16\n\x0ethird_party_id\x18\x01 \x01(\t\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xa6\x02\x12\n\n\x06System\x10\x01\"s\n\x0bGoldBalance\x12\x16\n\x0e\x63\x61pped_balance\x18\x01 \x01(\x03\x12\x15\n\rbonus_balance\x18\x02 \x01(\x03\x12\x0b\n\x03\x63\x61p\x18\x03 \x01(\x03\x12\x13\n\x0b\x63\x61p_warning\x18\x04 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x96\x02\"2\n\x0fGoldCostBooster\x12\x0c\n\x04\x63ost\x18\x01 \x01(\x03\x12\x11\n\tpack_type\x18\x02 \x01(\x05\"\xef\x01\n\x17\x42\x61ttlePayConfigResponse\x12$\n\x07\x62undles\x18\x01 \x03(\x0b\x32\x13.PegasusUtil.Bundle\x12\x10\n\x08\x63urrency\x18\x02 \x01(\x05\x12\x13\n\x0bunavailable\x18\x04 \x01(\x08\x12\x1f\n\x17secs_before_auto_cancel\x18\x05 \x01(\x05\x12\x38\n\x12gold_cost_boosters\x18\x06 \x03(\x0b\x32\x1c.PegasusUtil.GoldCostBooster\x12\x17\n\x0fgold_cost_arena\x18\x07 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xee\x01\">\n\rGuardianTrack\x12\x0c\n\x04what\x18\x01 \x01(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x85\x02\x12\n\n\x06System\x10\x00\"\xe8\x02\n\x0cGuardianVars\x12\x0f\n\x07tourney\x18\x01 \x01(\x08\x12\x10\n\x08practice\x18\x02 \x01(\x08\x12\x0e\n\x06\x63\x61sual\x18\x03 \x01(\x08\x12\r\n\x05\x66orge\x18\x04 \x01(\x08\x12\x10\n\x08\x66riendly\x18\x05 \x01(\x08\x12\x0f\n\x07manager\x18\x06 \x01(\x08\x12\x10\n\x08\x63rafting\x18\x07 \x01(\x08\x12\x0e\n\x06hunter\x18\x08 \x01(\x08\x12\x0c\n\x04mage\x18\t \x01(\x08\x12\x0f\n\x07paladin\x18\n \x01(\x08\x12\x0e\n\x06priest\x18\x0b \x01(\x08\x12\r\n\x05rogue\x18\x0c \x01(\x08\x12\x0e\n\x06shaman\x18\r \x01(\x08\x12\x0f\n\x07warlock\x18\x0e \x01(\x08\x12\x0f\n\x07warrior\x18\x0f \x01(\x08\x12\x12\n\nshowUserUI\x18\x10 \x01(\x05\x12\r\n\x05store\x18\x11 \x01(\x08\x12\x12\n\nbattle_pay\x18\x12 \x01(\x08\x12\x15\n\rbuy_with_gold\x18\x13 \x01(\x08\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x88\x02\"8\n\x15MassDisenchantRequest\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x8c\x02\x12\n\n\x06System\x10\x00\"=\n\x16MassDisenchantResponse\x12\x0e\n\x06\x61mount\x18\x01 \x01(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x8d\x02\"\xa5\x01\n\x10MedalHistoryInfo\x12\x0e\n\x06season\x18\x01 \x01(\x05\x12!\n\x04when\x18\x02 \x01(\x0b\x32\x13.PegasusShared.Date\x12\r\n\x05stars\x18\x03 \x01(\x05\x12\x12\n\nstar_level\x18\x04 \x01(\x05\x12\x13\n\x0blevel_start\x18\x05 \x01(\x05\x12\x11\n\tlevel_end\x18\x06 \x01(\x05\x12\x13\n\x0blegend_rank\x18\x07 \x01(\x05\"R\n\x0cMedalHistory\x12-\n\x06medals\x18\x01 \x03(\x0b\x32\x1d.PegasusUtil.MedalHistoryInfo\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xea\x01\"\xb7\x01\n\tMedalInfo\x12\x13\n\x0bseason_wins\x18\x03 \x01(\x05\x12\r\n\x05stars\x18\x06 \x01(\x05\x12\x0e\n\x06streak\x18\x07 \x01(\x05\x12\x12\n\nstar_level\x18\x08 \x01(\x05\x12\x13\n\x0blevel_start\x18\t \x01(\x05\x12\x11\n\tlevel_end\x18\n \x01(\x05\x12\x10\n\x08\x63\x61n_lose\x18\x0b \x01(\x08\x12\x13\n\x0blegend_rank\x18\r \x01(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xe8\x01\"R\n\x0cNearbyPlayer\x12\x12\n\nbnet_id_hi\x18\x01 \x01(\x04\x12\x12\n\nbnet_id_lo\x18\x02 \x01(\x04\x12\x1a\n\x12session_start_time\x18\x03 \x01(\x04\"\x9c\x03\n\x13NextHeroLevelReward\x12\r\n\x05level\x18\x01 \x01(\x05\x12\x41\n\x0ereward_booster\x18\x02 \x01(\x0b\x32).PegasusShared.ProfileNoticeRewardBooster\x12;\n\x0breward_card\x18\x03 \x01(\x0b\x32&.PegasusShared.ProfileNoticeRewardCard\x12;\n\x0breward_dust\x18\x04 \x01(\x0b\x32&.PegasusShared.ProfileNoticeRewardDust\x12;\n\x0breward_gold\x18\x05 \x01(\x0b\x32&.PegasusShared.ProfileNoticeRewardGold\x12=\n\x0creward_mount\x18\x06 \x01(\x0b\x32\'.PegasusShared.ProfileNoticeRewardMount\x12=\n\x0creward_forge\x18\x07 \x01(\x0b\x32\'.PegasusShared.ProfileNoticeRewardForge\"\x85\x01\n\nHeroXPInfo\x12\x10\n\x08\x63lass_id\x18\x01 \x01(\x05\x12\r\n\x05level\x18\x02 \x01(\x05\x12\x0f\n\x07\x63urr_xp\x18\x03 \x01(\x03\x12\x0e\n\x06max_xp\x18\x04 \x01(\x03\x12\x35\n\x0bnext_reward\x18\x05 \x01(\x0b\x32 .PegasusUtil.NextHeroLevelReward\"H\n\x06HeroXP\x12)\n\x08xp_infos\x18\x01 \x03(\x0b\x32\x17.PegasusUtil.HeroXPInfo\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9b\x02\"\x1a\n\x03NOP\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xfe\x01\"\xb3\x01\n\x11OneClientTracking\x12;\n\x05level\x18\x01 \x01(\x0e\x32$.PegasusUtil.OneClientTracking.Level:\x06L_INFO\x12\x0c\n\x04what\x18\x02 \x01(\x05\x12\x0f\n\x07message\x18\x03 \x01(\t\x12\x11\n\ttimestamp\x18\x04 \x01(\x04\"/\n\x05Level\x12\n\n\x06L_INFO\x10\x01\x12\r\n\tL_WARNING\x10\x02\x12\x0b\n\x07L_ERROR\x10\x03\"_\n\x0e\x43lientTracking\x12,\n\x04info\x18\x04 \x03(\x0b\x32\x1e.PegasusUtil.OneClientTracking\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xe4\x01\x12\n\n\x06System\x10\x00\"D\n\x0bOpenBooster\x12\x14\n\x0c\x62ooster_type\x18\x02 \x01(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xe1\x01\x12\n\n\x06System\x10\x00\"V\n\x0cPlayerRecord\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x05\x12\x0c\n\x04wins\x18\x03 \x01(\x05\x12\x0e\n\x06losses\x18\x04 \x01(\x05\x12\x0c\n\x04ties\x18\x05 \x01(\x05\"P\n\rPlayerRecords\x12*\n\x07records\x18\x01 \x03(\x0b\x32\x19.PegasusUtil.PlayerRecord\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x8e\x02\"M\n\tPlayQueue\x12+\n\x05queue\x18\x01 \x01(\x0b\x32\x1c.PegasusShared.PlayQueueInfo\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9e\x02\";\n\x10ProfileDeckLimit\x12\x12\n\ndeck_limit\x18\x01 \x01(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xe7\x01\"P\n\x10ProfileLastLogin\x12\'\n\nlast_login\x18\x01 \x01(\x0b\x32\x13.PegasusShared.Date\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xe3\x01\"\x99\x07\n\rProfileNotice\x12\r\n\x05\x65ntry\x18\x01 \x01(\x03\x12\x30\n\x05medal\x18\x02 \x01(\x0b\x32!.PegasusShared.ProfileNoticeMedal\x12\x41\n\x0ereward_booster\x18\x03 \x01(\x0b\x32).PegasusShared.ProfileNoticeRewardBooster\x12;\n\x0breward_card\x18\x04 \x01(\x0b\x32&.PegasusShared.ProfileNoticeRewardCard\x12;\n\x0bprecon_deck\x18\x06 \x01(\x0b\x32&.PegasusShared.ProfileNoticePreconDeck\x12;\n\x0breward_dust\x18\x07 \x01(\x0b\x32&.PegasusShared.ProfileNoticeRewardDust\x12;\n\x0breward_gold\x18\x08 \x01(\x0b\x32&.PegasusShared.ProfileNoticeRewardGold\x12=\n\x0creward_mount\x18\t \x01(\x0b\x32\'.PegasusShared.ProfileNoticeRewardMount\x12=\n\x0creward_forge\x18\n \x01(\x0b\x32\'.PegasusShared.ProfileNoticeRewardForge\x12\x0e\n\x06origin\x18\x0b \x01(\x05\x12\x13\n\x0borigin_data\x18\x0c \x01(\x03\x12!\n\x04when\x18\r \x01(\x0b\x32\x13.PegasusShared.Date\x12\x36\n\x08purchase\x18\x0e \x01(\x0b\x32$.PegasusShared.ProfileNoticePurchase\x12>\n\x10reward_card_back\x18\x0f \x01(\x0b\x32$.PegasusShared.ProfileNoticeCardBack\x12J\n\x0e\x64\x63_game_result\x18\x10 \x01(\x0b\x32\x32.PegasusShared.ProfileNoticeDisconnectedGameResult\x12;\n\x0b\x62onus_stars\x18\x11 \x01(\x0b\x32&.PegasusShared.ProfileNoticeBonusStars\x12I\n\x12\x61\x64venture_progress\x18\x12 \x01(\x0b\x32-.PegasusShared.ProfileNoticeAdventureProgress\"O\n\x0eProfileNotices\x12(\n\x04list\x18\x01 \x03(\x0b\x32\x1a.PegasusUtil.ProfileNotice\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xd4\x01\"\xc7\x01\n\x0fProfileProgress\x12\x10\n\x08progress\x18\x01 \x01(\x03\x12\x12\n\nbest_forge\x18\x02 \x01(\x05\x12\'\n\nlast_forge\x18\x03 \x01(\x0b\x32\x13.PegasusShared.Date\x12\x16\n\x0e\x64isplay_banner\x18\x04 \x01(\x05\x12\x38\n\x11\x61\x64venture_options\x18\x05 \x03(\x0b\x32\x1d.PegasusUtil.AdventureOptions\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xe9\x01\"\xd7\x07\n\rPurchaseError\x12:\n\x05\x65rror\x18\x01 \x01(\x0e\x32 .PegasusUtil.PurchaseError.Error:\tE_UNKNOWN\x12\x1c\n\x14purchase_in_progress\x18\x02 \x01(\t\x12\x12\n\nerror_code\x18\x03 \x01(\t\"\xd7\x06\n\x05\x45rror\x12\x16\n\tE_UNKNOWN\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\x12\r\n\tE_SUCCESS\x10\x00\x12\x17\n\x13\x45_STILL_IN_PROGRESS\x10\x01\x12\x12\n\x0e\x45_INVALID_BNET\x10\x02\x12\x10\n\x0c\x45_SERVICE_NA\x10\x03\x12\x1a\n\x16\x45_PURCHASE_IN_PROGRESS\x10\x04\x12\x0e\n\nE_DATABASE\x10\x05\x12\x16\n\x12\x45_INVALID_QUANTITY\x10\x06\x12\x17\n\x13\x45_DUPLICATE_LICENSE\x10\x07\x12\x16\n\x12\x45_REQUEST_NOT_SENT\x10\x08\x12\x14\n\x10\x45_NO_ACTIVE_BPAY\x10\t\x12\x11\n\rE_FAILED_RISK\x10\n\x12\x0e\n\nE_CANCELED\x10\x0b\x12\x0e\n\nE_WAIT_MOP\x10\x0c\x12\x19\n\x15\x45_WAIT_CLIENT_CONFIRM\x10\r\x12\x16\n\x12\x45_WAIT_CLIENT_RISK\x10\x0e\x12\x10\n\x0c\x45_PRODUCT_NA\x10\x0f\x12\x12\n\x0e\x45_RISK_TIMEOUT\x10\x10\x12\x1b\n\x17\x45_PRODUCT_ALREADY_OWNED\x10\x11\x12\x1e\n\x1a\x45_WAIT_THIRD_PARTY_RECEIPT\x10\x12\x12\x1d\n\x19\x45_PRODUCT_EVENT_HAS_ENDED\x10\x13\x12\x15\n\x11\x45_BP_GENERIC_FAIL\x10\x64\x12\x1a\n\x16\x45_BP_INVALID_CC_EXPIRY\x10\x65\x12\x13\n\x0f\x45_BP_RISK_ERROR\x10\x66\x12\x19\n\x15\x45_BP_NO_VALID_PAYMENT\x10g\x12\x15\n\x11\x45_BP_PAYMENT_AUTH\x10h\x12\x18\n\x14\x45_BP_PROVIDER_DENIED\x10i\x12\x15\n\x11\x45_BP_PURCHASE_BAN\x10j\x12\x17\n\x13\x45_BP_SPENDING_LIMIT\x10k\x12\x19\n\x15\x45_BP_PARENTAL_CONTROL\x10l\x12\x12\n\x0e\x45_BP_THROTTLED\x10m\x12 \n\x1c\x45_BP_THIRD_PARTY_BAD_RECEIPT\x10n\x12!\n\x1d\x45_BP_THIRD_PARTY_RECEIPT_USED\x10o\x12$\n E_BP_PRODUCT_UNIQUENESS_VIOLATED\x10p\x12\x17\n\x13\x45_BP_REGION_IS_DOWN\x10q\"\xa7\x03\n\x17\x42\x61ttlePayStatusResponse\x12\x42\n\x06status\x18\x01 \x01(\x0e\x32\x32.PegasusUtil.BattlePayStatusResponse.PurchaseState\x12\x12\n\nproduct_id\x18\x02 \x01(\t\x12\x32\n\x0epurchase_error\x18\x03 \x01(\x0b\x32\x1a.PegasusUtil.PurchaseError\x12\x1c\n\x14\x62\x61ttle_pay_available\x18\x04 \x01(\x08\x12\x16\n\x0etransaction_id\x18\x05 \x01(\x03\x12\x16\n\x0ethird_party_id\x18\x06 \x01(\t\x12\x10\n\x08\x63urrency\x18\x07 \x01(\x05\x12H\n\x08provider\x18\x08 \x01(\x0e\x32 .PegasusShared.BattlePayProvider:\x14\x42P_PROVIDER_BLIZZARD\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x89\x02\"A\n\rPurchaseState\x12\x0c\n\x08PS_READY\x10\x00\x12\x14\n\x10PS_CHECK_RESULTS\x10\x01\x12\x0c\n\x08PS_ERROR\x10\x02\"\xe9\x01\n\x0ePurchaseMethod\x12\x12\n\nproduct_id\x18\x01 \x01(\t\x12\x10\n\x08quantity\x18\x02 \x01(\x05\x12\x10\n\x08\x63urrency\x18\x03 \x01(\x05\x12\x13\n\x0bwallet_name\x18\x04 \x01(\t\x12\x14\n\x0cuse_ebalance\x18\x05 \x01(\x08\x12)\n\x05\x65rror\x18\x06 \x01(\x0b\x32\x1a.PegasusUtil.PurchaseError\x12\x16\n\x0etransaction_id\x18\x07 \x01(\x03\x12\x1c\n\x14is_zero_cost_license\x18\x08 \x01(\x08\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x90\x02\"\xc6\x01\n\x10PurchaseResponse\x12)\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x1a.PegasusUtil.PurchaseError\x12\x16\n\x0etransaction_id\x18\x02 \x01(\x03\x12\x12\n\nproduct_id\x18\x03 \x01(\t\x12\x16\n\x0ethird_party_id\x18\x04 \x01(\t\x12\x10\n\x08\x63urrency\x18\x05 \x01(\x05\x12\x1c\n\x14is_zero_cost_license\x18\x06 \x01(\x08\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x80\x02\"d\n\x10PurchaseWithGold\x12\x10\n\x08quantity\x18\x01 \x01(\x05\x12\x0f\n\x07product\x18\x02 \x01(\x05\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x97\x02\x12\n\n\x06System\x10\x00\"\x90\x02\n\x18PurchaseWithGoldResponse\x12P\n\x06result\x18\x01 \x01(\x0e\x32\x34.PegasusUtil.PurchaseWithGoldResponse.PurchaseResult:\nPR_SUCCESS\x12\x11\n\tgold_used\x18\x02 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x98\x02\"z\n\x0ePurchaseResult\x12\x0e\n\nPR_SUCCESS\x10\x01\x12\x19\n\x15PR_INSUFFICIENT_FUNDS\x10\x02\x12\x11\n\rPR_PRODUCT_NA\x10\x03\x12\x11\n\rPR_FEATURE_NA\x10\x04\x12\x17\n\x13PR_INVALID_QUANTITY\x10\x05\"I\n\nRenameDeck\x12\x0c\n\x04\x64\x65\x63k\x18\x01 \x01(\x03\x12\x0c\n\x04name\x18\x02 \x01(\t\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xd3\x01\x12\n\n\x06System\x10\x00\"\xb9\x02\n\x0eRewardProgress\x12\'\n\nseason_end\x18\x01 \x01(\x0b\x32\x13.PegasusShared.Date\x12\x15\n\rwins_per_gold\x18\x02 \x01(\x05\x12\x17\n\x0fgold_per_reward\x18\x03 \x01(\x05\x12\x18\n\x10max_gold_per_day\x18\x04 \x01(\x05\x12\x15\n\rseason_number\x18\x05 \x01(\x05\x12\x0f\n\x07pack_id\x18\x08 \x01(\x05\x12\x15\n\rxp_solo_limit\x18\t \x01(\x05\x12\x16\n\x0emax_hero_level\x18\n \x01(\x05\x12.\n\x11next_quest_cancel\x18\x0b \x01(\x0b\x32\x13.PegasusShared.Date\x12\x18\n\x10\x65vent_timing_mod\x18\x0c \x01(\x02\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x8f\x02\"p\n\x13SetAdventureOptions\x12\x38\n\x11\x61\x64venture_options\x18\x01 \x01(\x0b\x32\x1d.PegasusUtil.AdventureOptions\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xb6\x02\x12\n\n\x06System\x10\x00\"R\n\x0bSetCardBack\x12\x11\n\tcard_back\x18\x01 \x01(\x05\x12\x0f\n\x07\x64\x65\x63k_id\x18\x02 \x01(\x03\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xa3\x02\x12\n\n\x06System\x10\x00\"_\n\x13SetCardBackResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x11\n\tcard_back\x18\x02 \x01(\x05\x12\x0f\n\x07\x64\x65\x63k_id\x18\x03 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa4\x02\"Y\n\nSetOptions\x12*\n\x07options\x18\x01 \x03(\x0b\x32\x19.PegasusUtil.ClientOption\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xef\x01\x12\n\n\x06System\x10\x00\"=\n\x0bSetProgress\x12\r\n\x05value\x18\x01 \x01(\x03\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xe6\x01\x12\n\n\x06System\x10\x00\"\xb3\x01\n\x13SetProgressResponse\x12@\n\x06result\x18\x01 \x01(\x0e\x32\'.PegasusUtil.SetProgressResponse.Result:\x07SUCCESS\x12\x10\n\x08progress\x18\x02 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa8\x02\"3\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x01\x12\n\n\x06\x46\x41ILED\x10\x02\x12\x10\n\x0c\x41LREADY_DONE\x10\x03\"?\n\x12SpecialEventTiming\x12\r\n\x05\x65vent\x18\x01 \x01(\t\x12\r\n\x05start\x18\x02 \x01(\x04\x12\x0b\n\x03\x65nd\x18\x03 \x01(\x04\"\xb3\x04\n\x11MassiveLoginReply\x12\x36\n\x10profile_progress\x18\x01 \x01(\x0b\x32\x1c.PegasusUtil.ProfileProgress\x12*\n\nmedal_info\x18\x02 \x01(\x0b\x32\x16.PegasusUtil.MedalInfo\x12(\n\tdeck_list\x18\x03 \x01(\x0b\x32\x15.PegasusUtil.DeckList\x12\x39\n\x12profile_deck_limit\x18\x04 \x01(\x0b\x32\x1d.PegasusUtil.ProfileDeckLimit\x12.\n\x0cgold_balance\x18\x05 \x01(\x0b\x32\x18.PegasusUtil.GoldBalance\x12;\n\x13\x61rcane_dust_balance\x18\x06 \x01(\x0b\x32\x1e.PegasusUtil.ArcaneDustBalance\x12\x34\n\x0freward_progress\x18\x07 \x01(\x0b\x32\x1b.PegasusUtil.RewardProgress\x12\x32\n\x0eplayer_records\x18\x08 \x01(\x0b\x32\x1a.PegasusUtil.PlayerRecords\x12*\n\ncard_backs\x18\t \x01(\x0b\x32\x16.PegasusUtil.CardBacks\x12=\n\x14special_event_timing\x18\n \x03(\x0b\x32\x1f.PegasusUtil.SpecialEventTiming\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xac\x02\" \n\tSubscribe\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xba\x02\"\x98\x01\n\x11SubscribeResponse\x12\r\n\x05route\x18\x01 \x01(\x04\x12\x1a\n\x12supported_features\x18\x02 \x01(\x04\x12\x17\n\x0fkeep_alive_secs\x18\x03 \x01(\x04\"*\n\x08\x46\x65\x61tures\x12\x0e\n\nF_SYSTEM_0\x10\x01\x12\x0e\n\nF_SYSTEM_1\x10\x02\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xbb\x02\"\xe5\x01\n ThirdPartyPurchaseStatusResponse\x12\x16\n\x0ethird_party_id\x18\x01 \x01(\t\x12O\n\x06status\x18\x02 \x01(\x0e\x32\x34.PegasusUtil.ThirdPartyPurchaseStatusResponse.Status:\tNOT_FOUND\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa7\x02\"C\n\x06Status\x12\r\n\tNOT_FOUND\x10\x01\x12\r\n\tSUCCEEDED\x10\x02\x12\n\n\x06\x46\x41ILED\x10\x03\x12\x0f\n\x0bIN_PROGRESS\x10\x04\"]\n\x15ThirdPartyReceiptData\x12\x16\n\x0ethird_party_id\x18\x01 \x01(\t\x12\x0f\n\x07receipt\x18\x02 \x01(\t\x12\x1b\n\x13third_party_user_id\x18\x03 \x01(\t\"\xed\x01\n\x17StartThirdPartyPurchase\x12H\n\x08provider\x18\x01 \x01(\x0e\x32 .PegasusShared.BattlePayProvider:\x14\x42P_PROVIDER_BLIZZARD\x12\x12\n\nproduct_id\x18\x02 \x01(\t\x12\x10\n\x08quantity\x18\x03 \x01(\x05\x12\x41\n\x15\x64\x61ngling_receipt_data\x18\x04 \x01(\x0b\x32\".PegasusUtil.ThirdPartyReceiptData\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xb8\x02\x12\n\n\x06System\x10\x01\"\x8c\x01\n\x17SubmitThirdPartyReceipt\x12\x38\n\x0creceipt_data\x18\x01 \x01(\x0b\x32\".PegasusUtil.ThirdPartyReceiptData\x12\x16\n\x0etransaction_id\x18\x02 \x01(\x03\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xa5\x02\x12\n\n\x06System\x10\x01\"N\n\x14TriggerEventResponse\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\x05\x12\x0f\n\x07success\x18\x02 \x01(\x08\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xab\x02\"\x99\x01\n\x15TriggerLaunchDayEvent\x12.\n\x0blast_played\x18\x01 \x01(\x0b\x32\x19.PegasusUtil.NearbyPlayer\x12/\n\x0cother_player\x18\x02 \x01(\x0b\x32\x19.PegasusUtil.NearbyPlayer\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xaa\x02\x12\n\n\x06System\x10\x00\"F\n\x0bUpdateLogin\x12\x16\n\x0ereply_required\x18\x01 \x01(\x08\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xcd\x01\x12\n\n\x06System\x10\x00\"*\n\x13UpdateLoginComplete\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xb3\x02\"\x8d\x01\n\x08UtilAuth\x12,\n\x06result\x18\x01 \x01(\x0e\x32\x1c.PegasusUtil.UtilAuth.Result\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xcc\x01\">\n\x06Result\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07\x41LLOWED\x10\x01\x12\x0b\n\x07INVALID\x10\x02\x12\r\n\tNO_SERVER\x10\x03\"M\n\rUtilHandshake\x12\x15\n\rclient_handle\x18\x01 \x01(\x05\x12\x10\n\x08password\x18\x02 \x01(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xcb\x01\"C\n\x0fValidateAchieve\x12\x0f\n\x07\x61\x63hieve\x18\x01 \x01(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x9c\x02\x12\n\n\x06System\x10\x00\"?\n\x17ValidateAchieveResponse\x12\x0f\n\x07\x61\x63hieve\x18\x01 \x01(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9d\x02')
+  serialized_pb=_b('\n\x11PegasusUtil.proto\x12\x0bPegasusUtil\x1a\x13PegasusShared.proto\"\xea\x01\n\x1d\x41\x63\x63ountLicenseAchieveResponse\x12\x0f\n\x07\x61\x63hieve\x18\x01 \x02(\x05\x12\x41\n\x06result\x18\x02 \x02(\x0e\x32\x31.PegasusUtil.AccountLicenseAchieveResponse.Result\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xb7\x02\"`\n\x06Result\x12\x13\n\x0fINVALID_ACHIEVE\x10\x01\x12\x0e\n\nNOT_ACTIVE\x10\x02\x12\x0f\n\x0bIN_PROGRESS\x10\x03\x12\x0c\n\x08\x43OMPLETE\x10\x04\x12\x12\n\x0eSTATUS_UNKNOWN\x10\x05\"\xe8\x01\n\x07\x41\x63hieve\x12\n\n\x02id\x18\x01 \x02(\x05\x12\x10\n\x08progress\x18\x02 \x02(\x05\x12\x14\n\x0c\x61\x63k_progress\x18\x03 \x02(\x05\x12\x18\n\x10\x63ompletion_count\x18\x04 \x01(\x05\x12\x0e\n\x06\x61\x63tive\x18\x05 \x01(\x08\x12\x15\n\rstarted_count\x18\x06 \x01(\x05\x12\'\n\ndate_given\x18\x07 \x01(\x0b\x32\x13.PegasusShared.Date\x12+\n\x0e\x64\x61te_completed\x18\x08 \x01(\x0b\x32\x13.PegasusShared.Date\x12\x12\n\ndo_not_ack\x18\t \x01(\x08\"f\n\x0b\x41\x63hieveInfo\x12\x0c\n\x04\x64\x65sc\x18\x01 \x02(\t\x12\x0c\n\x04type\x18\x02 \x02(\x05\x12\r\n\x05quota\x18\x03 \x02(\x05\x12\x0e\n\x06reward\x18\x04 \x02(\x05\x12\r\n\x05\x64\x61ta1\x18\x05 \x02(\x03\x12\r\n\x05\x64\x61ta2\x18\x06 \x02(\x03\"C\n\x08\x41\x63hieves\x12\"\n\x04list\x18\x01 \x03(\x0b\x32\x14.PegasusUtil.Achieve\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xfc\x01\"W\n\x12\x41\x63kAchieveProgress\x12\n\n\x02id\x18\x01 \x02(\x05\x12\x14\n\x0c\x61\x63k_progress\x18\x02 \x02(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xf3\x01\x12\n\n\x06System\x10\x00\"Y\n\x0b\x41\x63kCardSeen\x12)\n\tcard_defs\x18\x01 \x03(\x0b\x32\x16.PegasusShared.CardDef\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xdf\x01\x12\n\n\x06System\x10\x00\";\n\tAckNotice\x12\r\n\x05\x65ntry\x18\x01 \x02(\x03\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xd5\x01\x12\n\n\x06System\x10\x00\"D\n\x11\x41\x63knowledgeBanner\x12\x0e\n\x06\x62\x61nner\x18\x01 \x02(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xb5\x02\x12\n\n\x06System\x10\x00\"M\n\x0f\x41\x63kWingProgress\x12\x0c\n\x04wing\x18\x01 \x02(\x05\x12\x0b\n\x03\x61\x63k\x18\x02 \x02(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xb4\x02\x12\n\n\x06System\x10\x00\"9\n\x10\x41\x64ventureOptions\x12\x14\n\x0c\x61\x64venture_id\x18\x01 \x02(\x05\x12\x0f\n\x07options\x18\x02 \x02(\x04\"`\n\x19\x41\x64ventureProgressResponse\x12.\n\x04list\x18\x01 \x03(\x0b\x32 .PegasusShared.AdventureProgress\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xb2\x02\"9\n\x11\x41rcaneDustBalance\x12\x0f\n\x07\x62\x61lance\x18\x01 \x02(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x86\x02\"=\n\x15\x41ssetsVersionResponse\x12\x0f\n\x07version\x18\x01 \x02(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xb0\x02\"\xab\x01\n\x0c\x41tlasAchieve\x12\n\n\x02id\x18\x01 \x02(\x05\x12\x10\n\x08progress\x18\x02 \x02(\x05\x12\x13\n\x0bis_complete\x18\x03 \x02(\x08\x12\x11\n\tack_value\x18\x04 \x02(\x05\x12+\n\x0e\x64\x61te_completed\x18\x05 \x01(\x0b\x32\x13.PegasusShared.Date\x12\x18\n\x10\x63ompletion_count\x18\x06 \x01(\x05\x12\x0e\n\x06\x61\x63tive\x18\x07 \x01(\x08\"N\n\x10\x41tlasAchieveInfo\x12&\n\x04info\x18\x01 \x03(\x0b\x32\x18.PegasusUtil.AchieveInfo\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10l\"L\n\rAtlasAchieves\x12\'\n\x04info\x18\x01 \x03(\x0b\x32\x19.PegasusUtil.AtlasAchieve\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10k\"H\n\x0f\x41tlasAddBooster\x12\x12\n\naccount_id\x18\x01 \x02(\x04\x12\x0c\n\x04type\x18\x02 \x02(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9d\x03\"r\n\x0c\x41tlasAddCard\x12\x12\n\naccount_id\x18\x01 \x02(\x04\x12(\n\x08\x63\x61rd_def\x18\x02 \x02(\x0b\x32\x16.PegasusShared.CardDef\x12\x0f\n\x07is_seen\x18\x03 \x01(\x08\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x95\x03\"N\n\x10\x41tlasAddCardBack\x12\x12\n\naccount_id\x18\x01 \x02(\x04\x12\x11\n\tcard_back\x18\x02 \x02(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa6\x03\"8\n\rAtlasAddDraft\x12\x12\n\naccount_id\x18\x01 \x02(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa0\x03\"H\n\x13\x41tlasBoosterHistory\x12\x0e\n\x06\x61\x63tion\x18\x01 \x02(\x05\x12!\n\x04when\x18\x02 \x02(\x0b\x32\x13.PegasusShared.Date\"\x85\x01\n\x0c\x41tlasBooster\x12\x12\n\nbooster_id\x18\x01 \x02(\x04\x12\x0f\n\x07is_open\x18\x02 \x02(\x08\x12\x0c\n\x04type\x18\x03 \x02(\x05\x12\x0f\n\x07license\x18\x04 \x02(\x04\x12\x31\n\x07history\x18\x05 \x03(\x0b\x32 .PegasusUtil.AtlasBoosterHistory\"L\n\rAtlasBoosters\x12\'\n\x04info\x18\x01 \x03(\x0b\x32\x19.PegasusUtil.AtlasBooster\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10m\"z\n\x14\x41tlasCardBackHistory\x12\x11\n\tcard_back\x18\x01 \x02(\x05\x12\x0e\n\x06\x61\x63tion\x18\x02 \x02(\x05\x12!\n\x04when\x18\x03 \x02(\x0b\x32\x13.PegasusShared.Date\x12\r\n\x05\x64\x61ta1\x18\x04 \x01(\x03\x12\r\n\x05\x64\x61ta2\x18\x05 \x01(\x03\"l\n\x0e\x41tlasCardBacks\x12\x12\n\ncard_backs\x18\x01 \x03(\x05\x12\x32\n\x07history\x18\x02 \x03(\x0b\x32!.PegasusUtil.AtlasCardBackHistory\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10p\"Z\n\x10\x41tlasCardHistory\x12\x0e\n\x06\x61\x63tion\x18\x01 \x02(\r\x12(\n\x0b\x61\x63tion_date\x18\x02 \x02(\x0b\x32\x13.PegasusShared.Date\x12\x0c\n\x04\x64\x61ta\x18\x03 \x02(\x04\"\x9e\x01\n\x0f\x41tlasCardDetail\x12\x0f\n\x07\x63\x61rd_id\x18\x01 \x02(\x04\x12\x0f\n\x07\x64\x65leted\x18\x02 \x02(\r\x12\x0f\n\x07is_seen\x18\x03 \x02(\x08\x12(\n\x0binsert_date\x18\x04 \x02(\x0b\x32\x13.PegasusShared.Date\x12.\n\x07history\x18\x05 \x03(\x0b\x32\x1d.PegasusUtil.AtlasCardHistory\"U\n\x10\x41tlasCardDetails\x12-\n\x07\x64\x65tails\x18\x01 \x03(\x0b\x32\x1c.PegasusUtil.AtlasCardDetail\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10g\"O\n\x15\x41tlasChangeArcaneDust\x12\x12\n\naccount_id\x18\x01 \x02(\x04\x12\r\n\x05\x64\x65lta\x18\x02 \x02(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x97\x03\"N\n\x14\x41tlasChangeBonusGold\x12\x12\n\naccount_id\x18\x01 \x02(\x04\x12\r\n\x05\x64\x65lta\x18\x02 \x02(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa4\x03\"I\n\x0f\x41tlasChangeGold\x12\x12\n\naccount_id\x18\x01 \x02(\x04\x12\r\n\x05\x64\x65lta\x18\x02 \x02(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa2\x03\"O\n\x0f\x41tlasCollection\x12(\n\x06stacks\x18\x01 \x03(\x0b\x32\x18.PegasusShared.CardStack\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x66\"z\n\x14\x41tlasCurrencyHistory\x12\x10\n\x08\x63urrency\x18\x01 \x02(\x05\x12\x0e\n\x06\x61mount\x18\x02 \x02(\x03\x12\x0e\n\x06\x61\x63tion\x18\x03 \x02(\x05\x12!\n\x04when\x18\x04 \x02(\x0b\x32\x13.PegasusShared.Date\x12\r\n\x05\x64\x61ta1\x18\x05 \x01(\x03\"^\n\x14\x41tlasCurrencyDetails\x12\x32\n\x07history\x18\x01 \x03(\x0b\x32!.PegasusUtil.AtlasCurrencyHistory\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10o\"P\n\x11\x41tlasCurrentDraft\x12\x0f\n\x07\x64\x65\x63k_id\x18\x01 \x02(\x04\x12\x0c\n\x04slot\x18\x02 \x02(\x05\x12\x0c\n\x04wins\x18\x03 \x02(\x05\x12\x0e\n\x06losses\x18\x04 \x02(\x05\"A\n\rAtlasDeckCard\x12#\n\x03\x64\x65\x66\x18\x01 \x02(\x0b\x32\x16.PegasusShared.CardDef\x12\x0b\n\x03qty\x18\x02 \x01(\x05\"_\n\tAtlasDeck\x12\'\n\x06header\x18\x01 \x02(\x0b\x32\x17.PegasusShared.DeckInfo\x12)\n\x05\x63\x61rds\x18\x02 \x03(\x0b\x32\x1a.PegasusUtil.AtlasDeckCard\"G\n\nAtlasDecks\x12%\n\x05\x64\x65\x63ks\x18\x01 \x03(\x0b\x32\x16.PegasusUtil.AtlasDeck\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10h\"\x93\x01\n\x11\x41tlasDraftHistory\x12\x0f\n\x07\x64\x65\x63k_id\x18\x01 \x02(\x04\x12\x0e\n\x06\x61\x63tion\x18\x02 \x02(\x05\x12!\n\x04when\x18\x03 \x02(\x0b\x32\x13.PegasusShared.Date\x12\r\n\x05\x64\x61ta1\x18\x04 \x01(\x03\x12\r\n\x05\x64\x61ta2\x18\x05 \x01(\x03\x12\r\n\x05\x64\x61ta3\x18\x06 \x01(\x03\x12\r\n\x05\x64\x61ta4\x18\x07 \x01(\x03\"L\n\x17\x41tlasDraftTicketHistory\x12\x0e\n\x06\x61\x63tion\x18\x01 \x02(\x05\x12!\n\x04when\x18\x02 \x02(\x0b\x32\x13.PegasusShared.Date\"\x7f\n\x10\x41tlasDraftTicket\x12\x11\n\tticket_id\x18\x01 \x02(\x04\x12\x10\n\x08was_used\x18\x02 \x02(\x08\x12\x0f\n\x07license\x18\x03 \x02(\t\x12\x35\n\x07history\x18\x04 \x03(\x0b\x32$.PegasusUtil.AtlasDraftTicketHistory\"\xb9\x01\n\x0b\x41tlasDrafts\x12.\n\x07tickets\x18\x01 \x03(\x0b\x32\x1d.PegasusUtil.AtlasDraftTicket\x12\x35\n\rcurrent_draft\x18\x02 \x01(\x0b\x32\x1e.PegasusUtil.AtlasCurrentDraft\x12/\n\x07history\x18\x03 \x03(\x0b\x32\x1e.PegasusUtil.AtlasDraftHistory\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10n\"\x90\x01\n\nAtlasError\x12/\n\x04type\x18\x01 \x02(\x0e\x32!.PegasusUtil.AtlasError.ErrorType\x12\r\n\x05\x65rror\x18\x02 \x02(\x05\".\n\tErrorType\x12\x0e\n\nBNET_ERROR\x10\x01\x12\x11\n\rPEGASUS_ERROR\x10\x02\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x65\"R\n\x13\x41tlasGetAchieveInfo\x12\x12\n\naccount_id\x18\x01 \x02(\x04\x12\x12\n\nachieve_id\x18\x02 \x02(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9b\x03\";\n\x10\x41tlasGetAchieves\x12\x12\n\naccount_id\x18\x01 \x02(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9a\x03\"D\n\x19\x41tlasGetAdventureProgress\x12\x12\n\naccount_id\x18\x01 \x02(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xaa\x03\"\x8b\x01\n\x10\x41tlasGetBoosters\x12\x12\n\naccount_id\x18\x01 \x02(\x04\x12\'\n\nstart_date\x18\x02 \x01(\x0b\x32\x13.PegasusShared.Date\x12%\n\x08\x65nd_date\x18\x03 \x01(\x0b\x32\x13.PegasusShared.Date\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9c\x03\"\x8c\x01\n\x11\x41tlasGetCardBacks\x12\x12\n\naccount_id\x18\x01 \x02(\x04\x12\'\n\nstart_date\x18\x02 \x01(\x0b\x32\x13.PegasusShared.Date\x12%\n\x08\x65nd_date\x18\x03 \x01(\x0b\x32\x13.PegasusShared.Date\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa5\x03\"\xb8\x01\n\x13\x41tlasGetCardDetails\x12\x12\n\naccount_id\x18\x01 \x02(\x04\x12(\n\x08\x63\x61rd_def\x18\x02 \x02(\x0b\x32\x16.PegasusShared.CardDef\x12\'\n\nstart_date\x18\x03 \x01(\x0b\x32\x13.PegasusShared.Date\x12%\n\x08\x65nd_date\x18\x04 \x01(\x0b\x32\x13.PegasusShared.Date\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x93\x03\"=\n\x12\x41tlasGetCollection\x12\x12\n\naccount_id\x18\x01 \x02(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x92\x03\"\x92\x01\n\x17\x41tlasGetCurrencyDetails\x12\x12\n\naccount_id\x18\x01 \x02(\x04\x12\'\n\nstart_date\x18\x02 \x01(\x0b\x32\x13.PegasusShared.Date\x12%\n\x08\x65nd_date\x18\x03 \x01(\x0b\x32\x13.PegasusShared.Date\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa3\x03\"8\n\rAtlasGetDecks\x12\x12\n\naccount_id\x18\x01 \x02(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x94\x03\"\x89\x01\n\x0e\x41tlasGetDrafts\x12\x12\n\naccount_id\x18\x01 \x02(\x04\x12\'\n\nstart_date\x18\x02 \x01(\x0b\x32\x13.PegasusShared.Date\x12%\n\x08\x65nd_date\x18\x03 \x01(\x0b\x32\x13.PegasusShared.Date\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9f\x03\"9\n\x0e\x41tlasGetOrders\x12\x12\n\naccount_id\x18\x01 \x02(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x99\x03\"=\n\x12\x41tlasGetPlayerInfo\x12\x12\n\naccount_id\x18\x01 \x02(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x91\x03\"\x83\x03\n\nAtlasOrder\x12\n\n\x02id\x18\x01 \x02(\x03\x12\x0c\n\x04type\x18\x02 \x02(\x05\x12\x0e\n\x06status\x18\x03 \x02(\x05\x12\x0c\n\x04\x64\x61ta\x18\x04 \x02(\x03\x12\x12\n\nfirst_data\x18\x05 \x02(\x03\x12\r\n\x05order\x18\x06 \x02(\t\x12\x0e\n\x06wallet\x18\x07 \x02(\x03\x12\x0f\n\x07\x65rr_str\x18\x08 \x02(\t\x12\x12\n\nip_address\x18\t \x02(\t\x12\x14\n\x0c\x63hallenge_id\x18\n \x02(\t\x12\x32\n\x08provider\x18\x0b \x02(\x0e\x32 .PegasusShared.BattlePayProvider\x12\x16\n\x0ethird_party_id\x18\x0c \x01(\t\x12\x12\n\nproduct_id\x18\r \x01(\t\x12(\n\x0binsert_date\x18\x0e \x01(\x0b\x32\x13.PegasusShared.Date\x12(\n\x0blast_update\x18\x0f \x01(\x0b\x32\x13.PegasusShared.Date\x12\x1b\n\x13third_party_user_id\x18\x10 \x01(\t\"J\n\x0b\x41tlasOrders\x12\'\n\x06orders\x18\x01 \x03(\x0b\x32\x17.PegasusUtil.AtlasOrder\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10j\"I\n\x1e\x41tlasReleaseMobilePurchaseLock\x12\x12\n\naccount_id\x18\x01 \x02(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa9\x03\"Q\n\x12\x41tlasRemoveBooster\x12\x12\n\naccount_id\x18\x01 \x02(\x04\x12\x12\n\nbooster_id\x18\x02 \x02(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9e\x03\"K\n\x0f\x41tlasRemoveCard\x12\x12\n\naccount_id\x18\x01 \x02(\x04\x12\x0f\n\x07\x63\x61rd_id\x18\x02 \x02(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x96\x03\"Q\n\x13\x41tlasRemoveCardBack\x12\x12\n\naccount_id\x18\x01 \x02(\x04\x12\x11\n\tcard_back\x18\x02 \x02(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa7\x03\"N\n\x10\x41tlasRemoveDraft\x12\x12\n\naccount_id\x18\x01 \x02(\x04\x12\x11\n\tticket_id\x18\x02 \x02(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa1\x03\"L\n\x10\x41tlasRestoreCard\x12\x12\n\naccount_id\x18\x01 \x02(\x04\x12\x0f\n\x07\x63\x61rd_id\x18\x02 \x02(\x04\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x98\x03\"\xb0\x01\n\x19\x41tlasSetAdventureProgress\x12\x12\n\naccount_id\x18\x01 \x02(\x04\x12\x0f\n\x07wing_id\x18\x02 \x02(\x05\x12\x10\n\x08progress\x18\x03 \x01(\x05\x12\x16\n\x0e\x61\x64\x64_wing_flags\x18\x04 \x01(\x04\x12\x19\n\x11remove_wing_flags\x18\x05 \x01(\x04\x12\x14\n\x0cprogress_ack\x18\x06 \x01(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xab\x03\"\"\n\x0c\x41tlasSuccess\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10i\"q\n\x11\x41tlasWingProgress\x12\x32\n\x08progress\x18\x01 \x02(\x0b\x32 .PegasusShared.AdventureProgress\x12(\n\x0blast_update\x18\x02 \x02(\x0b\x32\x13.PegasusShared.Date\"Z\n\x16\x41tlasAdventureProgress\x12,\n\x04list\x18\x01 \x03(\x0b\x32\x1e.PegasusUtil.AtlasWingProgress\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10q\"a\n\x0b\x42oosterCard\x12(\n\x08\x63\x61rd_def\x18\x01 \x02(\x0b\x32\x16.PegasusShared.CardDef\x12(\n\x0binsert_date\x18\x02 \x02(\x0b\x32\x13.PegasusShared.Date\"M\n\x0e\x42oosterContent\x12&\n\x04list\x18\x01 \x03(\x0b\x32\x18.PegasusUtil.BoosterCard\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xe2\x01\"\x1b\n\x0b\x42oosterInfo\x12\x0c\n\x04type\x18\x02 \x02(\x05\"\xdc\x03\n\x0b\x41tlasPlayer\x12\x11\n\tplayer_id\x18\x01 \x02(\x03\x12\x15\n\rgames_started\x18\x02 \x02(\x05\x12\x17\n\x0fgames_completed\x18\x03 \x02(\x05\x12\x11\n\tgames_won\x18\x04 \x02(\x05\x12\x12\n\ngames_lost\x18\x05 \x02(\x05\x12\x16\n\x0e\x64\x65leted_reason\x18\x06 \x02(\x05\x12\x12\n\ndeck_limit\x18\x07 \x02(\x05\x12\x19\n\x11\x63\x61mpaign_progress\x18\x08 \x02(\x03\x12\x16\n\x0erandom_deck_id\x18\t \x02(\x03\x12\x13\n\x0b\x61rcane_dust\x18\n \x02(\x03\x12\x14\n\x0clast_game_id\x18\x0b \x02(\x03\x12\x16\n\x0e\x63raft_asset_id\x18\x0c \x02(\x05\x12\x15\n\rcraft_premium\x18\r \x02(\x05\x12\x13\n\x0b\x63raft_count\x18\x0e \x02(\x05\x12\x14\n\x0c\x62\x61ttlepay_id\x18\x0f \x02(\x03\x12.\n\x0c\x62ooster_list\x18\x10 \x03(\x0b\x32\x18.PegasusUtil.BoosterInfo\x12\x0c\n\x04gold\x18\x11 \x02(\x03\x12\x12\n\nbonus_gold\x18\x12 \x02(\x03\x12\x19\n\x11\x64\x65\x66\x61ult_card_back\x18\x13 \x02(\x05\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x64\"J\n\x0b\x42oosterList\x12&\n\x04list\x18\x01 \x03(\x0b\x32\x18.PegasusUtil.BoosterInfo\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xe0\x01\"V\n\x0c\x42oosterTally\x12\x0f\n\x07is_open\x18\x01 \x02(\x08\x12\x0f\n\x07type_id\x18\x02 \x02(\x05\x12\x11\n\tis_bought\x18\x03 \x02(\x08\x12\x11\n\tsource_id\x18\x04 \x02(\x05\"P\n\x10\x42oosterTallyList\x12\'\n\x04list\x18\x01 \x03(\x0b\x32\x19.PegasusUtil.BoosterTally\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xb9\x02\"\xcb\x02\n\x0e\x42oughtSoldCard\x12#\n\x03\x64\x65\x66\x18\x01 \x02(\x0b\x32\x16.PegasusShared.CardDef\x12\x0e\n\x06\x61mount\x18\x02 \x02(\x05\x12\x32\n\x06result\x18\x03 \x02(\x0e\x32\".PegasusUtil.BoughtSoldCard.Result\x12\x0f\n\x06nerfed\x18\x84\x05 \x01(\x08\x12\x17\n\x0funit_sell_price\x18\x06 \x01(\x05\x12\x16\n\x0eunit_buy_price\x18\x07 \x01(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x82\x02\"y\n\x06Result\x12\n\n\x06\x46\x41ILED\x10\x01\x12\x08\n\x04SOLD\x10\x02\x12\n\n\x06\x42OUGHT\x10\x03\x12\r\n\tSOULBOUND\x10\x04\x12\x14\n\x10WRONG_SELL_PRICE\x10\x05\x12\x13\n\x0fWRONG_BUY_PRICE\x10\x06\x12\x13\n\x0fMISSING_ACHIEVE\x10\x07\"B\n\nBundleItem\x12\x14\n\x0cproduct_type\x18\x01 \x02(\x05\x12\x0c\n\x04\x64\x61ta\x18\x02 \x02(\x05\x12\x10\n\x08quantity\x18\x03 \x02(\x05\"\xb6\x01\n\x06\x42undle\x12\n\n\x02id\x18\x01 \x02(\t\x12\x0c\n\x04\x63ost\x18\x02 \x02(\x01\x12\x10\n\x08\x61pple_id\x18\x03 \x01(\t\x12\x16\n\x0egoogle_play_id\x18\x04 \x01(\t\x12&\n\x05items\x18\x05 \x03(\x0b\x32\x17.PegasusUtil.BundleItem\x12\x11\n\tgold_cost\x18\x06 \x01(\x03\x12\x11\n\tamazon_id\x18\x07 \x01(\t\x12\x1a\n\x12product_event_name\x18\t \x01(\t\"\x95\x01\n\x0b\x42uySellCard\x12#\n\x03\x64\x65\x66\x18\x01 \x02(\x0b\x32\x16.PegasusShared.CardDef\x12\x0f\n\x06\x62uying\x18\x82\x03 \x02(\x08\x12\x17\n\x0funit_sell_price\x18\x04 \x01(\x05\x12\x16\n\x0eunit_buy_price\x18\x05 \x01(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x81\x02\x12\n\n\x06System\x10\x00\"\xe2\x02\n\x0e\x43\x61ncelPurchase\x12\x16\n\x0eis_auto_cancel\x18\x01 \x02(\x08\x12i\n\x12third_party_reason\x18\x02 \x01(\x0e\x32\x32.PegasusUtil.CancelPurchase.ThirdPartyCancelReason:\x19PROVIDER_REPORTED_FAILURE\x12\x11\n\tdevice_id\x18\x03 \x02(\t\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x92\x02\x12\n\n\x06System\x10\x01\"\x98\x01\n\x16ThirdPartyCancelReason\x12\x1d\n\x19PROVIDER_REPORTED_FAILURE\x10\x01\x12\x1e\n\x1aNOT_RECOGNIZED_BY_PROVIDER\x10\x02\x12 \n\x1cUSER_CANCELED_BEFORE_PAYMENT\x10\x03\x12\x1d\n\x19USER_CANCELING_TO_UNBLOCK\x10\x04\"\xfb\x01\n\x16\x43\x61ncelPurchaseResponse\x12@\n\x06result\x18\x01 \x02(\x0e\x32\x30.PegasusUtil.CancelPurchaseResponse.CancelResult\x12\x16\n\x0etransaction_id\x18\x02 \x01(\x03\x12\x12\n\nproduct_id\x18\x03 \x01(\t\x12\x10\n\x08\x63urrency\x18\x04 \x01(\x05\"L\n\x0c\x43\x61ncelResult\x12\x0e\n\nCR_SUCCESS\x10\x01\x12\x12\n\x0e\x43R_NOT_ALLOWED\x10\x02\x12\x18\n\x14\x43R_NOTHING_TO_CANCEL\x10\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x93\x02\"@\n\x0b\x43\x61ncelQuest\x12\x10\n\x08quest_id\x18\x01 \x02(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x99\x02\x12\n\n\x06System\x10\x00\"}\n\x13\x43\x61ncelQuestResponse\x12\x10\n\x08quest_id\x18\x01 \x02(\x05\x12\x0f\n\x07success\x18\x02 \x02(\x08\x12.\n\x11next_quest_cancel\x18\x03 \x01(\x0b\x32\x13.PegasusShared.Date\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9a\x02\"[\n\tCardBacks\x12\x19\n\x11\x64\x65\x66\x61ult_card_back\x18\x01 \x02(\x05\x12\x12\n\ncard_backs\x18\x02 \x03(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xec\x01\x12\n\n\x06System\x10\x00\"\x1d\n\x0c\x43\x61rdUseCount\x12\r\n\x05\x61sset\x18\x01 \x02(\x05\"\\\n\tCardValue\x12$\n\x04\x63\x61rd\x18\x01 \x02(\x0b\x32\x16.PegasusShared.CardDef\x12\x0b\n\x03\x62uy\x18\x02 \x02(\x05\x12\x0c\n\x04sell\x18\x03 \x02(\x05\x12\x0e\n\x06nerfed\x18\x04 \x02(\x08\"a\n\nCardValues\x12%\n\x05\x63\x61rds\x18\x01 \x03(\x0b\x32\x16.PegasusUtil.CardValue\x12\x17\n\x0f\x63\x61rd_nerf_index\x18\x02 \x02(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x84\x02\"N\n\x1a\x43heckAccountLicenseAchieve\x12\x0f\n\x07\x61\x63hieve\x18\x01 \x02(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xa9\x02\x12\n\n\x06System\x10\x01\"7\n\x14\x43heckAccountLicenses\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x8b\x02\x12\n\n\x06System\x10\x00\"4\n\x11\x43heckGameLicenses\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x94\x02\x12\n\n\x06System\x10\x01\"T\n\x15\x43heckLicensesResponse\x12\x15\n\raccount_level\x18\x01 \x02(\x08\x12\x0f\n\x07success\x18\x02 \x02(\x08\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x95\x02\"w\n\x0c\x43lientOption\x12\r\n\x05index\x18\x01 \x02(\x05\x12\x0f\n\x07\x61s_bool\x18\x02 \x01(\x08\x12\x10\n\x08\x61s_int32\x18\x03 \x01(\x05\x12\x10\n\x08\x61s_int64\x18\x04 \x01(\x03\x12\x10\n\x08\x61s_float\x18\x05 \x01(\x02\x12\x11\n\tas_uint64\x18\x06 \x01(\x04\"`\n\rClientOptions\x12*\n\x07options\x18\x01 \x03(\x0b\x32\x19.PegasusUtil.ClientOption\x12\x0e\n\x06\x66\x61iled\x18\x02 \x01(\x08\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xf1\x01\"2\n\x0f\x43loseCardMarket\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x87\x02\x12\n\n\x06System\x10\x00\"K\n\nCollection\x12(\n\x06stacks\x18\x01 \x03(\x0b\x32\x18.PegasusShared.CardStack\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xcf\x01\"_\n\nCreateDeck\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x0c\n\x04hero\x18\x02 \x02(\x05\x12\x14\n\x0chero_premium\x18\x03 \x02(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xd1\x01\x12\n\n\x06System\x10\x00\"\x90\x01\n\x08\x44\x42\x41\x63tion\x12-\n\x06\x61\x63tion\x18\x01 \x02(\x0e\x32\x1d.PegasusShared.DatabaseAction\x12-\n\x06result\x18\x02 \x02(\x0e\x32\x1d.PegasusShared.DatabaseResult\x12\x11\n\tmeta_data\x18\x03 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xd8\x01\"\xa4\x01\n\tDebugAuth\x12-\n\x06result\x18\x01 \x02(\x0e\x32\x1d.PegasusUtil.DebugAuth.Result\x12\x11\n\tplayer_id\x18\x02 \x02(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xce\x01\"@\n\x06Result\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05VALID\x10\x01\x12\x0c\n\x08\x42\x41\x44_USER\x10\x02\x12\x10\n\x0c\x42\x41\x44_PASSWORD\x10\x03\"]\n\x0c\x44\x65\x63kContents\x12\x0c\n\x04\x64\x65\x63k\x18\x01 \x02(\x03\x12*\n\x05\x63\x61rds\x18\x02 \x03(\x0b\x32\x1b.PegasusShared.DeckCardData\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xd7\x01\"I\n\x0b\x44\x65\x63kCreated\x12%\n\x04info\x18\x01 \x02(\x0b\x32\x17.PegasusShared.DeckInfo\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xd9\x01\"0\n\x0b\x44\x65\x63kDeleted\x12\x0c\n\x04\x64\x65\x63k\x18\x01 \x02(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xda\x01\"A\n\x0e\x44\x65\x63kGainedCard\x12\x0c\n\x04\x64\x65\x63k\x18\x01 \x02(\x03\x12\x0c\n\x04\x63\x61rd\x18\x02 \x02(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xdc\x01\"G\n\x08\x44\x65\x63kList\x12&\n\x05\x64\x65\x63ks\x18\x01 \x03(\x0b\x32\x17.PegasusShared.DeckInfo\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xca\x01\"?\n\x0c\x44\x65\x63kLostCard\x12\x0c\n\x04\x64\x65\x63k\x18\x01 \x02(\x03\x12\x0c\n\x04\x63\x61rd\x18\x02 \x02(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xdd\x01\">\n\x0b\x44\x65\x63kRenamed\x12\x0c\n\x04\x64\x65\x63k\x18\x01 \x02(\x03\x12\x0c\n\x04name\x18\x02 \x02(\t\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xdb\x01\"h\n\x0b\x44\x65\x63kSetData\x12\x0c\n\x04\x64\x65\x63k\x18\x01 \x02(\x03\x12*\n\x05\x63\x61rds\x18\x02 \x03(\x0b\x32\x1b.PegasusShared.DeckCardData\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xde\x01\x12\n\n\x06System\x10\x00\";\n\nDeleteDeck\x12\x0c\n\x04\x64\x65\x63k\x18\x01 \x02(\x03\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xd2\x01\x12\n\n\x06System\x10\x00\"@\n\x0f\x44\x65vBnetIdentify\x12\x0c\n\x04name\x18\x01 \x02(\t\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x83\x02\x12\n\n\x06System\x10\x00\"\xaa\x01\n\x0c\x44isconnected\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\x12\x13\n\x0bgame_handle\x18\x02 \x01(\x05\x12\x15\n\rclient_handle\x18\x03 \x01(\x03\x12\x0c\n\x04port\x18\x04 \x01(\x05\x12\x0f\n\x07version\x18\x05 \x01(\t\x12\x17\n\x0f\x61urora_password\x18\x06 \x01(\t\x12\x10\n\x08scenario\x18\x07 \x01(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa1\x02\"-\n\nDoPurchase\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x91\x02\x12\n\n\x06System\x10\x01\"Q\n\x0f\x44raftAckRewards\x12\x0f\n\x07\x64\x65\x63k_id\x18\x01 \x02(\x03\x12\x0c\n\x04slot\x18\x02 \x02(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x9f\x02\x12\n\n\x06System\x10\x00\"-\n\nDraftBegin\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xeb\x01\x12\n\n\x06System\x10\x00\"G\n\x0e\x44raftBeginning\x12\x0f\n\x07\x64\x65\x63k_id\x18\x01 \x02(\x03\x12\x0f\n\x07\x63hoices\x18\x02 \x03(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xf6\x01\"G\n\x0b\x44raftChosen\x12\r\n\x05\x61sset\x18\x01 \x02(\x05\x12\x14\n\x0cnext_choices\x18\x02 \x03(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xf9\x01\"\xa2\x02\n\nDraftError\x12\x35\n\nerror_code\x18\x01 \x02(\x0e\x32!.PegasusUtil.DraftError.ErrorCode\"\xc7\x01\n\tErrorCode\x12\x0e\n\nDE_UNKNOWN\x10\x00\x12\x11\n\rDE_NO_LICENSE\x10\x01\x12\x13\n\x0f\x44\x45_RETIRE_FIRST\x10\x02\x12\x13\n\x0f\x44\x45_NOT_IN_DRAFT\x10\x03\x12\x0f\n\x0b\x44\x45_BAD_DECK\x10\x04\x12\x0f\n\x0b\x44\x45_BAD_SLOT\x10\x05\x12\x10\n\x0c\x44\x45_BAD_INDEX\x10\x06\x12 \n\x1c\x44\x45_NOT_IN_DRAFT_BUT_COULD_BE\x10\x07\x12\x17\n\x13\x44\x45_FEATURE_DISABLED\x10\x08\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xfb\x01\";\n\x18\x44raftGetPicksAndContents\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xf4\x01\x12\n\n\x06System\x10\x00\"^\n\rDraftMakePick\x12\x0f\n\x07\x64\x65\x63k_id\x18\x01 \x02(\x03\x12\x0c\n\x04slot\x18\x02 \x02(\x05\x12\r\n\x05index\x18\x03 \x02(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xf5\x01\x12\n\n\x06System\x10\x00\"M\n\x0b\x44raftRetire\x12\x0f\n\x07\x64\x65\x63k_id\x18\x01 \x02(\x03\x12\x0c\n\x04slot\x18\x02 \x02(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xf2\x01\x12\n\n\x06System\x10\x00\"\x8a\x02\n\x0e\x44raftRewardBag\x12\x41\n\x0ereward_booster\x18\x01 \x01(\x0b\x32).PegasusShared.ProfileNoticeRewardBooster\x12;\n\x0breward_card\x18\x02 \x01(\x0b\x32&.PegasusShared.ProfileNoticeRewardCard\x12;\n\x0breward_dust\x18\x03 \x01(\x0b\x32&.PegasusShared.ProfileNoticeRewardDust\x12;\n\x0breward_gold\x18\x04 \x01(\x0b\x32&.PegasusShared.ProfileNoticeRewardGold\"\xe9\x01\n\x10\x44raftRewardChest\x12)\n\x04\x62\x61g1\x18\x01 \x01(\x0b\x32\x1b.PegasusUtil.DraftRewardBag\x12)\n\x04\x62\x61g2\x18\x02 \x01(\x0b\x32\x1b.PegasusUtil.DraftRewardBag\x12)\n\x04\x62\x61g3\x18\x03 \x01(\x0b\x32\x1b.PegasusUtil.DraftRewardBag\x12)\n\x04\x62\x61g4\x18\x04 \x01(\x0b\x32\x1b.PegasusUtil.DraftRewardBag\x12)\n\x04\x62\x61g5\x18\x05 \x01(\x0b\x32\x1b.PegasusUtil.DraftRewardBag\"\xe4\x01\n\x17\x44raftChoicesAndContents\x12\x0f\n\x07\x64\x65\x63k_id\x18\x01 \x02(\x03\x12\x0c\n\x04slot\x18\x02 \x02(\x05\x12\x0f\n\x07\x63hoices\x18\x03 \x03(\x05\x12\x0c\n\x04hero\x18\x04 \x02(\x05\x12*\n\x05\x63\x61rds\x18\x05 \x03(\x0b\x32\x1b.PegasusShared.DeckCardData\x12\x0c\n\x04wins\x18\x06 \x02(\x05\x12\x0e\n\x06losses\x18\x07 \x02(\x05\x12,\n\x05\x63hest\x18\x08 \x01(\x0b\x32\x1d.PegasusUtil.DraftRewardChest\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xf8\x01\"b\n\x0c\x44raftRetired\x12\x0f\n\x07\x64\x65\x63k_id\x18\x01 \x02(\x03\x12,\n\x05\x63hest\x18\x02 \x02(\x0b\x32\x1d.PegasusUtil.DraftRewardChest\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xf7\x01\"9\n\x11\x44raftRewardsAcked\x12\x0f\n\x07\x64\x65\x63k_id\x18\x01 \x02(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa0\x02\"$\n\x0e\x44roppedRequest\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x00\"\x8b\x01\n\x07\x45rror37\x12\x33\n\x06reason\x18\x01 \x02(\x0e\x32#.PegasusUtil.Error37.ThrottleReason\x12\x14\n\x0cretry_millis\x18\x02 \x02(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x8a\x02\" \n\x0eThrottleReason\x12\x0e\n\nTR_DB_LOAD\x10\x00\"|\n\tGamesInfo\x12\x15\n\rgames_started\x18\x01 \x02(\x05\x12\x11\n\tgames_won\x18\x02 \x02(\x05\x12\x12\n\ngames_lost\x18\x03 \x02(\x05\x12\x1c\n\x14\x66ree_reward_progress\x18\x04 \x02(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xd0\x01\"\x89\x04\n\x0eGetAccountInfo\x12\x34\n\x07request\x18\x01 \x02(\x0e\x32#.PegasusUtil.GetAccountInfo.Request\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xc9\x01\x12\n\n\x06System\x10\x00\"\x9f\x03\n\x07Request\x12\x0e\n\nLAST_LOGIN\x10\x01\x12\r\n\tDECK_LIST\x10\x02\x12\x0e\n\nCOLLECTION\x10\x03\x12\x0e\n\nMEDAL_INFO\x10\x04\x12\x11\n\rMEDAL_HISTORY\x10\x05\x12\x0c\n\x08\x42OOSTERS\x10\x06\x12\x0e\n\nCARD_BACKS\x10\x07\x12\x11\n\rPLAYER_RECORD\x10\x08\x12\x10\n\x0cGAMES_PLAYED\x10\t\x12\x0e\n\nDECK_LIMIT\x10\n\x12\x11\n\rCAMPAIGN_INFO\x10\x0b\x12\x0b\n\x07NOTICES\x10\x0c\x12\x08\n\x04MOTD\x10\r\x12\x12\n\x0e\x43LIENT_OPTIONS\x10\x0e\x12\x0f\n\x0b\x43\x41RD_VALUES\x10\x0f\x12\x10\n\x0c\x44ISCONNECTED\x10\x10\x12\x17\n\x13\x41RCANE_DUST_BALANCE\x10\x11\x12\x0c\n\x08\x46\x45\x41TURES\x10\x12\x12\x13\n\x0fREWARD_PROGRESS\x10\x13\x12\x10\n\x0cGOLD_BALANCE\x10\x14\x12\x0b\n\x07HERO_XP\x10\x15\x12\r\n\tPVP_QUEUE\x10\x16\x12\x11\n\rMASSIVE_LOGIN\x10\x17\x12\x11\n\rBOOSTER_TALLY\x10\x18\"S\n\x0bGetAchieves\x12#\n\x1bonly_active_or_new_complete\x18\x01 \x01(\x08\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xfd\x01\x12\n\n\x06System\x10\x00\"7\n\x14GetAdventureProgress\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xb1\x02\x12\n\n\x06System\x10\x00\"3\n\x10GetAssetsVersion\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xaf\x02\x12\n\n\x06System\x10\x00\"5\n\x12GetBattlePayConfig\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xed\x01\x12\n\n\x06System\x10\x01\"5\n\x12GetBattlePayStatus\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xff\x01\x12\n\n\x06System\x10\x01\"8\n\x07GetDeck\x12\x0c\n\x04\x64\x65\x63k\x18\x01 \x02(\x03\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xd6\x01\x12\n\n\x06System\x10\x00\";\n\nGetOptions\x12\x0c\n\x04keys\x18\x01 \x03(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xf0\x01\x12\n\n\x06System\x10\x00\"\x7f\n\x11GetPurchaseMethod\x12\x12\n\nproduct_id\x18\x01 \x02(\t\x12\x10\n\x08quantity\x18\x02 \x02(\x05\x12\x10\n\x08\x63urrency\x18\x03 \x02(\x05\x12\x11\n\tdevice_id\x18\x04 \x02(\t\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xfa\x01\x12\n\n\x06System\x10\x01\"V\n\x1bGetThirdPartyPurchaseStatus\x12\x16\n\x0ethird_party_id\x18\x01 \x02(\t\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xa6\x02\x12\n\n\x06System\x10\x01\"s\n\x0bGoldBalance\x12\x16\n\x0e\x63\x61pped_balance\x18\x01 \x02(\x03\x12\x15\n\rbonus_balance\x18\x02 \x02(\x03\x12\x0b\n\x03\x63\x61p\x18\x03 \x02(\x03\x12\x13\n\x0b\x63\x61p_warning\x18\x04 \x02(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x96\x02\"2\n\x0fGoldCostBooster\x12\x0c\n\x04\x63ost\x18\x01 \x02(\x03\x12\x11\n\tpack_type\x18\x02 \x02(\x05\"\xef\x01\n\x17\x42\x61ttlePayConfigResponse\x12$\n\x07\x62undles\x18\x01 \x03(\x0b\x32\x13.PegasusUtil.Bundle\x12\x10\n\x08\x63urrency\x18\x02 \x01(\x05\x12\x13\n\x0bunavailable\x18\x04 \x01(\x08\x12\x1f\n\x17secs_before_auto_cancel\x18\x05 \x01(\x05\x12\x38\n\x12gold_cost_boosters\x18\x06 \x03(\x0b\x32\x1c.PegasusUtil.GoldCostBooster\x12\x17\n\x0fgold_cost_arena\x18\x07 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xee\x01\">\n\rGuardianTrack\x12\x0c\n\x04what\x18\x01 \x02(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x85\x02\x12\n\n\x06System\x10\x00\"\xeb\x02\n\x0cGuardianVars\x12\x0f\n\x07tourney\x18\x01 \x01(\x08\x12\x10\n\x08practice\x18\x02 \x01(\x08\x12\x0e\n\x06\x63\x61sual\x18\x03 \x01(\x08\x12\r\n\x05\x66orge\x18\x04 \x01(\x08\x12\x10\n\x08\x66riendly\x18\x05 \x01(\x08\x12\x0f\n\x07manager\x18\x06 \x01(\x08\x12\x10\n\x08\x63rafting\x18\x07 \x01(\x08\x12\x0e\n\x06hunter\x18\x08 \x01(\x08\x12\x0c\n\x04mage\x18\t \x01(\x08\x12\x0f\n\x07paladin\x18\n \x01(\x08\x12\x0e\n\x06priest\x18\x0b \x01(\x08\x12\r\n\x05rogue\x18\x0c \x01(\x08\x12\x0e\n\x06shaman\x18\r \x01(\x08\x12\x0f\n\x07warlock\x18\x0e \x01(\x08\x12\x0f\n\x07warrior\x18\x0f \x01(\x08\x12\x15\n\rshow_user_u_i\x18\x10 \x01(\x05\x12\r\n\x05store\x18\x11 \x01(\x08\x12\x12\n\nbattle_pay\x18\x12 \x01(\x08\x12\x15\n\rbuy_with_gold\x18\x13 \x01(\x08\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x88\x02\"8\n\x15MassDisenchantRequest\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x8c\x02\x12\n\n\x06System\x10\x00\"=\n\x16MassDisenchantResponse\x12\x0e\n\x06\x61mount\x18\x01 \x02(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x8d\x02\"\xa5\x01\n\x10MedalHistoryInfo\x12\x0e\n\x06season\x18\x01 \x02(\x05\x12!\n\x04when\x18\x02 \x02(\x0b\x32\x13.PegasusShared.Date\x12\r\n\x05stars\x18\x03 \x02(\x05\x12\x12\n\nstar_level\x18\x04 \x02(\x05\x12\x13\n\x0blevel_start\x18\x05 \x02(\x05\x12\x11\n\tlevel_end\x18\x06 \x02(\x05\x12\x13\n\x0blegend_rank\x18\x07 \x01(\x05\"R\n\x0cMedalHistory\x12-\n\x06medals\x18\x01 \x03(\x0b\x32\x1d.PegasusUtil.MedalHistoryInfo\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xea\x01\"\xb7\x01\n\tMedalInfo\x12\x13\n\x0bseason_wins\x18\x03 \x02(\x05\x12\r\n\x05stars\x18\x06 \x02(\x05\x12\x0e\n\x06streak\x18\x07 \x02(\x05\x12\x12\n\nstar_level\x18\x08 \x02(\x05\x12\x13\n\x0blevel_start\x18\t \x02(\x05\x12\x11\n\tlevel_end\x18\n \x02(\x05\x12\x10\n\x08\x63\x61n_lose\x18\x0b \x02(\x08\x12\x13\n\x0blegend_rank\x18\r \x01(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xe8\x01\"R\n\x0cNearbyPlayer\x12\x12\n\nbnet_id_hi\x18\x01 \x02(\x04\x12\x12\n\nbnet_id_lo\x18\x02 \x02(\x04\x12\x1a\n\x12session_start_time\x18\x03 \x02(\x04\"\x9c\x03\n\x13NextHeroLevelReward\x12\r\n\x05level\x18\x01 \x02(\x05\x12\x41\n\x0ereward_booster\x18\x02 \x01(\x0b\x32).PegasusShared.ProfileNoticeRewardBooster\x12;\n\x0breward_card\x18\x03 \x01(\x0b\x32&.PegasusShared.ProfileNoticeRewardCard\x12;\n\x0breward_dust\x18\x04 \x01(\x0b\x32&.PegasusShared.ProfileNoticeRewardDust\x12;\n\x0breward_gold\x18\x05 \x01(\x0b\x32&.PegasusShared.ProfileNoticeRewardGold\x12=\n\x0creward_mount\x18\x06 \x01(\x0b\x32\'.PegasusShared.ProfileNoticeRewardMount\x12=\n\x0creward_forge\x18\x07 \x01(\x0b\x32\'.PegasusShared.ProfileNoticeRewardForge\"\x85\x01\n\nHeroXPInfo\x12\x10\n\x08\x63lass_id\x18\x01 \x02(\x05\x12\r\n\x05level\x18\x02 \x02(\x05\x12\x0f\n\x07\x63urr_xp\x18\x03 \x02(\x03\x12\x0e\n\x06max_xp\x18\x04 \x02(\x03\x12\x35\n\x0bnext_reward\x18\x05 \x01(\x0b\x32 .PegasusUtil.NextHeroLevelReward\"H\n\x06HeroXP\x12)\n\x08xp_infos\x18\x01 \x03(\x0b\x32\x17.PegasusUtil.HeroXPInfo\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9b\x02\"\x1a\n\x03NOP\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xfe\x01\"\xab\x01\n\x11OneClientTracking\x12\x33\n\x05level\x18\x01 \x02(\x0e\x32$.PegasusUtil.OneClientTracking.Level\x12\x0c\n\x04what\x18\x02 \x02(\x05\x12\x11\n\ttimestamp\x18\x04 \x02(\x04\x12\x0f\n\x07message\x18\x03 \x01(\t\"/\n\x05Level\x12\n\n\x06L_INFO\x10\x01\x12\r\n\tL_WARNING\x10\x02\x12\x0b\n\x07L_ERROR\x10\x03\"_\n\x0e\x43lientTracking\x12,\n\x04info\x18\x04 \x03(\x0b\x32\x1e.PegasusUtil.OneClientTracking\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xe4\x01\x12\n\n\x06System\x10\x00\"D\n\x0bOpenBooster\x12\x14\n\x0c\x62ooster_type\x18\x02 \x02(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xe1\x01\x12\n\n\x06System\x10\x00\"V\n\x0cPlayerRecord\x12\x0c\n\x04type\x18\x01 \x02(\x05\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x05\x12\x0c\n\x04wins\x18\x03 \x02(\x05\x12\x0e\n\x06losses\x18\x04 \x02(\x05\x12\x0c\n\x04ties\x18\x05 \x01(\x05\"P\n\rPlayerRecords\x12*\n\x07records\x18\x01 \x03(\x0b\x32\x19.PegasusUtil.PlayerRecord\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x8e\x02\"M\n\tPlayQueue\x12+\n\x05queue\x18\x01 \x02(\x0b\x32\x1c.PegasusShared.PlayQueueInfo\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9e\x02\";\n\x10ProfileDeckLimit\x12\x12\n\ndeck_limit\x18\x01 \x02(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xe7\x01\"P\n\x10ProfileLastLogin\x12\'\n\nlast_login\x18\x01 \x02(\x0b\x32\x13.PegasusShared.Date\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xe3\x01\"\x99\x07\n\rProfileNotice\x12\r\n\x05\x65ntry\x18\x01 \x02(\x03\x12\x30\n\x05medal\x18\x02 \x01(\x0b\x32!.PegasusShared.ProfileNoticeMedal\x12\x41\n\x0ereward_booster\x18\x03 \x01(\x0b\x32).PegasusShared.ProfileNoticeRewardBooster\x12;\n\x0breward_card\x18\x04 \x01(\x0b\x32&.PegasusShared.ProfileNoticeRewardCard\x12;\n\x0bprecon_deck\x18\x06 \x01(\x0b\x32&.PegasusShared.ProfileNoticePreconDeck\x12;\n\x0breward_dust\x18\x07 \x01(\x0b\x32&.PegasusShared.ProfileNoticeRewardDust\x12;\n\x0breward_gold\x18\x08 \x01(\x0b\x32&.PegasusShared.ProfileNoticeRewardGold\x12=\n\x0creward_mount\x18\t \x01(\x0b\x32\'.PegasusShared.ProfileNoticeRewardMount\x12=\n\x0creward_forge\x18\n \x01(\x0b\x32\'.PegasusShared.ProfileNoticeRewardForge\x12\x0e\n\x06origin\x18\x0b \x02(\x05\x12\x13\n\x0borigin_data\x18\x0c \x01(\x03\x12!\n\x04when\x18\r \x02(\x0b\x32\x13.PegasusShared.Date\x12\x36\n\x08purchase\x18\x0e \x01(\x0b\x32$.PegasusShared.ProfileNoticePurchase\x12>\n\x10reward_card_back\x18\x0f \x01(\x0b\x32$.PegasusShared.ProfileNoticeCardBack\x12J\n\x0e\x64\x63_game_result\x18\x10 \x01(\x0b\x32\x32.PegasusShared.ProfileNoticeDisconnectedGameResult\x12;\n\x0b\x62onus_stars\x18\x11 \x01(\x0b\x32&.PegasusShared.ProfileNoticeBonusStars\x12I\n\x12\x61\x64venture_progress\x18\x12 \x01(\x0b\x32-.PegasusShared.ProfileNoticeAdventureProgress\"O\n\x0eProfileNotices\x12(\n\x04list\x18\x01 \x03(\x0b\x32\x1a.PegasusUtil.ProfileNotice\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xd4\x01\"\xca\x01\n\x0fProfileProgress\x12\x10\n\x08progress\x18\x01 \x02(\x03\x12\x12\n\nbest_forge\x18\x02 \x02(\x05\x12\'\n\nlast_forge\x18\x03 \x01(\x0b\x32\x13.PegasusShared.Date\x12\x19\n\x0e\x64isplay_banner\x18\x04 \x01(\x05:\x01\x30\x12\x38\n\x11\x61\x64venture_options\x18\x05 \x03(\x0b\x32\x1d.PegasusUtil.AdventureOptions\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xe9\x01\"\xcc\x07\n\rPurchaseError\x12/\n\x05\x65rror\x18\x01 \x02(\x0e\x32 .PegasusUtil.PurchaseError.Error\x12\x1c\n\x14purchase_in_progress\x18\x02 \x01(\t\x12\x12\n\nerror_code\x18\x03 \x01(\t\"\xd7\x06\n\x05\x45rror\x12\x16\n\tE_UNKNOWN\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\x12\r\n\tE_SUCCESS\x10\x00\x12\x17\n\x13\x45_STILL_IN_PROGRESS\x10\x01\x12\x12\n\x0e\x45_INVALID_BNET\x10\x02\x12\x10\n\x0c\x45_SERVICE_NA\x10\x03\x12\x1a\n\x16\x45_PURCHASE_IN_PROGRESS\x10\x04\x12\x0e\n\nE_DATABASE\x10\x05\x12\x16\n\x12\x45_INVALID_QUANTITY\x10\x06\x12\x17\n\x13\x45_DUPLICATE_LICENSE\x10\x07\x12\x16\n\x12\x45_REQUEST_NOT_SENT\x10\x08\x12\x14\n\x10\x45_NO_ACTIVE_BPAY\x10\t\x12\x11\n\rE_FAILED_RISK\x10\n\x12\x0e\n\nE_CANCELED\x10\x0b\x12\x0e\n\nE_WAIT_MOP\x10\x0c\x12\x19\n\x15\x45_WAIT_CLIENT_CONFIRM\x10\r\x12\x16\n\x12\x45_WAIT_CLIENT_RISK\x10\x0e\x12\x10\n\x0c\x45_PRODUCT_NA\x10\x0f\x12\x12\n\x0e\x45_RISK_TIMEOUT\x10\x10\x12\x1b\n\x17\x45_PRODUCT_ALREADY_OWNED\x10\x11\x12\x1e\n\x1a\x45_WAIT_THIRD_PARTY_RECEIPT\x10\x12\x12\x1d\n\x19\x45_PRODUCT_EVENT_HAS_ENDED\x10\x13\x12\x15\n\x11\x45_BP_GENERIC_FAIL\x10\x64\x12\x1a\n\x16\x45_BP_INVALID_CC_EXPIRY\x10\x65\x12\x13\n\x0f\x45_BP_RISK_ERROR\x10\x66\x12\x19\n\x15\x45_BP_NO_VALID_PAYMENT\x10g\x12\x15\n\x11\x45_BP_PAYMENT_AUTH\x10h\x12\x18\n\x14\x45_BP_PROVIDER_DENIED\x10i\x12\x15\n\x11\x45_BP_PURCHASE_BAN\x10j\x12\x17\n\x13\x45_BP_SPENDING_LIMIT\x10k\x12\x19\n\x15\x45_BP_PARENTAL_CONTROL\x10l\x12\x12\n\x0e\x45_BP_THROTTLED\x10m\x12 \n\x1c\x45_BP_THIRD_PARTY_BAD_RECEIPT\x10n\x12!\n\x1d\x45_BP_THIRD_PARTY_RECEIPT_USED\x10o\x12$\n E_BP_PRODUCT_UNIQUENESS_VIOLATED\x10p\x12\x17\n\x13\x45_BP_REGION_IS_DOWN\x10q\"\xa7\x03\n\x17\x42\x61ttlePayStatusResponse\x12\x42\n\x06status\x18\x01 \x02(\x0e\x32\x32.PegasusUtil.BattlePayStatusResponse.PurchaseState\x12\x12\n\nproduct_id\x18\x02 \x01(\t\x12\x32\n\x0epurchase_error\x18\x03 \x01(\x0b\x32\x1a.PegasusUtil.PurchaseError\x12\x1c\n\x14\x62\x61ttle_pay_available\x18\x04 \x02(\x08\x12\x16\n\x0etransaction_id\x18\x05 \x01(\x03\x12\x16\n\x0ethird_party_id\x18\x06 \x01(\t\x12\x10\n\x08\x63urrency\x18\x07 \x01(\x05\x12H\n\x08provider\x18\x08 \x01(\x0e\x32 .PegasusShared.BattlePayProvider:\x14\x42P_PROVIDER_BLIZZARD\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x89\x02\"A\n\rPurchaseState\x12\x0c\n\x08PS_READY\x10\x00\x12\x14\n\x10PS_CHECK_RESULTS\x10\x01\x12\x0c\n\x08PS_ERROR\x10\x02\"\xe9\x01\n\x0ePurchaseMethod\x12\x12\n\nproduct_id\x18\x01 \x01(\t\x12\x10\n\x08quantity\x18\x02 \x01(\x05\x12\x10\n\x08\x63urrency\x18\x03 \x01(\x05\x12\x13\n\x0bwallet_name\x18\x04 \x01(\t\x12\x14\n\x0cuse_ebalance\x18\x05 \x01(\x08\x12)\n\x05\x65rror\x18\x06 \x01(\x0b\x32\x1a.PegasusUtil.PurchaseError\x12\x16\n\x0etransaction_id\x18\x07 \x01(\x03\x12\x1c\n\x14is_zero_cost_license\x18\x08 \x01(\x08\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x90\x02\"\xc6\x01\n\x10PurchaseResponse\x12)\n\x05\x65rror\x18\x01 \x02(\x0b\x32\x1a.PegasusUtil.PurchaseError\x12\x16\n\x0etransaction_id\x18\x02 \x01(\x03\x12\x12\n\nproduct_id\x18\x03 \x01(\t\x12\x16\n\x0ethird_party_id\x18\x04 \x01(\t\x12\x10\n\x08\x63urrency\x18\x05 \x01(\x05\x12\x1c\n\x14is_zero_cost_license\x18\x06 \x01(\x08\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x80\x02\"d\n\x10PurchaseWithGold\x12\x10\n\x08quantity\x18\x01 \x02(\x05\x12\x0f\n\x07product\x18\x02 \x02(\x05\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x97\x02\x12\n\n\x06System\x10\x00\"\x84\x02\n\x18PurchaseWithGoldResponse\x12\x44\n\x06result\x18\x01 \x02(\x0e\x32\x34.PegasusUtil.PurchaseWithGoldResponse.PurchaseResult\x12\x11\n\tgold_used\x18\x02 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x98\x02\"z\n\x0ePurchaseResult\x12\x0e\n\nPR_SUCCESS\x10\x01\x12\x19\n\x15PR_INSUFFICIENT_FUNDS\x10\x02\x12\x11\n\rPR_PRODUCT_NA\x10\x03\x12\x11\n\rPR_FEATURE_NA\x10\x04\x12\x17\n\x13PR_INVALID_QUANTITY\x10\x05\"I\n\nRenameDeck\x12\x0c\n\x04\x64\x65\x63k\x18\x01 \x02(\x03\x12\x0c\n\x04name\x18\x02 \x02(\t\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xd3\x01\x12\n\n\x06System\x10\x00\"\xb9\x02\n\x0eRewardProgress\x12\'\n\nseason_end\x18\x01 \x02(\x0b\x32\x13.PegasusShared.Date\x12\x15\n\rwins_per_gold\x18\x02 \x02(\x05\x12\x17\n\x0fgold_per_reward\x18\x03 \x02(\x05\x12\x18\n\x10max_gold_per_day\x18\x04 \x02(\x05\x12\x15\n\rseason_number\x18\x05 \x02(\x05\x12\x0f\n\x07pack_id\x18\x08 \x01(\x05\x12\x15\n\rxp_solo_limit\x18\t \x02(\x05\x12\x16\n\x0emax_hero_level\x18\n \x02(\x05\x12.\n\x11next_quest_cancel\x18\x0b \x02(\x0b\x32\x13.PegasusShared.Date\x12\x18\n\x10\x65vent_timing_mod\x18\x0c \x02(\x02\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x8f\x02\"p\n\x13SetAdventureOptions\x12\x38\n\x11\x61\x64venture_options\x18\x01 \x02(\x0b\x32\x1d.PegasusUtil.AdventureOptions\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xb6\x02\x12\n\n\x06System\x10\x00\"R\n\x0bSetCardBack\x12\x11\n\tcard_back\x18\x01 \x02(\x05\x12\x0f\n\x07\x64\x65\x63k_id\x18\x02 \x01(\x03\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xa3\x02\x12\n\n\x06System\x10\x00\"_\n\x13SetCardBackResponse\x12\x0f\n\x07success\x18\x01 \x02(\x08\x12\x11\n\tcard_back\x18\x02 \x02(\x05\x12\x0f\n\x07\x64\x65\x63k_id\x18\x03 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa4\x02\"Y\n\nSetOptions\x12*\n\x07options\x18\x01 \x03(\x0b\x32\x19.PegasusUtil.ClientOption\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xef\x01\x12\n\n\x06System\x10\x00\"=\n\x0bSetProgress\x12\r\n\x05value\x18\x01 \x02(\x03\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xe6\x01\x12\n\n\x06System\x10\x00\"\xaa\x01\n\x13SetProgressResponse\x12\x37\n\x06result\x18\x01 \x02(\x0e\x32\'.PegasusUtil.SetProgressResponse.Result\x12\x10\n\x08progress\x18\x02 \x01(\x03\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa8\x02\"3\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x01\x12\n\n\x06\x46\x41ILED\x10\x02\x12\x10\n\x0c\x41LREADY_DONE\x10\x03\"?\n\x12SpecialEventTiming\x12\r\n\x05\x65vent\x18\x01 \x02(\t\x12\r\n\x05start\x18\x02 \x01(\x04\x12\x0b\n\x03\x65nd\x18\x03 \x01(\x04\"\xb3\x04\n\x11MassiveLoginReply\x12\x36\n\x10profile_progress\x18\x01 \x02(\x0b\x32\x1c.PegasusUtil.ProfileProgress\x12*\n\nmedal_info\x18\x02 \x02(\x0b\x32\x16.PegasusUtil.MedalInfo\x12(\n\tdeck_list\x18\x03 \x02(\x0b\x32\x15.PegasusUtil.DeckList\x12\x39\n\x12profile_deck_limit\x18\x04 \x02(\x0b\x32\x1d.PegasusUtil.ProfileDeckLimit\x12.\n\x0cgold_balance\x18\x05 \x02(\x0b\x32\x18.PegasusUtil.GoldBalance\x12;\n\x13\x61rcane_dust_balance\x18\x06 \x02(\x0b\x32\x1e.PegasusUtil.ArcaneDustBalance\x12\x34\n\x0freward_progress\x18\x07 \x02(\x0b\x32\x1b.PegasusUtil.RewardProgress\x12\x32\n\x0eplayer_records\x18\x08 \x02(\x0b\x32\x1a.PegasusUtil.PlayerRecords\x12*\n\ncard_backs\x18\t \x02(\x0b\x32\x16.PegasusUtil.CardBacks\x12=\n\x14special_event_timing\x18\n \x03(\x0b\x32\x1f.PegasusUtil.SpecialEventTiming\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xac\x02\" \n\tSubscribe\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xba\x02\"\x98\x01\n\x11SubscribeResponse\x12\r\n\x05route\x18\x01 \x01(\x04\x12\x1a\n\x12supported_features\x18\x02 \x01(\x04\x12\x17\n\x0fkeep_alive_secs\x18\x03 \x01(\x04\"*\n\x08\x46\x65\x61tures\x12\x0e\n\nF_SYSTEM_0\x10\x01\x12\x0e\n\nF_SYSTEM_1\x10\x02\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xbb\x02\"\xda\x01\n ThirdPartyPurchaseStatusResponse\x12\x16\n\x0ethird_party_id\x18\x01 \x02(\t\x12\x44\n\x06status\x18\x02 \x02(\x0e\x32\x34.PegasusUtil.ThirdPartyPurchaseStatusResponse.Status\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa7\x02\"C\n\x06Status\x12\r\n\tNOT_FOUND\x10\x01\x12\r\n\tSUCCEEDED\x10\x02\x12\n\n\x06\x46\x41ILED\x10\x03\x12\x0f\n\x0bIN_PROGRESS\x10\x04\"]\n\x15ThirdPartyReceiptData\x12\x16\n\x0ethird_party_id\x18\x01 \x01(\t\x12\x0f\n\x07receipt\x18\x02 \x01(\t\x12\x1b\n\x13third_party_user_id\x18\x03 \x01(\t\"\xea\x01\n\x17StartThirdPartyPurchase\x12\x32\n\x08provider\x18\x01 \x02(\x0e\x32 .PegasusShared.BattlePayProvider\x12\x12\n\nproduct_id\x18\x02 \x02(\t\x12\x10\n\x08quantity\x18\x03 \x02(\x05\x12\x41\n\x15\x64\x61ngling_receipt_data\x18\x04 \x01(\x0b\x32\".PegasusUtil.ThirdPartyReceiptData\x12\x11\n\tdevice_id\x18\x05 \x02(\t\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xb8\x02\x12\n\n\x06System\x10\x01\"\x8c\x01\n\x17SubmitThirdPartyReceipt\x12\x38\n\x0creceipt_data\x18\x01 \x02(\x0b\x32\".PegasusUtil.ThirdPartyReceiptData\x12\x16\n\x0etransaction_id\x18\x02 \x02(\x03\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xa5\x02\x12\n\n\x06System\x10\x01\"N\n\x14TriggerEventResponse\x12\x10\n\x08\x65vent_id\x18\x01 \x02(\x05\x12\x0f\n\x07success\x18\x02 \x02(\x08\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xab\x02\"\x99\x01\n\x15TriggerLaunchDayEvent\x12.\n\x0blast_played\x18\x01 \x02(\x0b\x32\x19.PegasusUtil.NearbyPlayer\x12/\n\x0cother_player\x18\x02 \x02(\x0b\x32\x19.PegasusUtil.NearbyPlayer\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xaa\x02\x12\n\n\x06System\x10\x00\"X\n\x0bUpdateLogin\x12\x16\n\x0ereply_required\x18\x01 \x01(\x08\x12\x10\n\x08referral\x18\x02 \x01(\t\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\xcd\x01\x12\n\n\x06System\x10\x00\"*\n\x13UpdateLoginComplete\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xb3\x02\"\x8d\x01\n\x08UtilAuth\x12,\n\x06result\x18\x01 \x02(\x0e\x32\x1c.PegasusUtil.UtilAuth.Result\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xcc\x01\">\n\x06Result\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07\x41LLOWED\x10\x01\x12\x0b\n\x07INVALID\x10\x02\x12\r\n\tNO_SERVER\x10\x03\"M\n\rUtilHandshake\x12\x15\n\rclient_handle\x18\x01 \x02(\x05\x12\x10\n\x08password\x18\x02 \x02(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xcb\x01\"C\n\x0fValidateAchieve\x12\x0f\n\x07\x61\x63hieve\x18\x01 \x02(\x05\"\x1f\n\x08PacketID\x12\x07\n\x02ID\x10\x9c\x02\x12\n\n\x06System\x10\x00\"?\n\x17ValidateAchieveResponse\x12\x0f\n\x07\x61\x63hieve\x18\x01 \x02(\x05\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x9d\x02')
   ,
   dependencies=[PegasusShared__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -40,8 +40,8 @@ _ACCOUNTLICENSEACHIEVERESPONSE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=190,
-  serialized_end=209,
+  serialized_start=173,
+  serialized_end=192,
 )
 _sym_db.RegisterEnumDescriptor(_ACCOUNTLICENSEACHIEVERESPONSE_PACKETID)
 
@@ -74,8 +74,8 @@ _ACCOUNTLICENSEACHIEVERESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=211,
-  serialized_end=307,
+  serialized_start=194,
+  serialized_end=290,
 )
 _sym_db.RegisterEnumDescriptor(_ACCOUNTLICENSEACHIEVERESPONSE_RESULT)
 
@@ -92,8 +92,8 @@ _ACHIEVES_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=696,
-  serialized_end=715,
+  serialized_start=679,
+  serialized_end=698,
 )
 _sym_db.RegisterEnumDescriptor(_ACHIEVES_PACKETID)
 
@@ -114,8 +114,8 @@ _ACKACHIEVEPROGRESS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=773,
-  serialized_end=804,
+  serialized_start=756,
+  serialized_end=787,
 )
 _sym_db.RegisterEnumDescriptor(_ACKACHIEVEPROGRESS_PACKETID)
 
@@ -136,8 +136,8 @@ _ACKCARDSEEN_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=864,
-  serialized_end=895,
+  serialized_start=847,
+  serialized_end=878,
 )
 _sym_db.RegisterEnumDescriptor(_ACKCARDSEEN_PACKETID)
 
@@ -158,8 +158,8 @@ _ACKNOTICE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=925,
-  serialized_end=956,
+  serialized_start=908,
+  serialized_end=939,
 )
 _sym_db.RegisterEnumDescriptor(_ACKNOTICE_PACKETID)
 
@@ -180,8 +180,8 @@ _ACKNOWLEDGEBANNER_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=995,
-  serialized_end=1026,
+  serialized_start=978,
+  serialized_end=1009,
 )
 _sym_db.RegisterEnumDescriptor(_ACKNOWLEDGEBANNER_PACKETID)
 
@@ -202,8 +202,8 @@ _ACKWINGPROGRESS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1074,
-  serialized_end=1105,
+  serialized_start=1057,
+  serialized_end=1088,
 )
 _sym_db.RegisterEnumDescriptor(_ACKWINGPROGRESS_PACKETID)
 
@@ -220,8 +220,8 @@ _ADVENTUREPROGRESSRESPONSE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1243,
-  serialized_end=1262,
+  serialized_start=1226,
+  serialized_end=1245,
 )
 _sym_db.RegisterEnumDescriptor(_ADVENTUREPROGRESSRESPONSE_PACKETID)
 
@@ -238,8 +238,8 @@ _ARCANEDUSTBALANCE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1302,
-  serialized_end=1321,
+  serialized_start=1285,
+  serialized_end=1304,
 )
 _sym_db.RegisterEnumDescriptor(_ARCANEDUSTBALANCE_PACKETID)
 
@@ -256,8 +256,8 @@ _ASSETSVERSIONRESPONSE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1365,
-  serialized_end=1384,
+  serialized_start=1348,
+  serialized_end=1367,
 )
 _sym_db.RegisterEnumDescriptor(_ASSETSVERSIONRESPONSE_PACKETID)
 
@@ -274,8 +274,8 @@ _ATLASACHIEVEINFO_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1620,
-  serialized_end=1638,
+  serialized_start=1603,
+  serialized_end=1621,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASACHIEVEINFO_PACKETID)
 
@@ -292,8 +292,8 @@ _ATLASACHIEVES_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1698,
-  serialized_end=1716,
+  serialized_start=1681,
+  serialized_end=1699,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASACHIEVES_PACKETID)
 
@@ -310,8 +310,8 @@ _ATLASADDBOOSTER_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1771,
-  serialized_end=1790,
+  serialized_start=1754,
+  serialized_end=1773,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASADDBOOSTER_PACKETID)
 
@@ -328,8 +328,8 @@ _ATLASADDCARD_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1887,
-  serialized_end=1906,
+  serialized_start=1870,
+  serialized_end=1889,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASADDCARD_PACKETID)
 
@@ -346,8 +346,8 @@ _ATLASADDCARDBACK_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1967,
-  serialized_end=1986,
+  serialized_start=1950,
+  serialized_end=1969,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASADDCARDBACK_PACKETID)
 
@@ -364,8 +364,8 @@ _ATLASADDDRAFT_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2025,
-  serialized_end=2044,
+  serialized_start=2008,
+  serialized_end=2027,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASADDDRAFT_PACKETID)
 
@@ -382,8 +382,8 @@ _ATLASBOOSTERS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2314,
-  serialized_end=2332,
+  serialized_start=2297,
+  serialized_end=2315,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASBOOSTERS_PACKETID)
 
@@ -400,8 +400,8 @@ _ATLASCARDBACKS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2548,
-  serialized_end=2566,
+  serialized_start=2531,
+  serialized_end=2549,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASCARDBACKS_PACKETID)
 
@@ -418,8 +418,8 @@ _ATLASCARDDETAILS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2888,
-  serialized_end=2906,
+  serialized_start=2871,
+  serialized_end=2889,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASCARDDETAILS_PACKETID)
 
@@ -436,8 +436,8 @@ _ATLASCHANGEARCANEDUST_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2968,
-  serialized_end=2987,
+  serialized_start=2951,
+  serialized_end=2970,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASCHANGEARCANEDUST_PACKETID)
 
@@ -454,8 +454,8 @@ _ATLASCHANGEBONUSGOLD_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3048,
-  serialized_end=3067,
+  serialized_start=3031,
+  serialized_end=3050,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASCHANGEBONUSGOLD_PACKETID)
 
@@ -472,8 +472,8 @@ _ATLASCHANGEGOLD_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3123,
-  serialized_end=3142,
+  serialized_start=3106,
+  serialized_end=3125,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASCHANGEGOLD_PACKETID)
 
@@ -490,8 +490,8 @@ _ATLASCOLLECTION_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3205,
-  serialized_end=3223,
+  serialized_start=3188,
+  serialized_end=3206,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASCOLLECTION_PACKETID)
 
@@ -508,8 +508,8 @@ _ATLASCURRENCYDETAILS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3425,
-  serialized_end=3443,
+  serialized_start=3408,
+  serialized_end=3426,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASCURRENCYDETAILS_PACKETID)
 
@@ -526,8 +526,8 @@ _ATLASDECKS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3744,
-  serialized_end=3762,
+  serialized_start=3727,
+  serialized_end=3745,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASDECKS_PACKETID)
 
@@ -544,8 +544,8 @@ _ATLASDRAFTS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4289,
-  serialized_end=4307,
+  serialized_start=4272,
+  serialized_end=4290,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASDRAFTS_PACKETID)
 
@@ -566,8 +566,8 @@ _ATLASERROR_ERRORTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4400,
-  serialized_end=4446,
+  serialized_start=4371,
+  serialized_end=4417,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASERROR_ERRORTYPE)
 
@@ -584,8 +584,8 @@ _ATLASERROR_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4448,
-  serialized_end=4466,
+  serialized_start=4419,
+  serialized_end=4437,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASERROR_PACKETID)
 
@@ -602,8 +602,8 @@ _ATLASGETACHIEVEINFO_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4531,
-  serialized_end=4550,
+  serialized_start=4502,
+  serialized_end=4521,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASGETACHIEVEINFO_PACKETID)
 
@@ -620,8 +620,8 @@ _ATLASGETACHIEVES_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4592,
-  serialized_end=4611,
+  serialized_start=4563,
+  serialized_end=4582,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASGETACHIEVES_PACKETID)
 
@@ -638,8 +638,8 @@ _ATLASGETADVENTUREPROGRESS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4662,
-  serialized_end=4681,
+  serialized_start=4633,
+  serialized_end=4652,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASGETADVENTUREPROGRESS_PACKETID)
 
@@ -656,8 +656,8 @@ _ATLASGETBOOSTERS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4804,
-  serialized_end=4823,
+  serialized_start=4775,
+  serialized_end=4794,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASGETBOOSTERS_PACKETID)
 
@@ -674,8 +674,8 @@ _ATLASGETCARDBACKS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4947,
-  serialized_end=4966,
+  serialized_start=4918,
+  serialized_end=4937,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASGETCARDBACKS_PACKETID)
 
@@ -692,8 +692,8 @@ _ATLASGETCARDDETAILS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5134,
-  serialized_end=5153,
+  serialized_start=5105,
+  serialized_end=5124,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASGETCARDDETAILS_PACKETID)
 
@@ -710,8 +710,8 @@ _ATLASGETCOLLECTION_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5197,
-  serialized_end=5216,
+  serialized_start=5168,
+  serialized_end=5187,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASGETCOLLECTION_PACKETID)
 
@@ -728,8 +728,8 @@ _ATLASGETCURRENCYDETAILS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5346,
-  serialized_end=5365,
+  serialized_start=5317,
+  serialized_end=5336,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASGETCURRENCYDETAILS_PACKETID)
 
@@ -746,8 +746,8 @@ _ATLASGETDECKS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5404,
-  serialized_end=5423,
+  serialized_start=5375,
+  serialized_end=5394,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASGETDECKS_PACKETID)
 
@@ -764,8 +764,8 @@ _ATLASGETDRAFTS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5544,
-  serialized_end=5563,
+  serialized_start=5515,
+  serialized_end=5534,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASGETDRAFTS_PACKETID)
 
@@ -782,8 +782,8 @@ _ATLASGETORDERS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5603,
-  serialized_end=5622,
+  serialized_start=5574,
+  serialized_end=5593,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASGETORDERS_PACKETID)
 
@@ -800,8 +800,8 @@ _ATLASGETPLAYERINFO_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5666,
-  serialized_end=5685,
+  serialized_start=5637,
+  serialized_end=5656,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASGETPLAYERINFO_PACKETID)
 
@@ -818,8 +818,8 @@ _ATLASORDERS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6155,
-  serialized_end=6173,
+  serialized_start=6104,
+  serialized_end=6122,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASORDERS_PACKETID)
 
@@ -836,8 +836,8 @@ _ATLASRELEASEMOBILEPURCHASELOCK_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6229,
-  serialized_end=6248,
+  serialized_start=6178,
+  serialized_end=6197,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASRELEASEMOBILEPURCHASELOCK_PACKETID)
 
@@ -854,8 +854,8 @@ _ATLASREMOVEBOOSTER_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6312,
-  serialized_end=6331,
+  serialized_start=6261,
+  serialized_end=6280,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASREMOVEBOOSTER_PACKETID)
 
@@ -872,8 +872,8 @@ _ATLASREMOVECARD_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6389,
-  serialized_end=6408,
+  serialized_start=6338,
+  serialized_end=6357,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASREMOVECARD_PACKETID)
 
@@ -890,8 +890,8 @@ _ATLASREMOVECARDBACK_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6472,
-  serialized_end=6491,
+  serialized_start=6421,
+  serialized_end=6440,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASREMOVECARDBACK_PACKETID)
 
@@ -908,8 +908,8 @@ _ATLASREMOVEDRAFT_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6552,
-  serialized_end=6571,
+  serialized_start=6501,
+  serialized_end=6520,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASREMOVEDRAFT_PACKETID)
 
@@ -926,8 +926,8 @@ _ATLASRESTORECARD_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6630,
-  serialized_end=6649,
+  serialized_start=6579,
+  serialized_end=6598,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASRESTORECARD_PACKETID)
 
@@ -944,8 +944,8 @@ _ATLASSETADVENTUREPROGRESS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6809,
-  serialized_end=6828,
+  serialized_start=6758,
+  serialized_end=6777,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASSETADVENTUREPROGRESS_PACKETID)
 
@@ -962,8 +962,8 @@ _ATLASSUCCESS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6846,
-  serialized_end=6864,
+  serialized_start=6795,
+  serialized_end=6813,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASSUCCESS_PACKETID)
 
@@ -980,8 +980,8 @@ _ATLASADVENTUREPROGRESS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=7053,
-  serialized_end=7071,
+  serialized_start=7002,
+  serialized_end=7020,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASADVENTUREPROGRESS_PACKETID)
 
@@ -998,8 +998,8 @@ _BOOSTERCONTENT_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=7230,
-  serialized_end=7249,
+  serialized_start=7179,
+  serialized_end=7198,
 )
 _sym_db.RegisterEnumDescriptor(_BOOSTERCONTENT_PACKETID)
 
@@ -1016,8 +1016,8 @@ _ATLASPLAYER_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=7754,
-  serialized_end=7772,
+  serialized_start=7688,
+  serialized_end=7706,
 )
 _sym_db.RegisterEnumDescriptor(_ATLASPLAYER_PACKETID)
 
@@ -1034,8 +1034,8 @@ _BOOSTERLIST_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=7829,
-  serialized_end=7848,
+  serialized_start=7763,
+  serialized_end=7782,
 )
 _sym_db.RegisterEnumDescriptor(_BOOSTERLIST_PACKETID)
 
@@ -1052,8 +1052,8 @@ _BOOSTERTALLYLIST_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=8014,
-  serialized_end=8033,
+  serialized_start=7933,
+  serialized_end=7952,
 )
 _sym_db.RegisterEnumDescriptor(_BOOSTERTALLYLIST_PACKETID)
 
@@ -1070,8 +1070,8 @@ _BOUGHTSOLDCARD_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=8247,
-  serialized_end=8266,
+  serialized_start=8144,
+  serialized_end=8163,
 )
 _sym_db.RegisterEnumDescriptor(_BOUGHTSOLDCARD_PACKETID)
 
@@ -1112,8 +1112,8 @@ _BOUGHTSOLDCARD_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=8268,
-  serialized_end=8389,
+  serialized_start=8165,
+  serialized_end=8286,
 )
 _sym_db.RegisterEnumDescriptor(_BOUGHTSOLDCARD_RESULT)
 
@@ -1134,8 +1134,8 @@ _BUYSELLCARD_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=8777,
-  serialized_end=8808,
+  serialized_start=8660,
+  serialized_end=8691,
 )
 _sym_db.RegisterEnumDescriptor(_BUYSELLCARD_PACKETID)
 
@@ -1156,8 +1156,8 @@ _CANCELPURCHASE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=8960,
-  serialized_end=8991,
+  serialized_start=8862,
+  serialized_end=8893,
 )
 _sym_db.RegisterEnumDescriptor(_CANCELPURCHASE_PACKETID)
 
@@ -1186,8 +1186,8 @@ _CANCELPURCHASE_THIRDPARTYCANCELREASON = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=8994,
-  serialized_end=9146,
+  serialized_start=8896,
+  serialized_end=9048,
 )
 _sym_db.RegisterEnumDescriptor(_CANCELPURCHASE_THIRDPARTYCANCELREASON)
 
@@ -1212,8 +1212,8 @@ _CANCELPURCHASERESPONSE_CANCELRESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=9315,
-  serialized_end=9391,
+  serialized_start=9205,
+  serialized_end=9281,
 )
 _sym_db.RegisterEnumDescriptor(_CANCELPURCHASERESPONSE_CANCELRESULT)
 
@@ -1230,8 +1230,8 @@ _CANCELPURCHASERESPONSE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=9393,
-  serialized_end=9412,
+  serialized_start=9283,
+  serialized_end=9302,
 )
 _sym_db.RegisterEnumDescriptor(_CANCELPURCHASERESPONSE_PACKETID)
 
@@ -1252,8 +1252,8 @@ _CANCELQUEST_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=9447,
-  serialized_end=9478,
+  serialized_start=9337,
+  serialized_end=9368,
 )
 _sym_db.RegisterEnumDescriptor(_CANCELQUEST_PACKETID)
 
@@ -1270,8 +1270,8 @@ _CANCELQUESTRESPONSE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=9586,
-  serialized_end=9605,
+  serialized_start=9476,
+  serialized_end=9495,
 )
 _sym_db.RegisterEnumDescriptor(_CANCELQUESTRESPONSE_PACKETID)
 
@@ -1292,8 +1292,8 @@ _CARDBACKS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=9667,
-  serialized_end=9698,
+  serialized_start=9557,
+  serialized_end=9588,
 )
 _sym_db.RegisterEnumDescriptor(_CARDBACKS_PACKETID)
 
@@ -1310,8 +1310,8 @@ _CARDVALUES_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=9918,
-  serialized_end=9937,
+  serialized_start=9793,
+  serialized_end=9812,
 )
 _sym_db.RegisterEnumDescriptor(_CARDVALUES_PACKETID)
 
@@ -1332,8 +1332,8 @@ _CHECKACCOUNTLICENSEACHIEVE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=9986,
-  serialized_end=10017,
+  serialized_start=9861,
+  serialized_end=9892,
 )
 _sym_db.RegisterEnumDescriptor(_CHECKACCOUNTLICENSEACHIEVE_PACKETID)
 
@@ -1354,8 +1354,8 @@ _CHECKACCOUNTLICENSES_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=10043,
-  serialized_end=10074,
+  serialized_start=9918,
+  serialized_end=9949,
 )
 _sym_db.RegisterEnumDescriptor(_CHECKACCOUNTLICENSES_PACKETID)
 
@@ -1376,8 +1376,8 @@ _CHECKGAMELICENSES_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=10097,
-  serialized_end=10128,
+  serialized_start=9972,
+  serialized_end=10003,
 )
 _sym_db.RegisterEnumDescriptor(_CHECKGAMELICENSES_PACKETID)
 
@@ -1394,8 +1394,8 @@ _CHECKLICENSESRESPONSE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=10195,
-  serialized_end=10214,
+  serialized_start=10070,
+  serialized_end=10089,
 )
 _sym_db.RegisterEnumDescriptor(_CHECKLICENSESRESPONSE_PACKETID)
 
@@ -1412,8 +1412,8 @@ _CLIENTOPTIONS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=10414,
-  serialized_end=10433,
+  serialized_start=10289,
+  serialized_end=10308,
 )
 _sym_db.RegisterEnumDescriptor(_CLIENTOPTIONS_PACKETID)
 
@@ -1434,8 +1434,8 @@ _CLOSECARDMARKET_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=10454,
-  serialized_end=10485,
+  serialized_start=10329,
+  serialized_end=10360,
 )
 _sym_db.RegisterEnumDescriptor(_CLOSECARDMARKET_PACKETID)
 
@@ -1452,8 +1452,8 @@ _COLLECTION_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=10543,
-  serialized_end=10562,
+  serialized_start=10418,
+  serialized_end=10437,
 )
 _sym_db.RegisterEnumDescriptor(_COLLECTION_PACKETID)
 
@@ -1474,8 +1474,8 @@ _CREATEDECK_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=10628,
-  serialized_end=10659,
+  serialized_start=10503,
+  serialized_end=10534,
 )
 _sym_db.RegisterEnumDescriptor(_CREATEDECK_PACKETID)
 
@@ -1492,8 +1492,8 @@ _DBACTION_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=10800,
-  serialized_end=10819,
+  serialized_start=10662,
+  serialized_end=10681,
 )
 _sym_db.RegisterEnumDescriptor(_DBACTION_PACKETID)
 
@@ -1510,8 +1510,8 @@ _DEBUGAUTH_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=10901,
-  serialized_end=10920,
+  serialized_start=10763,
+  serialized_end=10782,
 )
 _sym_db.RegisterEnumDescriptor(_DEBUGAUTH_PACKETID)
 
@@ -1540,8 +1540,8 @@ _DEBUGAUTH_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=10922,
-  serialized_end=10986,
+  serialized_start=10784,
+  serialized_end=10848,
 )
 _sym_db.RegisterEnumDescriptor(_DEBUGAUTH_RESULT)
 
@@ -1558,8 +1558,8 @@ _DECKCONTENTS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=11062,
-  serialized_end=11081,
+  serialized_start=10924,
+  serialized_end=10943,
 )
 _sym_db.RegisterEnumDescriptor(_DECKCONTENTS_PACKETID)
 
@@ -1576,8 +1576,8 @@ _DECKCREATED_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=11137,
-  serialized_end=11156,
+  serialized_start=10999,
+  serialized_end=11018,
 )
 _sym_db.RegisterEnumDescriptor(_DECKCREATED_PACKETID)
 
@@ -1594,8 +1594,8 @@ _DECKDELETED_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=11187,
-  serialized_end=11206,
+  serialized_start=11049,
+  serialized_end=11068,
 )
 _sym_db.RegisterEnumDescriptor(_DECKDELETED_PACKETID)
 
@@ -1612,8 +1612,8 @@ _DECKGAINEDCARD_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=11254,
-  serialized_end=11273,
+  serialized_start=11116,
+  serialized_end=11135,
 )
 _sym_db.RegisterEnumDescriptor(_DECKGAINEDCARD_PACKETID)
 
@@ -1630,8 +1630,8 @@ _DECKLIST_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=11327,
-  serialized_end=11346,
+  serialized_start=11189,
+  serialized_end=11208,
 )
 _sym_db.RegisterEnumDescriptor(_DECKLIST_PACKETID)
 
@@ -1648,8 +1648,8 @@ _DECKLOSTCARD_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=11392,
-  serialized_end=11411,
+  serialized_start=11254,
+  serialized_end=11273,
 )
 _sym_db.RegisterEnumDescriptor(_DECKLOSTCARD_PACKETID)
 
@@ -1666,8 +1666,8 @@ _DECKRENAMED_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=11456,
-  serialized_end=11475,
+  serialized_start=11318,
+  serialized_end=11337,
 )
 _sym_db.RegisterEnumDescriptor(_DECKRENAMED_PACKETID)
 
@@ -1688,8 +1688,8 @@ _DECKSETDATA_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=11550,
-  serialized_end=11581,
+  serialized_start=11412,
+  serialized_end=11443,
 )
 _sym_db.RegisterEnumDescriptor(_DECKSETDATA_PACKETID)
 
@@ -1710,8 +1710,8 @@ _DELETEDECK_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=11611,
-  serialized_end=11642,
+  serialized_start=11473,
+  serialized_end=11504,
 )
 _sym_db.RegisterEnumDescriptor(_DELETEDECK_PACKETID)
 
@@ -1732,8 +1732,8 @@ _DEVBNETIDENTIFY_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=11677,
-  serialized_end=11708,
+  serialized_start=11539,
+  serialized_end=11570,
 )
 _sym_db.RegisterEnumDescriptor(_DEVBNETIDENTIFY_PACKETID)
 
@@ -1750,8 +1750,8 @@ _DISCONNECTED_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=11862,
-  serialized_end=11881,
+  serialized_start=11724,
+  serialized_end=11743,
 )
 _sym_db.RegisterEnumDescriptor(_DISCONNECTED_PACKETID)
 
@@ -1772,8 +1772,8 @@ _DOPURCHASE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=11897,
-  serialized_end=11928,
+  serialized_start=11759,
+  serialized_end=11790,
 )
 _sym_db.RegisterEnumDescriptor(_DOPURCHASE_PACKETID)
 
@@ -1794,8 +1794,8 @@ _DRAFTACKREWARDS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=11980,
-  serialized_end=12011,
+  serialized_start=11842,
+  serialized_end=11873,
 )
 _sym_db.RegisterEnumDescriptor(_DRAFTACKREWARDS_PACKETID)
 
@@ -1816,8 +1816,8 @@ _DRAFTBEGIN_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=12027,
-  serialized_end=12058,
+  serialized_start=11889,
+  serialized_end=11920,
 )
 _sym_db.RegisterEnumDescriptor(_DRAFTBEGIN_PACKETID)
 
@@ -1834,8 +1834,8 @@ _DRAFTBEGINNING_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=12112,
-  serialized_end=12131,
+  serialized_start=11974,
+  serialized_end=11993,
 )
 _sym_db.RegisterEnumDescriptor(_DRAFTBEGINNING_PACKETID)
 
@@ -1852,8 +1852,8 @@ _DRAFTCHOSEN_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=12185,
-  serialized_end=12204,
+  serialized_start=12047,
+  serialized_end=12066,
 )
 _sym_db.RegisterEnumDescriptor(_DRAFTCHOSEN_PACKETID)
 
@@ -1902,8 +1902,8 @@ _DRAFTERROR_ERRORCODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=12277,
-  serialized_end=12476,
+  serialized_start=12139,
+  serialized_end=12338,
 )
 _sym_db.RegisterEnumDescriptor(_DRAFTERROR_ERRORCODE)
 
@@ -1920,8 +1920,8 @@ _DRAFTERROR_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=12478,
-  serialized_end=12497,
+  serialized_start=12340,
+  serialized_end=12359,
 )
 _sym_db.RegisterEnumDescriptor(_DRAFTERROR_PACKETID)
 
@@ -1942,8 +1942,8 @@ _DRAFTGETPICKSANDCONTENTS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=12527,
-  serialized_end=12558,
+  serialized_start=12389,
+  serialized_end=12420,
 )
 _sym_db.RegisterEnumDescriptor(_DRAFTGETPICKSANDCONTENTS_PACKETID)
 
@@ -1964,8 +1964,8 @@ _DRAFTMAKEPICK_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=12623,
-  serialized_end=12654,
+  serialized_start=12485,
+  serialized_end=12516,
 )
 _sym_db.RegisterEnumDescriptor(_DRAFTMAKEPICK_PACKETID)
 
@@ -1986,8 +1986,8 @@ _DRAFTRETIRE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=12702,
-  serialized_end=12733,
+  serialized_start=12564,
+  serialized_end=12595,
 )
 _sym_db.RegisterEnumDescriptor(_DRAFTRETIRE_PACKETID)
 
@@ -2004,8 +2004,8 @@ _DRAFTCHOICESANDCONTENTS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=13450,
-  serialized_end=13469,
+  serialized_start=13312,
+  serialized_end=13331,
 )
 _sym_db.RegisterEnumDescriptor(_DRAFTCHOICESANDCONTENTS_PACKETID)
 
@@ -2022,8 +2022,8 @@ _DRAFTRETIRED_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=13550,
-  serialized_end=13569,
+  serialized_start=13412,
+  serialized_end=13431,
 )
 _sym_db.RegisterEnumDescriptor(_DRAFTRETIRED_PACKETID)
 
@@ -2040,8 +2040,8 @@ _DRAFTREWARDSACKED_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=13609,
-  serialized_end=13628,
+  serialized_start=13471,
+  serialized_end=13490,
 )
 _sym_db.RegisterEnumDescriptor(_DRAFTREWARDSACKED_PACKETID)
 
@@ -2058,8 +2058,8 @@ _DROPPEDREQUEST_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=13648,
-  serialized_end=13666,
+  serialized_start=13510,
+  serialized_end=13528,
 )
 _sym_db.RegisterEnumDescriptor(_DROPPEDREQUEST_PACKETID)
 
@@ -2076,8 +2076,8 @@ _ERROR37_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=13755,
-  serialized_end=13774,
+  serialized_start=13617,
+  serialized_end=13636,
 )
 _sym_db.RegisterEnumDescriptor(_ERROR37_PACKETID)
 
@@ -2094,8 +2094,8 @@ _ERROR37_THROTTLEREASON = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=13776,
-  serialized_end=13808,
+  serialized_start=13638,
+  serialized_end=13670,
 )
 _sym_db.RegisterEnumDescriptor(_ERROR37_THROTTLEREASON)
 
@@ -2112,8 +2112,8 @@ _GAMESINFO_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=13915,
-  serialized_end=13934,
+  serialized_start=13777,
+  serialized_end=13796,
 )
 _sym_db.RegisterEnumDescriptor(_GAMESINFO_PACKETID)
 
@@ -2134,8 +2134,8 @@ _GETACCOUNTINFO_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=14021,
-  serialized_end=14052,
+  serialized_start=13871,
+  serialized_end=13902,
 )
 _sym_db.RegisterEnumDescriptor(_GETACCOUNTINFO_PACKETID)
 
@@ -2244,8 +2244,8 @@ _GETACCOUNTINFO_REQUEST = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=14055,
-  serialized_end=14470,
+  serialized_start=13905,
+  serialized_end=14320,
 )
 _sym_db.RegisterEnumDescriptor(_GETACCOUNTINFO_REQUEST)
 
@@ -2266,8 +2266,8 @@ _GETACHIEVES_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=14524,
-  serialized_end=14555,
+  serialized_start=14374,
+  serialized_end=14405,
 )
 _sym_db.RegisterEnumDescriptor(_GETACHIEVES_PACKETID)
 
@@ -2288,8 +2288,8 @@ _GETADVENTUREPROGRESS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=14581,
-  serialized_end=14612,
+  serialized_start=14431,
+  serialized_end=14462,
 )
 _sym_db.RegisterEnumDescriptor(_GETADVENTUREPROGRESS_PACKETID)
 
@@ -2310,8 +2310,8 @@ _GETASSETSVERSION_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=14634,
-  serialized_end=14665,
+  serialized_start=14484,
+  serialized_end=14515,
 )
 _sym_db.RegisterEnumDescriptor(_GETASSETSVERSION_PACKETID)
 
@@ -2332,8 +2332,8 @@ _GETBATTLEPAYCONFIG_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=14689,
-  serialized_end=14720,
+  serialized_start=14539,
+  serialized_end=14570,
 )
 _sym_db.RegisterEnumDescriptor(_GETBATTLEPAYCONFIG_PACKETID)
 
@@ -2354,8 +2354,8 @@ _GETBATTLEPAYSTATUS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=14744,
-  serialized_end=14775,
+  serialized_start=14594,
+  serialized_end=14625,
 )
 _sym_db.RegisterEnumDescriptor(_GETBATTLEPAYSTATUS_PACKETID)
 
@@ -2376,8 +2376,8 @@ _GETDECK_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=14802,
-  serialized_end=14833,
+  serialized_start=14652,
+  serialized_end=14683,
 )
 _sym_db.RegisterEnumDescriptor(_GETDECK_PACKETID)
 
@@ -2398,8 +2398,8 @@ _GETOPTIONS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=14863,
-  serialized_end=14894,
+  serialized_start=14713,
+  serialized_end=14744,
 )
 _sym_db.RegisterEnumDescriptor(_GETOPTIONS_PACKETID)
 
@@ -2420,8 +2420,8 @@ _GETPURCHASEMETHOD_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=14973,
-  serialized_end=15004,
+  serialized_start=14842,
+  serialized_end=14873,
 )
 _sym_db.RegisterEnumDescriptor(_GETPURCHASEMETHOD_PACKETID)
 
@@ -2442,8 +2442,8 @@ _GETTHIRDPARTYPURCHASESTATUS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=15061,
-  serialized_end=15092,
+  serialized_start=14930,
+  serialized_end=14961,
 )
 _sym_db.RegisterEnumDescriptor(_GETTHIRDPARTYPURCHASESTATUS_PACKETID)
 
@@ -2460,8 +2460,8 @@ _GOLDBALANCE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=15190,
-  serialized_end=15209,
+  serialized_start=15059,
+  serialized_end=15078,
 )
 _sym_db.RegisterEnumDescriptor(_GOLDBALANCE_PACKETID)
 
@@ -2478,8 +2478,8 @@ _BATTLEPAYCONFIGRESPONSE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=15484,
-  serialized_end=15503,
+  serialized_start=15353,
+  serialized_end=15372,
 )
 _sym_db.RegisterEnumDescriptor(_BATTLEPAYCONFIGRESPONSE_PACKETID)
 
@@ -2500,8 +2500,8 @@ _GUARDIANTRACK_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=15536,
-  serialized_end=15567,
+  serialized_start=15405,
+  serialized_end=15436,
 )
 _sym_db.RegisterEnumDescriptor(_GUARDIANTRACK_PACKETID)
 
@@ -2518,8 +2518,8 @@ _GUARDIANVARS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=15911,
-  serialized_end=15930,
+  serialized_start=15783,
+  serialized_end=15802,
 )
 _sym_db.RegisterEnumDescriptor(_GUARDIANVARS_PACKETID)
 
@@ -2540,8 +2540,8 @@ _MASSDISENCHANTREQUEST_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=15957,
-  serialized_end=15988,
+  serialized_start=15829,
+  serialized_end=15860,
 )
 _sym_db.RegisterEnumDescriptor(_MASSDISENCHANTREQUEST_PACKETID)
 
@@ -2558,8 +2558,8 @@ _MASSDISENCHANTRESPONSE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=16032,
-  serialized_end=16051,
+  serialized_start=15904,
+  serialized_end=15923,
 )
 _sym_db.RegisterEnumDescriptor(_MASSDISENCHANTRESPONSE_PACKETID)
 
@@ -2576,8 +2576,8 @@ _MEDALHISTORY_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=16284,
-  serialized_end=16303,
+  serialized_start=16156,
+  serialized_end=16175,
 )
 _sym_db.RegisterEnumDescriptor(_MEDALHISTORY_PACKETID)
 
@@ -2594,8 +2594,8 @@ _MEDALINFO_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=16470,
-  serialized_end=16489,
+  serialized_start=16342,
+  serialized_end=16361,
 )
 _sym_db.RegisterEnumDescriptor(_MEDALINFO_PACKETID)
 
@@ -2612,8 +2612,8 @@ _HEROXP_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=17179,
-  serialized_end=17198,
+  serialized_start=17051,
+  serialized_end=17070,
 )
 _sym_db.RegisterEnumDescriptor(_HEROXP_PACKETID)
 
@@ -2630,8 +2630,8 @@ _NOP_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=17207,
-  serialized_end=17226,
+  serialized_start=17079,
+  serialized_end=17098,
 )
 _sym_db.RegisterEnumDescriptor(_NOP_PACKETID)
 
@@ -2656,8 +2656,8 @@ _ONECLIENTTRACKING_LEVEL = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=17361,
-  serialized_end=17408,
+  serialized_start=17225,
+  serialized_end=17272,
 )
 _sym_db.RegisterEnumDescriptor(_ONECLIENTTRACKING_LEVEL)
 
@@ -2678,8 +2678,8 @@ _CLIENTTRACKING_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=17474,
-  serialized_end=17505,
+  serialized_start=17338,
+  serialized_end=17369,
 )
 _sym_db.RegisterEnumDescriptor(_CLIENTTRACKING_PACKETID)
 
@@ -2700,8 +2700,8 @@ _OPENBOOSTER_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=17544,
-  serialized_end=17575,
+  serialized_start=17408,
+  serialized_end=17439,
 )
 _sym_db.RegisterEnumDescriptor(_OPENBOOSTER_PACKETID)
 
@@ -2718,8 +2718,8 @@ _PLAYERRECORDS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=17726,
-  serialized_end=17745,
+  serialized_start=17590,
+  serialized_end=17609,
 )
 _sym_db.RegisterEnumDescriptor(_PLAYERRECORDS_PACKETID)
 
@@ -2736,8 +2736,8 @@ _PLAYQUEUE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=17805,
-  serialized_end=17824,
+  serialized_start=17669,
+  serialized_end=17688,
 )
 _sym_db.RegisterEnumDescriptor(_PLAYQUEUE_PACKETID)
 
@@ -2754,8 +2754,8 @@ _PROFILEDECKLIMIT_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=17866,
-  serialized_end=17885,
+  serialized_start=17730,
+  serialized_end=17749,
 )
 _sym_db.RegisterEnumDescriptor(_PROFILEDECKLIMIT_PACKETID)
 
@@ -2772,8 +2772,8 @@ _PROFILELASTLOGIN_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=17948,
-  serialized_end=17967,
+  serialized_start=17812,
+  serialized_end=17831,
 )
 _sym_db.RegisterEnumDescriptor(_PROFILELASTLOGIN_PACKETID)
 
@@ -2790,8 +2790,8 @@ _PROFILENOTICES_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=18953,
-  serialized_end=18972,
+  serialized_start=18817,
+  serialized_end=18836,
 )
 _sym_db.RegisterEnumDescriptor(_PROFILENOTICES_PACKETID)
 
@@ -2808,8 +2808,8 @@ _PROFILEPROGRESS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=19155,
-  serialized_end=19174,
+  serialized_start=19022,
+  serialized_end=19041,
 )
 _sym_db.RegisterEnumDescriptor(_PROFILEPROGRESS_PACKETID)
 
@@ -2962,8 +2962,8 @@ _PURCHASEERROR_ERROR = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=19305,
-  serialized_end=20160,
+  serialized_start=19161,
+  serialized_end=20016,
 )
 _sym_db.RegisterEnumDescriptor(_PURCHASEERROR_ERROR)
 
@@ -2980,8 +2980,8 @@ _BATTLEPAYSTATUSRESPONSE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=20500,
-  serialized_end=20519,
+  serialized_start=20356,
+  serialized_end=20375,
 )
 _sym_db.RegisterEnumDescriptor(_BATTLEPAYSTATUSRESPONSE_PACKETID)
 
@@ -3006,8 +3006,8 @@ _BATTLEPAYSTATUSRESPONSE_PURCHASESTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=20521,
-  serialized_end=20586,
+  serialized_start=20377,
+  serialized_end=20442,
 )
 _sym_db.RegisterEnumDescriptor(_BATTLEPAYSTATUSRESPONSE_PURCHASESTATE)
 
@@ -3024,8 +3024,8 @@ _PURCHASEMETHOD_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=20803,
-  serialized_end=20822,
+  serialized_start=20659,
+  serialized_end=20678,
 )
 _sym_db.RegisterEnumDescriptor(_PURCHASEMETHOD_PACKETID)
 
@@ -3042,8 +3042,8 @@ _PURCHASERESPONSE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=21004,
-  serialized_end=21023,
+  serialized_start=20860,
+  serialized_end=20879,
 )
 _sym_db.RegisterEnumDescriptor(_PURCHASERESPONSE_PACKETID)
 
@@ -3064,8 +3064,8 @@ _PURCHASEWITHGOLD_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=21094,
-  serialized_end=21125,
+  serialized_start=20950,
+  serialized_end=20981,
 )
 _sym_db.RegisterEnumDescriptor(_PURCHASEWITHGOLD_PACKETID)
 
@@ -3082,8 +3082,8 @@ _PURCHASEWITHGOLDRESPONSE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=21257,
-  serialized_end=21276,
+  serialized_start=21101,
+  serialized_end=21120,
 )
 _sym_db.RegisterEnumDescriptor(_PURCHASEWITHGOLDRESPONSE_PACKETID)
 
@@ -3116,8 +3116,8 @@ _PURCHASEWITHGOLDRESPONSE_PURCHASERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=21278,
-  serialized_end=21400,
+  serialized_start=21122,
+  serialized_end=21244,
 )
 _sym_db.RegisterEnumDescriptor(_PURCHASEWITHGOLDRESPONSE_PURCHASERESULT)
 
@@ -3138,8 +3138,8 @@ _RENAMEDECK_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=21444,
-  serialized_end=21475,
+  serialized_start=21288,
+  serialized_end=21319,
 )
 _sym_db.RegisterEnumDescriptor(_RENAMEDECK_PACKETID)
 
@@ -3156,8 +3156,8 @@ _REWARDPROGRESS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=21772,
-  serialized_end=21791,
+  serialized_start=21616,
+  serialized_end=21635,
 )
 _sym_db.RegisterEnumDescriptor(_REWARDPROGRESS_PACKETID)
 
@@ -3178,8 +3178,8 @@ _SETADVENTUREOPTIONS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=21874,
-  serialized_end=21905,
+  serialized_start=21718,
+  serialized_end=21749,
 )
 _sym_db.RegisterEnumDescriptor(_SETADVENTUREOPTIONS_PACKETID)
 
@@ -3200,8 +3200,8 @@ _SETCARDBACK_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=21958,
-  serialized_end=21989,
+  serialized_start=21802,
+  serialized_end=21833,
 )
 _sym_db.RegisterEnumDescriptor(_SETCARDBACK_PACKETID)
 
@@ -3218,8 +3218,8 @@ _SETCARDBACKRESPONSE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=22067,
-  serialized_end=22086,
+  serialized_start=21911,
+  serialized_end=21930,
 )
 _sym_db.RegisterEnumDescriptor(_SETCARDBACKRESPONSE_PACKETID)
 
@@ -3240,8 +3240,8 @@ _SETOPTIONS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=22146,
-  serialized_end=22177,
+  serialized_start=21990,
+  serialized_end=22021,
 )
 _sym_db.RegisterEnumDescriptor(_SETOPTIONS_PACKETID)
 
@@ -3262,8 +3262,8 @@ _SETPROGRESS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=22209,
-  serialized_end=22240,
+  serialized_start=22053,
+  serialized_end=22084,
 )
 _sym_db.RegisterEnumDescriptor(_SETPROGRESS_PACKETID)
 
@@ -3280,8 +3280,8 @@ _SETPROGRESSRESPONSE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=22350,
-  serialized_end=22369,
+  serialized_start=22185,
+  serialized_end=22204,
 )
 _sym_db.RegisterEnumDescriptor(_SETPROGRESSRESPONSE_PACKETID)
 
@@ -3306,8 +3306,8 @@ _SETPROGRESSRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=22371,
-  serialized_end=22422,
+  serialized_start=22206,
+  serialized_end=22257,
 )
 _sym_db.RegisterEnumDescriptor(_SETPROGRESSRESPONSE_RESULT)
 
@@ -3324,8 +3324,8 @@ _MASSIVELOGINREPLY_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=23034,
-  serialized_end=23053,
+  serialized_start=22869,
+  serialized_end=22888,
 )
 _sym_db.RegisterEnumDescriptor(_MASSIVELOGINREPLY_PACKETID)
 
@@ -3342,8 +3342,8 @@ _SUBSCRIBE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=23068,
-  serialized_end=23087,
+  serialized_start=22903,
+  serialized_end=22922,
 )
 _sym_db.RegisterEnumDescriptor(_SUBSCRIBE_PACKETID)
 
@@ -3364,8 +3364,8 @@ _SUBSCRIBERESPONSE_FEATURES = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=23179,
-  serialized_end=23221,
+  serialized_start=23014,
+  serialized_end=23056,
 )
 _sym_db.RegisterEnumDescriptor(_SUBSCRIBERESPONSE_FEATURES)
 
@@ -3382,8 +3382,8 @@ _SUBSCRIBERESPONSE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=23223,
-  serialized_end=23242,
+  serialized_start=23058,
+  serialized_end=23077,
 )
 _sym_db.RegisterEnumDescriptor(_SUBSCRIBERESPONSE_PACKETID)
 
@@ -3400,8 +3400,8 @@ _THIRDPARTYPURCHASESTATUSRESPONSE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=23386,
-  serialized_end=23405,
+  serialized_start=23210,
+  serialized_end=23229,
 )
 _sym_db.RegisterEnumDescriptor(_THIRDPARTYPURCHASESTATUSRESPONSE_PACKETID)
 
@@ -3430,8 +3430,8 @@ _THIRDPARTYPURCHASESTATUSRESPONSE_STATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=23407,
-  serialized_end=23474,
+  serialized_start=23231,
+  serialized_end=23298,
 )
 _sym_db.RegisterEnumDescriptor(_THIRDPARTYPURCHASESTATUSRESPONSE_STATUS)
 
@@ -3452,8 +3452,8 @@ _STARTTHIRDPARTYPURCHASE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=23778,
-  serialized_end=23809,
+  serialized_start=23599,
+  serialized_end=23630,
 )
 _sym_db.RegisterEnumDescriptor(_STARTTHIRDPARTYPURCHASE_PACKETID)
 
@@ -3474,8 +3474,8 @@ _SUBMITTHIRDPARTYRECEIPT_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=23921,
-  serialized_end=23952,
+  serialized_start=23742,
+  serialized_end=23773,
 )
 _sym_db.RegisterEnumDescriptor(_SUBMITTHIRDPARTYRECEIPT_PACKETID)
 
@@ -3492,8 +3492,8 @@ _TRIGGEREVENTRESPONSE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=24013,
-  serialized_end=24032,
+  serialized_start=23834,
+  serialized_end=23853,
 )
 _sym_db.RegisterEnumDescriptor(_TRIGGEREVENTRESPONSE_PACKETID)
 
@@ -3514,8 +3514,8 @@ _TRIGGERLAUNCHDAYEVENT_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=24157,
-  serialized_end=24188,
+  serialized_start=23978,
+  serialized_end=24009,
 )
 _sym_db.RegisterEnumDescriptor(_TRIGGERLAUNCHDAYEVENT_PACKETID)
 
@@ -3536,8 +3536,8 @@ _UPDATELOGIN_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=24229,
-  serialized_end=24260,
+  serialized_start=24068,
+  serialized_end=24099,
 )
 _sym_db.RegisterEnumDescriptor(_UPDATELOGIN_PACKETID)
 
@@ -3554,8 +3554,8 @@ _UPDATELOGINCOMPLETE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=24285,
-  serialized_end=24304,
+  serialized_start=24124,
+  serialized_end=24143,
 )
 _sym_db.RegisterEnumDescriptor(_UPDATELOGINCOMPLETE_PACKETID)
 
@@ -3572,8 +3572,8 @@ _UTILAUTH_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=24365,
-  serialized_end=24384,
+  serialized_start=24204,
+  serialized_end=24223,
 )
 _sym_db.RegisterEnumDescriptor(_UTILAUTH_PACKETID)
 
@@ -3602,8 +3602,8 @@ _UTILAUTH_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=24386,
-  serialized_end=24448,
+  serialized_start=24225,
+  serialized_end=24287,
 )
 _sym_db.RegisterEnumDescriptor(_UTILAUTH_RESULT)
 
@@ -3620,8 +3620,8 @@ _UTILHANDSHAKE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=24508,
-  serialized_end=24527,
+  serialized_start=24347,
+  serialized_end=24366,
 )
 _sym_db.RegisterEnumDescriptor(_UTILHANDSHAKE_PACKETID)
 
@@ -3642,8 +3642,8 @@ _VALIDATEACHIEVE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=24565,
-  serialized_end=24596,
+  serialized_start=24404,
+  serialized_end=24435,
 )
 _sym_db.RegisterEnumDescriptor(_VALIDATEACHIEVE_PACKETID)
 
@@ -3660,8 +3660,8 @@ _VALIDATEACHIEVERESPONSE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=24642,
-  serialized_end=24661,
+  serialized_start=24481,
+  serialized_end=24500,
 )
 _sym_db.RegisterEnumDescriptor(_VALIDATEACHIEVERESPONSE_PACKETID)
 
@@ -3675,15 +3675,15 @@ _ACCOUNTLICENSEACHIEVERESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='achieve', full_name='PegasusUtil.AccountLicenseAchieveResponse.achieve', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='result', full_name='PegasusUtil.AccountLicenseAchieveResponse.result', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=1,
+      number=2, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3702,7 +3702,7 @@ _ACCOUNTLICENSEACHIEVERESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=56,
-  serialized_end=307,
+  serialized_end=290,
 )
 
 
@@ -3715,21 +3715,21 @@ _ACHIEVE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='PegasusUtil.Achieve.id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='progress', full_name='PegasusUtil.Achieve.progress', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='ack_progress', full_name='PegasusUtil.Achieve.ack_progress', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -3788,8 +3788,8 @@ _ACHIEVE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=310,
-  serialized_end=542,
+  serialized_start=293,
+  serialized_end=525,
 )
 
 
@@ -3802,42 +3802,42 @@ _ACHIEVEINFO = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='desc', full_name='PegasusUtil.AchieveInfo.desc', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='type', full_name='PegasusUtil.AchieveInfo.type', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='quota', full_name='PegasusUtil.AchieveInfo.quota', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='reward', full_name='PegasusUtil.AchieveInfo.reward', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      number=4, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='data1', full_name='PegasusUtil.AchieveInfo.data1', index=4,
-      number=5, type=3, cpp_type=2, label=1,
+      number=5, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='data2', full_name='PegasusUtil.AchieveInfo.data2', index=5,
-      number=6, type=3, cpp_type=2, label=1,
+      number=6, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -3854,8 +3854,8 @@ _ACHIEVEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=544,
-  serialized_end=646,
+  serialized_start=527,
+  serialized_end=629,
 )
 
 
@@ -3886,8 +3886,8 @@ _ACHIEVES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=648,
-  serialized_end=715,
+  serialized_start=631,
+  serialized_end=698,
 )
 
 
@@ -3900,14 +3900,14 @@ _ACKACHIEVEPROGRESS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='PegasusUtil.AckAchieveProgress.id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='ack_progress', full_name='PegasusUtil.AckAchieveProgress.ack_progress', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -3925,8 +3925,8 @@ _ACKACHIEVEPROGRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=717,
-  serialized_end=804,
+  serialized_start=700,
+  serialized_end=787,
 )
 
 
@@ -3957,8 +3957,8 @@ _ACKCARDSEEN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=806,
-  serialized_end=895,
+  serialized_start=789,
+  serialized_end=878,
 )
 
 
@@ -3971,7 +3971,7 @@ _ACKNOTICE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='entry', full_name='PegasusUtil.AckNotice.entry', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -3989,8 +3989,8 @@ _ACKNOTICE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=897,
-  serialized_end=956,
+  serialized_start=880,
+  serialized_end=939,
 )
 
 
@@ -4003,7 +4003,7 @@ _ACKNOWLEDGEBANNER = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='banner', full_name='PegasusUtil.AcknowledgeBanner.banner', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -4021,8 +4021,8 @@ _ACKNOWLEDGEBANNER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=958,
-  serialized_end=1026,
+  serialized_start=941,
+  serialized_end=1009,
 )
 
 
@@ -4035,14 +4035,14 @@ _ACKWINGPROGRESS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='wing', full_name='PegasusUtil.AckWingProgress.wing', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='ack', full_name='PegasusUtil.AckWingProgress.ack', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -4060,8 +4060,8 @@ _ACKWINGPROGRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1028,
-  serialized_end=1105,
+  serialized_start=1011,
+  serialized_end=1088,
 )
 
 
@@ -4074,14 +4074,14 @@ _ADVENTUREOPTIONS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='adventure_id', full_name='PegasusUtil.AdventureOptions.adventure_id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='options', full_name='PegasusUtil.AdventureOptions.options', index=1,
-      number=2, type=4, cpp_type=4, label=1,
+      number=2, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -4098,8 +4098,8 @@ _ADVENTUREOPTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1107,
-  serialized_end=1164,
+  serialized_start=1090,
+  serialized_end=1147,
 )
 
 
@@ -4130,8 +4130,8 @@ _ADVENTUREPROGRESSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1166,
-  serialized_end=1262,
+  serialized_start=1149,
+  serialized_end=1245,
 )
 
 
@@ -4144,7 +4144,7 @@ _ARCANEDUSTBALANCE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='balance', full_name='PegasusUtil.ArcaneDustBalance.balance', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -4162,8 +4162,8 @@ _ARCANEDUSTBALANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1264,
-  serialized_end=1321,
+  serialized_start=1247,
+  serialized_end=1304,
 )
 
 
@@ -4176,7 +4176,7 @@ _ASSETSVERSIONRESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='version', full_name='PegasusUtil.AssetsVersionResponse.version', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -4194,8 +4194,8 @@ _ASSETSVERSIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1323,
-  serialized_end=1384,
+  serialized_start=1306,
+  serialized_end=1367,
 )
 
 
@@ -4208,28 +4208,28 @@ _ATLASACHIEVE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='PegasusUtil.AtlasAchieve.id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='progress', full_name='PegasusUtil.AtlasAchieve.progress', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='is_complete', full_name='PegasusUtil.AtlasAchieve.is_complete', index=2,
-      number=3, type=8, cpp_type=7, label=1,
+      number=3, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='ack_value', full_name='PegasusUtil.AtlasAchieve.ack_value', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      number=4, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -4267,8 +4267,8 @@ _ATLASACHIEVE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1387,
-  serialized_end=1558,
+  serialized_start=1370,
+  serialized_end=1541,
 )
 
 
@@ -4299,8 +4299,8 @@ _ATLASACHIEVEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1560,
-  serialized_end=1638,
+  serialized_start=1543,
+  serialized_end=1621,
 )
 
 
@@ -4331,8 +4331,8 @@ _ATLASACHIEVES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1640,
-  serialized_end=1716,
+  serialized_start=1623,
+  serialized_end=1699,
 )
 
 
@@ -4345,14 +4345,14 @@ _ATLASADDBOOSTER = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasAddBooster.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='type', full_name='PegasusUtil.AtlasAddBooster.type', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -4370,8 +4370,8 @@ _ATLASADDBOOSTER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1718,
-  serialized_end=1790,
+  serialized_start=1701,
+  serialized_end=1773,
 )
 
 
@@ -4384,14 +4384,14 @@ _ATLASADDCARD = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasAddCard.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='card_def', full_name='PegasusUtil.AtlasAddCard.card_def', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -4416,8 +4416,8 @@ _ATLASADDCARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1792,
-  serialized_end=1906,
+  serialized_start=1775,
+  serialized_end=1889,
 )
 
 
@@ -4430,14 +4430,14 @@ _ATLASADDCARDBACK = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasAddCardBack.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='card_back', full_name='PegasusUtil.AtlasAddCardBack.card_back', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -4455,8 +4455,8 @@ _ATLASADDCARDBACK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1908,
-  serialized_end=1986,
+  serialized_start=1891,
+  serialized_end=1969,
 )
 
 
@@ -4469,7 +4469,7 @@ _ATLASADDDRAFT = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasAddDraft.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -4487,8 +4487,8 @@ _ATLASADDDRAFT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1988,
-  serialized_end=2044,
+  serialized_start=1971,
+  serialized_end=2027,
 )
 
 
@@ -4501,14 +4501,14 @@ _ATLASBOOSTERHISTORY = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='action', full_name='PegasusUtil.AtlasBoosterHistory.action', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='when', full_name='PegasusUtil.AtlasBoosterHistory.when', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -4525,8 +4525,8 @@ _ATLASBOOSTERHISTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2046,
-  serialized_end=2118,
+  serialized_start=2029,
+  serialized_end=2101,
 )
 
 
@@ -4539,28 +4539,28 @@ _ATLASBOOSTER = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='booster_id', full_name='PegasusUtil.AtlasBooster.booster_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='is_open', full_name='PegasusUtil.AtlasBooster.is_open', index=1,
-      number=2, type=8, cpp_type=7, label=1,
+      number=2, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='type', full_name='PegasusUtil.AtlasBooster.type', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='license', full_name='PegasusUtil.AtlasBooster.license', index=3,
-      number=4, type=4, cpp_type=4, label=1,
+      number=4, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -4584,8 +4584,8 @@ _ATLASBOOSTER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2121,
-  serialized_end=2254,
+  serialized_start=2104,
+  serialized_end=2237,
 )
 
 
@@ -4616,8 +4616,8 @@ _ATLASBOOSTERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2256,
-  serialized_end=2332,
+  serialized_start=2239,
+  serialized_end=2315,
 )
 
 
@@ -4630,21 +4630,21 @@ _ATLASCARDBACKHISTORY = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='card_back', full_name='PegasusUtil.AtlasCardBackHistory.card_back', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='action', full_name='PegasusUtil.AtlasCardBackHistory.action', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='when', full_name='PegasusUtil.AtlasCardBackHistory.when', index=2,
-      number=3, type=11, cpp_type=10, label=1,
+      number=3, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -4675,8 +4675,8 @@ _ATLASCARDBACKHISTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2334,
-  serialized_end=2456,
+  serialized_start=2317,
+  serialized_end=2439,
 )
 
 
@@ -4714,8 +4714,8 @@ _ATLASCARDBACKS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2458,
-  serialized_end=2566,
+  serialized_start=2441,
+  serialized_end=2549,
 )
 
 
@@ -4728,21 +4728,21 @@ _ATLASCARDHISTORY = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='action', full_name='PegasusUtil.AtlasCardHistory.action', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='action_date', full_name='PegasusUtil.AtlasCardHistory.action_date', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='data', full_name='PegasusUtil.AtlasCardHistory.data', index=2,
-      number=3, type=4, cpp_type=4, label=1,
+      number=3, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -4759,8 +4759,8 @@ _ATLASCARDHISTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2568,
-  serialized_end=2658,
+  serialized_start=2551,
+  serialized_end=2641,
 )
 
 
@@ -4773,28 +4773,28 @@ _ATLASCARDDETAIL = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='card_id', full_name='PegasusUtil.AtlasCardDetail.card_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='deleted', full_name='PegasusUtil.AtlasCardDetail.deleted', index=1,
-      number=2, type=13, cpp_type=3, label=1,
+      number=2, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='is_seen', full_name='PegasusUtil.AtlasCardDetail.is_seen', index=2,
-      number=3, type=8, cpp_type=7, label=1,
+      number=3, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='insert_date', full_name='PegasusUtil.AtlasCardDetail.insert_date', index=3,
-      number=4, type=11, cpp_type=10, label=1,
+      number=4, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -4818,8 +4818,8 @@ _ATLASCARDDETAIL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2661,
-  serialized_end=2819,
+  serialized_start=2644,
+  serialized_end=2802,
 )
 
 
@@ -4850,8 +4850,8 @@ _ATLASCARDDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2821,
-  serialized_end=2906,
+  serialized_start=2804,
+  serialized_end=2889,
 )
 
 
@@ -4864,14 +4864,14 @@ _ATLASCHANGEARCANEDUST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasChangeArcaneDust.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='delta', full_name='PegasusUtil.AtlasChangeArcaneDust.delta', index=1,
-      number=2, type=3, cpp_type=2, label=1,
+      number=2, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -4889,8 +4889,8 @@ _ATLASCHANGEARCANEDUST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2908,
-  serialized_end=2987,
+  serialized_start=2891,
+  serialized_end=2970,
 )
 
 
@@ -4903,14 +4903,14 @@ _ATLASCHANGEBONUSGOLD = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasChangeBonusGold.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='delta', full_name='PegasusUtil.AtlasChangeBonusGold.delta', index=1,
-      number=2, type=3, cpp_type=2, label=1,
+      number=2, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -4928,8 +4928,8 @@ _ATLASCHANGEBONUSGOLD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2989,
-  serialized_end=3067,
+  serialized_start=2972,
+  serialized_end=3050,
 )
 
 
@@ -4942,14 +4942,14 @@ _ATLASCHANGEGOLD = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasChangeGold.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='delta', full_name='PegasusUtil.AtlasChangeGold.delta', index=1,
-      number=2, type=3, cpp_type=2, label=1,
+      number=2, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -4967,8 +4967,8 @@ _ATLASCHANGEGOLD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3069,
-  serialized_end=3142,
+  serialized_start=3052,
+  serialized_end=3125,
 )
 
 
@@ -4999,8 +4999,8 @@ _ATLASCOLLECTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3144,
-  serialized_end=3223,
+  serialized_start=3127,
+  serialized_end=3206,
 )
 
 
@@ -5013,28 +5013,28 @@ _ATLASCURRENCYHISTORY = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='currency', full_name='PegasusUtil.AtlasCurrencyHistory.currency', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='amount', full_name='PegasusUtil.AtlasCurrencyHistory.amount', index=1,
-      number=2, type=3, cpp_type=2, label=1,
+      number=2, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='action', full_name='PegasusUtil.AtlasCurrencyHistory.action', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='when', full_name='PegasusUtil.AtlasCurrencyHistory.when', index=3,
-      number=4, type=11, cpp_type=10, label=1,
+      number=4, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5058,8 +5058,8 @@ _ATLASCURRENCYHISTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3225,
-  serialized_end=3347,
+  serialized_start=3208,
+  serialized_end=3330,
 )
 
 
@@ -5090,8 +5090,8 @@ _ATLASCURRENCYDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3349,
-  serialized_end=3443,
+  serialized_start=3332,
+  serialized_end=3426,
 )
 
 
@@ -5104,28 +5104,28 @@ _ATLASCURRENTDRAFT = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck_id', full_name='PegasusUtil.AtlasCurrentDraft.deck_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='slot', full_name='PegasusUtil.AtlasCurrentDraft.slot', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='wins', full_name='PegasusUtil.AtlasCurrentDraft.wins', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='losses', full_name='PegasusUtil.AtlasCurrentDraft.losses', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      number=4, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5142,8 +5142,8 @@ _ATLASCURRENTDRAFT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3445,
-  serialized_end=3525,
+  serialized_start=3428,
+  serialized_end=3508,
 )
 
 
@@ -5156,7 +5156,7 @@ _ATLASDECKCARD = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='def', full_name='PegasusUtil.AtlasDeckCard.def', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5180,8 +5180,8 @@ _ATLASDECKCARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3527,
-  serialized_end=3592,
+  serialized_start=3510,
+  serialized_end=3575,
 )
 
 
@@ -5194,7 +5194,7 @@ _ATLASDECK = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='header', full_name='PegasusUtil.AtlasDeck.header', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5218,8 +5218,8 @@ _ATLASDECK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3594,
-  serialized_end=3689,
+  serialized_start=3577,
+  serialized_end=3672,
 )
 
 
@@ -5250,8 +5250,8 @@ _ATLASDECKS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3691,
-  serialized_end=3762,
+  serialized_start=3674,
+  serialized_end=3745,
 )
 
 
@@ -5264,21 +5264,21 @@ _ATLASDRAFTHISTORY = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck_id', full_name='PegasusUtil.AtlasDraftHistory.deck_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='action', full_name='PegasusUtil.AtlasDraftHistory.action', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='when', full_name='PegasusUtil.AtlasDraftHistory.when', index=2,
-      number=3, type=11, cpp_type=10, label=1,
+      number=3, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5323,8 +5323,8 @@ _ATLASDRAFTHISTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3765,
-  serialized_end=3912,
+  serialized_start=3748,
+  serialized_end=3895,
 )
 
 
@@ -5337,14 +5337,14 @@ _ATLASDRAFTTICKETHISTORY = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='action', full_name='PegasusUtil.AtlasDraftTicketHistory.action', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='when', full_name='PegasusUtil.AtlasDraftTicketHistory.when', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5361,8 +5361,8 @@ _ATLASDRAFTTICKETHISTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3914,
-  serialized_end=3990,
+  serialized_start=3897,
+  serialized_end=3973,
 )
 
 
@@ -5375,21 +5375,21 @@ _ATLASDRAFTTICKET = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='ticket_id', full_name='PegasusUtil.AtlasDraftTicket.ticket_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='was_used', full_name='PegasusUtil.AtlasDraftTicket.was_used', index=1,
-      number=2, type=8, cpp_type=7, label=1,
+      number=2, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='license', full_name='PegasusUtil.AtlasDraftTicket.license', index=2,
-      number=3, type=9, cpp_type=9, label=1,
+      number=3, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5413,8 +5413,8 @@ _ATLASDRAFTTICKET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3992,
-  serialized_end=4119,
+  serialized_start=3975,
+  serialized_end=4102,
 )
 
 
@@ -5459,8 +5459,8 @@ _ATLASDRAFTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4122,
-  serialized_end=4307,
+  serialized_start=4105,
+  serialized_end=4290,
 )
 
 
@@ -5473,14 +5473,14 @@ _ATLASERROR = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='type', full_name='PegasusUtil.AtlasError.type', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=1,
+      number=1, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='error', full_name='PegasusUtil.AtlasError.error', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5499,8 +5499,8 @@ _ATLASERROR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4310,
-  serialized_end=4466,
+  serialized_start=4293,
+  serialized_end=4437,
 )
 
 
@@ -5513,14 +5513,14 @@ _ATLASGETACHIEVEINFO = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasGetAchieveInfo.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='achieve_id', full_name='PegasusUtil.AtlasGetAchieveInfo.achieve_id', index=1,
-      number=2, type=4, cpp_type=4, label=1,
+      number=2, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5538,8 +5538,8 @@ _ATLASGETACHIEVEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4468,
-  serialized_end=4550,
+  serialized_start=4439,
+  serialized_end=4521,
 )
 
 
@@ -5552,7 +5552,7 @@ _ATLASGETACHIEVES = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasGetAchieves.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5570,8 +5570,8 @@ _ATLASGETACHIEVES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4552,
-  serialized_end=4611,
+  serialized_start=4523,
+  serialized_end=4582,
 )
 
 
@@ -5584,7 +5584,7 @@ _ATLASGETADVENTUREPROGRESS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasGetAdventureProgress.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5602,8 +5602,8 @@ _ATLASGETADVENTUREPROGRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4613,
-  serialized_end=4681,
+  serialized_start=4584,
+  serialized_end=4652,
 )
 
 
@@ -5616,7 +5616,7 @@ _ATLASGETBOOSTERS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasGetBoosters.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5648,8 +5648,8 @@ _ATLASGETBOOSTERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4684,
-  serialized_end=4823,
+  serialized_start=4655,
+  serialized_end=4794,
 )
 
 
@@ -5662,7 +5662,7 @@ _ATLASGETCARDBACKS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasGetCardBacks.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5694,8 +5694,8 @@ _ATLASGETCARDBACKS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4826,
-  serialized_end=4966,
+  serialized_start=4797,
+  serialized_end=4937,
 )
 
 
@@ -5708,14 +5708,14 @@ _ATLASGETCARDDETAILS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasGetCardDetails.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='card_def', full_name='PegasusUtil.AtlasGetCardDetails.card_def', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5747,8 +5747,8 @@ _ATLASGETCARDDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4969,
-  serialized_end=5153,
+  serialized_start=4940,
+  serialized_end=5124,
 )
 
 
@@ -5761,7 +5761,7 @@ _ATLASGETCOLLECTION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasGetCollection.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5779,8 +5779,8 @@ _ATLASGETCOLLECTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5155,
-  serialized_end=5216,
+  serialized_start=5126,
+  serialized_end=5187,
 )
 
 
@@ -5793,7 +5793,7 @@ _ATLASGETCURRENCYDETAILS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasGetCurrencyDetails.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5825,8 +5825,8 @@ _ATLASGETCURRENCYDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5219,
-  serialized_end=5365,
+  serialized_start=5190,
+  serialized_end=5336,
 )
 
 
@@ -5839,7 +5839,7 @@ _ATLASGETDECKS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasGetDecks.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5857,8 +5857,8 @@ _ATLASGETDECKS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5367,
-  serialized_end=5423,
+  serialized_start=5338,
+  serialized_end=5394,
 )
 
 
@@ -5871,7 +5871,7 @@ _ATLASGETDRAFTS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasGetDrafts.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5903,8 +5903,8 @@ _ATLASGETDRAFTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5426,
-  serialized_end=5563,
+  serialized_start=5397,
+  serialized_end=5534,
 )
 
 
@@ -5917,7 +5917,7 @@ _ATLASGETORDERS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasGetOrders.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5935,8 +5935,8 @@ _ATLASGETORDERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5565,
-  serialized_end=5622,
+  serialized_start=5536,
+  serialized_end=5593,
 )
 
 
@@ -5949,7 +5949,7 @@ _ATLASGETPLAYERINFO = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasGetPlayerInfo.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5967,8 +5967,8 @@ _ATLASGETPLAYERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5624,
-  serialized_end=5685,
+  serialized_start=5595,
+  serialized_end=5656,
 )
 
 
@@ -5981,78 +5981,78 @@ _ATLASORDER = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='PegasusUtil.AtlasOrder.id', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='type', full_name='PegasusUtil.AtlasOrder.type', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='status', full_name='PegasusUtil.AtlasOrder.status', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='data', full_name='PegasusUtil.AtlasOrder.data', index=3,
-      number=4, type=3, cpp_type=2, label=1,
+      number=4, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='first_data', full_name='PegasusUtil.AtlasOrder.first_data', index=4,
-      number=5, type=3, cpp_type=2, label=1,
+      number=5, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='order', full_name='PegasusUtil.AtlasOrder.order', index=5,
-      number=6, type=9, cpp_type=9, label=1,
+      number=6, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='wallet', full_name='PegasusUtil.AtlasOrder.wallet', index=6,
-      number=7, type=3, cpp_type=2, label=1,
+      number=7, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='err_str', full_name='PegasusUtil.AtlasOrder.err_str', index=7,
-      number=8, type=9, cpp_type=9, label=1,
+      number=8, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='ip_address', full_name='PegasusUtil.AtlasOrder.ip_address', index=8,
-      number=9, type=9, cpp_type=9, label=1,
+      number=9, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='challenge_id', full_name='PegasusUtil.AtlasOrder.challenge_id', index=9,
-      number=10, type=9, cpp_type=9, label=1,
+      number=10, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='provider', full_name='PegasusUtil.AtlasOrder.provider', index=10,
-      number=11, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=1,
+      number=11, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -6103,8 +6103,8 @@ _ATLASORDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5688,
-  serialized_end=6097,
+  serialized_start=5659,
+  serialized_end=6046,
 )
 
 
@@ -6135,8 +6135,8 @@ _ATLASORDERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6099,
-  serialized_end=6173,
+  serialized_start=6048,
+  serialized_end=6122,
 )
 
 
@@ -6149,7 +6149,7 @@ _ATLASRELEASEMOBILEPURCHASELOCK = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasReleaseMobilePurchaseLock.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -6167,8 +6167,8 @@ _ATLASRELEASEMOBILEPURCHASELOCK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6175,
-  serialized_end=6248,
+  serialized_start=6124,
+  serialized_end=6197,
 )
 
 
@@ -6181,14 +6181,14 @@ _ATLASREMOVEBOOSTER = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasRemoveBooster.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='booster_id', full_name='PegasusUtil.AtlasRemoveBooster.booster_id', index=1,
-      number=2, type=4, cpp_type=4, label=1,
+      number=2, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -6206,8 +6206,8 @@ _ATLASREMOVEBOOSTER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6250,
-  serialized_end=6331,
+  serialized_start=6199,
+  serialized_end=6280,
 )
 
 
@@ -6220,14 +6220,14 @@ _ATLASREMOVECARD = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasRemoveCard.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='card_id', full_name='PegasusUtil.AtlasRemoveCard.card_id', index=1,
-      number=2, type=4, cpp_type=4, label=1,
+      number=2, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -6245,8 +6245,8 @@ _ATLASREMOVECARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6333,
-  serialized_end=6408,
+  serialized_start=6282,
+  serialized_end=6357,
 )
 
 
@@ -6259,14 +6259,14 @@ _ATLASREMOVECARDBACK = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasRemoveCardBack.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='card_back', full_name='PegasusUtil.AtlasRemoveCardBack.card_back', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -6284,8 +6284,8 @@ _ATLASREMOVECARDBACK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6410,
-  serialized_end=6491,
+  serialized_start=6359,
+  serialized_end=6440,
 )
 
 
@@ -6298,14 +6298,14 @@ _ATLASREMOVEDRAFT = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasRemoveDraft.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='ticket_id', full_name='PegasusUtil.AtlasRemoveDraft.ticket_id', index=1,
-      number=2, type=4, cpp_type=4, label=1,
+      number=2, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -6323,8 +6323,8 @@ _ATLASREMOVEDRAFT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6493,
-  serialized_end=6571,
+  serialized_start=6442,
+  serialized_end=6520,
 )
 
 
@@ -6337,14 +6337,14 @@ _ATLASRESTORECARD = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasRestoreCard.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='card_id', full_name='PegasusUtil.AtlasRestoreCard.card_id', index=1,
-      number=2, type=4, cpp_type=4, label=1,
+      number=2, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -6362,8 +6362,8 @@ _ATLASRESTORECARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6573,
-  serialized_end=6649,
+  serialized_start=6522,
+  serialized_end=6598,
 )
 
 
@@ -6376,14 +6376,14 @@ _ATLASSETADVENTUREPROGRESS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='PegasusUtil.AtlasSetAdventureProgress.account_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='wing_id', full_name='PegasusUtil.AtlasSetAdventureProgress.wing_id', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -6429,8 +6429,8 @@ _ATLASSETADVENTUREPROGRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6652,
-  serialized_end=6828,
+  serialized_start=6601,
+  serialized_end=6777,
 )
 
 
@@ -6454,8 +6454,8 @@ _ATLASSUCCESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6830,
-  serialized_end=6864,
+  serialized_start=6779,
+  serialized_end=6813,
 )
 
 
@@ -6468,14 +6468,14 @@ _ATLASWINGPROGRESS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='progress', full_name='PegasusUtil.AtlasWingProgress.progress', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='last_update', full_name='PegasusUtil.AtlasWingProgress.last_update', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -6492,8 +6492,8 @@ _ATLASWINGPROGRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6866,
-  serialized_end=6979,
+  serialized_start=6815,
+  serialized_end=6928,
 )
 
 
@@ -6524,8 +6524,8 @@ _ATLASADVENTUREPROGRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6981,
-  serialized_end=7071,
+  serialized_start=6930,
+  serialized_end=7020,
 )
 
 
@@ -6538,14 +6538,14 @@ _BOOSTERCARD = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='card_def', full_name='PegasusUtil.BoosterCard.card_def', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='insert_date', full_name='PegasusUtil.BoosterCard.insert_date', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -6562,8 +6562,8 @@ _BOOSTERCARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7073,
-  serialized_end=7170,
+  serialized_start=7022,
+  serialized_end=7119,
 )
 
 
@@ -6594,8 +6594,8 @@ _BOOSTERCONTENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7172,
-  serialized_end=7249,
+  serialized_start=7121,
+  serialized_end=7198,
 )
 
 
@@ -6608,14 +6608,7 @@ _BOOSTERINFO = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='type', full_name='PegasusUtil.BoosterInfo.type', index=0,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='count', full_name='PegasusUtil.BoosterInfo.count', index=1,
-      number=3, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -6632,8 +6625,8 @@ _BOOSTERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7251,
-  serialized_end=7293,
+  serialized_start=7200,
+  serialized_end=7227,
 )
 
 
@@ -6646,105 +6639,105 @@ _ATLASPLAYER = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='player_id', full_name='PegasusUtil.AtlasPlayer.player_id', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='games_started', full_name='PegasusUtil.AtlasPlayer.games_started', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='games_completed', full_name='PegasusUtil.AtlasPlayer.games_completed', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='games_won', full_name='PegasusUtil.AtlasPlayer.games_won', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      number=4, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='games_lost', full_name='PegasusUtil.AtlasPlayer.games_lost', index=4,
-      number=5, type=5, cpp_type=1, label=1,
+      number=5, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='deleted_reason', full_name='PegasusUtil.AtlasPlayer.deleted_reason', index=5,
-      number=6, type=5, cpp_type=1, label=1,
+      number=6, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='deck_limit', full_name='PegasusUtil.AtlasPlayer.deck_limit', index=6,
-      number=7, type=5, cpp_type=1, label=1,
+      number=7, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='campaign_progress', full_name='PegasusUtil.AtlasPlayer.campaign_progress', index=7,
-      number=8, type=3, cpp_type=2, label=1,
+      number=8, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='random_deck_id', full_name='PegasusUtil.AtlasPlayer.random_deck_id', index=8,
-      number=9, type=3, cpp_type=2, label=1,
+      number=9, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='arcane_dust', full_name='PegasusUtil.AtlasPlayer.arcane_dust', index=9,
-      number=10, type=3, cpp_type=2, label=1,
+      number=10, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='last_game_id', full_name='PegasusUtil.AtlasPlayer.last_game_id', index=10,
-      number=11, type=3, cpp_type=2, label=1,
+      number=11, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='craft_asset_id', full_name='PegasusUtil.AtlasPlayer.craft_asset_id', index=11,
-      number=12, type=5, cpp_type=1, label=1,
+      number=12, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='craft_premium', full_name='PegasusUtil.AtlasPlayer.craft_premium', index=12,
-      number=13, type=5, cpp_type=1, label=1,
+      number=13, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='craft_count', full_name='PegasusUtil.AtlasPlayer.craft_count', index=13,
-      number=14, type=5, cpp_type=1, label=1,
+      number=14, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='battlepay_id', full_name='PegasusUtil.AtlasPlayer.battlepay_id', index=14,
-      number=15, type=3, cpp_type=2, label=1,
+      number=15, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -6758,21 +6751,21 @@ _ATLASPLAYER = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='gold', full_name='PegasusUtil.AtlasPlayer.gold', index=16,
-      number=17, type=3, cpp_type=2, label=1,
+      number=17, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='bonus_gold', full_name='PegasusUtil.AtlasPlayer.bonus_gold', index=17,
-      number=18, type=3, cpp_type=2, label=1,
+      number=18, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='default_card_back', full_name='PegasusUtil.AtlasPlayer.default_card_back', index=18,
-      number=19, type=5, cpp_type=1, label=1,
+      number=19, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -6790,8 +6783,8 @@ _ATLASPLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7296,
-  serialized_end=7772,
+  serialized_start=7230,
+  serialized_end=7706,
 )
 
 
@@ -6822,8 +6815,8 @@ _BOOSTERLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7774,
-  serialized_end=7848,
+  serialized_start=7708,
+  serialized_end=7782,
 )
 
 
@@ -6836,35 +6829,28 @@ _BOOSTERTALLY = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='is_open', full_name='PegasusUtil.BoosterTally.is_open', index=0,
-      number=1, type=8, cpp_type=7, label=1,
+      number=1, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='type_id', full_name='PegasusUtil.BoosterTally.type_id', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='is_bought', full_name='PegasusUtil.BoosterTally.is_bought', index=2,
-      number=3, type=8, cpp_type=7, label=1,
+      number=3, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='source_id', full_name='PegasusUtil.BoosterTally.source_id', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='count', full_name='PegasusUtil.BoosterTally.count', index=4,
-      number=5, type=5, cpp_type=1, label=1,
+      number=4, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -6881,8 +6867,8 @@ _BOOSTERTALLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7850,
-  serialized_end=7951,
+  serialized_start=7784,
+  serialized_end=7870,
 )
 
 
@@ -6913,8 +6899,8 @@ _BOOSTERTALLYLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7953,
-  serialized_end=8033,
+  serialized_start=7872,
+  serialized_end=7952,
 )
 
 
@@ -6927,48 +6913,41 @@ _BOUGHTSOLDCARD = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='def', full_name='PegasusUtil.BoughtSoldCard.def', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='amount', full_name='PegasusUtil.BoughtSoldCard.amount', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='result', full_name='PegasusUtil.BoughtSoldCard.result', index=2,
-      number=3, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=1,
+      number=3, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='count', full_name='PegasusUtil.BoughtSoldCard.count', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='nerfed', full_name='PegasusUtil.BoughtSoldCard.nerfed', index=4,
-      number=5, type=8, cpp_type=7, label=1,
+      name='nerfed', full_name='PegasusUtil.BoughtSoldCard.nerfed', index=3,
+      number=644, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='unit_sell_price', full_name='PegasusUtil.BoughtSoldCard.unit_sell_price', index=5,
+      name='unit_sell_price', full_name='PegasusUtil.BoughtSoldCard.unit_sell_price', index=4,
       number=6, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='unit_buy_price', full_name='PegasusUtil.BoughtSoldCard.unit_buy_price', index=6,
+      name='unit_buy_price', full_name='PegasusUtil.BoughtSoldCard.unit_buy_price', index=5,
       number=7, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -6988,8 +6967,8 @@ _BOUGHTSOLDCARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8036,
-  serialized_end=8389,
+  serialized_start=7955,
+  serialized_end=8286,
 )
 
 
@@ -7002,21 +6981,21 @@ _BUNDLEITEM = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='product_type', full_name='PegasusUtil.BundleItem.product_type', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='data', full_name='PegasusUtil.BundleItem.data', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='quantity', full_name='PegasusUtil.BundleItem.quantity', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7033,8 +7012,8 @@ _BUNDLEITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8391,
-  serialized_end=8457,
+  serialized_start=8288,
+  serialized_end=8354,
 )
 
 
@@ -7047,14 +7026,14 @@ _BUNDLE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='PegasusUtil.Bundle.id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='cost', full_name='PegasusUtil.Bundle.cost', index=1,
-      number=2, type=1, cpp_type=5, label=1,
+      number=2, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7113,8 +7092,8 @@ _BUNDLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8460,
-  serialized_end=8642,
+  serialized_start=8357,
+  serialized_end=8539,
 )
 
 
@@ -7127,34 +7106,27 @@ _BUYSELLCARD = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='def', full_name='PegasusUtil.BuySellCard.def', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='count', full_name='PegasusUtil.BuySellCard.count', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='buying', full_name='PegasusUtil.BuySellCard.buying', index=2,
-      number=3, type=8, cpp_type=7, label=1,
+      name='buying', full_name='PegasusUtil.BuySellCard.buying', index=1,
+      number=386, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='unit_sell_price', full_name='PegasusUtil.BuySellCard.unit_sell_price', index=3,
+      name='unit_sell_price', full_name='PegasusUtil.BuySellCard.unit_sell_price', index=2,
       number=4, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='unit_buy_price', full_name='PegasusUtil.BuySellCard.unit_buy_price', index=4,
+      name='unit_buy_price', full_name='PegasusUtil.BuySellCard.unit_buy_price', index=3,
       number=5, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -7173,8 +7145,8 @@ _BUYSELLCARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8645,
-  serialized_end=8808,
+  serialized_start=8542,
+  serialized_end=8691,
 )
 
 
@@ -7187,7 +7159,7 @@ _CANCELPURCHASE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='is_auto_cancel', full_name='PegasusUtil.CancelPurchase.is_auto_cancel', index=0,
-      number=1, type=8, cpp_type=7, label=1,
+      number=1, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7196,6 +7168,13 @@ _CANCELPURCHASE = _descriptor.Descriptor(
       name='third_party_reason', full_name='PegasusUtil.CancelPurchase.third_party_reason', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=1,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='device_id', full_name='PegasusUtil.CancelPurchase.device_id', index=2,
+      number=3, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -7213,8 +7192,8 @@ _CANCELPURCHASE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8811,
-  serialized_end=9146,
+  serialized_start=8694,
+  serialized_end=9048,
 )
 
 
@@ -7227,8 +7206,8 @@ _CANCELPURCHASERESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='PegasusUtil.CancelPurchaseResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=1,
+      number=1, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -7267,8 +7246,8 @@ _CANCELPURCHASERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9149,
-  serialized_end=9412,
+  serialized_start=9051,
+  serialized_end=9302,
 )
 
 
@@ -7281,7 +7260,7 @@ _CANCELQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='quest_id', full_name='PegasusUtil.CancelQuest.quest_id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7299,8 +7278,8 @@ _CANCELQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9414,
-  serialized_end=9478,
+  serialized_start=9304,
+  serialized_end=9368,
 )
 
 
@@ -7313,14 +7292,14 @@ _CANCELQUESTRESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='quest_id', full_name='PegasusUtil.CancelQuestResponse.quest_id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='success', full_name='PegasusUtil.CancelQuestResponse.success', index=1,
-      number=2, type=8, cpp_type=7, label=1,
+      number=2, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7345,8 +7324,8 @@ _CANCELQUESTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9480,
-  serialized_end=9605,
+  serialized_start=9370,
+  serialized_end=9495,
 )
 
 
@@ -7359,7 +7338,7 @@ _CARDBACKS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='default_card_back', full_name='PegasusUtil.CardBacks.default_card_back', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7384,8 +7363,8 @@ _CARDBACKS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9607,
-  serialized_end=9698,
+  serialized_start=9497,
+  serialized_end=9588,
 )
 
 
@@ -7398,14 +7377,7 @@ _CARDUSECOUNT = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='asset', full_name='PegasusUtil.CardUseCount.asset', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='count', full_name='PegasusUtil.CardUseCount.count', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7422,8 +7394,8 @@ _CARDUSECOUNT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9700,
-  serialized_end=9744,
+  serialized_start=9590,
+  serialized_end=9619,
 )
 
 
@@ -7436,28 +7408,28 @@ _CARDVALUE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='card', full_name='PegasusUtil.CardValue.card', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='buy', full_name='PegasusUtil.CardValue.buy', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='sell', full_name='PegasusUtil.CardValue.sell', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='nerfed', full_name='PegasusUtil.CardValue.nerfed', index=3,
-      number=4, type=8, cpp_type=7, label=1,
+      number=4, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7474,8 +7446,8 @@ _CARDVALUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9746,
-  serialized_end=9838,
+  serialized_start=9621,
+  serialized_end=9713,
 )
 
 
@@ -7495,7 +7467,7 @@ _CARDVALUES = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='card_nerf_index', full_name='PegasusUtil.CardValues.card_nerf_index', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7513,8 +7485,8 @@ _CARDVALUES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9840,
-  serialized_end=9937,
+  serialized_start=9715,
+  serialized_end=9812,
 )
 
 
@@ -7527,7 +7499,7 @@ _CHECKACCOUNTLICENSEACHIEVE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='achieve', full_name='PegasusUtil.CheckAccountLicenseAchieve.achieve', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7545,8 +7517,8 @@ _CHECKACCOUNTLICENSEACHIEVE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9939,
-  serialized_end=10017,
+  serialized_start=9814,
+  serialized_end=9892,
 )
 
 
@@ -7570,8 +7542,8 @@ _CHECKACCOUNTLICENSES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10019,
-  serialized_end=10074,
+  serialized_start=9894,
+  serialized_end=9949,
 )
 
 
@@ -7595,8 +7567,8 @@ _CHECKGAMELICENSES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10076,
-  serialized_end=10128,
+  serialized_start=9951,
+  serialized_end=10003,
 )
 
 
@@ -7609,14 +7581,14 @@ _CHECKLICENSESRESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_level', full_name='PegasusUtil.CheckLicensesResponse.account_level', index=0,
-      number=1, type=8, cpp_type=7, label=1,
+      number=1, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='success', full_name='PegasusUtil.CheckLicensesResponse.success', index=1,
-      number=2, type=8, cpp_type=7, label=1,
+      number=2, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7634,8 +7606,8 @@ _CHECKLICENSESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10130,
-  serialized_end=10214,
+  serialized_start=10005,
+  serialized_end=10089,
 )
 
 
@@ -7648,7 +7620,7 @@ _CLIENTOPTION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='index', full_name='PegasusUtil.ClientOption.index', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7700,8 +7672,8 @@ _CLIENTOPTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10216,
-  serialized_end=10335,
+  serialized_start=10091,
+  serialized_end=10210,
 )
 
 
@@ -7739,8 +7711,8 @@ _CLIENTOPTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10337,
-  serialized_end=10433,
+  serialized_start=10212,
+  serialized_end=10308,
 )
 
 
@@ -7764,8 +7736,8 @@ _CLOSECARDMARKET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10435,
-  serialized_end=10485,
+  serialized_start=10310,
+  serialized_end=10360,
 )
 
 
@@ -7796,8 +7768,8 @@ _COLLECTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10487,
-  serialized_end=10562,
+  serialized_start=10362,
+  serialized_end=10437,
 )
 
 
@@ -7810,21 +7782,21 @@ _CREATEDECK = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='name', full_name='PegasusUtil.CreateDeck.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='hero', full_name='PegasusUtil.CreateDeck.hero', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='hero_premium', full_name='PegasusUtil.CreateDeck.hero_premium', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7842,8 +7814,8 @@ _CREATEDECK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10564,
-  serialized_end=10659,
+  serialized_start=10439,
+  serialized_end=10534,
 )
 
 
@@ -7856,15 +7828,15 @@ _DBACTION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='action', full_name='PegasusUtil.DBAction.action', index=0,
-      number=1, type=14, cpp_type=8, label=1,
+      number=1, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='result', full_name='PegasusUtil.DBAction.result', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=-1,
+      number=2, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=-1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -7888,8 +7860,8 @@ _DBACTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10662,
-  serialized_end=10819,
+  serialized_start=10537,
+  serialized_end=10681,
 )
 
 
@@ -7902,14 +7874,14 @@ _DEBUGAUTH = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='PegasusUtil.DebugAuth.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
+      number=1, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='player_id', full_name='PegasusUtil.DebugAuth.player_id', index=1,
-      number=2, type=3, cpp_type=2, label=1,
+      number=2, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7928,8 +7900,8 @@ _DEBUGAUTH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10822,
-  serialized_end=10986,
+  serialized_start=10684,
+  serialized_end=10848,
 )
 
 
@@ -7942,7 +7914,7 @@ _DECKCONTENTS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck', full_name='PegasusUtil.DeckContents.deck', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7967,8 +7939,8 @@ _DECKCONTENTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10988,
-  serialized_end=11081,
+  serialized_start=10850,
+  serialized_end=10943,
 )
 
 
@@ -7981,7 +7953,7 @@ _DECKCREATED = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='info', full_name='PegasusUtil.DeckCreated.info', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7999,8 +7971,8 @@ _DECKCREATED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11083,
-  serialized_end=11156,
+  serialized_start=10945,
+  serialized_end=11018,
 )
 
 
@@ -8013,7 +7985,7 @@ _DECKDELETED = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck', full_name='PegasusUtil.DeckDeleted.deck', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8031,8 +8003,8 @@ _DECKDELETED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11158,
-  serialized_end=11206,
+  serialized_start=11020,
+  serialized_end=11068,
 )
 
 
@@ -8045,14 +8017,14 @@ _DECKGAINEDCARD = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck', full_name='PegasusUtil.DeckGainedCard.deck', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='card', full_name='PegasusUtil.DeckGainedCard.card', index=1,
-      number=2, type=3, cpp_type=2, label=1,
+      number=2, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8070,8 +8042,8 @@ _DECKGAINEDCARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11208,
-  serialized_end=11273,
+  serialized_start=11070,
+  serialized_end=11135,
 )
 
 
@@ -8102,8 +8074,8 @@ _DECKLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11275,
-  serialized_end=11346,
+  serialized_start=11137,
+  serialized_end=11208,
 )
 
 
@@ -8116,14 +8088,14 @@ _DECKLOSTCARD = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck', full_name='PegasusUtil.DeckLostCard.deck', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='card', full_name='PegasusUtil.DeckLostCard.card', index=1,
-      number=2, type=3, cpp_type=2, label=1,
+      number=2, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8141,8 +8113,8 @@ _DECKLOSTCARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11348,
-  serialized_end=11411,
+  serialized_start=11210,
+  serialized_end=11273,
 )
 
 
@@ -8155,14 +8127,14 @@ _DECKRENAMED = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck', full_name='PegasusUtil.DeckRenamed.deck', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='name', full_name='PegasusUtil.DeckRenamed.name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8180,8 +8152,8 @@ _DECKRENAMED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11413,
-  serialized_end=11475,
+  serialized_start=11275,
+  serialized_end=11337,
 )
 
 
@@ -8194,7 +8166,7 @@ _DECKSETDATA = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck', full_name='PegasusUtil.DeckSetData.deck', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8219,8 +8191,8 @@ _DECKSETDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11477,
-  serialized_end=11581,
+  serialized_start=11339,
+  serialized_end=11443,
 )
 
 
@@ -8233,7 +8205,7 @@ _DELETEDECK = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck', full_name='PegasusUtil.DeleteDeck.deck', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8251,8 +8223,8 @@ _DELETEDECK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11583,
-  serialized_end=11642,
+  serialized_start=11445,
+  serialized_end=11504,
 )
 
 
@@ -8265,7 +8237,7 @@ _DEVBNETIDENTIFY = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='name', full_name='PegasusUtil.DevBnetIdentify.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8283,8 +8255,8 @@ _DEVBNETIDENTIFY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11644,
-  serialized_end=11708,
+  serialized_start=11506,
+  serialized_end=11570,
 )
 
 
@@ -8357,8 +8329,8 @@ _DISCONNECTED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11711,
-  serialized_end=11881,
+  serialized_start=11573,
+  serialized_end=11743,
 )
 
 
@@ -8382,8 +8354,8 @@ _DOPURCHASE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11883,
-  serialized_end=11928,
+  serialized_start=11745,
+  serialized_end=11790,
 )
 
 
@@ -8396,14 +8368,14 @@ _DRAFTACKREWARDS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck_id', full_name='PegasusUtil.DraftAckRewards.deck_id', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='slot', full_name='PegasusUtil.DraftAckRewards.slot', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8421,8 +8393,8 @@ _DRAFTACKREWARDS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11930,
-  serialized_end=12011,
+  serialized_start=11792,
+  serialized_end=11873,
 )
 
 
@@ -8446,8 +8418,8 @@ _DRAFTBEGIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12013,
-  serialized_end=12058,
+  serialized_start=11875,
+  serialized_end=11920,
 )
 
 
@@ -8460,7 +8432,7 @@ _DRAFTBEGINNING = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck_id', full_name='PegasusUtil.DraftBeginning.deck_id', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8485,8 +8457,8 @@ _DRAFTBEGINNING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12060,
-  serialized_end=12131,
+  serialized_start=11922,
+  serialized_end=11993,
 )
 
 
@@ -8499,7 +8471,7 @@ _DRAFTCHOSEN = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='asset', full_name='PegasusUtil.DraftChosen.asset', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8524,8 +8496,8 @@ _DRAFTCHOSEN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12133,
-  serialized_end=12204,
+  serialized_start=11995,
+  serialized_end=12066,
 )
 
 
@@ -8538,7 +8510,7 @@ _DRAFTERROR = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='error_code', full_name='PegasusUtil.DraftError.error_code', index=0,
-      number=1, type=14, cpp_type=8, label=1,
+      number=1, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8557,8 +8529,8 @@ _DRAFTERROR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12207,
-  serialized_end=12497,
+  serialized_start=12069,
+  serialized_end=12359,
 )
 
 
@@ -8582,8 +8554,8 @@ _DRAFTGETPICKSANDCONTENTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12499,
-  serialized_end=12558,
+  serialized_start=12361,
+  serialized_end=12420,
 )
 
 
@@ -8596,21 +8568,21 @@ _DRAFTMAKEPICK = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck_id', full_name='PegasusUtil.DraftMakePick.deck_id', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='slot', full_name='PegasusUtil.DraftMakePick.slot', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='index', full_name='PegasusUtil.DraftMakePick.index', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8628,8 +8600,8 @@ _DRAFTMAKEPICK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12560,
-  serialized_end=12654,
+  serialized_start=12422,
+  serialized_end=12516,
 )
 
 
@@ -8642,14 +8614,14 @@ _DRAFTRETIRE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck_id', full_name='PegasusUtil.DraftRetire.deck_id', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='slot', full_name='PegasusUtil.DraftRetire.slot', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8667,8 +8639,8 @@ _DRAFTRETIRE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12656,
-  serialized_end=12733,
+  serialized_start=12518,
+  serialized_end=12595,
 )
 
 
@@ -8719,8 +8691,8 @@ _DRAFTREWARDBAG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12736,
-  serialized_end=13002,
+  serialized_start=12598,
+  serialized_end=12864,
 )
 
 
@@ -8778,8 +8750,8 @@ _DRAFTREWARDCHEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13005,
-  serialized_end=13238,
+  serialized_start=12867,
+  serialized_end=13100,
 )
 
 
@@ -8792,14 +8764,14 @@ _DRAFTCHOICESANDCONTENTS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck_id', full_name='PegasusUtil.DraftChoicesAndContents.deck_id', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='slot', full_name='PegasusUtil.DraftChoicesAndContents.slot', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8813,7 +8785,7 @@ _DRAFTCHOICESANDCONTENTS = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='hero', full_name='PegasusUtil.DraftChoicesAndContents.hero', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      number=4, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8827,14 +8799,14 @@ _DRAFTCHOICESANDCONTENTS = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='wins', full_name='PegasusUtil.DraftChoicesAndContents.wins', index=5,
-      number=6, type=5, cpp_type=1, label=1,
+      number=6, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='losses', full_name='PegasusUtil.DraftChoicesAndContents.losses', index=6,
-      number=7, type=5, cpp_type=1, label=1,
+      number=7, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8859,8 +8831,8 @@ _DRAFTCHOICESANDCONTENTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13241,
-  serialized_end=13469,
+  serialized_start=13103,
+  serialized_end=13331,
 )
 
 
@@ -8873,14 +8845,14 @@ _DRAFTRETIRED = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck_id', full_name='PegasusUtil.DraftRetired.deck_id', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='chest', full_name='PegasusUtil.DraftRetired.chest', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8898,8 +8870,8 @@ _DRAFTRETIRED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13471,
-  serialized_end=13569,
+  serialized_start=13333,
+  serialized_end=13431,
 )
 
 
@@ -8912,7 +8884,7 @@ _DRAFTREWARDSACKED = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck_id', full_name='PegasusUtil.DraftRewardsAcked.deck_id', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8930,8 +8902,8 @@ _DRAFTREWARDSACKED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13571,
-  serialized_end=13628,
+  serialized_start=13433,
+  serialized_end=13490,
 )
 
 
@@ -8955,8 +8927,8 @@ _DROPPEDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13630,
-  serialized_end=13666,
+  serialized_start=13492,
+  serialized_end=13528,
 )
 
 
@@ -8969,14 +8941,14 @@ _ERROR37 = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='reason', full_name='PegasusUtil.Error37.reason', index=0,
-      number=1, type=14, cpp_type=8, label=1,
+      number=1, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='retry_millis', full_name='PegasusUtil.Error37.retry_millis', index=1,
-      number=2, type=3, cpp_type=2, label=1,
+      number=2, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -8995,8 +8967,8 @@ _ERROR37 = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13669,
-  serialized_end=13808,
+  serialized_start=13531,
+  serialized_end=13670,
 )
 
 
@@ -9009,28 +8981,28 @@ _GAMESINFO = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='games_started', full_name='PegasusUtil.GamesInfo.games_started', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='games_won', full_name='PegasusUtil.GamesInfo.games_won', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='games_lost', full_name='PegasusUtil.GamesInfo.games_lost', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='free_reward_progress', full_name='PegasusUtil.GamesInfo.free_reward_progress', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      number=4, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -9048,8 +9020,8 @@ _GAMESINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13810,
-  serialized_end=13934,
+  serialized_start=13672,
+  serialized_end=13796,
 )
 
 
@@ -9062,8 +9034,8 @@ _GETACCOUNTINFO = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='request', full_name='PegasusUtil.GetAccountInfo.request', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=1,
+      number=1, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -9081,8 +9053,8 @@ _GETACCOUNTINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13937,
-  serialized_end=14470,
+  serialized_start=13799,
+  serialized_end=14320,
 )
 
 
@@ -9113,8 +9085,8 @@ _GETACHIEVES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14472,
-  serialized_end=14555,
+  serialized_start=14322,
+  serialized_end=14405,
 )
 
 
@@ -9138,8 +9110,8 @@ _GETADVENTUREPROGRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14557,
-  serialized_end=14612,
+  serialized_start=14407,
+  serialized_end=14462,
 )
 
 
@@ -9163,8 +9135,8 @@ _GETASSETSVERSION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14614,
-  serialized_end=14665,
+  serialized_start=14464,
+  serialized_end=14515,
 )
 
 
@@ -9188,8 +9160,8 @@ _GETBATTLEPAYCONFIG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14667,
-  serialized_end=14720,
+  serialized_start=14517,
+  serialized_end=14570,
 )
 
 
@@ -9213,8 +9185,8 @@ _GETBATTLEPAYSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14722,
-  serialized_end=14775,
+  serialized_start=14572,
+  serialized_end=14625,
 )
 
 
@@ -9227,7 +9199,7 @@ _GETDECK = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck', full_name='PegasusUtil.GetDeck.deck', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -9245,8 +9217,8 @@ _GETDECK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14777,
-  serialized_end=14833,
+  serialized_start=14627,
+  serialized_end=14683,
 )
 
 
@@ -9277,8 +9249,8 @@ _GETOPTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14835,
-  serialized_end=14894,
+  serialized_start=14685,
+  serialized_end=14744,
 )
 
 
@@ -9291,22 +9263,29 @@ _GETPURCHASEMETHOD = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='product_id', full_name='PegasusUtil.GetPurchaseMethod.product_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='quantity', full_name='PegasusUtil.GetPurchaseMethod.quantity', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='currency', full_name='PegasusUtil.GetPurchaseMethod.currency', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='device_id', full_name='PegasusUtil.GetPurchaseMethod.device_id', index=3,
+      number=4, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -9323,8 +9302,8 @@ _GETPURCHASEMETHOD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14896,
-  serialized_end=15004,
+  serialized_start=14746,
+  serialized_end=14873,
 )
 
 
@@ -9337,7 +9316,7 @@ _GETTHIRDPARTYPURCHASESTATUS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='third_party_id', full_name='PegasusUtil.GetThirdPartyPurchaseStatus.third_party_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -9355,8 +9334,8 @@ _GETTHIRDPARTYPURCHASESTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15006,
-  serialized_end=15092,
+  serialized_start=14875,
+  serialized_end=14961,
 )
 
 
@@ -9369,28 +9348,28 @@ _GOLDBALANCE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='capped_balance', full_name='PegasusUtil.GoldBalance.capped_balance', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='bonus_balance', full_name='PegasusUtil.GoldBalance.bonus_balance', index=1,
-      number=2, type=3, cpp_type=2, label=1,
+      number=2, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='cap', full_name='PegasusUtil.GoldBalance.cap', index=2,
-      number=3, type=3, cpp_type=2, label=1,
+      number=3, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='cap_warning', full_name='PegasusUtil.GoldBalance.cap_warning', index=3,
-      number=4, type=3, cpp_type=2, label=1,
+      number=4, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -9408,8 +9387,8 @@ _GOLDBALANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15094,
-  serialized_end=15209,
+  serialized_start=14963,
+  serialized_end=15078,
 )
 
 
@@ -9422,14 +9401,14 @@ _GOLDCOSTBOOSTER = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='cost', full_name='PegasusUtil.GoldCostBooster.cost', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='pack_type', full_name='PegasusUtil.GoldCostBooster.pack_type', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -9446,8 +9425,8 @@ _GOLDCOSTBOOSTER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15211,
-  serialized_end=15261,
+  serialized_start=15080,
+  serialized_end=15130,
 )
 
 
@@ -9513,8 +9492,8 @@ _BATTLEPAYCONFIGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15264,
-  serialized_end=15503,
+  serialized_start=15133,
+  serialized_end=15372,
 )
 
 
@@ -9527,7 +9506,7 @@ _GUARDIANTRACK = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='what', full_name='PegasusUtil.GuardianTrack.what', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -9545,8 +9524,8 @@ _GUARDIANTRACK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15505,
-  serialized_end=15567,
+  serialized_start=15374,
+  serialized_end=15436,
 )
 
 
@@ -9663,7 +9642,7 @@ _GUARDIANVARS = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='showUserUI', full_name='PegasusUtil.GuardianVars.showUserUI', index=15,
+      name='show_user_u_i', full_name='PegasusUtil.GuardianVars.show_user_u_i', index=15,
       number=16, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -9703,8 +9682,8 @@ _GUARDIANVARS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15570,
-  serialized_end=15930,
+  serialized_start=15439,
+  serialized_end=15802,
 )
 
 
@@ -9728,8 +9707,8 @@ _MASSDISENCHANTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15932,
-  serialized_end=15988,
+  serialized_start=15804,
+  serialized_end=15860,
 )
 
 
@@ -9742,7 +9721,7 @@ _MASSDISENCHANTRESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='amount', full_name='PegasusUtil.MassDisenchantResponse.amount', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -9760,8 +9739,8 @@ _MASSDISENCHANTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15990,
-  serialized_end=16051,
+  serialized_start=15862,
+  serialized_end=15923,
 )
 
 
@@ -9774,42 +9753,42 @@ _MEDALHISTORYINFO = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='season', full_name='PegasusUtil.MedalHistoryInfo.season', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='when', full_name='PegasusUtil.MedalHistoryInfo.when', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='stars', full_name='PegasusUtil.MedalHistoryInfo.stars', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='star_level', full_name='PegasusUtil.MedalHistoryInfo.star_level', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      number=4, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='level_start', full_name='PegasusUtil.MedalHistoryInfo.level_start', index=4,
-      number=5, type=5, cpp_type=1, label=1,
+      number=5, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='level_end', full_name='PegasusUtil.MedalHistoryInfo.level_end', index=5,
-      number=6, type=5, cpp_type=1, label=1,
+      number=6, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -9833,8 +9812,8 @@ _MEDALHISTORYINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16054,
-  serialized_end=16219,
+  serialized_start=15926,
+  serialized_end=16091,
 )
 
 
@@ -9865,8 +9844,8 @@ _MEDALHISTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16221,
-  serialized_end=16303,
+  serialized_start=16093,
+  serialized_end=16175,
 )
 
 
@@ -9879,49 +9858,49 @@ _MEDALINFO = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='season_wins', full_name='PegasusUtil.MedalInfo.season_wins', index=0,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='stars', full_name='PegasusUtil.MedalInfo.stars', index=1,
-      number=6, type=5, cpp_type=1, label=1,
+      number=6, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='streak', full_name='PegasusUtil.MedalInfo.streak', index=2,
-      number=7, type=5, cpp_type=1, label=1,
+      number=7, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='star_level', full_name='PegasusUtil.MedalInfo.star_level', index=3,
-      number=8, type=5, cpp_type=1, label=1,
+      number=8, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='level_start', full_name='PegasusUtil.MedalInfo.level_start', index=4,
-      number=9, type=5, cpp_type=1, label=1,
+      number=9, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='level_end', full_name='PegasusUtil.MedalInfo.level_end', index=5,
-      number=10, type=5, cpp_type=1, label=1,
+      number=10, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='can_lose', full_name='PegasusUtil.MedalInfo.can_lose', index=6,
-      number=11, type=8, cpp_type=7, label=1,
+      number=11, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -9946,8 +9925,8 @@ _MEDALINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16306,
-  serialized_end=16489,
+  serialized_start=16178,
+  serialized_end=16361,
 )
 
 
@@ -9960,21 +9939,21 @@ _NEARBYPLAYER = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='bnet_id_hi', full_name='PegasusUtil.NearbyPlayer.bnet_id_hi', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='bnet_id_lo', full_name='PegasusUtil.NearbyPlayer.bnet_id_lo', index=1,
-      number=2, type=4, cpp_type=4, label=1,
+      number=2, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='session_start_time', full_name='PegasusUtil.NearbyPlayer.session_start_time', index=2,
-      number=3, type=4, cpp_type=4, label=1,
+      number=3, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -9991,8 +9970,8 @@ _NEARBYPLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16491,
-  serialized_end=16573,
+  serialized_start=16363,
+  serialized_end=16445,
 )
 
 
@@ -10005,7 +9984,7 @@ _NEXTHEROLEVELREWARD = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='level', full_name='PegasusUtil.NextHeroLevelReward.level', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -10064,8 +10043,8 @@ _NEXTHEROLEVELREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16576,
-  serialized_end=16988,
+  serialized_start=16448,
+  serialized_end=16860,
 )
 
 
@@ -10078,28 +10057,28 @@ _HEROXPINFO = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='class_id', full_name='PegasusUtil.HeroXPInfo.class_id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='level', full_name='PegasusUtil.HeroXPInfo.level', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='curr_xp', full_name='PegasusUtil.HeroXPInfo.curr_xp', index=2,
-      number=3, type=3, cpp_type=2, label=1,
+      number=3, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='max_xp', full_name='PegasusUtil.HeroXPInfo.max_xp', index=3,
-      number=4, type=3, cpp_type=2, label=1,
+      number=4, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -10123,8 +10102,8 @@ _HEROXPINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16991,
-  serialized_end=17124,
+  serialized_start=16863,
+  serialized_end=16996,
 )
 
 
@@ -10155,8 +10134,8 @@ _HEROXP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17126,
-  serialized_end=17198,
+  serialized_start=16998,
+  serialized_end=17070,
 )
 
 
@@ -10180,8 +10159,8 @@ _NOP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17200,
-  serialized_end=17226,
+  serialized_start=17072,
+  serialized_end=17098,
 )
 
 
@@ -10194,29 +10173,29 @@ _ONECLIENTTRACKING = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='level', full_name='PegasusUtil.OneClientTracking.level', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=1,
+      number=1, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='what', full_name='PegasusUtil.OneClientTracking.what', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='message', full_name='PegasusUtil.OneClientTracking.message', index=2,
+      name='timestamp', full_name='PegasusUtil.OneClientTracking.timestamp', index=2,
+      number=4, type=4, cpp_type=4, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='message', full_name='PegasusUtil.OneClientTracking.message', index=3,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='timestamp', full_name='PegasusUtil.OneClientTracking.timestamp', index=3,
-      number=4, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -10233,8 +10212,8 @@ _ONECLIENTTRACKING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17229,
-  serialized_end=17408,
+  serialized_start=17101,
+  serialized_end=17272,
 )
 
 
@@ -10265,8 +10244,8 @@ _CLIENTTRACKING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17410,
-  serialized_end=17505,
+  serialized_start=17274,
+  serialized_end=17369,
 )
 
 
@@ -10279,7 +10258,7 @@ _OPENBOOSTER = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='booster_type', full_name='PegasusUtil.OpenBooster.booster_type', index=0,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -10297,8 +10276,8 @@ _OPENBOOSTER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17507,
-  serialized_end=17575,
+  serialized_start=17371,
+  serialized_end=17439,
 )
 
 
@@ -10311,7 +10290,7 @@ _PLAYERRECORD = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='type', full_name='PegasusUtil.PlayerRecord.type', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -10325,14 +10304,14 @@ _PLAYERRECORD = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='wins', full_name='PegasusUtil.PlayerRecord.wins', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='losses', full_name='PegasusUtil.PlayerRecord.losses', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      number=4, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -10356,8 +10335,8 @@ _PLAYERRECORD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17577,
-  serialized_end=17663,
+  serialized_start=17441,
+  serialized_end=17527,
 )
 
 
@@ -10388,8 +10367,8 @@ _PLAYERRECORDS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17665,
-  serialized_end=17745,
+  serialized_start=17529,
+  serialized_end=17609,
 )
 
 
@@ -10402,7 +10381,7 @@ _PLAYQUEUE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='queue', full_name='PegasusUtil.PlayQueue.queue', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -10420,8 +10399,8 @@ _PLAYQUEUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17747,
-  serialized_end=17824,
+  serialized_start=17611,
+  serialized_end=17688,
 )
 
 
@@ -10434,7 +10413,7 @@ _PROFILEDECKLIMIT = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck_limit', full_name='PegasusUtil.ProfileDeckLimit.deck_limit', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -10452,8 +10431,8 @@ _PROFILEDECKLIMIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17826,
-  serialized_end=17885,
+  serialized_start=17690,
+  serialized_end=17749,
 )
 
 
@@ -10466,7 +10445,7 @@ _PROFILELASTLOGIN = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='last_login', full_name='PegasusUtil.ProfileLastLogin.last_login', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -10484,8 +10463,8 @@ _PROFILELASTLOGIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17887,
-  serialized_end=17967,
+  serialized_start=17751,
+  serialized_end=17831,
 )
 
 
@@ -10498,7 +10477,7 @@ _PROFILENOTICE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='entry', full_name='PegasusUtil.ProfileNotice.entry', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -10561,7 +10540,7 @@ _PROFILENOTICE = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='origin', full_name='PegasusUtil.ProfileNotice.origin', index=9,
-      number=11, type=5, cpp_type=1, label=1,
+      number=11, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -10575,7 +10554,7 @@ _PROFILENOTICE = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='when', full_name='PegasusUtil.ProfileNotice.when', index=11,
-      number=13, type=11, cpp_type=10, label=1,
+      number=13, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -10627,8 +10606,8 @@ _PROFILENOTICE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17970,
-  serialized_end=18891,
+  serialized_start=17834,
+  serialized_end=18755,
 )
 
 
@@ -10659,8 +10638,8 @@ _PROFILENOTICES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18893,
-  serialized_end=18972,
+  serialized_start=18757,
+  serialized_end=18836,
 )
 
 
@@ -10673,14 +10652,14 @@ _PROFILEPROGRESS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='progress', full_name='PegasusUtil.ProfileProgress.progress', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='best_forge', full_name='PegasusUtil.ProfileProgress.best_forge', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -10695,7 +10674,7 @@ _PROFILEPROGRESS = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='display_banner', full_name='PegasusUtil.ProfileProgress.display_banner', index=3,
       number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -10719,8 +10698,8 @@ _PROFILEPROGRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18975,
-  serialized_end=19174,
+  serialized_start=18839,
+  serialized_end=19041,
 )
 
 
@@ -10733,8 +10712,8 @@ _PURCHASEERROR = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='error', full_name='PegasusUtil.PurchaseError.error', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=-1,
+      number=1, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=-1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -10765,8 +10744,8 @@ _PURCHASEERROR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19177,
-  serialized_end=20160,
+  serialized_start=19044,
+  serialized_end=20016,
 )
 
 
@@ -10779,7 +10758,7 @@ _BATTLEPAYSTATUSRESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='status', full_name='PegasusUtil.BattlePayStatusResponse.status', index=0,
-      number=1, type=14, cpp_type=8, label=1,
+      number=1, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -10800,7 +10779,7 @@ _BATTLEPAYSTATUSRESPONSE = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='battle_pay_available', full_name='PegasusUtil.BattlePayStatusResponse.battle_pay_available', index=3,
-      number=4, type=8, cpp_type=7, label=1,
+      number=4, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -10847,8 +10826,8 @@ _BATTLEPAYSTATUSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20163,
-  serialized_end=20586,
+  serialized_start=20019,
+  serialized_end=20442,
 )
 
 
@@ -10928,8 +10907,8 @@ _PURCHASEMETHOD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20589,
-  serialized_end=20822,
+  serialized_start=20445,
+  serialized_end=20678,
 )
 
 
@@ -10942,7 +10921,7 @@ _PURCHASERESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='error', full_name='PegasusUtil.PurchaseResponse.error', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -10995,8 +10974,8 @@ _PURCHASERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20825,
-  serialized_end=21023,
+  serialized_start=20681,
+  serialized_end=20879,
 )
 
 
@@ -11009,14 +10988,14 @@ _PURCHASEWITHGOLD = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='quantity', full_name='PegasusUtil.PurchaseWithGold.quantity', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='product', full_name='PegasusUtil.PurchaseWithGold.product', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -11041,8 +11020,8 @@ _PURCHASEWITHGOLD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21025,
-  serialized_end=21125,
+  serialized_start=20881,
+  serialized_end=20981,
 )
 
 
@@ -11055,8 +11034,8 @@ _PURCHASEWITHGOLDRESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='PegasusUtil.PurchaseWithGoldResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=1,
+      number=1, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -11081,8 +11060,8 @@ _PURCHASEWITHGOLDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21128,
-  serialized_end=21400,
+  serialized_start=20984,
+  serialized_end=21244,
 )
 
 
@@ -11095,14 +11074,14 @@ _RENAMEDECK = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='deck', full_name='PegasusUtil.RenameDeck.deck', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='name', full_name='PegasusUtil.RenameDeck.name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -11120,8 +11099,8 @@ _RENAMEDECK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21402,
-  serialized_end=21475,
+  serialized_start=21246,
+  serialized_end=21319,
 )
 
 
@@ -11134,35 +11113,35 @@ _REWARDPROGRESS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='season_end', full_name='PegasusUtil.RewardProgress.season_end', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='wins_per_gold', full_name='PegasusUtil.RewardProgress.wins_per_gold', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='gold_per_reward', full_name='PegasusUtil.RewardProgress.gold_per_reward', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='max_gold_per_day', full_name='PegasusUtil.RewardProgress.max_gold_per_day', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      number=4, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='season_number', full_name='PegasusUtil.RewardProgress.season_number', index=4,
-      number=5, type=5, cpp_type=1, label=1,
+      number=5, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -11176,28 +11155,28 @@ _REWARDPROGRESS = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='xp_solo_limit', full_name='PegasusUtil.RewardProgress.xp_solo_limit', index=6,
-      number=9, type=5, cpp_type=1, label=1,
+      number=9, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='max_hero_level', full_name='PegasusUtil.RewardProgress.max_hero_level', index=7,
-      number=10, type=5, cpp_type=1, label=1,
+      number=10, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='next_quest_cancel', full_name='PegasusUtil.RewardProgress.next_quest_cancel', index=8,
-      number=11, type=11, cpp_type=10, label=1,
+      number=11, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='event_timing_mod', full_name='PegasusUtil.RewardProgress.event_timing_mod', index=9,
-      number=12, type=2, cpp_type=6, label=1,
+      number=12, type=2, cpp_type=6, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -11215,8 +11194,8 @@ _REWARDPROGRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21478,
-  serialized_end=21791,
+  serialized_start=21322,
+  serialized_end=21635,
 )
 
 
@@ -11229,7 +11208,7 @@ _SETADVENTUREOPTIONS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='adventure_options', full_name='PegasusUtil.SetAdventureOptions.adventure_options', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -11247,8 +11226,8 @@ _SETADVENTUREOPTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21793,
-  serialized_end=21905,
+  serialized_start=21637,
+  serialized_end=21749,
 )
 
 
@@ -11261,7 +11240,7 @@ _SETCARDBACK = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='card_back', full_name='PegasusUtil.SetCardBack.card_back', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -11286,8 +11265,8 @@ _SETCARDBACK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21907,
-  serialized_end=21989,
+  serialized_start=21751,
+  serialized_end=21833,
 )
 
 
@@ -11300,14 +11279,14 @@ _SETCARDBACKRESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='success', full_name='PegasusUtil.SetCardBackResponse.success', index=0,
-      number=1, type=8, cpp_type=7, label=1,
+      number=1, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='card_back', full_name='PegasusUtil.SetCardBackResponse.card_back', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -11332,8 +11311,8 @@ _SETCARDBACKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21991,
-  serialized_end=22086,
+  serialized_start=21835,
+  serialized_end=21930,
 )
 
 
@@ -11364,8 +11343,8 @@ _SETOPTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22088,
-  serialized_end=22177,
+  serialized_start=21932,
+  serialized_end=22021,
 )
 
 
@@ -11378,7 +11357,7 @@ _SETPROGRESS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='value', full_name='PegasusUtil.SetProgress.value', index=0,
-      number=1, type=3, cpp_type=2, label=1,
+      number=1, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -11396,8 +11375,8 @@ _SETPROGRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22179,
-  serialized_end=22240,
+  serialized_start=22023,
+  serialized_end=22084,
 )
 
 
@@ -11410,8 +11389,8 @@ _SETPROGRESSRESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='PegasusUtil.SetProgressResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=1,
+      number=1, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -11436,8 +11415,8 @@ _SETPROGRESSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22243,
-  serialized_end=22422,
+  serialized_start=22087,
+  serialized_end=22257,
 )
 
 
@@ -11450,7 +11429,7 @@ _SPECIALEVENTTIMING = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='event', full_name='PegasusUtil.SpecialEventTiming.event', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -11481,8 +11460,8 @@ _SPECIALEVENTTIMING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22424,
-  serialized_end=22487,
+  serialized_start=22259,
+  serialized_end=22322,
 )
 
 
@@ -11495,63 +11474,63 @@ _MASSIVELOGINREPLY = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='profile_progress', full_name='PegasusUtil.MassiveLoginReply.profile_progress', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='medal_info', full_name='PegasusUtil.MassiveLoginReply.medal_info', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='deck_list', full_name='PegasusUtil.MassiveLoginReply.deck_list', index=2,
-      number=3, type=11, cpp_type=10, label=1,
+      number=3, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='profile_deck_limit', full_name='PegasusUtil.MassiveLoginReply.profile_deck_limit', index=3,
-      number=4, type=11, cpp_type=10, label=1,
+      number=4, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='gold_balance', full_name='PegasusUtil.MassiveLoginReply.gold_balance', index=4,
-      number=5, type=11, cpp_type=10, label=1,
+      number=5, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='arcane_dust_balance', full_name='PegasusUtil.MassiveLoginReply.arcane_dust_balance', index=5,
-      number=6, type=11, cpp_type=10, label=1,
+      number=6, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='reward_progress', full_name='PegasusUtil.MassiveLoginReply.reward_progress', index=6,
-      number=7, type=11, cpp_type=10, label=1,
+      number=7, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='player_records', full_name='PegasusUtil.MassiveLoginReply.player_records', index=7,
-      number=8, type=11, cpp_type=10, label=1,
+      number=8, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='card_backs', full_name='PegasusUtil.MassiveLoginReply.card_backs', index=8,
-      number=9, type=11, cpp_type=10, label=1,
+      number=9, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -11576,8 +11555,8 @@ _MASSIVELOGINREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22490,
-  serialized_end=23053,
+  serialized_start=22325,
+  serialized_end=22888,
 )
 
 
@@ -11601,8 +11580,8 @@ _SUBSCRIBE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23055,
-  serialized_end=23087,
+  serialized_start=22890,
+  serialized_end=22922,
 )
 
 
@@ -11648,8 +11627,8 @@ _SUBSCRIBERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23090,
-  serialized_end=23242,
+  serialized_start=22925,
+  serialized_end=23077,
 )
 
 
@@ -11662,15 +11641,15 @@ _THIRDPARTYPURCHASESTATUSRESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='third_party_id', full_name='PegasusUtil.ThirdPartyPurchaseStatusResponse.third_party_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='status', full_name='PegasusUtil.ThirdPartyPurchaseStatusResponse.status', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=1,
+      number=2, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -11688,8 +11667,8 @@ _THIRDPARTYPURCHASESTATUSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23245,
-  serialized_end=23474,
+  serialized_start=23080,
+  serialized_end=23298,
 )
 
 
@@ -11733,8 +11712,8 @@ _THIRDPARTYRECEIPTDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23476,
-  serialized_end=23569,
+  serialized_start=23300,
+  serialized_end=23393,
 )
 
 
@@ -11747,21 +11726,21 @@ _STARTTHIRDPARTYPURCHASE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='provider', full_name='PegasusUtil.StartThirdPartyPurchase.provider', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=1,
+      number=1, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='product_id', full_name='PegasusUtil.StartThirdPartyPurchase.product_id', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='quantity', full_name='PegasusUtil.StartThirdPartyPurchase.quantity', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -11770,6 +11749,13 @@ _STARTTHIRDPARTYPURCHASE = _descriptor.Descriptor(
       name='dangling_receipt_data', full_name='PegasusUtil.StartThirdPartyPurchase.dangling_receipt_data', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='device_id', full_name='PegasusUtil.StartThirdPartyPurchase.device_id', index=4,
+      number=5, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -11786,8 +11772,8 @@ _STARTTHIRDPARTYPURCHASE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23572,
-  serialized_end=23809,
+  serialized_start=23396,
+  serialized_end=23630,
 )
 
 
@@ -11800,14 +11786,14 @@ _SUBMITTHIRDPARTYRECEIPT = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='receipt_data', full_name='PegasusUtil.SubmitThirdPartyReceipt.receipt_data', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='transaction_id', full_name='PegasusUtil.SubmitThirdPartyReceipt.transaction_id', index=1,
-      number=2, type=3, cpp_type=2, label=1,
+      number=2, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -11825,8 +11811,8 @@ _SUBMITTHIRDPARTYRECEIPT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23812,
-  serialized_end=23952,
+  serialized_start=23633,
+  serialized_end=23773,
 )
 
 
@@ -11839,14 +11825,14 @@ _TRIGGEREVENTRESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='event_id', full_name='PegasusUtil.TriggerEventResponse.event_id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='success', full_name='PegasusUtil.TriggerEventResponse.success', index=1,
-      number=2, type=8, cpp_type=7, label=1,
+      number=2, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -11864,8 +11850,8 @@ _TRIGGEREVENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23954,
-  serialized_end=24032,
+  serialized_start=23775,
+  serialized_end=23853,
 )
 
 
@@ -11878,14 +11864,14 @@ _TRIGGERLAUNCHDAYEVENT = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='last_played', full_name='PegasusUtil.TriggerLaunchDayEvent.last_played', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='other_player', full_name='PegasusUtil.TriggerLaunchDayEvent.other_player', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -11903,8 +11889,8 @@ _TRIGGERLAUNCHDAYEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24035,
-  serialized_end=24188,
+  serialized_start=23856,
+  serialized_end=24009,
 )
 
 
@@ -11922,6 +11908,13 @@ _UPDATELOGIN = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='referral', full_name='PegasusUtil.UpdateLogin.referral', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -11935,8 +11928,8 @@ _UPDATELOGIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24190,
-  serialized_end=24260,
+  serialized_start=24011,
+  serialized_end=24099,
 )
 
 
@@ -11960,8 +11953,8 @@ _UPDATELOGINCOMPLETE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24262,
-  serialized_end=24304,
+  serialized_start=24101,
+  serialized_end=24143,
 )
 
 
@@ -11974,7 +11967,7 @@ _UTILAUTH = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='PegasusUtil.UtilAuth.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
+      number=1, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -11993,8 +11986,8 @@ _UTILAUTH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24307,
-  serialized_end=24448,
+  serialized_start=24146,
+  serialized_end=24287,
 )
 
 
@@ -12007,14 +12000,14 @@ _UTILHANDSHAKE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='client_handle', full_name='PegasusUtil.UtilHandshake.client_handle', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='password', full_name='PegasusUtil.UtilHandshake.password', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -12032,8 +12025,8 @@ _UTILHANDSHAKE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24450,
-  serialized_end=24527,
+  serialized_start=24289,
+  serialized_end=24366,
 )
 
 
@@ -12046,7 +12039,7 @@ _VALIDATEACHIEVE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='achieve', full_name='PegasusUtil.ValidateAchieve.achieve', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -12064,8 +12057,8 @@ _VALIDATEACHIEVE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24529,
-  serialized_end=24596,
+  serialized_start=24368,
+  serialized_end=24435,
 )
 
 
@@ -12078,7 +12071,7 @@ _VALIDATEACHIEVERESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='achieve', full_name='PegasusUtil.ValidateAchieveResponse.achieve', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -12096,8 +12089,8 @@ _VALIDATEACHIEVERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24598,
-  serialized_end=24661,
+  serialized_start=24437,
+  serialized_end=24500,
 )
 
 _ACCOUNTLICENSEACHIEVERESPONSE.fields_by_name['result'].enum_type = _ACCOUNTLICENSEACHIEVERESPONSE_RESULT

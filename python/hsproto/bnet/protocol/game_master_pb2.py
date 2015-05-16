@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='bnet/protocol/game_master.proto',
   package='bnet.protocol.game_master',
   syntax='proto2',
-  serialized_pb=_b('\n\x1f\x62net/protocol/game_master.proto\x12\x19\x62net.protocol.game_master\x1a\x15\x62net/protocol_0.proto\x1a\x1d\x62net/protocol/attribute.proto\x1a\x1f\x62net/protocol/server_pool.proto\"\x9b\x01\n\x0b\x43onnectInfo\x12*\n\tmember_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x0c\n\x04host\x18\x02 \x01(\t\x12\x0c\n\x04port\x18\x03 \x01(\x05\x12\r\n\x05token\x18\x04 \x01(\x0c\x12\x35\n\tattribute\x18\x05 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\"J\n\x10\x46indGameResponse\x12\x12\n\nrequest_id\x18\x01 \x01(\x06\x12\x12\n\nfactory_id\x18\x02 \x01(\x06\x12\x0e\n\x06queued\x18\x03 \x01(\x08\"J\n\nGameHandle\x12\x12\n\nfactory_id\x18\x01 \x01(\x06\x12(\n\x07game_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\xa5\x01\n\x11\x43hangeGameRequest\x12:\n\x0bgame_handle\x18\x01 \x01(\x0b\x32%.bnet.protocol.game_master.GameHandle\x12\x0c\n\x04open\x18\x02 \x01(\x08\x12\x35\n\tattribute\x18\x03 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x0f\n\x07replace\x18\x04 \x01(\x08\"c\n\x15GameEndedNotification\x12:\n\x0bgame_handle\x18\x01 \x01(\x0b\x32%.bnet.protocol.game_master.GameHandle\x12\x0e\n\x06reason\x18\x02 \x01(\r\"\xb9\x01\n\x15GameFoundNotification\x12\x12\n\nrequest_id\x18\x01 \x01(\x06\x12\x12\n\nerror_code\x18\x02 \x01(\r\x12:\n\x0bgame_handle\x18\x03 \x01(\x0b\x32%.bnet.protocol.game_master.GameHandle\x12<\n\x0c\x63onnect_info\x18\x04 \x03(\x0b\x32&.bnet.protocol.game_master.ConnectInfo\"\xc3\x01\n\x0eGameProperties\x12?\n\x13\x63reation_attributes\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x38\n\x06\x66ilter\x18\x02 \x01(\x0b\x32(.bnet.protocol.attribute.AttributeFilter\x12\x0e\n\x06\x63reate\x18\x03 \x01(\x08\x12\x12\n\x04open\x18\x04 \x01(\x08:\x04true\x12\x12\n\nprogram_id\x18\x05 \x01(\x07\"\xdc\x02\n\x0fGameStatsBucket\x12\x12\n\nbucket_min\x18\x01 \x01(\x02\x12 \n\nbucket_max\x18\x02 \x01(\x02:\x0c\x34.294967e+09\x12\x19\n\x11wait_milliseconds\x18\x03 \x01(\r\x12\x16\n\x0egames_per_hour\x18\x04 \x01(\r\x12\x14\n\x0c\x61\x63tive_games\x18\x05 \x01(\r\x12\x16\n\x0e\x61\x63tive_players\x18\x06 \x01(\r\x12\x15\n\rforming_games\x18\x07 \x01(\r\x12\x17\n\x0fwaiting_players\x18\x08 \x01(\r\x12\x1b\n\x13open_joinable_games\x18\t \x01(\r\x12&\n\x1eplayers_in_open_joinable_games\x18\n \x01(\r\x12\x18\n\x10open_games_total\x18\x0b \x01(\r\x12#\n\x1bplayers_in_open_games_total\x18\x0c \x01(\r\"\xde\x01\n\x16GameFactoryDescription\x12\n\n\x02id\x18\x01 \x01(\x06\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x35\n\tattribute\x18\x03 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12@\n\x0cstats_bucket\x18\x04 \x03(\x0b\x32*.bnet.protocol.game_master.GameStatsBucket\x12\x13\n\x0bunseeded_id\x18\x05 \x01(\x06\x12\x1c\n\x0e\x61llow_queueing\x18\x06 \x01(\x08:\x04true\"\xf6\x01\n\x19\x46\x61\x63toryUpdateNotification\x12O\n\x02op\x18\x01 \x01(\x0e\x32>.bnet.protocol.game_master.FactoryUpdateNotification.Operation:\x03\x41\x44\x44\x12\x46\n\x0b\x64\x65scription\x18\x02 \x01(\x0b\x32\x31.bnet.protocol.game_master.GameFactoryDescription\x12\x12\n\nprogram_id\x18\x03 \x01(\x07\",\n\tOperation\x12\x07\n\x03\x41\x44\x44\x10\x01\x12\n\n\x06REMOVE\x10\x02\x12\n\n\x06\x43HANGE\x10\x03\"+\n\x15GetFactoryInfoRequest\x12\x12\n\nfactory_id\x18\x01 \x01(\x06\"\x91\x01\n\x16GetFactoryInfoResponse\x12\x35\n\tattribute\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12@\n\x0cstats_bucket\x18\x02 \x03(\x0b\x32*.bnet.protocol.game_master.GameStatsBucket\"c\n\x13GetGameStatsRequest\x12\x12\n\nfactory_id\x18\x01 \x01(\x06\x12\x38\n\x06\x66ilter\x18\x02 \x01(\x0b\x32(.bnet.protocol.attribute.AttributeFilter\"X\n\x14GetGameStatsResponse\x12@\n\x0cstats_bucket\x18\x01 \x03(\x0b\x32*.bnet.protocol.game_master.GameStatsBucket\"t\n\x10JoinGameResponse\x12\x12\n\nrequest_id\x18\x01 \x01(\x06\x12\x0e\n\x06queued\x18\x02 \x01(\x08\x12<\n\x0c\x63onnect_info\x18\x03 \x03(\x0b\x32&.bnet.protocol.game_master.ConnectInfo\"\x7f\n\x14ListFactoriesRequest\x12\x38\n\x06\x66ilter\x18\x01 \x01(\x0b\x32(.bnet.protocol.attribute.AttributeFilter\x12\x13\n\x0bstart_index\x18\x02 \x01(\r\x12\x18\n\x0bmax_results\x18\x03 \x01(\r:\x03\x31\x30\x30\"v\n\x15ListFactoriesResponse\x12\x46\n\x0b\x64\x65scription\x18\x01 \x03(\x0b\x32\x31.bnet.protocol.game_master.GameFactoryDescription\x12\x15\n\rtotal_results\x18\x02 \x01(\r\"\x93\x01\n\x16PlayerLeftNotification\x12:\n\x0bgame_handle\x18\x01 \x01(\x0b\x32%.bnet.protocol.game_master.GameHandle\x12*\n\tmember_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x11\n\x06reason\x18\x03 \x01(\r:\x01\x31\"%\n\x10SubscribeRequest\x12\x11\n\tobject_id\x18\x01 \x01(\x04\",\n\x11SubscribeResponse\x12\x17\n\x0fsubscription_id\x18\x01 \x01(\x04\"\x19\n\x17UnregisterServerRequest\"\x1c\n\x1aUnregisterUtilitiesRequest\"-\n\x12UnsubscribeRequest\x12\x17\n\x0fsubscription_id\x18\x01 \x01(\x04\"j\n\x06Player\x12)\n\x08identity\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.Identity\x12\x35\n\tattribute\x18\x02 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\"s\n\x16\x43\x61ncelGameEntryRequest\x12\x12\n\nrequest_id\x18\x01 \x01(\x06\x12\x12\n\nfactory_id\x18\x02 \x01(\x06\x12\x31\n\x06player\x18\x03 \x03(\x0b\x32!.bnet.protocol.game_master.Player\"\xdd\x01\n\x0f\x46indGameRequest\x12\x31\n\x06player\x18\x01 \x03(\x0b\x32!.bnet.protocol.game_master.Player\x12\x12\n\nfactory_id\x18\x02 \x01(\x06\x12=\n\nproperties\x18\x03 \x01(\x0b\x32).bnet.protocol.game_master.GameProperties\x12\x11\n\tobject_id\x18\x04 \x01(\x04\x12\x12\n\nrequest_id\x18\x05 \x01(\x06\x12\x1d\n\x15\x61\x64vanced_notification\x18\x06 \x01(\x08\"\x9f\x01\n\x0fJoinGameRequest\x12:\n\x0bgame_handle\x18\x01 \x01(\x0b\x32%.bnet.protocol.game_master.GameHandle\x12\x31\n\x06player\x18\x02 \x03(\x0b\x32!.bnet.protocol.game_master.Player\x12\x1d\n\x15\x61\x64vanced_notification\x18\x03 \x01(\x08\"\x99\x01\n\x15RegisterServerRequest\x12\x35\n\tattribute\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x35\n\x05state\x18\x02 \x01(\x0b\x32&.bnet.protocol.server_pool.ServerState\x12\x12\n\nprogram_id\x18\x03 \x01(\x07\"\x9c\x01\n\x18RegisterUtilitiesRequest\x12\x35\n\tattribute\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x35\n\x05state\x18\x02 \x01(\x0b\x32&.bnet.protocol.server_pool.ServerState\x12\x12\n\nprogram_id\x18\x03 \x01(\x07')
+  serialized_pb=_b('\n\x1f\x62net/protocol/game_master.proto\x12\x19\x62net.protocol.game_master\x1a\x15\x62net/protocol_0.proto\x1a\x1d\x62net/protocol/attribute.proto\x1a\x1f\x62net/protocol/server_pool.proto\"\x9b\x01\n\x0b\x43onnectInfo\x12*\n\tmember_id\x18\x01 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12\x0c\n\x04host\x18\x02 \x02(\t\x12\x0c\n\x04port\x18\x03 \x02(\x05\x12\r\n\x05token\x18\x04 \x01(\x0c\x12\x35\n\tattribute\x18\x05 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\"Q\n\x10\x46indGameResponse\x12\x12\n\nrequest_id\x18\x01 \x01(\x06\x12\x12\n\nfactory_id\x18\x02 \x01(\x06\x12\x15\n\x06queued\x18\x03 \x01(\x08:\x05\x66\x61lse\"J\n\nGameHandle\x12\x12\n\nfactory_id\x18\x01 \x02(\x06\x12(\n\x07game_id\x18\x02 \x02(\x0b\x32\x17.bnet.protocol.EntityId\"\xac\x01\n\x11\x43hangeGameRequest\x12:\n\x0bgame_handle\x18\x01 \x02(\x0b\x32%.bnet.protocol.game_master.GameHandle\x12\x0c\n\x04open\x18\x02 \x01(\x08\x12\x35\n\tattribute\x18\x03 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x16\n\x07replace\x18\x04 \x01(\x08:\x05\x66\x61lse\"f\n\x15GameEndedNotification\x12:\n\x0bgame_handle\x18\x01 \x02(\x0b\x32%.bnet.protocol.game_master.GameHandle\x12\x11\n\x06reason\x18\x02 \x01(\r:\x01\x30\"\xbc\x01\n\x15GameFoundNotification\x12\x12\n\nrequest_id\x18\x01 \x02(\x06\x12\x15\n\nerror_code\x18\x02 \x01(\r:\x01\x30\x12:\n\x0bgame_handle\x18\x03 \x01(\x0b\x32%.bnet.protocol.game_master.GameHandle\x12<\n\x0c\x63onnect_info\x18\x04 \x03(\x0b\x32&.bnet.protocol.game_master.ConnectInfo\"\xca\x01\n\x0eGameProperties\x12?\n\x13\x63reation_attributes\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x38\n\x06\x66ilter\x18\x02 \x01(\x0b\x32(.bnet.protocol.attribute.AttributeFilter\x12\x15\n\x06\x63reate\x18\x03 \x01(\x08:\x05\x66\x61lse\x12\x12\n\x04open\x18\x04 \x01(\x08:\x04true\x12\x12\n\nprogram_id\x18\x05 \x01(\x07\"\xfd\x02\n\x0fGameStatsBucket\x12\x15\n\nbucket_min\x18\x01 \x01(\x02:\x01\x30\x12 \n\nbucket_max\x18\x02 \x01(\x02:\x0c\x34.294967e+09\x12\x1c\n\x11wait_milliseconds\x18\x03 \x01(\r:\x01\x30\x12\x19\n\x0egames_per_hour\x18\x04 \x01(\r:\x01\x30\x12\x17\n\x0c\x61\x63tive_games\x18\x05 \x01(\r:\x01\x30\x12\x19\n\x0e\x61\x63tive_players\x18\x06 \x01(\r:\x01\x30\x12\x18\n\rforming_games\x18\x07 \x01(\r:\x01\x30\x12\x1a\n\x0fwaiting_players\x18\x08 \x01(\r:\x01\x30\x12\x1e\n\x13open_joinable_games\x18\t \x01(\r:\x01\x30\x12)\n\x1eplayers_in_open_joinable_games\x18\n \x01(\r:\x01\x30\x12\x1b\n\x10open_games_total\x18\x0b \x01(\r:\x01\x30\x12&\n\x1bplayers_in_open_games_total\x18\x0c \x01(\r:\x01\x30\"\xe1\x01\n\x16GameFactoryDescription\x12\n\n\x02id\x18\x01 \x02(\x06\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x35\n\tattribute\x18\x03 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12@\n\x0cstats_bucket\x18\x04 \x03(\x0b\x32*.bnet.protocol.game_master.GameStatsBucket\x12\x16\n\x0bunseeded_id\x18\x05 \x01(\x06:\x01\x30\x12\x1c\n\x0e\x61llow_queueing\x18\x06 \x01(\x08:\x04true\"\xf1\x01\n\x19\x46\x61\x63toryUpdateNotification\x12J\n\x02op\x18\x01 \x02(\x0e\x32>.bnet.protocol.game_master.FactoryUpdateNotification.Operation\x12\x46\n\x0b\x64\x65scription\x18\x02 \x02(\x0b\x32\x31.bnet.protocol.game_master.GameFactoryDescription\x12\x12\n\nprogram_id\x18\x03 \x01(\x07\",\n\tOperation\x12\x07\n\x03\x41\x44\x44\x10\x01\x12\n\n\x06REMOVE\x10\x02\x12\n\n\x06\x43HANGE\x10\x03\"+\n\x15GetFactoryInfoRequest\x12\x12\n\nfactory_id\x18\x01 \x02(\x06\"\x91\x01\n\x16GetFactoryInfoResponse\x12\x35\n\tattribute\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12@\n\x0cstats_bucket\x18\x02 \x03(\x0b\x32*.bnet.protocol.game_master.GameStatsBucket\"c\n\x13GetGameStatsRequest\x12\x12\n\nfactory_id\x18\x01 \x02(\x06\x12\x38\n\x06\x66ilter\x18\x02 \x02(\x0b\x32(.bnet.protocol.attribute.AttributeFilter\"X\n\x14GetGameStatsResponse\x12@\n\x0cstats_bucket\x18\x01 \x03(\x0b\x32*.bnet.protocol.game_master.GameStatsBucket\"{\n\x10JoinGameResponse\x12\x12\n\nrequest_id\x18\x01 \x01(\x06\x12\x15\n\x06queued\x18\x02 \x01(\x08:\x05\x66\x61lse\x12<\n\x0c\x63onnect_info\x18\x03 \x03(\x0b\x32&.bnet.protocol.game_master.ConnectInfo\"\x82\x01\n\x14ListFactoriesRequest\x12\x38\n\x06\x66ilter\x18\x01 \x02(\x0b\x32(.bnet.protocol.attribute.AttributeFilter\x12\x16\n\x0bstart_index\x18\x02 \x01(\r:\x01\x30\x12\x18\n\x0bmax_results\x18\x03 \x01(\r:\x03\x31\x30\x30\"v\n\x15ListFactoriesResponse\x12\x46\n\x0b\x64\x65scription\x18\x01 \x03(\x0b\x32\x31.bnet.protocol.game_master.GameFactoryDescription\x12\x15\n\rtotal_results\x18\x02 \x01(\r\"\x93\x01\n\x16PlayerLeftNotification\x12:\n\x0bgame_handle\x18\x01 \x02(\x0b\x32%.bnet.protocol.game_master.GameHandle\x12*\n\tmember_id\x18\x02 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12\x11\n\x06reason\x18\x03 \x01(\r:\x01\x31\"%\n\x10SubscribeRequest\x12\x11\n\tobject_id\x18\x01 \x02(\x04\",\n\x11SubscribeResponse\x12\x17\n\x0fsubscription_id\x18\x01 \x01(\x04\"\x19\n\x17UnregisterServerRequest\"\x1c\n\x1aUnregisterUtilitiesRequest\"-\n\x12UnsubscribeRequest\x12\x17\n\x0fsubscription_id\x18\x01 \x02(\x04\"j\n\x06Player\x12)\n\x08identity\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.Identity\x12\x35\n\tattribute\x18\x02 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\"s\n\x16\x43\x61ncelGameEntryRequest\x12\x12\n\nrequest_id\x18\x01 \x02(\x06\x12\x12\n\nfactory_id\x18\x02 \x01(\x06\x12\x31\n\x06player\x18\x03 \x03(\x0b\x32!.bnet.protocol.game_master.Player\"\xe4\x01\n\x0f\x46indGameRequest\x12\x31\n\x06player\x18\x01 \x03(\x0b\x32!.bnet.protocol.game_master.Player\x12\x12\n\nfactory_id\x18\x02 \x01(\x06\x12=\n\nproperties\x18\x03 \x01(\x0b\x32).bnet.protocol.game_master.GameProperties\x12\x11\n\tobject_id\x18\x04 \x01(\x04\x12\x12\n\nrequest_id\x18\x05 \x01(\x06\x12$\n\x15\x61\x64vanced_notification\x18\x06 \x01(\x08:\x05\x66\x61lse\"\xa6\x01\n\x0fJoinGameRequest\x12:\n\x0bgame_handle\x18\x01 \x02(\x0b\x32%.bnet.protocol.game_master.GameHandle\x12\x31\n\x06player\x18\x02 \x03(\x0b\x32!.bnet.protocol.game_master.Player\x12$\n\x15\x61\x64vanced_notification\x18\x03 \x01(\x08:\x05\x66\x61lse\"\x99\x01\n\x15RegisterServerRequest\x12\x35\n\tattribute\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x35\n\x05state\x18\x02 \x01(\x0b\x32&.bnet.protocol.server_pool.ServerState\x12\x12\n\nprogram_id\x18\x03 \x02(\x07\"\x9c\x01\n\x18RegisterUtilitiesRequest\x12\x35\n\tattribute\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x35\n\x05state\x18\x02 \x01(\x0b\x32&.bnet.protocol.server_pool.ServerState\x12\x12\n\nprogram_id\x18\x03 \x02(\x07')
   ,
   dependencies=[bnet_dot_protocol__0__pb2.DESCRIPTOR,bnet_dot_protocol_dot_attribute__pb2.DESCRIPTOR,bnet_dot_protocol_dot_server__pool__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -50,8 +50,8 @@ _FACTORYUPDATENOTIFICATION_OPERATION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1893,
-  serialized_end=1937,
+  serialized_start=1951,
+  serialized_end=1995,
 )
 _sym_db.RegisterEnumDescriptor(_FACTORYUPDATENOTIFICATION_OPERATION)
 
@@ -65,21 +65,21 @@ _CONNECTINFO = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='member_id', full_name='bnet.protocol.game_master.ConnectInfo.member_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='host', full_name='bnet.protocol.game_master.ConnectInfo.host', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='port', full_name='bnet.protocol.game_master.ConnectInfo.port', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -139,7 +139,7 @@ _FINDGAMERESPONSE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='queued', full_name='bnet.protocol.game_master.FindGameResponse.queued', index=2,
       number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -156,7 +156,7 @@ _FINDGAMERESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=307,
-  serialized_end=381,
+  serialized_end=388,
 )
 
 
@@ -169,14 +169,14 @@ _GAMEHANDLE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='factory_id', full_name='bnet.protocol.game_master.GameHandle.factory_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
+      number=1, type=6, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='game_id', full_name='bnet.protocol.game_master.GameHandle.game_id', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -193,8 +193,8 @@ _GAMEHANDLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=383,
-  serialized_end=457,
+  serialized_start=390,
+  serialized_end=464,
 )
 
 
@@ -207,7 +207,7 @@ _CHANGEGAMEREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='game_handle', full_name='bnet.protocol.game_master.ChangeGameRequest.game_handle', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -229,7 +229,7 @@ _CHANGEGAMEREQUEST = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='replace', full_name='bnet.protocol.game_master.ChangeGameRequest.replace', index=3,
       number=4, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -245,8 +245,8 @@ _CHANGEGAMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=460,
-  serialized_end=625,
+  serialized_start=467,
+  serialized_end=639,
 )
 
 
@@ -259,7 +259,7 @@ _GAMEENDEDNOTIFICATION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='game_handle', full_name='bnet.protocol.game_master.GameEndedNotification.game_handle', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -267,7 +267,7 @@ _GAMEENDEDNOTIFICATION = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='reason', full_name='bnet.protocol.game_master.GameEndedNotification.reason', index=1,
       number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -283,8 +283,8 @@ _GAMEENDEDNOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=627,
-  serialized_end=726,
+  serialized_start=641,
+  serialized_end=743,
 )
 
 
@@ -297,7 +297,7 @@ _GAMEFOUNDNOTIFICATION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='request_id', full_name='bnet.protocol.game_master.GameFoundNotification.request_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
+      number=1, type=6, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -305,7 +305,7 @@ _GAMEFOUNDNOTIFICATION = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='error_code', full_name='bnet.protocol.game_master.GameFoundNotification.error_code', index=1,
       number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -335,8 +335,8 @@ _GAMEFOUNDNOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=729,
-  serialized_end=914,
+  serialized_start=746,
+  serialized_end=934,
 )
 
 
@@ -364,7 +364,7 @@ _GAMEPROPERTIES = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='create', full_name='bnet.protocol.game_master.GameProperties.create', index=2,
       number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -394,8 +394,8 @@ _GAMEPROPERTIES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=917,
-  serialized_end=1112,
+  serialized_start=937,
+  serialized_end=1139,
 )
 
 
@@ -409,7 +409,7 @@ _GAMESTATSBUCKET = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='bucket_min', full_name='bnet.protocol.game_master.GameStatsBucket.bucket_min', index=0,
       number=1, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -423,70 +423,70 @@ _GAMESTATSBUCKET = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='wait_milliseconds', full_name='bnet.protocol.game_master.GameStatsBucket.wait_milliseconds', index=2,
       number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='games_per_hour', full_name='bnet.protocol.game_master.GameStatsBucket.games_per_hour', index=3,
       number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='active_games', full_name='bnet.protocol.game_master.GameStatsBucket.active_games', index=4,
       number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='active_players', full_name='bnet.protocol.game_master.GameStatsBucket.active_players', index=5,
       number=6, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='forming_games', full_name='bnet.protocol.game_master.GameStatsBucket.forming_games', index=6,
       number=7, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='waiting_players', full_name='bnet.protocol.game_master.GameStatsBucket.waiting_players', index=7,
       number=8, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='open_joinable_games', full_name='bnet.protocol.game_master.GameStatsBucket.open_joinable_games', index=8,
       number=9, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='players_in_open_joinable_games', full_name='bnet.protocol.game_master.GameStatsBucket.players_in_open_joinable_games', index=9,
       number=10, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='open_games_total', full_name='bnet.protocol.game_master.GameStatsBucket.open_games_total', index=10,
       number=11, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='players_in_open_games_total', full_name='bnet.protocol.game_master.GameStatsBucket.players_in_open_games_total', index=11,
       number=12, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -502,8 +502,8 @@ _GAMESTATSBUCKET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1115,
-  serialized_end=1463,
+  serialized_start=1142,
+  serialized_end=1523,
 )
 
 
@@ -516,7 +516,7 @@ _GAMEFACTORYDESCRIPTION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='bnet.protocol.game_master.GameFactoryDescription.id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
+      number=1, type=6, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -545,7 +545,7 @@ _GAMEFACTORYDESCRIPTION = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='unseeded_id', full_name='bnet.protocol.game_master.GameFactoryDescription.unseeded_id', index=4,
       number=5, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -568,8 +568,8 @@ _GAMEFACTORYDESCRIPTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1466,
-  serialized_end=1688,
+  serialized_start=1526,
+  serialized_end=1751,
 )
 
 
@@ -582,14 +582,14 @@ _FACTORYUPDATENOTIFICATION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='op', full_name='bnet.protocol.game_master.FactoryUpdateNotification.op', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=1,
+      number=1, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='description', full_name='bnet.protocol.game_master.FactoryUpdateNotification.description', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -614,8 +614,8 @@ _FACTORYUPDATENOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1691,
-  serialized_end=1937,
+  serialized_start=1754,
+  serialized_end=1995,
 )
 
 
@@ -628,7 +628,7 @@ _GETFACTORYINFOREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='factory_id', full_name='bnet.protocol.game_master.GetFactoryInfoRequest.factory_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
+      number=1, type=6, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -645,8 +645,8 @@ _GETFACTORYINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1939,
-  serialized_end=1982,
+  serialized_start=1997,
+  serialized_end=2040,
 )
 
 
@@ -683,8 +683,8 @@ _GETFACTORYINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1985,
-  serialized_end=2130,
+  serialized_start=2043,
+  serialized_end=2188,
 )
 
 
@@ -697,14 +697,14 @@ _GETGAMESTATSREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='factory_id', full_name='bnet.protocol.game_master.GetGameStatsRequest.factory_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
+      number=1, type=6, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='filter', full_name='bnet.protocol.game_master.GetGameStatsRequest.filter', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -721,8 +721,8 @@ _GETGAMESTATSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2132,
-  serialized_end=2231,
+  serialized_start=2190,
+  serialized_end=2289,
 )
 
 
@@ -752,8 +752,8 @@ _GETGAMESTATSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2233,
-  serialized_end=2321,
+  serialized_start=2291,
+  serialized_end=2379,
 )
 
 
@@ -774,7 +774,7 @@ _JOINGAMERESPONSE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='queued', full_name='bnet.protocol.game_master.JoinGameResponse.queued', index=1,
       number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -797,8 +797,8 @@ _JOINGAMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2323,
-  serialized_end=2439,
+  serialized_start=2381,
+  serialized_end=2504,
 )
 
 
@@ -811,7 +811,7 @@ _LISTFACTORIESREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='filter', full_name='bnet.protocol.game_master.ListFactoriesRequest.filter', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -819,7 +819,7 @@ _LISTFACTORIESREQUEST = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='start_index', full_name='bnet.protocol.game_master.ListFactoriesRequest.start_index', index=1,
       number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -842,8 +842,8 @@ _LISTFACTORIESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2441,
-  serialized_end=2568,
+  serialized_start=2507,
+  serialized_end=2637,
 )
 
 
@@ -880,8 +880,8 @@ _LISTFACTORIESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2570,
-  serialized_end=2688,
+  serialized_start=2639,
+  serialized_end=2757,
 )
 
 
@@ -894,14 +894,14 @@ _PLAYERLEFTNOTIFICATION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='game_handle', full_name='bnet.protocol.game_master.PlayerLeftNotification.game_handle', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='member_id', full_name='bnet.protocol.game_master.PlayerLeftNotification.member_id', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -925,8 +925,8 @@ _PLAYERLEFTNOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2691,
-  serialized_end=2838,
+  serialized_start=2760,
+  serialized_end=2907,
 )
 
 
@@ -939,7 +939,7 @@ _SUBSCRIBEREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='object_id', full_name='bnet.protocol.game_master.SubscribeRequest.object_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -956,8 +956,8 @@ _SUBSCRIBEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2840,
-  serialized_end=2877,
+  serialized_start=2909,
+  serialized_end=2946,
 )
 
 
@@ -987,8 +987,8 @@ _SUBSCRIBERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2879,
-  serialized_end=2923,
+  serialized_start=2948,
+  serialized_end=2992,
 )
 
 
@@ -1011,8 +1011,8 @@ _UNREGISTERSERVERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2925,
-  serialized_end=2950,
+  serialized_start=2994,
+  serialized_end=3019,
 )
 
 
@@ -1035,8 +1035,8 @@ _UNREGISTERUTILITIESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2952,
-  serialized_end=2980,
+  serialized_start=3021,
+  serialized_end=3049,
 )
 
 
@@ -1049,7 +1049,7 @@ _UNSUBSCRIBEREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='subscription_id', full_name='bnet.protocol.game_master.UnsubscribeRequest.subscription_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1066,8 +1066,8 @@ _UNSUBSCRIBEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2982,
-  serialized_end=3027,
+  serialized_start=3051,
+  serialized_end=3096,
 )
 
 
@@ -1104,8 +1104,8 @@ _PLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3029,
-  serialized_end=3135,
+  serialized_start=3098,
+  serialized_end=3204,
 )
 
 
@@ -1118,7 +1118,7 @@ _CANCELGAMEENTRYREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='request_id', full_name='bnet.protocol.game_master.CancelGameEntryRequest.request_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
+      number=1, type=6, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1149,8 +1149,8 @@ _CANCELGAMEENTRYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3137,
-  serialized_end=3252,
+  serialized_start=3206,
+  serialized_end=3321,
 )
 
 
@@ -1199,7 +1199,7 @@ _FINDGAMEREQUEST = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='advanced_notification', full_name='bnet.protocol.game_master.FindGameRequest.advanced_notification', index=5,
       number=6, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1215,8 +1215,8 @@ _FINDGAMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3255,
-  serialized_end=3476,
+  serialized_start=3324,
+  serialized_end=3552,
 )
 
 
@@ -1229,7 +1229,7 @@ _JOINGAMEREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='game_handle', full_name='bnet.protocol.game_master.JoinGameRequest.game_handle', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1244,7 +1244,7 @@ _JOINGAMEREQUEST = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='advanced_notification', full_name='bnet.protocol.game_master.JoinGameRequest.advanced_notification', index=2,
       number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1260,8 +1260,8 @@ _JOINGAMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3479,
-  serialized_end=3638,
+  serialized_start=3555,
+  serialized_end=3721,
 )
 
 
@@ -1288,7 +1288,7 @@ _REGISTERSERVERREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='program_id', full_name='bnet.protocol.game_master.RegisterServerRequest.program_id', index=2,
-      number=3, type=7, cpp_type=3, label=1,
+      number=3, type=7, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1305,8 +1305,8 @@ _REGISTERSERVERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3641,
-  serialized_end=3794,
+  serialized_start=3724,
+  serialized_end=3877,
 )
 
 
@@ -1333,7 +1333,7 @@ _REGISTERUTILITIESREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='program_id', full_name='bnet.protocol.game_master.RegisterUtilitiesRequest.program_id', index=2,
-      number=3, type=7, cpp_type=3, label=1,
+      number=3, type=7, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1350,8 +1350,8 @@ _REGISTERUTILITIESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3797,
-  serialized_end=3953,
+  serialized_start=3880,
+  serialized_end=4036,
 )
 
 _CONNECTINFO.fields_by_name['member_id'].message_type = bnet_dot_protocol__0__pb2._ENTITYID

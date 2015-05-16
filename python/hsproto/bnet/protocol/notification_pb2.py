@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='bnet/protocol/notification.proto',
   package='bnet.protocol.notification',
   syntax='proto2',
-  serialized_pb=_b('\n bnet/protocol/notification.proto\x12\x1a\x62net.protocol.notification\x1a\x15\x62net/protocol_0.proto\x1a\x1d\x62net/protocol/attribute.proto\"?\n\x11\x46indClientRequest\x12*\n\tentity_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\xae\x02\n\x0cNotification\x12*\n\tsender_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12*\n\ttarget_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x35\n\tattribute\x18\x04 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x32\n\x11sender_account_id\x18\x05 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x32\n\x11target_account_id\x18\x06 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x19\n\x11sender_battle_tag\x18\x07 \x01(\t\"C\n\x15RegisterClientRequest\x12*\n\tentity_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"E\n\x17UnregisterClientRequest\x12*\n\tentity_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"X\n\x12\x46indClientResponse\x12\r\n\x05label\x18\x01 \x01(\r\x12\x33\n\x11\x63lient_process_id\x18\x02 \x01(\x0b\x32\x18.bnet.protocol.ProcessId')
+  serialized_pb=_b('\n bnet/protocol/notification.proto\x12\x1a\x62net.protocol.notification\x1a\x15\x62net/protocol_0.proto\x1a\x1d\x62net/protocol/attribute.proto\"?\n\x11\x46indClientRequest\x12*\n\tentity_id\x18\x01 \x02(\x0b\x32\x17.bnet.protocol.EntityId\"\xae\x02\n\x0cNotification\x12*\n\tsender_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12*\n\ttarget_id\x18\x02 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12\x0c\n\x04type\x18\x03 \x02(\t\x12\x35\n\tattribute\x18\x04 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x32\n\x11sender_account_id\x18\x05 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x32\n\x11target_account_id\x18\x06 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x19\n\x11sender_battle_tag\x18\x07 \x01(\t\"C\n\x15RegisterClientRequest\x12*\n\tentity_id\x18\x01 \x02(\x0b\x32\x17.bnet.protocol.EntityId\"E\n\x17UnregisterClientRequest\x12*\n\tentity_id\x18\x01 \x02(\x0b\x32\x17.bnet.protocol.EntityId\"X\n\x12\x46indClientResponse\x12\r\n\x05label\x18\x01 \x02(\r\x12\x33\n\x11\x63lient_process_id\x18\x02 \x01(\x0b\x32\x18.bnet.protocol.ProcessId')
   ,
   dependencies=[bnet_dot_protocol__0__pb2.DESCRIPTOR,bnet_dot_protocol_dot_attribute__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -38,7 +38,7 @@ _FINDCLIENTREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='entity_id', full_name='bnet.protocol.notification.FindClientRequest.entity_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -76,14 +76,14 @@ _NOTIFICATION = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='target_id', full_name='bnet.protocol.notification.Notification.target_id', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='type', full_name='bnet.protocol.notification.Notification.type', index=2,
-      number=3, type=9, cpp_type=9, label=1,
+      number=3, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -142,7 +142,7 @@ _REGISTERCLIENTREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='entity_id', full_name='bnet.protocol.notification.RegisterClientRequest.entity_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -173,7 +173,7 @@ _UNREGISTERCLIENTREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='entity_id', full_name='bnet.protocol.notification.UnregisterClientRequest.entity_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -204,7 +204,7 @@ _FINDCLIENTRESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='label', full_name='bnet.protocol.notification.FindClientResponse.label', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,

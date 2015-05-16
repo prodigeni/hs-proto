@@ -15,16 +15,15 @@ _sym_db = _symbol_database.Default()
 
 from . import attribute_pb2 as bnet_dot_protocol_dot_attribute__pb2
 from .. import protocol_0_pb2 as bnet_dot_protocol__0__pb2
-from . import channel_pb2 as bnet_dot_protocol_dot_channel__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='bnet/protocol/presence.proto',
   package='bnet.protocol.presence',
   syntax='proto2',
-  serialized_pb=_b('\n\x1c\x62net/protocol/presence.proto\x12\x16\x62net.protocol.presence\x1a\x1d\x62net/protocol/attribute.proto\x1a\x15\x62net/protocol_0.proto\x1a\x1b\x62net/protocol/channel.proto\"H\n\x08\x46ieldKey\x12\x0f\n\x07program\x18\x01 \x01(\r\x12\r\n\x05group\x18\x02 \x01(\r\x12\r\n\x05\x66ield\x18\x03 \x01(\r\x12\r\n\x05index\x18\x04 \x01(\x04\"g\n\x05\x46ield\x12-\n\x03key\x18\x01 \x01(\x0b\x32 .bnet.protocol.presence.FieldKey\x12/\n\x05value\x18\x02 \x01(\x0b\x32 .bnet.protocol.attribute.Variant\"\xac\x01\n\x0e\x46ieldOperation\x12,\n\x05\x66ield\x18\x01 \x01(\x0b\x32\x1d.bnet.protocol.presence.Field\x12G\n\toperation\x18\x02 \x01(\x0e\x32\x34.bnet.protocol.presence.FieldOperation.OperationType\"#\n\rOperationType\x12\x07\n\x03SET\x10\x00\x12\t\n\x05\x43LEAR\x10\x01\"\xe9\x01\n\x0c\x43hannelState\x12*\n\tentity_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12?\n\x0f\x66ield_operation\x18\x02 \x03(\x0b\x32&.bnet.protocol.presence.FieldOperation\x12\x0f\n\x07healing\x18\x03 \x01(\x08\x32[\n\x08presence\x12#.bnet.protocol.channel.ChannelState\x18\x65 \x01(\x0b\x32$.bnet.protocol.presence.ChannelState\"Y\n\x10OwnershipRequest\x12*\n\tentity_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x19\n\x11release_ownership\x18\x02 \x01(\x08\"i\n\x0cQueryRequest\x12*\n\tentity_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12-\n\x03key\x18\x02 \x03(\x0b\x32 .bnet.protocol.presence.FieldKey\"=\n\rQueryResponse\x12,\n\x05\x66ield\x18\x02 \x03(\x0b\x32\x1d.bnet.protocol.presence.Field\"D\n\x0cRichPresence\x12\x12\n\nprogram_id\x18\x01 \x01(\x07\x12\x11\n\tstream_id\x18\x02 \x01(\x07\x12\r\n\x05index\x18\x03 \x01(\r\"J\n\x1cSubscribeNotificationRequest\x12*\n\tentity_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\x90\x01\n\x10SubscribeRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12*\n\tentity_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x11\n\tobject_id\x18\x03 \x01(\x04\x12\x12\n\nprogram_id\x18\x04 \x03(\x07\"k\n\x12UnsubscribeRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12*\n\tentity_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"|\n\rUpdateRequest\x12*\n\tentity_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12?\n\x0f\x66ield_operation\x18\x02 \x03(\x0b\x32&.bnet.protocol.presence.FieldOperation')
+  serialized_pb=_b('\n\x1c\x62net/protocol/presence.proto\x12\x16\x62net.protocol.presence\x1a\x1d\x62net/protocol/attribute.proto\x1a\x15\x62net/protocol_0.proto\"K\n\x08\x46ieldKey\x12\x0f\n\x07program\x18\x01 \x02(\r\x12\r\n\x05group\x18\x02 \x02(\r\x12\r\n\x05\x66ield\x18\x03 \x02(\r\x12\x10\n\x05index\x18\x04 \x01(\x04:\x01\x30\"g\n\x05\x46ield\x12-\n\x03key\x18\x01 \x02(\x0b\x32 .bnet.protocol.presence.FieldKey\x12/\n\x05value\x18\x02 \x02(\x0b\x32 .bnet.protocol.attribute.Variant\"\xb1\x01\n\x0e\x46ieldOperation\x12,\n\x05\x66ield\x18\x01 \x02(\x0b\x32\x1d.bnet.protocol.presence.Field\x12L\n\toperation\x18\x02 \x01(\x0e\x32\x34.bnet.protocol.presence.FieldOperation.OperationType:\x03SET\"#\n\rOperationType\x12\x07\n\x03SET\x10\x00\x12\t\n\x05\x43LEAR\x10\x01\"\x93\x01\n\x0c\x43hannelState\x12*\n\tentity_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12?\n\x0f\x66ield_operation\x18\x02 \x03(\x0b\x32&.bnet.protocol.presence.FieldOperation\x12\x16\n\x07healing\x18\x03 \x01(\x08:\x05\x66\x61lse\"`\n\x10OwnershipRequest\x12*\n\tentity_id\x18\x01 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12 \n\x11release_ownership\x18\x02 \x01(\x08:\x05\x66\x61lse\"i\n\x0cQueryRequest\x12*\n\tentity_id\x18\x01 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12-\n\x03key\x18\x02 \x03(\x0b\x32 .bnet.protocol.presence.FieldKey\"=\n\rQueryResponse\x12,\n\x05\x66ield\x18\x02 \x03(\x0b\x32\x1d.bnet.protocol.presence.Field\"D\n\x0cRichPresence\x12\x12\n\nprogram_id\x18\x01 \x02(\x07\x12\x11\n\tstream_id\x18\x02 \x02(\x07\x12\r\n\x05index\x18\x03 \x02(\r\"J\n\x1cSubscribeNotificationRequest\x12*\n\tentity_id\x18\x01 \x02(\x0b\x32\x17.bnet.protocol.EntityId\"\x90\x01\n\x10SubscribeRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12*\n\tentity_id\x18\x02 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12\x11\n\tobject_id\x18\x03 \x02(\x04\x12\x12\n\nprogram_id\x18\x04 \x03(\x07\"k\n\x12UnsubscribeRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12*\n\tentity_id\x18\x02 \x02(\x0b\x32\x17.bnet.protocol.EntityId\"|\n\rUpdateRequest\x12*\n\tentity_id\x18\x01 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12?\n\x0f\x66ield_operation\x18\x02 \x03(\x0b\x32&.bnet.protocol.presence.FieldOperation')
   ,
-  dependencies=[bnet_dot_protocol_dot_attribute__pb2.DESCRIPTOR,bnet_dot_protocol__0__pb2.DESCRIPTOR,bnet_dot_protocol_dot_channel__pb2.DESCRIPTOR,])
+  dependencies=[bnet_dot_protocol_dot_attribute__pb2.DESCRIPTOR,bnet_dot_protocol__0__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -46,8 +45,8 @@ _FIELDOPERATION_OPERATIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=456,
-  serialized_end=491,
+  serialized_start=435,
+  serialized_end=470,
 )
 _sym_db.RegisterEnumDescriptor(_FIELDOPERATION_OPERATIONTYPE)
 
@@ -61,21 +60,21 @@ _FIELDKEY = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='program', full_name='bnet.protocol.presence.FieldKey.program', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='group', full_name='bnet.protocol.presence.FieldKey.group', index=1,
-      number=2, type=13, cpp_type=3, label=1,
+      number=2, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='field', full_name='bnet.protocol.presence.FieldKey.field', index=2,
-      number=3, type=13, cpp_type=3, label=1,
+      number=3, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -83,7 +82,7 @@ _FIELDKEY = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='index', full_name='bnet.protocol.presence.FieldKey.index', index=3,
       number=4, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -99,8 +98,8 @@ _FIELDKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=139,
-  serialized_end=211,
+  serialized_start=110,
+  serialized_end=185,
 )
 
 
@@ -113,14 +112,14 @@ _FIELD = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='key', full_name='bnet.protocol.presence.Field.key', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='value', full_name='bnet.protocol.presence.Field.value', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -137,8 +136,8 @@ _FIELD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=213,
-  serialized_end=316,
+  serialized_start=187,
+  serialized_end=290,
 )
 
 
@@ -151,7 +150,7 @@ _FIELDOPERATION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='field', full_name='bnet.protocol.presence.FieldOperation.field', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -159,7 +158,7 @@ _FIELDOPERATION = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='operation', full_name='bnet.protocol.presence.FieldOperation.operation', index=1,
       number=2, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -176,8 +175,8 @@ _FIELDOPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=319,
-  serialized_end=491,
+  serialized_start=293,
+  serialized_end=470,
 )
 
 
@@ -205,19 +204,12 @@ _CHANNELSTATE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='healing', full_name='bnet.protocol.presence.ChannelState.healing', index=2,
       number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
   ],
   extensions=[
-    _descriptor.FieldDescriptor(
-      name='presence', full_name='bnet.protocol.presence.ChannelState.presence', index=0,
-      number=101, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=True, extension_scope=None,
-      options=None),
   ],
   nested_types=[],
   enum_types=[
@@ -228,8 +220,8 @@ _CHANNELSTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=494,
-  serialized_end=727,
+  serialized_start=473,
+  serialized_end=620,
 )
 
 
@@ -242,7 +234,7 @@ _OWNERSHIPREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='entity_id', full_name='bnet.protocol.presence.OwnershipRequest.entity_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -250,7 +242,7 @@ _OWNERSHIPREQUEST = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='release_ownership', full_name='bnet.protocol.presence.OwnershipRequest.release_ownership', index=1,
       number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -266,8 +258,8 @@ _OWNERSHIPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=729,
-  serialized_end=818,
+  serialized_start=622,
+  serialized_end=718,
 )
 
 
@@ -280,7 +272,7 @@ _QUERYREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='entity_id', full_name='bnet.protocol.presence.QueryRequest.entity_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -304,8 +296,8 @@ _QUERYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=820,
-  serialized_end=925,
+  serialized_start=720,
+  serialized_end=825,
 )
 
 
@@ -335,8 +327,8 @@ _QUERYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=927,
-  serialized_end=988,
+  serialized_start=827,
+  serialized_end=888,
 )
 
 
@@ -349,21 +341,21 @@ _RICHPRESENCE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='program_id', full_name='bnet.protocol.presence.RichPresence.program_id', index=0,
-      number=1, type=7, cpp_type=3, label=1,
+      number=1, type=7, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='stream_id', full_name='bnet.protocol.presence.RichPresence.stream_id', index=1,
-      number=2, type=7, cpp_type=3, label=1,
+      number=2, type=7, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='index', full_name='bnet.protocol.presence.RichPresence.index', index=2,
-      number=3, type=13, cpp_type=3, label=1,
+      number=3, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -380,8 +372,8 @@ _RICHPRESENCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=990,
-  serialized_end=1058,
+  serialized_start=890,
+  serialized_end=958,
 )
 
 
@@ -394,7 +386,7 @@ _SUBSCRIBENOTIFICATIONREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='entity_id', full_name='bnet.protocol.presence.SubscribeNotificationRequest.entity_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -411,8 +403,8 @@ _SUBSCRIBENOTIFICATIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1060,
-  serialized_end=1134,
+  serialized_start=960,
+  serialized_end=1034,
 )
 
 
@@ -432,14 +424,14 @@ _SUBSCRIBEREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='entity_id', full_name='bnet.protocol.presence.SubscribeRequest.entity_id', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='object_id', full_name='bnet.protocol.presence.SubscribeRequest.object_id', index=2,
-      number=3, type=4, cpp_type=4, label=1,
+      number=3, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -463,8 +455,8 @@ _SUBSCRIBEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1137,
-  serialized_end=1281,
+  serialized_start=1037,
+  serialized_end=1181,
 )
 
 
@@ -484,7 +476,7 @@ _UNSUBSCRIBEREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='entity_id', full_name='bnet.protocol.presence.UnsubscribeRequest.entity_id', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -501,8 +493,8 @@ _UNSUBSCRIBEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1283,
-  serialized_end=1390,
+  serialized_start=1183,
+  serialized_end=1290,
 )
 
 
@@ -515,7 +507,7 @@ _UPDATEREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='entity_id', full_name='bnet.protocol.presence.UpdateRequest.entity_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -539,8 +531,8 @@ _UPDATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1392,
-  serialized_end=1516,
+  serialized_start=1292,
+  serialized_end=1416,
 )
 
 _FIELD.fields_by_name['key'].message_type = _FIELDKEY
@@ -658,7 +650,5 @@ UpdateRequest = _reflection.GeneratedProtocolMessageType('UpdateRequest', (_mess
   ))
 _sym_db.RegisterMessage(UpdateRequest)
 
-_CHANNELSTATE.extensions_by_name['presence'].message_type = _CHANNELSTATE
-bnet_dot_protocol_dot_channel__pb2.ChannelState.RegisterExtension(_CHANNELSTATE.extensions_by_name['presence'])
 
 # @@protoc_insertion_point(module_scope)

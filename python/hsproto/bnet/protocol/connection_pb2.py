@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='bnet/protocol/connection.proto',
   package='bnet.protocol.connection',
   syntax='proto2',
-  serialized_pb=_b('\n\x1e\x62net/protocol/connection.proto\x12\x18\x62net.protocol.connection\x1a\x15\x62net/protocol_0.proto\"+\n\x0c\x42indResponse\x12\x1b\n\x13imported_service_id\x18\x01 \x03(\r\"(\n\x0c\x42oundService\x12\x0c\n\x04hash\x18\x01 \x01(\x07\x12\n\n\x02id\x18\x02 \x01(\r\"n\n\x0b\x42indRequest\x12\x1d\n\x15imported_service_hash\x18\x01 \x03(\x07\x12@\n\x10\x65xported_service\x18\x02 \x03(\x0b\x32&.bnet.protocol.connection.BoundService\"<\n\x16\x44isconnectNotification\x12\x12\n\nerror_code\x18\x01 \x01(\r\x12\x0e\n\x06reason\x18\x02 \x01(\t\"\'\n\x11\x44isconnectRequest\x12\x12\n\nerror_code\x18\x01 \x01(\r\"B\n\x0b\x45\x63hoRequest\x12\x0c\n\x04time\x18\x01 \x01(\x06\x12\x14\n\x0cnetwork_only\x18\x02 \x01(\x08\x12\x0f\n\x07payload\x18\x03 \x01(\x0c\"-\n\x0c\x45\x63hoResponse\x12\x0c\n\x04time\x18\x01 \x01(\x06\x12\x0f\n\x07payload\x18\x02 \x01(\x0c\"\x10\n\x0e\x45ncryptRequest\"X\n ConnectionMeteringContentHandles\x12\x34\n\x0e\x63ontent_handle\x18\x01 \x03(\x0b\x32\x1c.bnet.protocol.ContentHandle\"z\n\x0e\x43onnectRequest\x12+\n\tclient_id\x18\x01 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\x12;\n\x0c\x62ind_request\x18\x02 \x01(\x0b\x32%.bnet.protocol.connection.BindRequest\"\xae\x02\n\x0f\x43onnectResponse\x12+\n\tserver_id\x18\x01 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\x12+\n\tclient_id\x18\x02 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\x12\x13\n\x0b\x62ind_result\x18\x03 \x01(\r\x12=\n\rbind_response\x18\x04 \x01(\x0b\x32&.bnet.protocol.connection.BindResponse\x12X\n\x14\x63ontent_handle_array\x18\x05 \x01(\x0b\x32:.bnet.protocol.connection.ConnectionMeteringContentHandles\x12\x13\n\x0bserver_time\x18\x06 \x01(\x04')
+  serialized_pb=_b('\n\x1e\x62net/protocol/connection.proto\x12\x18\x62net.protocol.connection\x1a\x15\x62net/protocol_0.proto\"+\n\x0c\x42indResponse\x12\x1b\n\x13imported_service_id\x18\x01 \x03(\r\"(\n\x0c\x42oundService\x12\x0c\n\x04hash\x18\x01 \x02(\x07\x12\n\n\x02id\x18\x02 \x02(\r\"n\n\x0b\x42indRequest\x12\x1d\n\x15imported_service_hash\x18\x01 \x03(\x07\x12@\n\x10\x65xported_service\x18\x02 \x03(\x0b\x32&.bnet.protocol.connection.BoundService\"<\n\x16\x44isconnectNotification\x12\x12\n\nerror_code\x18\x01 \x02(\r\x12\x0e\n\x06reason\x18\x02 \x01(\t\"\'\n\x11\x44isconnectRequest\x12\x12\n\nerror_code\x18\x01 \x02(\r\"I\n\x0b\x45\x63hoRequest\x12\x0c\n\x04time\x18\x01 \x01(\x06\x12\x1b\n\x0cnetwork_only\x18\x02 \x01(\x08:\x05\x66\x61lse\x12\x0f\n\x07payload\x18\x03 \x01(\x0c\"-\n\x0c\x45\x63hoResponse\x12\x0c\n\x04time\x18\x01 \x01(\x06\x12\x0f\n\x07payload\x18\x02 \x01(\x0c\"\x10\n\x0e\x45ncryptRequest\"X\n ConnectionMeteringContentHandles\x12\x34\n\x0e\x63ontent_handle\x18\x01 \x03(\x0b\x32\x1c.bnet.protocol.ContentHandle\"z\n\x0e\x43onnectRequest\x12+\n\tclient_id\x18\x01 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\x12;\n\x0c\x62ind_request\x18\x02 \x01(\x0b\x32%.bnet.protocol.connection.BindRequest\"\xae\x02\n\x0f\x43onnectResponse\x12+\n\tserver_id\x18\x01 \x02(\x0b\x32\x18.bnet.protocol.ProcessId\x12+\n\tclient_id\x18\x02 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\x12\x13\n\x0b\x62ind_result\x18\x03 \x01(\r\x12=\n\rbind_response\x18\x04 \x01(\x0b\x32&.bnet.protocol.connection.BindResponse\x12X\n\x14\x63ontent_handle_array\x18\x05 \x01(\x0b\x32:.bnet.protocol.connection.ConnectionMeteringContentHandles\x12\x13\n\x0bserver_time\x18\x06 \x01(\x04')
   ,
   dependencies=[bnet_dot_protocol__0__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -68,14 +68,14 @@ _BOUNDSERVICE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='hash', full_name='bnet.protocol.connection.BoundService.hash', index=0,
-      number=1, type=7, cpp_type=3, label=1,
+      number=1, type=7, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='id', full_name='bnet.protocol.connection.BoundService.id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
+      number=2, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -144,7 +144,7 @@ _DISCONNECTNOTIFICATION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='error_code', full_name='bnet.protocol.connection.DisconnectNotification.error_code', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -182,7 +182,7 @@ _DISCONNECTREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='error_code', full_name='bnet.protocol.connection.DisconnectRequest.error_code', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -221,7 +221,7 @@ _ECHOREQUEST = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='network_only', full_name='bnet.protocol.connection.EchoRequest.network_only', index=1,
       number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -245,7 +245,7 @@ _ECHOREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=385,
-  serialized_end=451,
+  serialized_end=458,
 )
 
 
@@ -282,8 +282,8 @@ _ECHORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=453,
-  serialized_end=498,
+  serialized_start=460,
+  serialized_end=505,
 )
 
 
@@ -306,8 +306,8 @@ _ENCRYPTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=500,
-  serialized_end=516,
+  serialized_start=507,
+  serialized_end=523,
 )
 
 
@@ -337,8 +337,8 @@ _CONNECTIONMETERINGCONTENTHANDLES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=518,
-  serialized_end=606,
+  serialized_start=525,
+  serialized_end=613,
 )
 
 
@@ -375,8 +375,8 @@ _CONNECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=608,
-  serialized_end=730,
+  serialized_start=615,
+  serialized_end=737,
 )
 
 
@@ -389,7 +389,7 @@ _CONNECTRESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='server_id', full_name='bnet.protocol.connection.ConnectResponse.server_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -441,8 +441,8 @@ _CONNECTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=733,
-  serialized_end=1035,
+  serialized_start=740,
+  serialized_end=1042,
 )
 
 _BINDREQUEST.fields_by_name['exported_service'].message_type = _BOUNDSERVICE

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='PegasusGame.proto',
   package='PegasusGame',
   syntax='proto2',
-  serialized_pb=_b('\n\x11PegasusGame.proto\x12\x0bPegasusGame\x1a\x13PegasusShared.proto\"B\n\x0e\x43hooseEntities\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x10\n\x08\x65ntities\x18\x02 \x03(\x05\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x03\"2\n\x0c\x43lientPacket\x12\x0e\n\x06packet\x18\x01 \x01(\x0c\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x06\"3\n\x0c\x44\x65\x62ugMessage\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x05\"\x9f\x01\n\x0c\x45ntityChoice\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x13\n\x0b\x63hoice_type\x18\x02 \x01(\x05\x12\x12\n\ncancelable\x18\x03 \x01(\x08\x12\x11\n\tcount_min\x18\x04 \x01(\x05\x12\x11\n\tcount_max\x18\x05 \x01(\x05\x12\x10\n\x08\x65ntities\x18\x06 \x03(\x05\x12\x0e\n\x06source\x18\x07 \x01(\x05\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x11\"F\n\x12\x46orcedEntityChoice\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x10\n\x08\x65ntities\x18\x02 \x03(\x05\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\r\"\x86\x01\n\x0cGameCanceled\x12\x42\n\x06reason\x18\x01 \x01(\x0e\x32 .PegasusGame.GameCanceled.Reason:\x10OPPONENT_TIMEOUT\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x0c\"\x1e\n\x06Reason\x12\x14\n\x10OPPONENT_TIMEOUT\x10\x01\"\x95\x01\n\tGameSetup\x12\r\n\x05\x62oard\x18\x01 \x01(\x05\x12\x1e\n\x16max_secrets_per_player\x18\x02 \x01(\x05\x12\'\n\x1fmax_friendly_minions_per_player\x18\x03 \x01(\x05\x12\x1c\n\x14keep_alive_frequency\x18\x04 \x01(\x05\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x10\"\"\n\x0cGetGameState\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x01\"]\n\tMouseInfo\x12\x14\n\x0c\x61rrow_origin\x18\x01 \x01(\x05\x12\x11\n\theld_card\x18\x02 \x01(\x05\x12\x11\n\tover_card\x18\x03 \x01(\x05\x12\t\n\x01x\x18\x04 \x01(\x05\x12\t\n\x01y\x18\x05 \x01(\x05\",\n\nNAckOption\x12\n\n\x02id\x18\x01 \x01(\x05\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\n\"\x8e\x01\n\x0cNotification\x12>\n\x04type\x18\x01 \x01(\x0e\x32\x1e.PegasusGame.Notification.Type:\x10IN_HAND_CARD_CAP\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x15\"*\n\x04Type\x12\x14\n\x10IN_HAND_CARD_CAP\x10\x01\x12\x0c\n\x08MANA_CAP\x10\x02\"\x11\n\x0fPowerHistoryEnd\"0\n\x10PowerHistoryHide\x12\x0e\n\x06\x65ntity\x18\x01 \x01(\x05\x12\x0c\n\x04zone\x18\x02 \x01(\x05\"\xb1\x01\n\x14PowerHistoryMetaData\x12\x0c\n\x04info\x18\x02 \x03(\x05\x12=\n\tmeta_type\x18\x03 \x01(\x0e\x32*.PegasusGame.PowerHistoryMetaData.MetaType\x12\x0c\n\x04\x64\x61ta\x18\x04 \x01(\x05\">\n\x08MetaType\x12\x0f\n\x0bMETA_TARGET\x10\x00\x12\x0f\n\x0bMETA_DAMAGE\x10\x01\x12\x10\n\x0cMETA_HEALING\x10\x02\"\xe8\x01\n\x11PowerHistoryStart\x12\x39\n\x04type\x18\x01 \x01(\x0e\x32#.PegasusGame.PowerHistoryStart.Type:\x06\x41TTACK\x12\r\n\x05index\x18\x02 \x01(\x05\x12\x0e\n\x06source\x18\x03 \x01(\x05\x12\x0e\n\x06target\x18\x04 \x01(\x05\"i\n\x04Type\x12\n\n\x06\x41TTACK\x10\x01\x12\x0e\n\nCONTINUOUS\x10\x02\x12\t\n\x05POWER\x10\x03\x12\n\n\x06SCRIPT\x10\x04\x12\x0b\n\x07TRIGGER\x10\x05\x12\n\n\x06\x44\x45\x41THS\x10\x06\x12\x08\n\x04PLAY\x10\x07\x12\x0b\n\x07\x46\x41TIGUE\x10\x08\"C\n\x15PowerHistoryTagChange\x12\x0e\n\x06\x65ntity\x18\x01 \x01(\x05\x12\x0b\n\x03tag\x18\x02 \x01(\x05\x12\r\n\x05value\x18\x03 \x01(\x05\"\xbc\x01\n\x0cServerResult\x12\x13\n\x0bresult_code\x18\x01 \x01(\x05\x12\x1b\n\x13retry_delay_seconds\x18\x02 \x01(\x02\">\n\x04\x43ode\x12\r\n\tRESULT_OK\x10\x00\x12\x10\n\x0cRESULT_RETRY\x10\x01\x12\x15\n\x11RESULT_NOT_EXISTS\x10\x02\"&\n\tConstants\x12\x19\n\x15\x44\x45\x46\x41ULT_RETRY_SECONDS\x10\x02\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x17\"(\n\tSubOption\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0f\n\x07targets\x18\x03 \x03(\x05\"\xbb\x01\n\x06Option\x12,\n\x04type\x18\x01 \x01(\x0e\x32\x18.PegasusGame.Option.Type:\x04PASS\x12+\n\x0bmain_option\x18\x02 \x01(\x0b\x32\x16.PegasusGame.SubOption\x12+\n\x0bsub_options\x18\x03 \x03(\x0b\x32\x16.PegasusGame.SubOption\")\n\x04Type\x12\x08\n\x04PASS\x10\x01\x12\x0c\n\x08\x45ND_TURN\x10\x02\x12\t\n\x05POWER\x10\x03\"R\n\nAllOptions\x12\n\n\x02id\x18\x01 \x01(\x05\x12$\n\x07options\x18\x02 \x03(\x0b\x32\x13.PegasusGame.Option\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x0e\"\"\n\x03Tag\x12\x0c\n\x04name\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\x05\"4\n\x06\x45ntity\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x1e\n\x04tags\x18\x02 \x03(\x0b\x32\x10.PegasusGame.Tag\"R\n\x12PowerHistoryEntity\x12\x0e\n\x06\x65ntity\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x1e\n\x04tags\x18\x03 \x03(\x0b\x32\x10.PegasusGame.Tag\"L\n\tTurnTimer\x12\x0f\n\x07seconds\x18\x01 \x01(\x05\x12\x0c\n\x04turn\x18\x02 \x01(\x05\x12\x0c\n\x04show\x18\x03 \x01(\x08\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\t\"j\n\x06UserUI\x12*\n\nmouse_info\x18\x01 \x01(\x0b\x32\x16.PegasusGame.MouseInfo\x12\r\n\x05\x65mote\x18\x02 \x01(\x05\x12\x11\n\tplayer_id\x18\x03 \x01(\x05\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x0f\"\x8e\x01\n\x10InviteToSpectate\x12\x32\n\x13targetBnetAccountId\x18\x01 \x01(\x0b\x32\x15.PegasusShared.BnetId\x12\x32\n\x13targetGameAccountId\x18\x02 \x01(\x0b\x32\x15.PegasusShared.BnetId\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x19\"z\n\x06Player\x12\n\n\x02id\x18\x01 \x01(\x05\x12,\n\rgameAccountId\x18\x02 \x01(\x0b\x32\x15.PegasusShared.BnetId\x12\x11\n\tcard_back\x18\x03 \x01(\x05\x12#\n\x06\x65ntity\x18\x04 \x01(\x0b\x32\x13.PegasusGame.Entity\"h\n\x16PowerHistoryCreateGame\x12(\n\x0bgame_entity\x18\x01 \x01(\x0b\x32\x13.PegasusGame.Entity\x12$\n\x07players\x18\x02 \x03(\x0b\x32\x13.PegasusGame.Player\"\xc0\x03\n\x10PowerHistoryData\x12\x34\n\x0b\x66ull_entity\x18\x01 \x01(\x0b\x32\x1f.PegasusGame.PowerHistoryEntity\x12\x34\n\x0bshow_entity\x18\x02 \x01(\x0b\x32\x1f.PegasusGame.PowerHistoryEntity\x12\x32\n\x0bhide_entity\x18\x03 \x01(\x0b\x32\x1d.PegasusGame.PowerHistoryHide\x12\x36\n\ntag_change\x18\x04 \x01(\x0b\x32\".PegasusGame.PowerHistoryTagChange\x12\x38\n\x0b\x63reate_game\x18\x05 \x01(\x0b\x32#.PegasusGame.PowerHistoryCreateGame\x12\x33\n\x0bpower_start\x18\x06 \x01(\x0b\x32\x1e.PegasusGame.PowerHistoryStart\x12/\n\tpower_end\x18\x07 \x01(\x0b\x32\x1c.PegasusGame.PowerHistoryEnd\x12\x34\n\tmeta_data\x18\x08 \x01(\x0b\x32!.PegasusGame.PowerHistoryMetaData\"O\n\x0cPowerHistory\x12+\n\x04list\x18\x01 \x03(\x0b\x32\x1d.PegasusGame.PowerHistoryData\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x13\"\xa1\x01\n\x10RemoveSpectators\x12\x35\n\x16target_gameaccount_ids\x18\x01 \x03(\x0b\x32\x15.PegasusShared.BnetId\x12\x1b\n\x13kick_all_spectators\x18\x02 \x01(\x08\x12%\n\x1dregenerate_spectator_password\x18\x03 \x01(\x08\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x1a\"S\n\x0fSpectatorChange\x12,\n\rgameAccountId\x18\x01 \x01(\x0b\x32\x15.PegasusShared.BnetId\x12\x12\n\nis_removed\x18\x02 \x01(\x08\"\xb8\x01\n\x10SpectatorRemoved\x12\x13\n\x0breason_code\x18\x01 \x01(\x05\x12)\n\nremoved_by\x18\x02 \x01(\x0b\x32\x15.PegasusShared.BnetId\"d\n\x16SpectatorRemovedReason\x12#\n\x1fSPECTATOR_REMOVED_REASON_KICKED\x10\x00\x12%\n!SPECTATOR_REMOVED_REASON_GAMEOVER\x10\x01\"\xb3\x01\n\x0c\x43hooseOption\x12\n\n\x02id\x18\x01 \x01(\x05\x12\r\n\x05index\x18\x02 \x01(\x05\x12\x0e\n\x06target\x18\x03 \x01(\x05\x12\x11\n\tsubOption\x18\x04 \x01(\x05\x12\x10\n\x08position\x18\x05 \x01(\x05\x12\x14\n\x0cold_platform\x18\x06 \x01(\x05\x12)\n\x08platform\x18\x07 \x01(\x0b\x32\x17.PegasusShared.Platform\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x02\"]\n\x06GiveUp\x12\x14\n\x0cold_platform\x18\x01 \x01(\x05\x12)\n\x08platform\x18\x02 \x01(\x0b\x32\x17.PegasusShared.Platform\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x0b\"\xb9\x01\n\x12SpectatorHandshake\x12\x13\n\x0bgame_handle\x18\x01 \x01(\x05\x12\x10\n\x08password\x18\x02 \x01(\t\x12\x0f\n\x07version\x18\x03 \x01(\t\x12)\n\x08platform\x18\x04 \x01(\x0b\x32\x17.PegasusShared.Platform\x12,\n\rgameAccountId\x18\x05 \x01(\x0b\x32\x15.PegasusShared.BnetId\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x16\"\xb5\x02\n\x0fSpectatorNotify\x12\x11\n\tplayer_id\x18\x01 \x01(\x05\x12\x30\n\rchoose_option\x18\x02 \x01(\x0b\x32\x19.PegasusGame.ChooseOption\x12\x34\n\x0f\x63hoose_entities\x18\x03 \x01(\x0b\x32\x1b.PegasusGame.ChooseEntities\x12\x36\n\x10spectator_change\x18\x04 \x03(\x0b\x32\x1c.PegasusGame.SpectatorChange\x12!\n\x19spectator_password_update\x18\x05 \x01(\t\x12\x38\n\x11spectator_removed\x18\x06 \x01(\x0b\x32\x1d.PegasusGame.SpectatorRemoved\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x18')
+  serialized_pb=_b('\n\x11PegasusGame.proto\x12\x0bPegasusGame\x1a\x13PegasusShared.proto\"B\n\x0e\x43hooseEntities\x12\n\n\x02id\x18\x01 \x02(\x05\x12\x10\n\x08\x65ntities\x18\x02 \x03(\x05\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x03\"2\n\x0c\x43lientPacket\x12\x0e\n\x06packet\x18\x01 \x02(\x0c\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x06\"3\n\x0c\x44\x65\x62ugMessage\x12\x0f\n\x07message\x18\x01 \x02(\t\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x05\"\x9f\x01\n\x0c\x45ntityChoice\x12\n\n\x02id\x18\x01 \x02(\x05\x12\x13\n\x0b\x63hoice_type\x18\x02 \x02(\x05\x12\x12\n\ncancelable\x18\x03 \x02(\x08\x12\x11\n\tcount_min\x18\x04 \x02(\x05\x12\x11\n\tcount_max\x18\x05 \x02(\x05\x12\x10\n\x08\x65ntities\x18\x06 \x03(\x05\x12\x0e\n\x06source\x18\x07 \x01(\x05\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x11\"F\n\x12\x46orcedEntityChoice\x12\n\n\x02id\x18\x01 \x02(\x05\x12\x10\n\x08\x65ntities\x18\x02 \x03(\x05\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\r\"t\n\x0cGameCanceled\x12\x30\n\x06reason\x18\x01 \x02(\x0e\x32 .PegasusGame.GameCanceled.Reason\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x0c\"\x1e\n\x06Reason\x12\x14\n\x10OPPONENT_TIMEOUT\x10\x01\"\x95\x01\n\tGameSetup\x12\r\n\x05\x62oard\x18\x01 \x02(\x05\x12\x1e\n\x16max_secrets_per_player\x18\x02 \x02(\x05\x12\'\n\x1fmax_friendly_minions_per_player\x18\x03 \x02(\x05\x12\x1c\n\x14keep_alive_frequency\x18\x04 \x01(\x05\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x10\"\"\n\x0cGetGameState\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x01\"]\n\tMouseInfo\x12\x14\n\x0c\x61rrow_origin\x18\x01 \x02(\x05\x12\x11\n\theld_card\x18\x02 \x02(\x05\x12\x11\n\tover_card\x18\x03 \x02(\x05\x12\t\n\x01x\x18\x04 \x02(\x05\x12\t\n\x01y\x18\x05 \x02(\x05\",\n\nNAckOption\x12\n\n\x02id\x18\x01 \x02(\x05\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\n\"|\n\x0cNotification\x12,\n\x04type\x18\x01 \x02(\x0e\x32\x1e.PegasusGame.Notification.Type\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x15\"*\n\x04Type\x12\x14\n\x10IN_HAND_CARD_CAP\x10\x01\x12\x0c\n\x08MANA_CAP\x10\x02\"\x11\n\x0fPowerHistoryEnd\"0\n\x10PowerHistoryHide\x12\x0e\n\x06\x65ntity\x18\x01 \x02(\x05\x12\x0c\n\x04zone\x18\x02 \x02(\x05\"\xbe\x01\n\x14PowerHistoryMetaData\x12\x0c\n\x04info\x18\x02 \x03(\x05\x12J\n\tmeta_type\x18\x03 \x01(\x0e\x32*.PegasusGame.PowerHistoryMetaData.MetaType:\x0bMETA_TARGET\x12\x0c\n\x04\x64\x61ta\x18\x04 \x01(\x05\">\n\x08MetaType\x12\x0f\n\x0bMETA_TARGET\x10\x00\x12\x0f\n\x0bMETA_DAMAGE\x10\x01\x12\x10\n\x0cMETA_HEALING\x10\x02\"\xe0\x01\n\x11PowerHistoryStart\x12\x31\n\x04type\x18\x01 \x02(\x0e\x32#.PegasusGame.PowerHistoryStart.Type\x12\r\n\x05index\x18\x02 \x02(\x05\x12\x0e\n\x06source\x18\x03 \x02(\x05\x12\x0e\n\x06target\x18\x04 \x02(\x05\"i\n\x04Type\x12\n\n\x06\x41TTACK\x10\x01\x12\x0e\n\nCONTINUOUS\x10\x02\x12\t\n\x05POWER\x10\x03\x12\n\n\x06SCRIPT\x10\x04\x12\x0b\n\x07TRIGGER\x10\x05\x12\n\n\x06\x44\x45\x41THS\x10\x06\x12\x08\n\x04PLAY\x10\x07\x12\x0b\n\x07\x46\x41TIGUE\x10\x08\"C\n\x15PowerHistoryTagChange\x12\x0e\n\x06\x65ntity\x18\x01 \x02(\x05\x12\x0b\n\x03tag\x18\x02 \x02(\x05\x12\r\n\x05value\x18\x03 \x02(\x05\"\xbc\x01\n\x0cServerResult\x12\x13\n\x0bresult_code\x18\x01 \x02(\x05\x12\x1b\n\x13retry_delay_seconds\x18\x02 \x01(\x02\">\n\x04\x43ode\x12\r\n\tRESULT_OK\x10\x00\x12\x10\n\x0cRESULT_RETRY\x10\x01\x12\x15\n\x11RESULT_NOT_EXISTS\x10\x02\"&\n\tConstants\x12\x19\n\x15\x44\x45\x46\x41ULT_RETRY_SECONDS\x10\x02\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x17\"(\n\tSubOption\x12\n\n\x02id\x18\x01 \x02(\x05\x12\x0f\n\x07targets\x18\x03 \x03(\x05\"\xb5\x01\n\x06Option\x12&\n\x04type\x18\x01 \x02(\x0e\x32\x18.PegasusGame.Option.Type\x12+\n\x0bmain_option\x18\x02 \x01(\x0b\x32\x16.PegasusGame.SubOption\x12+\n\x0bsub_options\x18\x03 \x03(\x0b\x32\x16.PegasusGame.SubOption\")\n\x04Type\x12\x08\n\x04PASS\x10\x01\x12\x0c\n\x08\x45ND_TURN\x10\x02\x12\t\n\x05POWER\x10\x03\"R\n\nAllOptions\x12\n\n\x02id\x18\x01 \x02(\x05\x12$\n\x07options\x18\x02 \x03(\x0b\x32\x13.PegasusGame.Option\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x0e\"\"\n\x03Tag\x12\x0c\n\x04name\x18\x01 \x02(\x05\x12\r\n\x05value\x18\x02 \x02(\x05\"4\n\x06\x45ntity\x12\n\n\x02id\x18\x01 \x02(\x05\x12\x1e\n\x04tags\x18\x02 \x03(\x0b\x32\x10.PegasusGame.Tag\"R\n\x12PowerHistoryEntity\x12\x0e\n\x06\x65ntity\x18\x01 \x02(\x05\x12\x0c\n\x04name\x18\x02 \x02(\t\x12\x1e\n\x04tags\x18\x03 \x03(\x0b\x32\x10.PegasusGame.Tag\"L\n\tTurnTimer\x12\x0f\n\x07seconds\x18\x01 \x02(\x05\x12\x0c\n\x04turn\x18\x02 \x02(\x05\x12\x0c\n\x04show\x18\x03 \x02(\x08\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\t\"j\n\x06UserUI\x12*\n\nmouse_info\x18\x01 \x01(\x0b\x32\x16.PegasusGame.MouseInfo\x12\r\n\x05\x65mote\x18\x02 \x01(\x05\x12\x11\n\tplayer_id\x18\x03 \x01(\x05\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x0f\"\x94\x01\n\x10InviteToSpectate\x12\x35\n\x16target_bnet_account_id\x18\x01 \x01(\x0b\x32\x15.PegasusShared.BnetId\x12\x35\n\x16target_game_account_id\x18\x02 \x02(\x0b\x32\x15.PegasusShared.BnetId\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x19\"|\n\x06Player\x12\n\n\x02id\x18\x01 \x02(\x05\x12.\n\x0fgame_account_id\x18\x02 \x02(\x0b\x32\x15.PegasusShared.BnetId\x12\x11\n\tcard_back\x18\x03 \x02(\x05\x12#\n\x06\x65ntity\x18\x04 \x02(\x0b\x32\x13.PegasusGame.Entity\"h\n\x16PowerHistoryCreateGame\x12(\n\x0bgame_entity\x18\x01 \x02(\x0b\x32\x13.PegasusGame.Entity\x12$\n\x07players\x18\x02 \x03(\x0b\x32\x13.PegasusGame.Player\"\xc0\x03\n\x10PowerHistoryData\x12\x34\n\x0b\x66ull_entity\x18\x01 \x01(\x0b\x32\x1f.PegasusGame.PowerHistoryEntity\x12\x34\n\x0bshow_entity\x18\x02 \x01(\x0b\x32\x1f.PegasusGame.PowerHistoryEntity\x12\x32\n\x0bhide_entity\x18\x03 \x01(\x0b\x32\x1d.PegasusGame.PowerHistoryHide\x12\x36\n\ntag_change\x18\x04 \x01(\x0b\x32\".PegasusGame.PowerHistoryTagChange\x12\x38\n\x0b\x63reate_game\x18\x05 \x01(\x0b\x32#.PegasusGame.PowerHistoryCreateGame\x12\x33\n\x0bpower_start\x18\x06 \x01(\x0b\x32\x1e.PegasusGame.PowerHistoryStart\x12/\n\tpower_end\x18\x07 \x01(\x0b\x32\x1c.PegasusGame.PowerHistoryEnd\x12\x34\n\tmeta_data\x18\x08 \x01(\x0b\x32!.PegasusGame.PowerHistoryMetaData\"O\n\x0cPowerHistory\x12+\n\x04list\x18\x01 \x03(\x0b\x32\x1d.PegasusGame.PowerHistoryData\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x13\"\xaf\x01\n\x10RemoveSpectators\x12\x35\n\x16target_gameaccount_ids\x18\x01 \x03(\x0b\x32\x15.PegasusShared.BnetId\x12\"\n\x13kick_all_spectators\x18\x02 \x01(\x08:\x05\x66\x61lse\x12,\n\x1dregenerate_spectator_password\x18\x03 \x01(\x08:\x05\x66\x61lse\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x1a\"U\n\x0fSpectatorChange\x12.\n\x0fgame_account_id\x18\x01 \x02(\x0b\x32\x15.PegasusShared.BnetId\x12\x12\n\nis_removed\x18\x02 \x02(\x08\"\xb8\x01\n\x10SpectatorRemoved\x12\x13\n\x0breason_code\x18\x01 \x02(\x05\x12)\n\nremoved_by\x18\x02 \x01(\x0b\x32\x15.PegasusShared.BnetId\"d\n\x16SpectatorRemovedReason\x12#\n\x1fSPECTATOR_REMOVED_REASON_KICKED\x10\x00\x12%\n!SPECTATOR_REMOVED_REASON_GAMEOVER\x10\x01\"\xb4\x01\n\x0c\x43hooseOption\x12\n\n\x02id\x18\x01 \x02(\x05\x12\r\n\x05index\x18\x02 \x02(\x05\x12\x0e\n\x06target\x18\x03 \x02(\x05\x12\x12\n\nsub_option\x18\x04 \x01(\x05\x12\x10\n\x08position\x18\x05 \x01(\x05\x12\x14\n\x0cold_platform\x18\x06 \x02(\x05\x12)\n\x08platform\x18\x07 \x01(\x0b\x32\x17.PegasusShared.Platform\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x02\"]\n\x06GiveUp\x12\x14\n\x0cold_platform\x18\x01 \x02(\x05\x12)\n\x08platform\x18\x02 \x01(\x0b\x32\x17.PegasusShared.Platform\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x0b\"\xbb\x01\n\x12SpectatorHandshake\x12\x13\n\x0bgame_handle\x18\x01 \x02(\x05\x12\x10\n\x08password\x18\x02 \x02(\t\x12\x0f\n\x07version\x18\x03 \x02(\t\x12)\n\x08platform\x18\x04 \x02(\x0b\x32\x17.PegasusShared.Platform\x12.\n\x0fgame_account_id\x18\x05 \x02(\x0b\x32\x15.PegasusShared.BnetId\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x16\"\xb5\x02\n\x0fSpectatorNotify\x12\x11\n\tplayer_id\x18\x01 \x02(\x05\x12\x30\n\rchoose_option\x18\x02 \x01(\x0b\x32\x19.PegasusGame.ChooseOption\x12\x34\n\x0f\x63hoose_entities\x18\x03 \x01(\x0b\x32\x1b.PegasusGame.ChooseEntities\x12\x36\n\x10spectator_change\x18\x04 \x03(\x0b\x32\x1c.PegasusGame.SpectatorChange\x12!\n\x19spectator_password_update\x18\x05 \x01(\t\x12\x38\n\x11spectator_removed\x18\x06 \x01(\x0b\x32\x1d.PegasusGame.SpectatorRemoved\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10\x18')
   ,
   dependencies=[PegasusShared__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -130,8 +130,8 @@ _GAMECANCELED_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=547,
-  serialized_end=565,
+  serialized_start=528,
+  serialized_end=546,
 )
 _sym_db.RegisterEnumDescriptor(_GAMECANCELED_PACKETID)
 
@@ -148,8 +148,8 @@ _GAMECANCELED_REASON = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=567,
-  serialized_end=597,
+  serialized_start=548,
+  serialized_end=578,
 )
 _sym_db.RegisterEnumDescriptor(_GAMECANCELED_REASON)
 
@@ -166,8 +166,8 @@ _GAMESETUP_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=731,
-  serialized_end=749,
+  serialized_start=712,
+  serialized_end=730,
 )
 _sym_db.RegisterEnumDescriptor(_GAMESETUP_PACKETID)
 
@@ -184,8 +184,8 @@ _GETGAMESTATE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=767,
-  serialized_end=785,
+  serialized_start=748,
+  serialized_end=766,
 )
 _sym_db.RegisterEnumDescriptor(_GETGAMESTATE_PACKETID)
 
@@ -202,8 +202,8 @@ _NACKOPTION_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=908,
-  serialized_end=926,
+  serialized_start=889,
+  serialized_end=907,
 )
 _sym_db.RegisterEnumDescriptor(_NACKOPTION_PACKETID)
 
@@ -220,8 +220,8 @@ _NOTIFICATION_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1009,
-  serialized_end=1027,
+  serialized_start=971,
+  serialized_end=989,
 )
 _sym_db.RegisterEnumDescriptor(_NOTIFICATION_PACKETID)
 
@@ -242,8 +242,8 @@ _NOTIFICATION_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1029,
-  serialized_end=1071,
+  serialized_start=991,
+  serialized_end=1033,
 )
 _sym_db.RegisterEnumDescriptor(_NOTIFICATION_TYPE)
 
@@ -268,8 +268,8 @@ _POWERHISTORYMETADATA_METATYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1258,
-  serialized_end=1320,
+  serialized_start=1233,
+  serialized_end=1295,
 )
 _sym_db.RegisterEnumDescriptor(_POWERHISTORYMETADATA_METATYPE)
 
@@ -314,8 +314,8 @@ _POWERHISTORYSTART_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1450,
-  serialized_end=1555,
+  serialized_start=1417,
+  serialized_end=1522,
 )
 _sym_db.RegisterEnumDescriptor(_POWERHISTORYSTART_TYPE)
 
@@ -340,8 +340,8 @@ _SERVERRESULT_CODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1693,
-  serialized_end=1755,
+  serialized_start=1660,
+  serialized_end=1722,
 )
 _sym_db.RegisterEnumDescriptor(_SERVERRESULT_CODE)
 
@@ -358,8 +358,8 @@ _SERVERRESULT_CONSTANTS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1757,
-  serialized_end=1795,
+  serialized_start=1724,
+  serialized_end=1762,
 )
 _sym_db.RegisterEnumDescriptor(_SERVERRESULT_CONSTANTS)
 
@@ -376,8 +376,8 @@ _SERVERRESULT_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1797,
-  serialized_end=1815,
+  serialized_start=1764,
+  serialized_end=1782,
 )
 _sym_db.RegisterEnumDescriptor(_SERVERRESULT_PACKETID)
 
@@ -402,8 +402,8 @@ _OPTION_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2006,
-  serialized_end=2047,
+  serialized_start=1967,
+  serialized_end=2008,
 )
 _sym_db.RegisterEnumDescriptor(_OPTION_TYPE)
 
@@ -420,8 +420,8 @@ _ALLOPTIONS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2113,
-  serialized_end=2131,
+  serialized_start=2074,
+  serialized_end=2092,
 )
 _sym_db.RegisterEnumDescriptor(_ALLOPTIONS_PACKETID)
 
@@ -438,8 +438,8 @@ _TURNTIMER_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2365,
-  serialized_end=2383,
+  serialized_start=2326,
+  serialized_end=2344,
 )
 _sym_db.RegisterEnumDescriptor(_TURNTIMER_PACKETID)
 
@@ -456,8 +456,8 @@ _USERUI_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2473,
-  serialized_end=2491,
+  serialized_start=2434,
+  serialized_end=2452,
 )
 _sym_db.RegisterEnumDescriptor(_USERUI_PACKETID)
 
@@ -474,8 +474,8 @@ _INVITETOSPECTATE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2618,
-  serialized_end=2636,
+  serialized_start=2585,
+  serialized_end=2603,
 )
 _sym_db.RegisterEnumDescriptor(_INVITETOSPECTATE_PACKETID)
 
@@ -492,8 +492,8 @@ _POWERHISTORY_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3380,
-  serialized_end=3398,
+  serialized_start=3349,
+  serialized_end=3367,
 )
 _sym_db.RegisterEnumDescriptor(_POWERHISTORY_PACKETID)
 
@@ -510,8 +510,8 @@ _REMOVESPECTATORS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3544,
-  serialized_end=3562,
+  serialized_start=3527,
+  serialized_end=3545,
 )
 _sym_db.RegisterEnumDescriptor(_REMOVESPECTATORS_PACKETID)
 
@@ -532,8 +532,8 @@ _SPECTATORREMOVED_SPECTATORREMOVEDREASON = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3734,
-  serialized_end=3834,
+  serialized_start=3719,
+  serialized_end=3819,
 )
 _sym_db.RegisterEnumDescriptor(_SPECTATORREMOVED_SPECTATORREMOVEDREASON)
 
@@ -550,8 +550,8 @@ _CHOOSEOPTION_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3998,
-  serialized_end=4016,
+  serialized_start=3984,
+  serialized_end=4002,
 )
 _sym_db.RegisterEnumDescriptor(_CHOOSEOPTION_PACKETID)
 
@@ -568,8 +568,8 @@ _GIVEUP_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4093,
-  serialized_end=4111,
+  serialized_start=4079,
+  serialized_end=4097,
 )
 _sym_db.RegisterEnumDescriptor(_GIVEUP_PACKETID)
 
@@ -586,8 +586,8 @@ _SPECTATORHANDSHAKE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4281,
-  serialized_end=4299,
+  serialized_start=4269,
+  serialized_end=4287,
 )
 _sym_db.RegisterEnumDescriptor(_SPECTATORHANDSHAKE_PACKETID)
 
@@ -604,8 +604,8 @@ _SPECTATORNOTIFY_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4593,
-  serialized_end=4611,
+  serialized_start=4581,
+  serialized_end=4599,
 )
 _sym_db.RegisterEnumDescriptor(_SPECTATORNOTIFY_PACKETID)
 
@@ -619,7 +619,7 @@ _CHOOSEENTITIES = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='PegasusGame.ChooseEntities.id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -658,7 +658,7 @@ _CLIENTPACKET = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='packet', full_name='PegasusGame.ClientPacket.packet', index=0,
-      number=1, type=12, cpp_type=9, label=1,
+      number=1, type=12, cpp_type=9, label=2,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -690,7 +690,7 @@ _DEBUGMESSAGE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='message', full_name='PegasusGame.DebugMessage.message', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -722,35 +722,35 @@ _ENTITYCHOICE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='PegasusGame.EntityChoice.id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='choice_type', full_name='PegasusGame.EntityChoice.choice_type', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='cancelable', full_name='PegasusGame.EntityChoice.cancelable', index=2,
-      number=3, type=8, cpp_type=7, label=1,
+      number=3, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='count_min', full_name='PegasusGame.EntityChoice.count_min', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      number=4, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='count_max', full_name='PegasusGame.EntityChoice.count_max', index=4,
-      number=5, type=5, cpp_type=1, label=1,
+      number=5, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -796,7 +796,7 @@ _FORCEDENTITYCHOICE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='PegasusGame.ForcedEntityChoice.id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -835,8 +835,8 @@ _GAMECANCELED = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='reason', full_name='PegasusGame.GameCanceled.reason', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=1,
+      number=1, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -854,8 +854,8 @@ _GAMECANCELED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=463,
-  serialized_end=597,
+  serialized_start=462,
+  serialized_end=578,
 )
 
 
@@ -868,21 +868,21 @@ _GAMESETUP = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='board', full_name='PegasusGame.GameSetup.board', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='max_secrets_per_player', full_name='PegasusGame.GameSetup.max_secrets_per_player', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='max_friendly_minions_per_player', full_name='PegasusGame.GameSetup.max_friendly_minions_per_player', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -907,8 +907,8 @@ _GAMESETUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=600,
-  serialized_end=749,
+  serialized_start=581,
+  serialized_end=730,
 )
 
 
@@ -932,8 +932,8 @@ _GETGAMESTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=751,
-  serialized_end=785,
+  serialized_start=732,
+  serialized_end=766,
 )
 
 
@@ -946,35 +946,35 @@ _MOUSEINFO = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='arrow_origin', full_name='PegasusGame.MouseInfo.arrow_origin', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='held_card', full_name='PegasusGame.MouseInfo.held_card', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='over_card', full_name='PegasusGame.MouseInfo.over_card', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='x', full_name='PegasusGame.MouseInfo.x', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      number=4, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='y', full_name='PegasusGame.MouseInfo.y', index=4,
-      number=5, type=5, cpp_type=1, label=1,
+      number=5, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -991,8 +991,8 @@ _MOUSEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=787,
-  serialized_end=880,
+  serialized_start=768,
+  serialized_end=861,
 )
 
 
@@ -1005,7 +1005,7 @@ _NACKOPTION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='PegasusGame.NAckOption.id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1023,8 +1023,8 @@ _NACKOPTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=882,
-  serialized_end=926,
+  serialized_start=863,
+  serialized_end=907,
 )
 
 
@@ -1037,8 +1037,8 @@ _NOTIFICATION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='type', full_name='PegasusGame.Notification.type', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=1,
+      number=1, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1056,8 +1056,8 @@ _NOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=929,
-  serialized_end=1071,
+  serialized_start=909,
+  serialized_end=1033,
 )
 
 
@@ -1080,8 +1080,8 @@ _POWERHISTORYEND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1073,
-  serialized_end=1090,
+  serialized_start=1035,
+  serialized_end=1052,
 )
 
 
@@ -1094,14 +1094,14 @@ _POWERHISTORYHIDE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='entity', full_name='PegasusGame.PowerHistoryHide.entity', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='zone', full_name='PegasusGame.PowerHistoryHide.zone', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1118,8 +1118,8 @@ _POWERHISTORYHIDE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1092,
-  serialized_end=1140,
+  serialized_start=1054,
+  serialized_end=1102,
 )
 
 
@@ -1140,7 +1140,7 @@ _POWERHISTORYMETADATA = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='meta_type', full_name='PegasusGame.PowerHistoryMetaData.meta_type', index=1,
       number=3, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1164,8 +1164,8 @@ _POWERHISTORYMETADATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1143,
-  serialized_end=1320,
+  serialized_start=1105,
+  serialized_end=1295,
 )
 
 
@@ -1178,28 +1178,28 @@ _POWERHISTORYSTART = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='type', full_name='PegasusGame.PowerHistoryStart.type', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=1,
+      number=1, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='index', full_name='PegasusGame.PowerHistoryStart.index', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='source', full_name='PegasusGame.PowerHistoryStart.source', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='target', full_name='PegasusGame.PowerHistoryStart.target', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      number=4, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1217,8 +1217,8 @@ _POWERHISTORYSTART = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1323,
-  serialized_end=1555,
+  serialized_start=1298,
+  serialized_end=1522,
 )
 
 
@@ -1231,21 +1231,21 @@ _POWERHISTORYTAGCHANGE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='entity', full_name='PegasusGame.PowerHistoryTagChange.entity', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='tag', full_name='PegasusGame.PowerHistoryTagChange.tag', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='value', full_name='PegasusGame.PowerHistoryTagChange.value', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1262,8 +1262,8 @@ _POWERHISTORYTAGCHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1557,
-  serialized_end=1624,
+  serialized_start=1524,
+  serialized_end=1591,
 )
 
 
@@ -1276,7 +1276,7 @@ _SERVERRESULT = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='result_code', full_name='PegasusGame.ServerResult.result_code', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1303,8 +1303,8 @@ _SERVERRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1627,
-  serialized_end=1815,
+  serialized_start=1594,
+  serialized_end=1782,
 )
 
 
@@ -1317,7 +1317,7 @@ _SUBOPTION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='PegasusGame.SubOption.id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1341,8 +1341,8 @@ _SUBOPTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1817,
-  serialized_end=1857,
+  serialized_start=1784,
+  serialized_end=1824,
 )
 
 
@@ -1355,8 +1355,8 @@ _OPTION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='type', full_name='PegasusGame.Option.type', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=1,
+      number=1, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1387,8 +1387,8 @@ _OPTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1860,
-  serialized_end=2047,
+  serialized_start=1827,
+  serialized_end=2008,
 )
 
 
@@ -1401,7 +1401,7 @@ _ALLOPTIONS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='PegasusGame.AllOptions.id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1426,8 +1426,8 @@ _ALLOPTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2049,
-  serialized_end=2131,
+  serialized_start=2010,
+  serialized_end=2092,
 )
 
 
@@ -1440,14 +1440,14 @@ _TAG = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='name', full_name='PegasusGame.Tag.name', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='value', full_name='PegasusGame.Tag.value', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1464,8 +1464,8 @@ _TAG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2133,
-  serialized_end=2167,
+  serialized_start=2094,
+  serialized_end=2128,
 )
 
 
@@ -1478,7 +1478,7 @@ _ENTITY = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='PegasusGame.Entity.id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1502,8 +1502,8 @@ _ENTITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2169,
-  serialized_end=2221,
+  serialized_start=2130,
+  serialized_end=2182,
 )
 
 
@@ -1516,14 +1516,14 @@ _POWERHISTORYENTITY = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='entity', full_name='PegasusGame.PowerHistoryEntity.entity', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='name', full_name='PegasusGame.PowerHistoryEntity.name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1547,8 +1547,8 @@ _POWERHISTORYENTITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2223,
-  serialized_end=2305,
+  serialized_start=2184,
+  serialized_end=2266,
 )
 
 
@@ -1561,21 +1561,21 @@ _TURNTIMER = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='seconds', full_name='PegasusGame.TurnTimer.seconds', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='turn', full_name='PegasusGame.TurnTimer.turn', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='show', full_name='PegasusGame.TurnTimer.show', index=2,
-      number=3, type=8, cpp_type=7, label=1,
+      number=3, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1593,8 +1593,8 @@ _TURNTIMER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2307,
-  serialized_end=2383,
+  serialized_start=2268,
+  serialized_end=2344,
 )
 
 
@@ -1639,8 +1639,8 @@ _USERUI = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2385,
-  serialized_end=2491,
+  serialized_start=2346,
+  serialized_end=2452,
 )
 
 
@@ -1652,15 +1652,15 @@ _INVITETOSPECTATE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='targetBnetAccountId', full_name='PegasusGame.InviteToSpectate.targetBnetAccountId', index=0,
+      name='target_bnet_account_id', full_name='PegasusGame.InviteToSpectate.target_bnet_account_id', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='targetGameAccountId', full_name='PegasusGame.InviteToSpectate.targetGameAccountId', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      name='target_game_account_id', full_name='PegasusGame.InviteToSpectate.target_game_account_id', index=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1678,8 +1678,8 @@ _INVITETOSPECTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2494,
-  serialized_end=2636,
+  serialized_start=2455,
+  serialized_end=2603,
 )
 
 
@@ -1692,28 +1692,28 @@ _PLAYER = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='PegasusGame.Player.id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='gameAccountId', full_name='PegasusGame.Player.gameAccountId', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      name='game_account_id', full_name='PegasusGame.Player.game_account_id', index=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='card_back', full_name='PegasusGame.Player.card_back', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='entity', full_name='PegasusGame.Player.entity', index=3,
-      number=4, type=11, cpp_type=10, label=1,
+      number=4, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1730,8 +1730,8 @@ _PLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2638,
-  serialized_end=2760,
+  serialized_start=2605,
+  serialized_end=2729,
 )
 
 
@@ -1744,7 +1744,7 @@ _POWERHISTORYCREATEGAME = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='game_entity', full_name='PegasusGame.PowerHistoryCreateGame.game_entity', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1768,8 +1768,8 @@ _POWERHISTORYCREATEGAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2762,
-  serialized_end=2866,
+  serialized_start=2731,
+  serialized_end=2835,
 )
 
 
@@ -1848,8 +1848,8 @@ _POWERHISTORYDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2869,
-  serialized_end=3317,
+  serialized_start=2838,
+  serialized_end=3286,
 )
 
 
@@ -1880,8 +1880,8 @@ _POWERHISTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3319,
-  serialized_end=3398,
+  serialized_start=3288,
+  serialized_end=3367,
 )
 
 
@@ -1902,14 +1902,14 @@ _REMOVESPECTATORS = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='kick_all_spectators', full_name='PegasusGame.RemoveSpectators.kick_all_spectators', index=1,
       number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='regenerate_spectator_password', full_name='PegasusGame.RemoveSpectators.regenerate_spectator_password', index=2,
       number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1926,8 +1926,8 @@ _REMOVESPECTATORS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3401,
-  serialized_end=3562,
+  serialized_start=3370,
+  serialized_end=3545,
 )
 
 
@@ -1939,15 +1939,15 @@ _SPECTATORCHANGE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='gameAccountId', full_name='PegasusGame.SpectatorChange.gameAccountId', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      name='game_account_id', full_name='PegasusGame.SpectatorChange.game_account_id', index=0,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='is_removed', full_name='PegasusGame.SpectatorChange.is_removed', index=1,
-      number=2, type=8, cpp_type=7, label=1,
+      number=2, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1964,8 +1964,8 @@ _SPECTATORCHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3564,
-  serialized_end=3647,
+  serialized_start=3547,
+  serialized_end=3632,
 )
 
 
@@ -1978,7 +1978,7 @@ _SPECTATORREMOVED = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='reason_code', full_name='PegasusGame.SpectatorRemoved.reason_code', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -2003,8 +2003,8 @@ _SPECTATORREMOVED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3650,
-  serialized_end=3834,
+  serialized_start=3635,
+  serialized_end=3819,
 )
 
 
@@ -2017,27 +2017,27 @@ _CHOOSEOPTION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='PegasusGame.ChooseOption.id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='index', full_name='PegasusGame.ChooseOption.index', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='target', full_name='PegasusGame.ChooseOption.target', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='subOption', full_name='PegasusGame.ChooseOption.subOption', index=3,
+      name='sub_option', full_name='PegasusGame.ChooseOption.sub_option', index=3,
       number=4, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2052,7 +2052,7 @@ _CHOOSEOPTION = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='old_platform', full_name='PegasusGame.ChooseOption.old_platform', index=5,
-      number=6, type=5, cpp_type=1, label=1,
+      number=6, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -2077,8 +2077,8 @@ _CHOOSEOPTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3837,
-  serialized_end=4016,
+  serialized_start=3822,
+  serialized_end=4002,
 )
 
 
@@ -2091,7 +2091,7 @@ _GIVEUP = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='old_platform', full_name='PegasusGame.GiveUp.old_platform', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -2116,8 +2116,8 @@ _GIVEUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4018,
-  serialized_end=4111,
+  serialized_start=4004,
+  serialized_end=4097,
 )
 
 
@@ -2130,35 +2130,35 @@ _SPECTATORHANDSHAKE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='game_handle', full_name='PegasusGame.SpectatorHandshake.game_handle', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='password', full_name='PegasusGame.SpectatorHandshake.password', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='version', full_name='PegasusGame.SpectatorHandshake.version', index=2,
-      number=3, type=9, cpp_type=9, label=1,
+      number=3, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='platform', full_name='PegasusGame.SpectatorHandshake.platform', index=3,
-      number=4, type=11, cpp_type=10, label=1,
+      number=4, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='gameAccountId', full_name='PegasusGame.SpectatorHandshake.gameAccountId', index=4,
-      number=5, type=11, cpp_type=10, label=1,
+      name='game_account_id', full_name='PegasusGame.SpectatorHandshake.game_account_id', index=4,
+      number=5, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -2176,8 +2176,8 @@ _SPECTATORHANDSHAKE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4114,
-  serialized_end=4299,
+  serialized_start=4100,
+  serialized_end=4287,
 )
 
 
@@ -2190,7 +2190,7 @@ _SPECTATORNOTIFY = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='player_id', full_name='PegasusGame.SpectatorNotify.player_id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -2243,8 +2243,8 @@ _SPECTATORNOTIFY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4302,
-  serialized_end=4611,
+  serialized_start=4290,
+  serialized_end=4599,
 )
 
 _CHOOSEENTITIES_PACKETID.containing_type = _CHOOSEENTITIES
@@ -2279,10 +2279,10 @@ _POWERHISTORYENTITY.fields_by_name['tags'].message_type = _TAG
 _TURNTIMER_PACKETID.containing_type = _TURNTIMER
 _USERUI.fields_by_name['mouse_info'].message_type = _MOUSEINFO
 _USERUI_PACKETID.containing_type = _USERUI
-_INVITETOSPECTATE.fields_by_name['targetBnetAccountId'].message_type = PegasusShared__pb2._BNETID
-_INVITETOSPECTATE.fields_by_name['targetGameAccountId'].message_type = PegasusShared__pb2._BNETID
+_INVITETOSPECTATE.fields_by_name['target_bnet_account_id'].message_type = PegasusShared__pb2._BNETID
+_INVITETOSPECTATE.fields_by_name['target_game_account_id'].message_type = PegasusShared__pb2._BNETID
 _INVITETOSPECTATE_PACKETID.containing_type = _INVITETOSPECTATE
-_PLAYER.fields_by_name['gameAccountId'].message_type = PegasusShared__pb2._BNETID
+_PLAYER.fields_by_name['game_account_id'].message_type = PegasusShared__pb2._BNETID
 _PLAYER.fields_by_name['entity'].message_type = _ENTITY
 _POWERHISTORYCREATEGAME.fields_by_name['game_entity'].message_type = _ENTITY
 _POWERHISTORYCREATEGAME.fields_by_name['players'].message_type = _PLAYER
@@ -2298,7 +2298,7 @@ _POWERHISTORY.fields_by_name['list'].message_type = _POWERHISTORYDATA
 _POWERHISTORY_PACKETID.containing_type = _POWERHISTORY
 _REMOVESPECTATORS.fields_by_name['target_gameaccount_ids'].message_type = PegasusShared__pb2._BNETID
 _REMOVESPECTATORS_PACKETID.containing_type = _REMOVESPECTATORS
-_SPECTATORCHANGE.fields_by_name['gameAccountId'].message_type = PegasusShared__pb2._BNETID
+_SPECTATORCHANGE.fields_by_name['game_account_id'].message_type = PegasusShared__pb2._BNETID
 _SPECTATORREMOVED.fields_by_name['removed_by'].message_type = PegasusShared__pb2._BNETID
 _SPECTATORREMOVED_SPECTATORREMOVEDREASON.containing_type = _SPECTATORREMOVED
 _CHOOSEOPTION.fields_by_name['platform'].message_type = PegasusShared__pb2._PLATFORM
@@ -2306,7 +2306,7 @@ _CHOOSEOPTION_PACKETID.containing_type = _CHOOSEOPTION
 _GIVEUP.fields_by_name['platform'].message_type = PegasusShared__pb2._PLATFORM
 _GIVEUP_PACKETID.containing_type = _GIVEUP
 _SPECTATORHANDSHAKE.fields_by_name['platform'].message_type = PegasusShared__pb2._PLATFORM
-_SPECTATORHANDSHAKE.fields_by_name['gameAccountId'].message_type = PegasusShared__pb2._BNETID
+_SPECTATORHANDSHAKE.fields_by_name['game_account_id'].message_type = PegasusShared__pb2._BNETID
 _SPECTATORHANDSHAKE_PACKETID.containing_type = _SPECTATORHANDSHAKE
 _SPECTATORNOTIFY.fields_by_name['choose_option'].message_type = _CHOOSEOPTION
 _SPECTATORNOTIFY.fields_by_name['choose_entities'].message_type = _CHOOSEENTITIES

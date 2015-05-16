@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='bnet/protocol/authentication.proto',
   package='bnet.protocol.authentication',
   syntax='proto2',
-  serialized_pb=_b('\n\"bnet/protocol/authentication.proto\x12\x1c\x62net.protocol.authentication\x1a\x1d\x62net/protocol/account_0.proto\x1a\x15\x62net/protocol_0.proto\"\xbc\x01\n\x1b\x41\x63\x63ountSettingsNotification\x12\x37\n\x08licenses\x18\x01 \x03(\x0b\x32%.bnet.protocol.account.AccountLicense\x12\x14\n\x0cis_using_rid\x18\x02 \x01(\x08\x12\x1b\n\x13is_playing_from_igr\x18\x03 \x01(\x08\x12\x19\n\x11\x63\x61n_receive_voice\x18\x04 \x01(\x08\x12\x16\n\x0e\x63\x61n_send_voice\x18\x05 \x01(\x08\"*\n\x17GenerateSSOTokenRequest\x12\x0f\n\x07program\x18\x01 \x01(\x07\">\n\x18GenerateSSOTokenResponse\x12\x0e\n\x06sso_id\x18\x01 \x01(\x0c\x12\x12\n\nsso_secret\x18\x02 \x01(\x0c\"a\n\x17LogonQueueUpdateRequest\x12\x10\n\x08position\x18\x01 \x01(\r\x12\x16\n\x0e\x65stimated_time\x18\x02 \x01(\x04\x12\x1c\n\x14\x65ta_deviation_in_sec\x18\x03 \x01(\x04\"\xc8\x02\n\x0cLogonRequest\x12\x0f\n\x07program\x18\x01 \x01(\t\x12\x10\n\x08platform\x18\x02 \x01(\t\x12\x0e\n\x06locale\x18\x03 \x01(\t\x12\r\n\x05\x65mail\x18\x04 \x01(\t\x12\x0f\n\x07version\x18\x05 \x01(\t\x12\x1b\n\x13\x61pplication_version\x18\x06 \x01(\x05\x12\x17\n\x0fpublic_computer\x18\x07 \x01(\x08\x12\x0e\n\x06sso_id\x18\x08 \x01(\x0c\x12!\n\x19\x64isconnect_on_cookie_fail\x18\t \x01(\x08\x12\'\n\x1f\x61llow_logon_queue_notifications\x18\n \x01(\x08\x12\x1f\n\x17web_client_verification\x18\x0b \x01(\x08\x12\x1e\n\x16\x63\x61\x63hed_web_credentials\x18\x0c \x01(\x0c\x12\x12\n\nuser_agent\x18\x0e \x01(\t\"(\n\x12LogonUpdateRequest\x12\x12\n\nerror_code\x18\x01 \x01(\r\"%\n\x15MemModuleLoadResponse\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\":\n\x14ModuleMessageRequest\x12\x11\n\tmodule_id\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\x0c\"7\n\x12ModuleNotification\x12\x11\n\tmodule_id\x18\x02 \x01(\x05\x12\x0e\n\x06result\x18\x03 \x01(\r\"=\n\x18ServerStateChangeRequest\x12\r\n\x05state\x18\x01 \x01(\r\x12\x12\n\nevent_time\x18\x02 \x01(\x04\"6\n\x1bVerifyWebCredentialsRequest\x12\x17\n\x0fweb_credentials\x18\x01 \x01(\x0c\"T\n\x0bVersionInfo\x12\x0e\n\x06number\x18\x01 \x01(\r\x12\r\n\x05patch\x18\x02 \x01(\t\x12\x13\n\x0bis_optional\x18\x03 \x01(\x08\x12\x11\n\tkick_time\x18\x04 \x01(\x04\"Z\n\x17VersionInfoNotification\x12?\n\x0cversion_info\x18\x01 \x01(\x0b\x32).bnet.protocol.authentication.VersionInfo\"`\n\x14MemModuleLoadRequest\x12,\n\x06handle\x18\x01 \x01(\x0b\x32\x1c.bnet.protocol.ContentHandle\x12\x0b\n\x03key\x18\x02 \x01(\x0c\x12\r\n\x05input\x18\x03 \x01(\x0c\"Y\n\x11ModuleLoadRequest\x12\x33\n\rmodule_handle\x18\x01 \x01(\x0b\x32\x1c.bnet.protocol.ContentHandle\x12\x0f\n\x07message\x18\x02 \x01(\x0c\"[\n\x1aGameAccountSelectedRequest\x12\x0e\n\x06result\x18\x01 \x01(\r\x12-\n\x0cgame_account\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\xe8\x01\n\x0bLogonResult\x12\x12\n\nerror_code\x18\x01 \x01(\r\x12(\n\x07\x61\x63\x63ount\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12-\n\x0cgame_account\x18\x03 \x03(\x0b\x32\x17.bnet.protocol.EntityId\x12\r\n\x05\x65mail\x18\x04 \x01(\t\x12\x18\n\x10\x61vailable_region\x18\x05 \x03(\r\x12\x18\n\x10\x63onnected_region\x18\x06 \x01(\r\x12\x12\n\nbattle_tag\x18\x07 \x01(\t\x12\x15\n\rgeoip_country\x18\x08 \x01(\t\"I\n\x18SelectGameAccountRequest\x12-\n\x0cgame_account\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId')
+  serialized_pb=_b('\n\"bnet/protocol/authentication.proto\x12\x1c\x62net.protocol.authentication\x1a\x1d\x62net/protocol/account_0.proto\x1a\x15\x62net/protocol_0.proto\"\xbc\x01\n\x1b\x41\x63\x63ountSettingsNotification\x12\x37\n\x08licenses\x18\x01 \x03(\x0b\x32%.bnet.protocol.account.AccountLicense\x12\x14\n\x0cis_using_rid\x18\x02 \x01(\x08\x12\x1b\n\x13is_playing_from_igr\x18\x03 \x01(\x08\x12\x19\n\x11\x63\x61n_receive_voice\x18\x04 \x01(\x08\x12\x16\n\x0e\x63\x61n_send_voice\x18\x05 \x01(\x08\"*\n\x17GenerateSSOTokenRequest\x12\x0f\n\x07program\x18\x01 \x01(\x07\">\n\x18GenerateSSOTokenResponse\x12\x0e\n\x06sso_id\x18\x01 \x01(\x0c\x12\x12\n\nsso_secret\x18\x02 \x01(\x0c\"a\n\x17LogonQueueUpdateRequest\x12\x10\n\x08position\x18\x01 \x02(\r\x12\x16\n\x0e\x65stimated_time\x18\x02 \x02(\x04\x12\x1c\n\x14\x65ta_deviation_in_sec\x18\x03 \x02(\x04\"\xdd\x02\n\x0cLogonRequest\x12\x0f\n\x07program\x18\x01 \x01(\t\x12\x10\n\x08platform\x18\x02 \x01(\t\x12\x0e\n\x06locale\x18\x03 \x01(\t\x12\r\n\x05\x65mail\x18\x04 \x01(\t\x12\x0f\n\x07version\x18\x05 \x01(\t\x12\x1b\n\x13\x61pplication_version\x18\x06 \x01(\x05\x12\x17\n\x0fpublic_computer\x18\x07 \x01(\x08\x12\x0e\n\x06sso_id\x18\x08 \x01(\x0c\x12(\n\x19\x64isconnect_on_cookie_fail\x18\t \x01(\x08:\x05\x66\x61lse\x12.\n\x1f\x61llow_logon_queue_notifications\x18\n \x01(\x08:\x05\x66\x61lse\x12&\n\x17web_client_verification\x18\x0b \x01(\x08:\x05\x66\x61lse\x12\x1e\n\x16\x63\x61\x63hed_web_credentials\x18\x0c \x01(\x0c\x12\x12\n\nuser_agent\x18\x0e \x01(\t\"(\n\x12LogonUpdateRequest\x12\x12\n\nerror_code\x18\x01 \x02(\r\"%\n\x15MemModuleLoadResponse\x12\x0c\n\x04\x64\x61ta\x18\x01 \x02(\x0c\":\n\x14ModuleMessageRequest\x12\x11\n\tmodule_id\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x01(\x0c\"7\n\x12ModuleNotification\x12\x11\n\tmodule_id\x18\x02 \x01(\x05\x12\x0e\n\x06result\x18\x03 \x01(\r\"=\n\x18ServerStateChangeRequest\x12\r\n\x05state\x18\x01 \x02(\r\x12\x12\n\nevent_time\x18\x02 \x02(\x04\"6\n\x1bVerifyWebCredentialsRequest\x12\x17\n\x0fweb_credentials\x18\x01 \x01(\x0c\"T\n\x0bVersionInfo\x12\x0e\n\x06number\x18\x01 \x01(\r\x12\r\n\x05patch\x18\x02 \x01(\t\x12\x13\n\x0bis_optional\x18\x03 \x01(\x08\x12\x11\n\tkick_time\x18\x04 \x01(\x04\"Z\n\x17VersionInfoNotification\x12?\n\x0cversion_info\x18\x01 \x01(\x0b\x32).bnet.protocol.authentication.VersionInfo\"`\n\x14MemModuleLoadRequest\x12,\n\x06handle\x18\x01 \x02(\x0b\x32\x1c.bnet.protocol.ContentHandle\x12\x0b\n\x03key\x18\x02 \x02(\x0c\x12\r\n\x05input\x18\x03 \x02(\x0c\"Y\n\x11ModuleLoadRequest\x12\x33\n\rmodule_handle\x18\x01 \x02(\x0b\x32\x1c.bnet.protocol.ContentHandle\x12\x0f\n\x07message\x18\x02 \x01(\x0c\"[\n\x1aGameAccountSelectedRequest\x12\x0e\n\x06result\x18\x01 \x02(\r\x12-\n\x0cgame_account\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\xe8\x01\n\x0bLogonResult\x12\x12\n\nerror_code\x18\x01 \x02(\r\x12(\n\x07\x61\x63\x63ount\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12-\n\x0cgame_account\x18\x03 \x03(\x0b\x32\x17.bnet.protocol.EntityId\x12\r\n\x05\x65mail\x18\x04 \x01(\t\x12\x18\n\x10\x61vailable_region\x18\x05 \x03(\r\x12\x18\n\x10\x63onnected_region\x18\x06 \x01(\r\x12\x12\n\nbattle_tag\x18\x07 \x01(\t\x12\x15\n\rgeoip_country\x18\x08 \x01(\t\"I\n\x18SelectGameAccountRequest\x12-\n\x0cgame_account\x18\x01 \x02(\x0b\x32\x17.bnet.protocol.EntityId')
   ,
   dependencies=[bnet_dot_protocol_dot_account__0__pb2.DESCRIPTOR,bnet_dot_protocol__0__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -166,21 +166,21 @@ _LOGONQUEUEUPDATEREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='position', full_name='bnet.protocol.authentication.LogonQueueUpdateRequest.position', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='estimated_time', full_name='bnet.protocol.authentication.LogonQueueUpdateRequest.estimated_time', index=1,
-      number=2, type=4, cpp_type=4, label=1,
+      number=2, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='eta_deviation_in_sec', full_name='bnet.protocol.authentication.LogonQueueUpdateRequest.eta_deviation_in_sec', index=2,
-      number=3, type=4, cpp_type=4, label=1,
+      number=3, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -268,21 +268,21 @@ _LOGONREQUEST = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='disconnect_on_cookie_fail', full_name='bnet.protocol.authentication.LogonRequest.disconnect_on_cookie_fail', index=8,
       number=9, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='allow_logon_queue_notifications', full_name='bnet.protocol.authentication.LogonRequest.allow_logon_queue_notifications', index=9,
       number=10, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='web_client_verification', full_name='bnet.protocol.authentication.LogonRequest.web_client_verification', index=10,
       number=11, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -313,7 +313,7 @@ _LOGONREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=521,
-  serialized_end=849,
+  serialized_end=870,
 )
 
 
@@ -326,7 +326,7 @@ _LOGONUPDATEREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='error_code', full_name='bnet.protocol.authentication.LogonUpdateRequest.error_code', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -343,8 +343,8 @@ _LOGONUPDATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=851,
-  serialized_end=891,
+  serialized_start=872,
+  serialized_end=912,
 )
 
 
@@ -357,7 +357,7 @@ _MEMMODULELOADRESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='data', full_name='bnet.protocol.authentication.MemModuleLoadResponse.data', index=0,
-      number=1, type=12, cpp_type=9, label=1,
+      number=1, type=12, cpp_type=9, label=2,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -374,8 +374,8 @@ _MEMMODULELOADRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=893,
-  serialized_end=930,
+  serialized_start=914,
+  serialized_end=951,
 )
 
 
@@ -388,7 +388,7 @@ _MODULEMESSAGEREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='module_id', full_name='bnet.protocol.authentication.ModuleMessageRequest.module_id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -412,8 +412,8 @@ _MODULEMESSAGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=932,
-  serialized_end=990,
+  serialized_start=953,
+  serialized_end=1011,
 )
 
 
@@ -450,8 +450,8 @@ _MODULENOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=992,
-  serialized_end=1047,
+  serialized_start=1013,
+  serialized_end=1068,
 )
 
 
@@ -464,14 +464,14 @@ _SERVERSTATECHANGEREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='state', full_name='bnet.protocol.authentication.ServerStateChangeRequest.state', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='event_time', full_name='bnet.protocol.authentication.ServerStateChangeRequest.event_time', index=1,
-      number=2, type=4, cpp_type=4, label=1,
+      number=2, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -488,8 +488,8 @@ _SERVERSTATECHANGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1049,
-  serialized_end=1110,
+  serialized_start=1070,
+  serialized_end=1131,
 )
 
 
@@ -519,8 +519,8 @@ _VERIFYWEBCREDENTIALSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1112,
-  serialized_end=1166,
+  serialized_start=1133,
+  serialized_end=1187,
 )
 
 
@@ -571,8 +571,8 @@ _VERSIONINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1168,
-  serialized_end=1252,
+  serialized_start=1189,
+  serialized_end=1273,
 )
 
 
@@ -602,8 +602,8 @@ _VERSIONINFONOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1254,
-  serialized_end=1344,
+  serialized_start=1275,
+  serialized_end=1365,
 )
 
 
@@ -616,21 +616,21 @@ _MEMMODULELOADREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='handle', full_name='bnet.protocol.authentication.MemModuleLoadRequest.handle', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='key', full_name='bnet.protocol.authentication.MemModuleLoadRequest.key', index=1,
-      number=2, type=12, cpp_type=9, label=1,
+      number=2, type=12, cpp_type=9, label=2,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='input', full_name='bnet.protocol.authentication.MemModuleLoadRequest.input', index=2,
-      number=3, type=12, cpp_type=9, label=1,
+      number=3, type=12, cpp_type=9, label=2,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -647,8 +647,8 @@ _MEMMODULELOADREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1346,
-  serialized_end=1442,
+  serialized_start=1367,
+  serialized_end=1463,
 )
 
 
@@ -661,7 +661,7 @@ _MODULELOADREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='module_handle', full_name='bnet.protocol.authentication.ModuleLoadRequest.module_handle', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -685,8 +685,8 @@ _MODULELOADREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1444,
-  serialized_end=1533,
+  serialized_start=1465,
+  serialized_end=1554,
 )
 
 
@@ -699,7 +699,7 @@ _GAMEACCOUNTSELECTEDREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='bnet.protocol.authentication.GameAccountSelectedRequest.result', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -723,8 +723,8 @@ _GAMEACCOUNTSELECTEDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1535,
-  serialized_end=1626,
+  serialized_start=1556,
+  serialized_end=1647,
 )
 
 
@@ -737,7 +737,7 @@ _LOGONRESULT = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='error_code', full_name='bnet.protocol.authentication.LogonResult.error_code', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -803,8 +803,8 @@ _LOGONRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1629,
-  serialized_end=1861,
+  serialized_start=1650,
+  serialized_end=1882,
 )
 
 
@@ -817,7 +817,7 @@ _SELECTGAMEACCOUNTREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='game_account', full_name='bnet.protocol.authentication.SelectGameAccountRequest.game_account', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -834,8 +834,8 @@ _SELECTGAMEACCOUNTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1863,
-  serialized_end=1936,
+  serialized_start=1884,
+  serialized_end=1957,
 )
 
 _ACCOUNTSETTINGSNOTIFICATION.fields_by_name['licenses'].message_type = bnet_dot_protocol_dot_account__0__pb2._ACCOUNTLICENSE

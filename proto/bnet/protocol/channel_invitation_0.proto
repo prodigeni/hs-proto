@@ -1,0 +1,49 @@
+syntax = "proto2";
+package bnet.protocol.channel_invitation;
+import "bnet/protocol_0.proto";
+import "bnet/protocol/channel.proto";
+
+
+message AcceptInvitationResponse {
+	required uint64 object_id = 1;
+}
+
+message HasRoomForInvitationRequest {
+	required uint32 service_type = 1;
+	optional fixed32 program = 2;
+	optional string channel_type = 3 [default = "default"];
+}
+
+message IncrementChannelCountResponse {
+	repeated uint64 reservation_tokens = 1;
+}
+
+message AcceptInvitationRequest {
+	optional .bnet.protocol.EntityId agent_id = 1;
+	optional .bnet.protocol.channel.MemberState member_state = 2;
+	required fixed64 invitation_id = 3;
+	required uint64 object_id = 4;
+	optional .bnet.protocol.EntityId channel_id = 5;
+	optional uint32 service_type = 6;
+	optional bool local_subscriber = 7 [default = true];
+}
+
+message ChannelCount {
+	optional .bnet.protocol.EntityId channel_id = 1;
+	optional string channel_type = 2 [default = "default"];
+}
+
+message ChannelCountDescription {
+	required uint32 service_type = 1;
+	required fixed32 program = 2;
+	optional string channel_type = 3 [default = "default"];
+	optional .bnet.protocol.EntityId channel_id = 4;
+}
+
+message ChannelInvitationParams {
+	required .bnet.protocol.EntityId channel_id = 1;
+	optional bool reserved = 2;
+	optional bool rejoin = 3;
+	required uint32 service_type = 4;
+}
+

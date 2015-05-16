@@ -15,49 +15,18 @@ _sym_db = _symbol_database.Default()
 
 from .. import protocol_0_pb2 as bnet_dot_protocol__0__pb2
 from . import attribute_pb2 as bnet_dot_protocol_dot_attribute__pb2
-from . import invitation_pb2 as bnet_dot_protocol_dot_invitation__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='bnet/protocol/channel.proto',
   package='bnet.protocol.channel',
   syntax='proto2',
-  serialized_pb=_b('\n\x1b\x62net/protocol/channel.proto\x12\x15\x62net.protocol.channel\x1a\x15\x62net/protocol_0.proto\x1a\x1d\x62net/protocol/attribute.proto\x1a\x1e\x62net/protocol/invitation.proto\"\x15\n\x13GetChannelIdRequest\"-\n\x18SubscribeChannelResponse\x12\x11\n\tobject_id\x18\x01 \x01(\x04\"W\n\x15\x43reateChannelResponse\x12\x11\n\tobject_id\x18\x01 \x01(\x04\x12+\n\nchannel_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"L\n\x0f\x44issolveRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x0e\n\x06reason\x18\x02 \x01(\r\"\xe9\x01\n\x12\x46indChannelOptions\x12\x13\n\x0bstart_index\x18\x01 \x01(\r\x12\x17\n\x0bmax_results\x18\x02 \x01(\r:\x02\x31\x36\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0f\n\x07program\x18\x04 \x01(\x07\x12\x0e\n\x06locale\x18\x05 \x01(\x07\x12\x15\n\rcapacity_full\x18\x06 \x01(\r\x12\x42\n\x10\x61ttribute_filter\x18\x07 \x01(\x0b\x32(.bnet.protocol.attribute.AttributeFilter\x12\x14\n\x0c\x63hannel_type\x18\x08 \x01(\t*\x05\x08\x64\x10\x91N\"C\n\x14GetChannelIdResponse\x12+\n\nchannel_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\x9b\x01\n\x15GetChannelInfoRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12+\n\nchannel_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x13\n\x0b\x66\x65tch_state\x18\x03 \x01(\x08\x12\x15\n\rfetch_members\x18\x04 \x01(\x08\"\x80\x01\n\x13JoinChannelResponse\x12\x11\n\tobject_id\x18\x01 \x01(\x04\x12!\n\x19require_friend_validation\x18\x02 \x01(\x08\x12\x33\n\x12privileged_account\x18\x03 \x03(\x0b\x32\x17.bnet.protocol.EntityId\"z\n\x11LeaveNotification\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12*\n\tmember_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x0e\n\x06reason\x18\x03 \x01(\r\"\xa7\x01\n\x0bMemberState\x12\x35\n\tattribute\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x0c\n\x04role\x18\x02 \x03(\r\x12\x12\n\nprivileges\x18\x03 \x01(\x04\x12(\n\x04info\x18\x04 \x01(\x0b\x32\x1a.bnet.protocol.AccountInfo\x12\x0e\n\x06hidden\x18\x05 \x01(\x08*\x05\x08\x64\x10\x91N\"U\n\x07Message\x12\x35\n\tattribute\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x0c\n\x04role\x18\x02 \x01(\r*\x05\x08\x64\x10\x91N\"|\n\x13RemoveMemberRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12*\n\tmember_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x0e\n\x06reason\x18\x03 \x01(\r\"{\n\x12RemoveNotification\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12*\n\tmember_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x0e\n\x06reason\x18\x03 \x01(\r\"\x92\x01\n\x17SendMessageNotification\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12/\n\x07message\x18\x02 \x01(\x0b\x32\x1e.bnet.protocol.channel.Message\x12\x1b\n\x13required_privileges\x18\x03 \x01(\x04\"\x8d\x01\n\x12SendMessageRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12/\n\x07message\x18\x02 \x01(\x0b\x32\x1e.bnet.protocol.channel.Message\x12\x1b\n\x13required_privileges\x18\x03 \x01(\x04\"v\n\x0fSetRolesRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x0c\n\x04role\x18\x02 \x03(\r\x12*\n\tmember_id\x18\x03 \x03(\x0b\x32\x17.bnet.protocol.EntityId\"\x84\x01\n\x17SubscribeChannelRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12+\n\nchannel_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x11\n\tobject_id\x18\x03 \x01(\x04\"q\n\x18UnsubscribeMemberRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12*\n\tmember_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\xd5\x01\n\x10\x41\x64\x64MemberRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x30\n\x0fmember_identity\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.Identity\x12\x38\n\x0cmember_state\x18\x03 \x01(\x0b\x32\".bnet.protocol.channel.MemberState\x12\x11\n\tobject_id\x18\x04 \x01(\x04\x12\x17\n\tsubscribe\x18\x05 \x01(\x08:\x04true\"\x81\x01\n\x12\x46indChannelRequest\x12/\n\x0e\x61gent_identity\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.Identity\x12:\n\x07options\x18\x02 \x01(\x0b\x32).bnet.protocol.channel.FindChannelOptions\"\x93\x02\n\x12JoinChannelRequest\x12/\n\x0e\x61gent_identity\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.Identity\x12\x38\n\x0cmember_state\x18\x02 \x01(\x0b\x32\".bnet.protocol.channel.MemberState\x12+\n\nchannel_id\x18\x03 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x11\n\tobject_id\x18\x04 \x01(\x04\x12\x32\n\x11\x66riend_account_id\x18\x05 \x03(\x0b\x32\x17.bnet.protocol.EntityId\x12\x1e\n\x10local_subscriber\x18\x06 \x01(\x08:\x04true\"f\n\x06Member\x12)\n\x08identity\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.Identity\x12\x31\n\x05state\x18\x02 \x01(\x0b\x32\".bnet.protocol.channel.MemberState\"A\n\x10JoinNotification\x12-\n\x06member\x18\x01 \x01(\x0b\x32\x1d.bnet.protocol.channel.Member\"\x95\x01\n\x1dUpdateMemberStateNotification\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x33\n\x0cstate_change\x18\x02 \x03(\x0b\x32\x1d.bnet.protocol.channel.Member\x12\x14\n\x0cremoved_role\x18\x03 \x03(\r\"\x90\x01\n\x18UpdateMemberStateRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x33\n\x0cstate_change\x18\x02 \x03(\x0b\x32\x1d.bnet.protocol.channel.Member\x12\x14\n\x0cremoved_role\x18\x03 \x03(\r\"\xe3\x04\n\x0c\x43hannelState\x12\x13\n\x0bmax_members\x18\x01 \x01(\r\x12\x13\n\x0bmin_members\x18\x02 \x01(\r\x12\x35\n\tattribute\x18\x03 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x38\n\ninvitation\x18\x04 \x03(\x0b\x32$.bnet.protocol.invitation.Invitation\x12\x17\n\x0fmax_invitations\x18\x05 \x01(\r\x12\x0e\n\x06reason\x18\x06 \x01(\r\x12[\n\rprivacy_level\x18\x07 \x01(\x0e\x32\x30.bnet.protocol.channel.ChannelState.PrivacyLevel:\x12PRIVACY_LEVEL_OPEN\x12\x0c\n\x04name\x18\x08 \x01(\t\x12\x15\n\rdelegate_name\x18\t \x01(\t\x12\x1d\n\x0c\x63hannel_type\x18\n \x01(\t:\x07\x64\x65\x66\x61ult\x12\x0f\n\x07program\x18\x0b \x01(\x07\x12\x1d\n\x15\x61llow_offline_members\x18\x0c \x01(\x08\x12#\n\x15subscribe_to_presence\x18\r \x01(\x08:\x04true\"\x91\x01\n\x0cPrivacyLevel\x12\x16\n\x12PRIVACY_LEVEL_OPEN\x10\x01\x12,\n(PRIVACY_LEVEL_OPEN_INVITATION_AND_FRIEND\x10\x02\x12!\n\x1dPRIVACY_LEVEL_OPEN_INVITATION\x10\x03\x12\x18\n\x14PRIVACY_LEVEL_CLOSED\x10\x04*\x05\x08\x64\x10\x91N\"\xa9\x01\n\x0f\x41\x64\x64Notification\x12+\n\x04self\x18\x01 \x01(\x0b\x32\x1d.bnet.protocol.channel.Member\x12-\n\x06member\x18\x02 \x03(\x0b\x32\x1d.bnet.protocol.channel.Member\x12:\n\rchannel_state\x18\x03 \x01(\x0b\x32#.bnet.protocol.channel.ChannelState\"\x8e\x01\n\x12\x43hannelDescription\x12+\n\nchannel_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x17\n\x0f\x63urrent_members\x18\x02 \x01(\r\x12\x32\n\x05state\x18\x03 \x01(\x0b\x32#.bnet.protocol.channel.ChannelState\"\x83\x01\n\x0b\x43hannelInfo\x12>\n\x0b\x64\x65scription\x18\x01 \x01(\x0b\x32).bnet.protocol.channel.ChannelDescription\x12-\n\x06member\x18\x02 \x03(\x0b\x32\x1d.bnet.protocol.channel.Member*\x05\x08\x64\x10\x91N\"\xeb\x02\n\x14\x43reateChannelRequest\x12/\n\x0e\x61gent_identity\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.Identity\x12\x38\n\x0cmember_state\x18\x02 \x01(\x0b\x32\".bnet.protocol.channel.MemberState\x12:\n\rchannel_state\x18\x03 \x01(\x0b\x32#.bnet.protocol.channel.ChannelState\x12+\n\nchannel_id\x18\x04 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x11\n\tobject_id\x18\x05 \x01(\x04\x12,\n\x0blocal_agent\x18\x06 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12>\n\x12local_member_state\x18\x07 \x01(\x0b\x32\".bnet.protocol.channel.MemberState\"Q\n\x13\x46indChannelResponse\x12:\n\x07\x63hannel\x18\x01 \x03(\x0b\x32).bnet.protocol.channel.ChannelDescription\"R\n\x16GetChannelInfoResponse\x12\x38\n\x0c\x63hannel_info\x18\x01 \x01(\x0b\x32\".bnet.protocol.channel.ChannelInfo\"\x86\x01\n\x1eUpdateChannelStateNotification\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x39\n\x0cstate_change\x18\x02 \x01(\x0b\x32#.bnet.protocol.channel.ChannelState\"\x81\x01\n\x19UpdateChannelStateRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x39\n\x0cstate_change\x18\x02 \x01(\x0b\x32#.bnet.protocol.channel.ChannelState')
+  serialized_pb=_b('\n\x1b\x62net/protocol/channel.proto\x12\x15\x62net.protocol.channel\x1a\x15\x62net/protocol_0.proto\x1a\x1d\x62net/protocol/attribute.proto\"\x15\n\x13GetChannelIdRequest\"-\n\x18SubscribeChannelResponse\x12\x11\n\tobject_id\x18\x01 \x01(\x04\"W\n\x15\x43reateChannelResponse\x12\x11\n\tobject_id\x18\x01 \x02(\x04\x12+\n\nchannel_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"L\n\x0f\x44issolveRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x0e\n\x06reason\x18\x02 \x01(\r\"\xe5\x01\n\x12\x46indChannelOptions\x12\x16\n\x0bstart_index\x18\x01 \x01(\r:\x01\x30\x12\x17\n\x0bmax_results\x18\x02 \x01(\r:\x02\x31\x36\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0f\n\x07program\x18\x04 \x01(\x07\x12\x0e\n\x06locale\x18\x05 \x01(\x07\x12\x15\n\rcapacity_full\x18\x06 \x01(\r\x12\x42\n\x10\x61ttribute_filter\x18\x07 \x02(\x0b\x32(.bnet.protocol.attribute.AttributeFilter\x12\x14\n\x0c\x63hannel_type\x18\x08 \x01(\t\"C\n\x14GetChannelIdResponse\x12+\n\nchannel_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\xa9\x01\n\x15GetChannelInfoRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12+\n\nchannel_id\x18\x02 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12\x1a\n\x0b\x66\x65tch_state\x18\x03 \x01(\x08:\x05\x66\x61lse\x12\x1c\n\rfetch_members\x18\x04 \x01(\x08:\x05\x66\x61lse\"\x87\x01\n\x13JoinChannelResponse\x12\x11\n\tobject_id\x18\x01 \x01(\x04\x12(\n\x19require_friend_validation\x18\x02 \x01(\x08:\x05\x66\x61lse\x12\x33\n\x12privileged_account\x18\x03 \x03(\x0b\x32\x17.bnet.protocol.EntityId\"z\n\x11LeaveNotification\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12*\n\tmember_id\x18\x02 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12\x0e\n\x06reason\x18\x03 \x01(\r\"\xaa\x01\n\x0bMemberState\x12\x35\n\tattribute\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x0c\n\x04role\x18\x02 \x03(\r\x12\x15\n\nprivileges\x18\x03 \x01(\x04:\x01\x30\x12(\n\x04info\x18\x04 \x01(\x0b\x32\x1a.bnet.protocol.AccountInfo\x12\x15\n\x06hidden\x18\x05 \x01(\x08:\x05\x66\x61lse\"N\n\x07Message\x12\x35\n\tattribute\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x0c\n\x04role\x18\x02 \x01(\r\"|\n\x13RemoveMemberRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12*\n\tmember_id\x18\x02 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12\x0e\n\x06reason\x18\x03 \x01(\r\"{\n\x12RemoveNotification\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12*\n\tmember_id\x18\x02 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12\x0e\n\x06reason\x18\x03 \x01(\r\"\x95\x01\n\x17SendMessageNotification\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12/\n\x07message\x18\x02 \x02(\x0b\x32\x1e.bnet.protocol.channel.Message\x12\x1e\n\x13required_privileges\x18\x03 \x01(\x04:\x01\x30\"\x90\x01\n\x12SendMessageRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12/\n\x07message\x18\x02 \x02(\x0b\x32\x1e.bnet.protocol.channel.Message\x12\x1e\n\x13required_privileges\x18\x03 \x01(\x04:\x01\x30\"v\n\x0fSetRolesRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x0c\n\x04role\x18\x02 \x03(\r\x12*\n\tmember_id\x18\x03 \x03(\x0b\x32\x17.bnet.protocol.EntityId\"\x84\x01\n\x17SubscribeChannelRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12+\n\nchannel_id\x18\x02 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12\x11\n\tobject_id\x18\x03 \x02(\x04\"q\n\x18UnsubscribeMemberRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12*\n\tmember_id\x18\x02 \x02(\x0b\x32\x17.bnet.protocol.EntityId\"\xd5\x01\n\x10\x41\x64\x64MemberRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x30\n\x0fmember_identity\x18\x02 \x02(\x0b\x32\x17.bnet.protocol.Identity\x12\x38\n\x0cmember_state\x18\x03 \x02(\x0b\x32\".bnet.protocol.channel.MemberState\x12\x11\n\tobject_id\x18\x04 \x02(\x04\x12\x17\n\tsubscribe\x18\x05 \x01(\x08:\x04true\"\x81\x01\n\x12\x46indChannelRequest\x12/\n\x0e\x61gent_identity\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.Identity\x12:\n\x07options\x18\x02 \x02(\x0b\x32).bnet.protocol.channel.FindChannelOptions\"\x93\x02\n\x12JoinChannelRequest\x12/\n\x0e\x61gent_identity\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.Identity\x12\x38\n\x0cmember_state\x18\x02 \x01(\x0b\x32\".bnet.protocol.channel.MemberState\x12+\n\nchannel_id\x18\x03 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12\x11\n\tobject_id\x18\x04 \x02(\x04\x12\x32\n\x11\x66riend_account_id\x18\x05 \x03(\x0b\x32\x17.bnet.protocol.EntityId\x12\x1e\n\x10local_subscriber\x18\x06 \x01(\x08:\x04true\"f\n\x06Member\x12)\n\x08identity\x18\x01 \x02(\x0b\x32\x17.bnet.protocol.Identity\x12\x31\n\x05state\x18\x02 \x02(\x0b\x32\".bnet.protocol.channel.MemberState\"A\n\x10JoinNotification\x12-\n\x06member\x18\x01 \x02(\x0b\x32\x1d.bnet.protocol.channel.Member\"\x95\x01\n\x1dUpdateMemberStateNotification\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x33\n\x0cstate_change\x18\x02 \x03(\x0b\x32\x1d.bnet.protocol.channel.Member\x12\x14\n\x0cremoved_role\x18\x03 \x03(\r\"\x90\x01\n\x18UpdateMemberStateRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x33\n\x0cstate_change\x18\x02 \x03(\x0b\x32\x1d.bnet.protocol.channel.Member\x12\x14\n\x0cremoved_role\x18\x03 \x03(\r')
   ,
-  dependencies=[bnet_dot_protocol__0__pb2.DESCRIPTOR,bnet_dot_protocol_dot_attribute__pb2.DESCRIPTOR,bnet_dot_protocol_dot_invitation__pb2.DESCRIPTOR,])
+  dependencies=[bnet_dot_protocol__0__pb2.DESCRIPTOR,bnet_dot_protocol_dot_attribute__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
-
-_CHANNELSTATE_PRIVACYLEVEL = _descriptor.EnumDescriptor(
-  name='PrivacyLevel',
-  full_name='bnet.protocol.channel.ChannelState.PrivacyLevel',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='PRIVACY_LEVEL_OPEN', index=0, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='PRIVACY_LEVEL_OPEN_INVITATION_AND_FRIEND', index=1, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='PRIVACY_LEVEL_OPEN_INVITATION', index=2, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='PRIVACY_LEVEL_CLOSED', index=3, number=4,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=3822,
-  serialized_end=3967,
-)
-_sym_db.RegisterEnumDescriptor(_CHANNELSTATE_PRIVACYLEVEL)
 
 
 _GETCHANNELIDREQUEST = _descriptor.Descriptor(
@@ -79,8 +48,8 @@ _GETCHANNELIDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=140,
-  serialized_end=161,
+  serialized_start=108,
+  serialized_end=129,
 )
 
 
@@ -110,8 +79,8 @@ _SUBSCRIBECHANNELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=163,
-  serialized_end=208,
+  serialized_start=131,
+  serialized_end=176,
 )
 
 
@@ -124,7 +93,7 @@ _CREATECHANNELRESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='object_id', full_name='bnet.protocol.channel.CreateChannelResponse.object_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -148,8 +117,8 @@ _CREATECHANNELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=210,
-  serialized_end=297,
+  serialized_start=178,
+  serialized_end=265,
 )
 
 
@@ -186,8 +155,8 @@ _DISSOLVEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=299,
-  serialized_end=375,
+  serialized_start=267,
+  serialized_end=343,
 )
 
 
@@ -201,7 +170,7 @@ _FINDCHANNELOPTIONS = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='start_index', full_name='bnet.protocol.channel.FindChannelOptions.start_index', index=0,
       number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -242,7 +211,7 @@ _FINDCHANNELOPTIONS = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='attribute_filter', full_name='bnet.protocol.channel.FindChannelOptions.attribute_filter', index=6,
-      number=7, type=11, cpp_type=10, label=1,
+      number=7, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -261,13 +230,13 @@ _FINDCHANNELOPTIONS = _descriptor.Descriptor(
   enum_types=[
   ],
   options=None,
-  is_extendable=True,
+  is_extendable=False,
   syntax='proto2',
-  extension_ranges=[(100, 10001), ],
+  extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=378,
-  serialized_end=611,
+  serialized_start=346,
+  serialized_end=575,
 )
 
 
@@ -297,8 +266,8 @@ _GETCHANNELIDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=613,
-  serialized_end=680,
+  serialized_start=577,
+  serialized_end=644,
 )
 
 
@@ -318,7 +287,7 @@ _GETCHANNELINFOREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='channel_id', full_name='bnet.protocol.channel.GetChannelInfoRequest.channel_id', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -326,14 +295,14 @@ _GETCHANNELINFOREQUEST = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='fetch_state', full_name='bnet.protocol.channel.GetChannelInfoRequest.fetch_state', index=2,
       number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='fetch_members', full_name='bnet.protocol.channel.GetChannelInfoRequest.fetch_members', index=3,
       number=4, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -349,8 +318,8 @@ _GETCHANNELINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=683,
-  serialized_end=838,
+  serialized_start=647,
+  serialized_end=816,
 )
 
 
@@ -371,7 +340,7 @@ _JOINCHANNELRESPONSE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='require_friend_validation', full_name='bnet.protocol.channel.JoinChannelResponse.require_friend_validation', index=1,
       number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -394,8 +363,8 @@ _JOINCHANNELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=841,
-  serialized_end=969,
+  serialized_start=819,
+  serialized_end=954,
 )
 
 
@@ -415,7 +384,7 @@ _LEAVENOTIFICATION = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='member_id', full_name='bnet.protocol.channel.LeaveNotification.member_id', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -439,8 +408,8 @@ _LEAVENOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=971,
-  serialized_end=1093,
+  serialized_start=956,
+  serialized_end=1078,
 )
 
 
@@ -468,7 +437,7 @@ _MEMBERSTATE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='privileges', full_name='bnet.protocol.channel.MemberState.privileges', index=2,
       number=3, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -482,7 +451,7 @@ _MEMBERSTATE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='hidden', full_name='bnet.protocol.channel.MemberState.hidden', index=4,
       number=5, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -493,13 +462,13 @@ _MEMBERSTATE = _descriptor.Descriptor(
   enum_types=[
   ],
   options=None,
-  is_extendable=True,
+  is_extendable=False,
   syntax='proto2',
-  extension_ranges=[(100, 10001), ],
+  extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1096,
-  serialized_end=1263,
+  serialized_start=1081,
+  serialized_end=1251,
 )
 
 
@@ -531,13 +500,13 @@ _MESSAGE = _descriptor.Descriptor(
   enum_types=[
   ],
   options=None,
-  is_extendable=True,
+  is_extendable=False,
   syntax='proto2',
-  extension_ranges=[(100, 10001), ],
+  extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1265,
-  serialized_end=1350,
+  serialized_start=1253,
+  serialized_end=1331,
 )
 
 
@@ -557,7 +526,7 @@ _REMOVEMEMBERREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='member_id', full_name='bnet.protocol.channel.RemoveMemberRequest.member_id', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -581,8 +550,8 @@ _REMOVEMEMBERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1352,
-  serialized_end=1476,
+  serialized_start=1333,
+  serialized_end=1457,
 )
 
 
@@ -602,7 +571,7 @@ _REMOVENOTIFICATION = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='member_id', full_name='bnet.protocol.channel.RemoveNotification.member_id', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -626,8 +595,8 @@ _REMOVENOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1478,
-  serialized_end=1601,
+  serialized_start=1459,
+  serialized_end=1582,
 )
 
 
@@ -647,7 +616,7 @@ _SENDMESSAGENOTIFICATION = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='message', full_name='bnet.protocol.channel.SendMessageNotification.message', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -655,7 +624,7 @@ _SENDMESSAGENOTIFICATION = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='required_privileges', full_name='bnet.protocol.channel.SendMessageNotification.required_privileges', index=2,
       number=3, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -671,8 +640,8 @@ _SENDMESSAGENOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1604,
-  serialized_end=1750,
+  serialized_start=1585,
+  serialized_end=1734,
 )
 
 
@@ -692,7 +661,7 @@ _SENDMESSAGEREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='message', full_name='bnet.protocol.channel.SendMessageRequest.message', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -700,7 +669,7 @@ _SENDMESSAGEREQUEST = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='required_privileges', full_name='bnet.protocol.channel.SendMessageRequest.required_privileges', index=2,
       number=3, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -716,8 +685,8 @@ _SENDMESSAGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1753,
-  serialized_end=1894,
+  serialized_start=1737,
+  serialized_end=1881,
 )
 
 
@@ -761,8 +730,8 @@ _SETROLESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1896,
-  serialized_end=2014,
+  serialized_start=1883,
+  serialized_end=2001,
 )
 
 
@@ -782,14 +751,14 @@ _SUBSCRIBECHANNELREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='channel_id', full_name='bnet.protocol.channel.SubscribeChannelRequest.channel_id', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='object_id', full_name='bnet.protocol.channel.SubscribeChannelRequest.object_id', index=2,
-      number=3, type=4, cpp_type=4, label=1,
+      number=3, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -806,8 +775,8 @@ _SUBSCRIBECHANNELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2017,
-  serialized_end=2149,
+  serialized_start=2004,
+  serialized_end=2136,
 )
 
 
@@ -827,7 +796,7 @@ _UNSUBSCRIBEMEMBERREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='member_id', full_name='bnet.protocol.channel.UnsubscribeMemberRequest.member_id', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -844,8 +813,8 @@ _UNSUBSCRIBEMEMBERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2151,
-  serialized_end=2264,
+  serialized_start=2138,
+  serialized_end=2251,
 )
 
 
@@ -865,21 +834,21 @@ _ADDMEMBERREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='member_identity', full_name='bnet.protocol.channel.AddMemberRequest.member_identity', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='member_state', full_name='bnet.protocol.channel.AddMemberRequest.member_state', index=2,
-      number=3, type=11, cpp_type=10, label=1,
+      number=3, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='object_id', full_name='bnet.protocol.channel.AddMemberRequest.object_id', index=3,
-      number=4, type=4, cpp_type=4, label=1,
+      number=4, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -903,8 +872,8 @@ _ADDMEMBERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2267,
-  serialized_end=2480,
+  serialized_start=2254,
+  serialized_end=2467,
 )
 
 
@@ -924,7 +893,7 @@ _FINDCHANNELREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='options', full_name='bnet.protocol.channel.FindChannelRequest.options', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -941,8 +910,8 @@ _FINDCHANNELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2483,
-  serialized_end=2612,
+  serialized_start=2470,
+  serialized_end=2599,
 )
 
 
@@ -969,14 +938,14 @@ _JOINCHANNELREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='channel_id', full_name='bnet.protocol.channel.JoinChannelRequest.channel_id', index=2,
-      number=3, type=11, cpp_type=10, label=1,
+      number=3, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='object_id', full_name='bnet.protocol.channel.JoinChannelRequest.object_id', index=3,
-      number=4, type=4, cpp_type=4, label=1,
+      number=4, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1007,8 +976,8 @@ _JOINCHANNELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2615,
-  serialized_end=2890,
+  serialized_start=2602,
+  serialized_end=2877,
 )
 
 
@@ -1021,14 +990,14 @@ _MEMBER = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='identity', full_name='bnet.protocol.channel.Member.identity', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='state', full_name='bnet.protocol.channel.Member.state', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1045,8 +1014,8 @@ _MEMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2892,
-  serialized_end=2994,
+  serialized_start=2879,
+  serialized_end=2981,
 )
 
 
@@ -1059,7 +1028,7 @@ _JOINNOTIFICATION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='member', full_name='bnet.protocol.channel.JoinNotification.member', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1076,8 +1045,8 @@ _JOINNOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2996,
-  serialized_end=3061,
+  serialized_start=2983,
+  serialized_end=3048,
 )
 
 
@@ -1121,8 +1090,8 @@ _UPDATEMEMBERSTATENOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3064,
-  serialized_end=3213,
+  serialized_start=3051,
+  serialized_end=3200,
 )
 
 
@@ -1166,463 +1135,8 @@ _UPDATEMEMBERSTATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3216,
-  serialized_end=3360,
-)
-
-
-_CHANNELSTATE = _descriptor.Descriptor(
-  name='ChannelState',
-  full_name='bnet.protocol.channel.ChannelState',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='max_members', full_name='bnet.protocol.channel.ChannelState.max_members', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='min_members', full_name='bnet.protocol.channel.ChannelState.min_members', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='attribute', full_name='bnet.protocol.channel.ChannelState.attribute', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='invitation', full_name='bnet.protocol.channel.ChannelState.invitation', index=3,
-      number=4, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='max_invitations', full_name='bnet.protocol.channel.ChannelState.max_invitations', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='reason', full_name='bnet.protocol.channel.ChannelState.reason', index=5,
-      number=6, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='privacy_level', full_name='bnet.protocol.channel.ChannelState.privacy_level', index=6,
-      number=7, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=1,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='name', full_name='bnet.protocol.channel.ChannelState.name', index=7,
-      number=8, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='delegate_name', full_name='bnet.protocol.channel.ChannelState.delegate_name', index=8,
-      number=9, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_type', full_name='bnet.protocol.channel.ChannelState.channel_type', index=9,
-      number=10, type=9, cpp_type=9, label=1,
-      has_default_value=True, default_value=_b("default").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='program', full_name='bnet.protocol.channel.ChannelState.program', index=10,
-      number=11, type=7, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='allow_offline_members', full_name='bnet.protocol.channel.ChannelState.allow_offline_members', index=11,
-      number=12, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='subscribe_to_presence', full_name='bnet.protocol.channel.ChannelState.subscribe_to_presence', index=12,
-      number=13, type=8, cpp_type=7, label=1,
-      has_default_value=True, default_value=True,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CHANNELSTATE_PRIVACYLEVEL,
-  ],
-  options=None,
-  is_extendable=True,
-  syntax='proto2',
-  extension_ranges=[(100, 10001), ],
-  oneofs=[
-  ],
-  serialized_start=3363,
-  serialized_end=3974,
-)
-
-
-_ADDNOTIFICATION = _descriptor.Descriptor(
-  name='AddNotification',
-  full_name='bnet.protocol.channel.AddNotification',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='self', full_name='bnet.protocol.channel.AddNotification.self', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='member', full_name='bnet.protocol.channel.AddNotification.member', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_state', full_name='bnet.protocol.channel.AddNotification.channel_state', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=3977,
-  serialized_end=4146,
-)
-
-
-_CHANNELDESCRIPTION = _descriptor.Descriptor(
-  name='ChannelDescription',
-  full_name='bnet.protocol.channel.ChannelDescription',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='channel_id', full_name='bnet.protocol.channel.ChannelDescription.channel_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='current_members', full_name='bnet.protocol.channel.ChannelDescription.current_members', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='state', full_name='bnet.protocol.channel.ChannelDescription.state', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=4149,
-  serialized_end=4291,
-)
-
-
-_CHANNELINFO = _descriptor.Descriptor(
-  name='ChannelInfo',
-  full_name='bnet.protocol.channel.ChannelInfo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='description', full_name='bnet.protocol.channel.ChannelInfo.description', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='member', full_name='bnet.protocol.channel.ChannelInfo.member', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=True,
-  syntax='proto2',
-  extension_ranges=[(100, 10001), ],
-  oneofs=[
-  ],
-  serialized_start=4294,
-  serialized_end=4425,
-)
-
-
-_CREATECHANNELREQUEST = _descriptor.Descriptor(
-  name='CreateChannelRequest',
-  full_name='bnet.protocol.channel.CreateChannelRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='agent_identity', full_name='bnet.protocol.channel.CreateChannelRequest.agent_identity', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='member_state', full_name='bnet.protocol.channel.CreateChannelRequest.member_state', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_state', full_name='bnet.protocol.channel.CreateChannelRequest.channel_state', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_id', full_name='bnet.protocol.channel.CreateChannelRequest.channel_id', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='object_id', full_name='bnet.protocol.channel.CreateChannelRequest.object_id', index=4,
-      number=5, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='local_agent', full_name='bnet.protocol.channel.CreateChannelRequest.local_agent', index=5,
-      number=6, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='local_member_state', full_name='bnet.protocol.channel.CreateChannelRequest.local_member_state', index=6,
-      number=7, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=4428,
-  serialized_end=4791,
-)
-
-
-_FINDCHANNELRESPONSE = _descriptor.Descriptor(
-  name='FindChannelResponse',
-  full_name='bnet.protocol.channel.FindChannelResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='channel', full_name='bnet.protocol.channel.FindChannelResponse.channel', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=4793,
-  serialized_end=4874,
-)
-
-
-_GETCHANNELINFORESPONSE = _descriptor.Descriptor(
-  name='GetChannelInfoResponse',
-  full_name='bnet.protocol.channel.GetChannelInfoResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='channel_info', full_name='bnet.protocol.channel.GetChannelInfoResponse.channel_info', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=4876,
-  serialized_end=4958,
-)
-
-
-_UPDATECHANNELSTATENOTIFICATION = _descriptor.Descriptor(
-  name='UpdateChannelStateNotification',
-  full_name='bnet.protocol.channel.UpdateChannelStateNotification',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='agent_id', full_name='bnet.protocol.channel.UpdateChannelStateNotification.agent_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='state_change', full_name='bnet.protocol.channel.UpdateChannelStateNotification.state_change', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=4961,
-  serialized_end=5095,
-)
-
-
-_UPDATECHANNELSTATEREQUEST = _descriptor.Descriptor(
-  name='UpdateChannelStateRequest',
-  full_name='bnet.protocol.channel.UpdateChannelStateRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='agent_id', full_name='bnet.protocol.channel.UpdateChannelStateRequest.agent_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='state_change', full_name='bnet.protocol.channel.UpdateChannelStateRequest.state_change', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=5098,
-  serialized_end=5227,
+  serialized_start=3203,
+  serialized_end=3347,
 )
 
 _CREATECHANNELRESPONSE.fields_by_name['channel_id'].message_type = bnet_dot_protocol__0__pb2._ENTITYID
@@ -1667,29 +1181,6 @@ _UPDATEMEMBERSTATENOTIFICATION.fields_by_name['agent_id'].message_type = bnet_do
 _UPDATEMEMBERSTATENOTIFICATION.fields_by_name['state_change'].message_type = _MEMBER
 _UPDATEMEMBERSTATEREQUEST.fields_by_name['agent_id'].message_type = bnet_dot_protocol__0__pb2._ENTITYID
 _UPDATEMEMBERSTATEREQUEST.fields_by_name['state_change'].message_type = _MEMBER
-_CHANNELSTATE.fields_by_name['attribute'].message_type = bnet_dot_protocol_dot_attribute__pb2._ATTRIBUTE
-_CHANNELSTATE.fields_by_name['invitation'].message_type = bnet_dot_protocol_dot_invitation__pb2._INVITATION
-_CHANNELSTATE.fields_by_name['privacy_level'].enum_type = _CHANNELSTATE_PRIVACYLEVEL
-_CHANNELSTATE_PRIVACYLEVEL.containing_type = _CHANNELSTATE
-_ADDNOTIFICATION.fields_by_name['self'].message_type = _MEMBER
-_ADDNOTIFICATION.fields_by_name['member'].message_type = _MEMBER
-_ADDNOTIFICATION.fields_by_name['channel_state'].message_type = _CHANNELSTATE
-_CHANNELDESCRIPTION.fields_by_name['channel_id'].message_type = bnet_dot_protocol__0__pb2._ENTITYID
-_CHANNELDESCRIPTION.fields_by_name['state'].message_type = _CHANNELSTATE
-_CHANNELINFO.fields_by_name['description'].message_type = _CHANNELDESCRIPTION
-_CHANNELINFO.fields_by_name['member'].message_type = _MEMBER
-_CREATECHANNELREQUEST.fields_by_name['agent_identity'].message_type = bnet_dot_protocol__0__pb2._IDENTITY
-_CREATECHANNELREQUEST.fields_by_name['member_state'].message_type = _MEMBERSTATE
-_CREATECHANNELREQUEST.fields_by_name['channel_state'].message_type = _CHANNELSTATE
-_CREATECHANNELREQUEST.fields_by_name['channel_id'].message_type = bnet_dot_protocol__0__pb2._ENTITYID
-_CREATECHANNELREQUEST.fields_by_name['local_agent'].message_type = bnet_dot_protocol__0__pb2._ENTITYID
-_CREATECHANNELREQUEST.fields_by_name['local_member_state'].message_type = _MEMBERSTATE
-_FINDCHANNELRESPONSE.fields_by_name['channel'].message_type = _CHANNELDESCRIPTION
-_GETCHANNELINFORESPONSE.fields_by_name['channel_info'].message_type = _CHANNELINFO
-_UPDATECHANNELSTATENOTIFICATION.fields_by_name['agent_id'].message_type = bnet_dot_protocol__0__pb2._ENTITYID
-_UPDATECHANNELSTATENOTIFICATION.fields_by_name['state_change'].message_type = _CHANNELSTATE
-_UPDATECHANNELSTATEREQUEST.fields_by_name['agent_id'].message_type = bnet_dot_protocol__0__pb2._ENTITYID
-_UPDATECHANNELSTATEREQUEST.fields_by_name['state_change'].message_type = _CHANNELSTATE
 DESCRIPTOR.message_types_by_name['GetChannelIdRequest'] = _GETCHANNELIDREQUEST
 DESCRIPTOR.message_types_by_name['SubscribeChannelResponse'] = _SUBSCRIBECHANNELRESPONSE
 DESCRIPTOR.message_types_by_name['CreateChannelResponse'] = _CREATECHANNELRESPONSE
@@ -1715,15 +1206,6 @@ DESCRIPTOR.message_types_by_name['Member'] = _MEMBER
 DESCRIPTOR.message_types_by_name['JoinNotification'] = _JOINNOTIFICATION
 DESCRIPTOR.message_types_by_name['UpdateMemberStateNotification'] = _UPDATEMEMBERSTATENOTIFICATION
 DESCRIPTOR.message_types_by_name['UpdateMemberStateRequest'] = _UPDATEMEMBERSTATEREQUEST
-DESCRIPTOR.message_types_by_name['ChannelState'] = _CHANNELSTATE
-DESCRIPTOR.message_types_by_name['AddNotification'] = _ADDNOTIFICATION
-DESCRIPTOR.message_types_by_name['ChannelDescription'] = _CHANNELDESCRIPTION
-DESCRIPTOR.message_types_by_name['ChannelInfo'] = _CHANNELINFO
-DESCRIPTOR.message_types_by_name['CreateChannelRequest'] = _CREATECHANNELREQUEST
-DESCRIPTOR.message_types_by_name['FindChannelResponse'] = _FINDCHANNELRESPONSE
-DESCRIPTOR.message_types_by_name['GetChannelInfoResponse'] = _GETCHANNELINFORESPONSE
-DESCRIPTOR.message_types_by_name['UpdateChannelStateNotification'] = _UPDATECHANNELSTATENOTIFICATION
-DESCRIPTOR.message_types_by_name['UpdateChannelStateRequest'] = _UPDATECHANNELSTATEREQUEST
 
 GetChannelIdRequest = _reflection.GeneratedProtocolMessageType('GetChannelIdRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETCHANNELIDREQUEST,
@@ -1899,69 +1381,6 @@ UpdateMemberStateRequest = _reflection.GeneratedProtocolMessageType('UpdateMembe
   # @@protoc_insertion_point(class_scope:bnet.protocol.channel.UpdateMemberStateRequest)
   ))
 _sym_db.RegisterMessage(UpdateMemberStateRequest)
-
-ChannelState = _reflection.GeneratedProtocolMessageType('ChannelState', (_message.Message,), dict(
-  DESCRIPTOR = _CHANNELSTATE,
-  __module__ = 'bnet.protocol.channel_pb2'
-  # @@protoc_insertion_point(class_scope:bnet.protocol.channel.ChannelState)
-  ))
-_sym_db.RegisterMessage(ChannelState)
-
-AddNotification = _reflection.GeneratedProtocolMessageType('AddNotification', (_message.Message,), dict(
-  DESCRIPTOR = _ADDNOTIFICATION,
-  __module__ = 'bnet.protocol.channel_pb2'
-  # @@protoc_insertion_point(class_scope:bnet.protocol.channel.AddNotification)
-  ))
-_sym_db.RegisterMessage(AddNotification)
-
-ChannelDescription = _reflection.GeneratedProtocolMessageType('ChannelDescription', (_message.Message,), dict(
-  DESCRIPTOR = _CHANNELDESCRIPTION,
-  __module__ = 'bnet.protocol.channel_pb2'
-  # @@protoc_insertion_point(class_scope:bnet.protocol.channel.ChannelDescription)
-  ))
-_sym_db.RegisterMessage(ChannelDescription)
-
-ChannelInfo = _reflection.GeneratedProtocolMessageType('ChannelInfo', (_message.Message,), dict(
-  DESCRIPTOR = _CHANNELINFO,
-  __module__ = 'bnet.protocol.channel_pb2'
-  # @@protoc_insertion_point(class_scope:bnet.protocol.channel.ChannelInfo)
-  ))
-_sym_db.RegisterMessage(ChannelInfo)
-
-CreateChannelRequest = _reflection.GeneratedProtocolMessageType('CreateChannelRequest', (_message.Message,), dict(
-  DESCRIPTOR = _CREATECHANNELREQUEST,
-  __module__ = 'bnet.protocol.channel_pb2'
-  # @@protoc_insertion_point(class_scope:bnet.protocol.channel.CreateChannelRequest)
-  ))
-_sym_db.RegisterMessage(CreateChannelRequest)
-
-FindChannelResponse = _reflection.GeneratedProtocolMessageType('FindChannelResponse', (_message.Message,), dict(
-  DESCRIPTOR = _FINDCHANNELRESPONSE,
-  __module__ = 'bnet.protocol.channel_pb2'
-  # @@protoc_insertion_point(class_scope:bnet.protocol.channel.FindChannelResponse)
-  ))
-_sym_db.RegisterMessage(FindChannelResponse)
-
-GetChannelInfoResponse = _reflection.GeneratedProtocolMessageType('GetChannelInfoResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETCHANNELINFORESPONSE,
-  __module__ = 'bnet.protocol.channel_pb2'
-  # @@protoc_insertion_point(class_scope:bnet.protocol.channel.GetChannelInfoResponse)
-  ))
-_sym_db.RegisterMessage(GetChannelInfoResponse)
-
-UpdateChannelStateNotification = _reflection.GeneratedProtocolMessageType('UpdateChannelStateNotification', (_message.Message,), dict(
-  DESCRIPTOR = _UPDATECHANNELSTATENOTIFICATION,
-  __module__ = 'bnet.protocol.channel_pb2'
-  # @@protoc_insertion_point(class_scope:bnet.protocol.channel.UpdateChannelStateNotification)
-  ))
-_sym_db.RegisterMessage(UpdateChannelStateNotification)
-
-UpdateChannelStateRequest = _reflection.GeneratedProtocolMessageType('UpdateChannelStateRequest', (_message.Message,), dict(
-  DESCRIPTOR = _UPDATECHANNELSTATEREQUEST,
-  __module__ = 'bnet.protocol.channel_pb2'
-  # @@protoc_insertion_point(class_scope:bnet.protocol.channel.UpdateChannelStateRequest)
-  ))
-_sym_db.RegisterMessage(UpdateChannelStateRequest)
 
 
 # @@protoc_insertion_point(module_scope)

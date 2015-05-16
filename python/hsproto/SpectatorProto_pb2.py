@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='SpectatorProto.proto',
   package='SpectatorProto',
   syntax='proto2',
-  serialized_pb=_b('\n\x14SpectatorProto.proto\x12\x0eSpectatorProto\x1a\x13PegasusShared.proto\"\xcf\x02\n\x08JoinInfo\x12\x19\n\x11server_ip_address\x18\x01 \x01(\t\x12\x13\n\x0bserver_port\x18\x02 \x01(\r\x12\x13\n\x0bgame_handle\x18\x03 \x01(\x05\x12\x12\n\nsecret_key\x18\x04 \x01(\t\x12\x13\n\x0bis_joinable\x18\x05 \x01(\x08\x12\x1e\n\x16\x63urrent_num_spectators\x18\x06 \x01(\x05\x12\x1a\n\x12max_num_spectators\x18\x07 \x01(\x05\x12*\n\tgame_type\x18\x08 \x01(\x0e\x32\x17.PegasusShared.GameType\x12\x12\n\nmission_id\x18\t \x01(\x05\x12\x30\n\x11spectated_players\x18\n \x03(\x0b\x32\x15.PegasusShared.BnetId\x12\'\n\x08party_id\x18\x0b \x01(\x0b\x32\x15.PegasusShared.BnetId\"j\n\x06Invite\x12\x33\n\x14inviterGameAccountId\x18\x01 \x01(\x0b\x32\x15.PegasusShared.BnetId\x12+\n\tjoin_info\x18\x02 \x01(\x0b\x32\x18.SpectatorProto.JoinInfo\"\xaa\x01\n\x0fPartyServerInfo\x12\x19\n\x11server_ip_address\x18\x01 \x01(\t\x12\x13\n\x0bserver_port\x18\x02 \x01(\r\x12\x13\n\x0bgame_handle\x18\x03 \x01(\x05\x12\x12\n\nsecret_key\x18\x04 \x01(\t\x12*\n\tgame_type\x18\x05 \x01(\x0e\x32\x17.PegasusShared.GameType\x12\x12\n\nmission_id\x18\x06 \x01(\x05*\x1e\n\tConstants\x12\x11\n\x0c\x44\x45\x46\x41ULT_PORT\x10\x8c\x1d')
+  serialized_pb=_b('\n\x14SpectatorProto.proto\x12\x0eSpectatorProto\x1a\x13PegasusShared.proto\"\xdb\x02\n\x08JoinInfo\x12\x19\n\x11server_ip_address\x18\x01 \x01(\t\x12\x13\n\x0bserver_port\x18\x02 \x01(\r\x12\x13\n\x0bgame_handle\x18\x03 \x01(\x05\x12\x12\n\nsecret_key\x18\x04 \x01(\t\x12\x13\n\x0bis_joinable\x18\x05 \x01(\x08\x12\x1e\n\x16\x63urrent_num_spectators\x18\x06 \x01(\x05\x12\x1a\n\x12max_num_spectators\x18\x07 \x01(\x05\x12\x36\n\tgame_type\x18\x08 \x01(\x0e\x32\x17.PegasusShared.GameType:\nGT_UNKNOWN\x12\x12\n\nmission_id\x18\t \x01(\x05\x12\x30\n\x11spectated_players\x18\n \x03(\x0b\x32\x15.PegasusShared.BnetId\x12\'\n\x08party_id\x18\x0b \x01(\x0b\x32\x15.PegasusShared.BnetId\"m\n\x06Invite\x12\x36\n\x17inviter_game_account_id\x18\x01 \x02(\x0b\x32\x15.PegasusShared.BnetId\x12+\n\tjoin_info\x18\x02 \x02(\x0b\x32\x18.SpectatorProto.JoinInfo\"\xb6\x01\n\x0fPartyServerInfo\x12\x19\n\x11server_ip_address\x18\x01 \x01(\t\x12\x13\n\x0bserver_port\x18\x02 \x01(\r\x12\x13\n\x0bgame_handle\x18\x03 \x01(\x05\x12\x12\n\nsecret_key\x18\x04 \x01(\t\x12\x36\n\tgame_type\x18\x05 \x01(\x0e\x32\x17.PegasusShared.GameType:\nGT_UNKNOWN\x12\x12\n\nmission_id\x18\x06 \x01(\x05*\x1e\n\tConstants\x12\x11\n\x0c\x44\x45\x46\x41ULT_PORT\x10\x8c\x1d')
   ,
   dependencies=[PegasusShared__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -39,8 +39,8 @@ _CONSTANTS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=680,
-  serialized_end=710,
+  serialized_start=707,
+  serialized_end=737,
 )
 _sym_db.RegisterEnumDescriptor(_CONSTANTS)
 
@@ -108,7 +108,7 @@ _JOININFO = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='game_type', full_name='SpectatorProto.JoinInfo.game_type', index=7,
       number=8, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -146,7 +146,7 @@ _JOININFO = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=62,
-  serialized_end=397,
+  serialized_end=409,
 )
 
 
@@ -158,15 +158,15 @@ _INVITE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='inviterGameAccountId', full_name='SpectatorProto.Invite.inviterGameAccountId', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      name='inviter_game_account_id', full_name='SpectatorProto.Invite.inviter_game_account_id', index=0,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='join_info', full_name='SpectatorProto.Invite.join_info', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -183,8 +183,8 @@ _INVITE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=399,
-  serialized_end=505,
+  serialized_start=411,
+  serialized_end=520,
 )
 
 
@@ -226,7 +226,7 @@ _PARTYSERVERINFO = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='game_type', full_name='SpectatorProto.PartyServerInfo.game_type', index=4,
       number=5, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -249,14 +249,14 @@ _PARTYSERVERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=508,
-  serialized_end=678,
+  serialized_start=523,
+  serialized_end=705,
 )
 
 _JOININFO.fields_by_name['game_type'].enum_type = PegasusShared__pb2._GAMETYPE
 _JOININFO.fields_by_name['spectated_players'].message_type = PegasusShared__pb2._BNETID
 _JOININFO.fields_by_name['party_id'].message_type = PegasusShared__pb2._BNETID
-_INVITE.fields_by_name['inviterGameAccountId'].message_type = PegasusShared__pb2._BNETID
+_INVITE.fields_by_name['inviter_game_account_id'].message_type = PegasusShared__pb2._BNETID
 _INVITE.fields_by_name['join_info'].message_type = _JOININFO
 _PARTYSERVERINFO.fields_by_name['game_type'].enum_type = PegasusShared__pb2._GAMETYPE
 DESCRIPTOR.message_types_by_name['JoinInfo'] = _JOININFO

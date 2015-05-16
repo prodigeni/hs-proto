@@ -22,9 +22,9 @@ message GenerateSSOTokenResponse {
 }
 
 message LogonQueueUpdateRequest {
-	optional uint32 position = 1;
-	optional uint64 estimated_time = 2;
-	optional uint64 eta_deviation_in_sec = 3;
+	required uint32 position = 1;
+	required uint64 estimated_time = 2;
+	required uint64 eta_deviation_in_sec = 3;
 }
 
 message LogonRequest {
@@ -36,23 +36,23 @@ message LogonRequest {
 	optional int32 application_version = 6;
 	optional bool public_computer = 7;
 	optional bytes sso_id = 8;
-	optional bool disconnect_on_cookie_fail = 9;
-	optional bool allow_logon_queue_notifications = 10;
-	optional bool web_client_verification = 11;
+	optional bool disconnect_on_cookie_fail = 9 [default = false];
+	optional bool allow_logon_queue_notifications = 10 [default = false];
+	optional bool web_client_verification = 11 [default = false];
 	optional bytes cached_web_credentials = 12;
 	optional string user_agent = 14;
 }
 
 message LogonUpdateRequest {
-	optional uint32 error_code = 1;
+	required uint32 error_code = 1;
 }
 
 message MemModuleLoadResponse {
-	optional bytes data = 1;
+	required bytes data = 1;
 }
 
 message ModuleMessageRequest {
-	optional int32 module_id = 1;
+	required int32 module_id = 1;
 	optional bytes message = 2;
 }
 
@@ -62,8 +62,8 @@ message ModuleNotification {
 }
 
 message ServerStateChangeRequest {
-	optional uint32 state = 1;
-	optional uint64 event_time = 2;
+	required uint32 state = 1;
+	required uint64 event_time = 2;
 }
 
 message VerifyWebCredentialsRequest {
@@ -82,23 +82,23 @@ message VersionInfoNotification {
 }
 
 message MemModuleLoadRequest {
-	optional .bnet.protocol.ContentHandle handle = 1;
-	optional bytes key = 2;
-	optional bytes input = 3;
+	required .bnet.protocol.ContentHandle handle = 1;
+	required bytes key = 2;
+	required bytes input = 3;
 }
 
 message ModuleLoadRequest {
-	optional .bnet.protocol.ContentHandle module_handle = 1;
+	required .bnet.protocol.ContentHandle module_handle = 1;
 	optional bytes message = 2;
 }
 
 message GameAccountSelectedRequest {
-	optional uint32 result = 1;
+	required uint32 result = 1;
 	optional .bnet.protocol.EntityId game_account = 2;
 }
 
 message LogonResult {
-	optional uint32 error_code = 1;
+	required uint32 error_code = 1;
 	optional .bnet.protocol.EntityId account = 2;
 	repeated .bnet.protocol.EntityId game_account = 3;
 	optional string email = 4;
@@ -109,6 +109,6 @@ message LogonResult {
 }
 
 message SelectGameAccountRequest {
-	optional .bnet.protocol.EntityId game_account = 1;
+	required .bnet.protocol.EntityId game_account = 1;
 }
 

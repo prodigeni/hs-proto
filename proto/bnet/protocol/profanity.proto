@@ -3,8 +3,8 @@ package bnet.protocol.profanity;
 
 
 message WordFilter {
-	optional string type = 1;
-	optional string regex = 2;
+	required string type = 1;
+	required string regex = 2;
 }
 
 message WordFilters {

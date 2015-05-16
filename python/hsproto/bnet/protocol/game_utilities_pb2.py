@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='bnet/protocol/game_utilities.proto',
   package='bnet.protocol.game_utilities',
   syntax='proto2',
-  serialized_pb=_b('\n\"bnet/protocol/game_utilities.proto\x12\x1c\x62net.protocol.game_utilities\x1a\x1d\x62net/protocol/attribute.proto\x1a\x15\x62net/protocol_0.proto\"G\n\x0e\x43lientResponse\x12\x35\n\tattribute\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\"G\n\x0eServerResponse\x12\x35\n\tattribute\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\"\x83\x01\n\x0fPlayerVariables\x12)\n\x08identity\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.Identity\x12\x0e\n\x06rating\x18\x02 \x01(\x01\x12\x35\n\tattribute\x18\x03 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\"e\n\x1aGetPlayerVariablesResponse\x12G\n\x10player_variables\x18\x01 \x03(\x0b\x32-.bnet.protocol.game_utilities.PlayerVariables\"\xd2\x01\n\rClientRequest\x12\x35\n\tattribute\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12&\n\x04host\x18\x02 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\x12\x30\n\x0f\x62net_account_id\x18\x03 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x30\n\x0fgame_account_id\x18\x04 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"z\n\x1eGameAccountOfflineNotification\x12\x30\n\x0fgame_account_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12&\n\x04host\x18\x02 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\"y\n\x1dGameAccountOnlineNotification\x12\x30\n\x0fgame_account_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12&\n\x04host\x18\x02 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\"\x8c\x01\n\x19GetPlayerVariablesRequest\x12G\n\x10player_variables\x18\x01 \x03(\x0b\x32-.bnet.protocol.game_utilities.PlayerVariables\x12&\n\x04host\x18\x02 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\"\xd0\x01\n\x1dPresenceChannelCreatedRequest\x12#\n\x02id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x30\n\x0fgame_account_id\x18\x03 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x30\n\x0f\x62net_account_id\x18\x04 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12&\n\x04host\x18\x05 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\"\x7f\n\rServerRequest\x12\x35\n\tattribute\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x0f\n\x07program\x18\x02 \x01(\x07\x12&\n\x04host\x18\x03 \x01(\x0b\x32\x18.bnet.protocol.ProcessId')
+  serialized_pb=_b('\n\"bnet/protocol/game_utilities.proto\x12\x1c\x62net.protocol.game_utilities\x1a\x1d\x62net/protocol/attribute.proto\x1a\x15\x62net/protocol_0.proto\"G\n\x0e\x43lientResponse\x12\x35\n\tattribute\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\"G\n\x0eServerResponse\x12\x35\n\tattribute\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\"\x83\x01\n\x0fPlayerVariables\x12)\n\x08identity\x18\x01 \x02(\x0b\x32\x17.bnet.protocol.Identity\x12\x0e\n\x06rating\x18\x02 \x01(\x01\x12\x35\n\tattribute\x18\x03 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\"e\n\x1aGetPlayerVariablesResponse\x12G\n\x10player_variables\x18\x01 \x03(\x0b\x32-.bnet.protocol.game_utilities.PlayerVariables\"\xd2\x01\n\rClientRequest\x12\x35\n\tattribute\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12&\n\x04host\x18\x02 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\x12\x30\n\x0f\x62net_account_id\x18\x03 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x30\n\x0fgame_account_id\x18\x04 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"z\n\x1eGameAccountOfflineNotification\x12\x30\n\x0fgame_account_id\x18\x01 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12&\n\x04host\x18\x02 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\"y\n\x1dGameAccountOnlineNotification\x12\x30\n\x0fgame_account_id\x18\x01 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12&\n\x04host\x18\x02 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\"\x8c\x01\n\x19GetPlayerVariablesRequest\x12G\n\x10player_variables\x18\x01 \x03(\x0b\x32-.bnet.protocol.game_utilities.PlayerVariables\x12&\n\x04host\x18\x02 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\"\xd0\x01\n\x1dPresenceChannelCreatedRequest\x12#\n\x02id\x18\x01 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12\x30\n\x0fgame_account_id\x18\x03 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x30\n\x0f\x62net_account_id\x18\x04 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12&\n\x04host\x18\x05 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\"\x7f\n\rServerRequest\x12\x35\n\tattribute\x18\x01 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x0f\n\x07program\x18\x02 \x02(\x07\x12&\n\x04host\x18\x03 \x01(\x0b\x32\x18.bnet.protocol.ProcessId')
   ,
   dependencies=[bnet_dot_protocol_dot_attribute__pb2.DESCRIPTOR,bnet_dot_protocol__0__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -100,7 +100,7 @@ _PLAYERVARIABLES = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='identity', full_name='bnet.protocol.game_utilities.PlayerVariables.identity', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -228,7 +228,7 @@ _GAMEACCOUNTOFFLINENOTIFICATION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='game_account_id', full_name='bnet.protocol.game_utilities.GameAccountOfflineNotification.game_account_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -266,7 +266,7 @@ _GAMEACCOUNTONLINENOTIFICATION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='game_account_id', full_name='bnet.protocol.game_utilities.GameAccountOnlineNotification.game_account_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -342,7 +342,7 @@ _PRESENCECHANNELCREATEDREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='bnet.protocol.game_utilities.PresenceChannelCreatedRequest.id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -401,7 +401,7 @@ _SERVERREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='program', full_name='bnet.protocol.game_utilities.ServerRequest.program', index=1,
-      number=2, type=7, cpp_type=3, label=1,
+      number=2, type=7, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,

@@ -1,0 +1,63 @@
+syntax = "proto2";
+package bnet.protocol.channel_invitation;
+import "bnet/protocol_0.proto";
+import "bnet/protocol/channel_invitation_0.proto";
+import "bnet/protocol/invitation.proto";
+
+
+message DecrementChannelCountRequest {
+	required .bnet.protocol.EntityId agent_id = 1;
+	optional .bnet.protocol.EntityId channel_id = 2;
+	optional uint64 reservation_token = 3;
+}
+
+message IncrementChannelCountRequest {
+	required .bnet.protocol.EntityId agent_id = 1;
+	repeated .bnet.protocol.channel_invitation.ChannelCountDescription descriptions = 2;
+}
+
+message ListChannelCountRequest {
+	required .bnet.protocol.EntityId member_id = 1;
+	required uint32 service_type = 2;
+	optional fixed32 program = 3;
+}
+
+message ListChannelCountResponse {
+	repeated .bnet.protocol.channel_invitation.ChannelCount channel = 1;
+}
+
+message RevokeInvitationRequest {
+	optional .bnet.protocol.EntityId agent_id = 1;
+	optional .bnet.protocol.EntityId target_id = 2;
+	required fixed64 invitation_id = 3;
+	required .bnet.protocol.EntityId channel_id = 4;
+}
+
+message SubscribeRequest {
+	optional .bnet.protocol.EntityId agent_id = 1;
+	required uint64 object_id = 2;
+}
+
+message UnsubscribeRequest {
+	optional .bnet.protocol.EntityId agent_id = 1;
+}
+
+message UpdateChannelCountRequest {
+	required .bnet.protocol.EntityId agent_id = 1;
+	optional uint64 reservation_token = 2;
+	required .bnet.protocol.EntityId channel_id = 3;
+}
+
+message SuggestInvitationRequest {
+	optional .bnet.protocol.EntityId agent_id = 1;
+	required .bnet.protocol.EntityId channel_id = 2;
+	required .bnet.protocol.EntityId target_id = 3;
+	optional .bnet.protocol.EntityId approval_id = 4;
+	optional .bnet.protocol.Identity agent_identity = 5;
+	optional .bnet.protocol.AccountInfo agent_info = 6;
+}
+
+message SuggestionAddedNotification {
+	required .bnet.protocol.invitation.Suggestion suggestion = 1;
+}
+

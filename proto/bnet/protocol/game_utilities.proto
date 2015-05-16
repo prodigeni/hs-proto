@@ -13,7 +13,7 @@ message ServerResponse {
 }
 
 message PlayerVariables {
-	optional .bnet.protocol.Identity identity = 1;
+	required .bnet.protocol.Identity identity = 1;
 	optional double rating = 2;
 	repeated .bnet.protocol.attribute.Attribute attribute = 3;
 }
@@ -30,12 +30,12 @@ message ClientRequest {
 }
 
 message GameAccountOfflineNotification {
-	optional .bnet.protocol.EntityId game_account_id = 1;
+	required .bnet.protocol.EntityId game_account_id = 1;
 	optional .bnet.protocol.ProcessId host = 2;
 }
 
 message GameAccountOnlineNotification {
-	optional .bnet.protocol.EntityId game_account_id = 1;
+	required .bnet.protocol.EntityId game_account_id = 1;
 	optional .bnet.protocol.ProcessId host = 2;
 }
 
@@ -45,7 +45,7 @@ message GetPlayerVariablesRequest {
 }
 
 message PresenceChannelCreatedRequest {
-	optional .bnet.protocol.EntityId id = 1;
+	required .bnet.protocol.EntityId id = 1;
 	optional .bnet.protocol.EntityId game_account_id = 3;
 	optional .bnet.protocol.EntityId bnet_account_id = 4;
 	optional .bnet.protocol.ProcessId host = 5;
@@ -53,7 +53,7 @@ message PresenceChannelCreatedRequest {
 
 message ServerRequest {
 	repeated .bnet.protocol.attribute.Attribute attribute = 1;
-	optional fixed32 program = 2;
+	required fixed32 program = 2;
 	optional .bnet.protocol.ProcessId host = 3;
 }
 

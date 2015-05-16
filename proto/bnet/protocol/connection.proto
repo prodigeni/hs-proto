@@ -8,8 +8,8 @@ message BindResponse {
 }
 
 message BoundService {
-	optional fixed32 hash = 1;
-	optional uint32 id = 2;
+	required fixed32 hash = 1;
+	required uint32 id = 2;
 }
 
 message BindRequest {
@@ -18,17 +18,17 @@ message BindRequest {
 }
 
 message DisconnectNotification {
-	optional uint32 error_code = 1;
+	required uint32 error_code = 1;
 	optional string reason = 2;
 }
 
 message DisconnectRequest {
-	optional uint32 error_code = 1;
+	required uint32 error_code = 1;
 }
 
 message EchoRequest {
 	optional fixed64 time = 1;
-	optional bool network_only = 2;
+	optional bool network_only = 2 [default = false];
 	optional bytes payload = 3;
 }
 
@@ -50,7 +50,7 @@ message ConnectRequest {
 }
 
 message ConnectResponse {
-	optional .bnet.protocol.ProcessId server_id = 1;
+	required .bnet.protocol.ProcessId server_id = 1;
 	optional .bnet.protocol.ProcessId client_id = 2;
 	optional uint32 bind_result = 3;
 	optional .bnet.protocol.connection.BindResponse bind_response = 4;

@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='bnet/protocol/challenge.proto',
   package='bnet.protocol.challenge',
   syntax='proto2',
-  serialized_pb=_b('\n\x1d\x62net/protocol/challenge.proto\x12\x17\x62net.protocol.challenge\x1a\x1d\x62net/protocol/attribute.proto\x1a\x15\x62net/protocol_0.proto\"H\n\tChallenge\x12\x0c\n\x04type\x18\x01 \x01(\x07\x12\x0c\n\x04info\x18\x02 \x01(\t\x12\x0e\n\x06\x61nswer\x18\x03 \x01(\t\x12\x0f\n\x07retries\x18\x04 \x01(\r\"D\n\x18\x43hallengeAnsweredRequest\x12\x0e\n\x06\x61nswer\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\x12\n\n\x02id\x18\x03 \x01(\r\"U\n\x19\x43hallengeAnsweredResponse\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x12\x10\n\x08\x64o_retry\x18\x02 \x01(\x08\x12\x18\n\x10record_not_found\x18\x03 \x01(\x08\"\'\n\x19\x43hallengeCancelledRequest\x12\n\n\x02id\x18\x01 \x01(\r\"X\n\x18\x43hallengeExternalRequest\x12\x15\n\rrequest_token\x18\x01 \x01(\t\x12\x14\n\x0cpayload_type\x18\x02 \x01(\t\x12\x0f\n\x07payload\x18\x03 \x01(\x0c\"F\n\x17\x43hallengeExternalResult\x12\x15\n\rrequest_token\x18\x01 \x01(\t\x12\x14\n\x06passed\x18\x02 \x01(\x08:\x04true\"W\n\x16\x43hallengePickedRequest\x12\x11\n\tchallenge\x18\x01 \x01(\x07\x12\n\n\x02id\x18\x02 \x01(\r\x12\x1e\n\x16new_challenge_protocol\x18\x03 \x01(\x08\"\'\n\x17\x43hallengePickedResponse\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\"T\n\x16\x43hallengeResultRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\x07\x12\x10\n\x08\x65rror_id\x18\x03 \x01(\r\x12\x0e\n\x06\x61nswer\x18\x04 \x01(\x0c\")\n\x1bSendChallengeToUserResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\xe7\x01\n\x14\x43hallengeUserRequest\x12\x36\n\nchallenges\x18\x01 \x03(\x0b\x32\".bnet.protocol.challenge.Challenge\x12\x0f\n\x07\x63ontext\x18\x02 \x01(\x07\x12\n\n\x02id\x18\x03 \x01(\r\x12\x10\n\x08\x64\x65\x61\x64line\x18\x04 \x01(\x04\x12\x36\n\nattributes\x18\x05 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x30\n\x0fgame_account_id\x18\x06 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\x8b\x02\n\x1aSendChallengeToUserRequest\x12)\n\x07peer_id\x18\x01 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\x12\x30\n\x0fgame_account_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x36\n\nchallenges\x18\x03 \x03(\x0b\x32\".bnet.protocol.challenge.Challenge\x12\x0f\n\x07\x63ontext\x18\x04 \x01(\x07\x12\x0f\n\x07timeout\x18\x05 \x01(\x04\x12\x36\n\nattributes\x18\x06 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute')
+  serialized_pb=_b('\n\x1d\x62net/protocol/challenge.proto\x12\x17\x62net.protocol.challenge\x1a\x1d\x62net/protocol/attribute.proto\x1a\x15\x62net/protocol_0.proto\"H\n\tChallenge\x12\x0c\n\x04type\x18\x01 \x02(\x07\x12\x0c\n\x04info\x18\x02 \x01(\t\x12\x0e\n\x06\x61nswer\x18\x03 \x01(\t\x12\x0f\n\x07retries\x18\x04 \x01(\r\"D\n\x18\x43hallengeAnsweredRequest\x12\x0e\n\x06\x61nswer\x18\x01 \x02(\t\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\x12\n\n\x02id\x18\x03 \x01(\r\"U\n\x19\x43hallengeAnsweredResponse\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x12\x10\n\x08\x64o_retry\x18\x02 \x01(\x08\x12\x18\n\x10record_not_found\x18\x03 \x01(\x08\"\'\n\x19\x43hallengeCancelledRequest\x12\n\n\x02id\x18\x01 \x01(\r\"X\n\x18\x43hallengeExternalRequest\x12\x15\n\rrequest_token\x18\x01 \x01(\t\x12\x14\n\x0cpayload_type\x18\x02 \x01(\t\x12\x0f\n\x07payload\x18\x03 \x01(\x0c\"F\n\x17\x43hallengeExternalResult\x12\x15\n\rrequest_token\x18\x01 \x01(\t\x12\x14\n\x06passed\x18\x02 \x01(\x08:\x04true\"^\n\x16\x43hallengePickedRequest\x12\x11\n\tchallenge\x18\x01 \x02(\x07\x12\n\n\x02id\x18\x02 \x01(\r\x12%\n\x16new_challenge_protocol\x18\x03 \x01(\x08:\x05\x66\x61lse\"\'\n\x17\x43hallengePickedResponse\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\"T\n\x16\x43hallengeResultRequest\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\x07\x12\x10\n\x08\x65rror_id\x18\x03 \x01(\r\x12\x0e\n\x06\x61nswer\x18\x04 \x01(\x0c\")\n\x1bSendChallengeToUserResponse\x12\n\n\x02id\x18\x01 \x01(\r\"\xe7\x01\n\x14\x43hallengeUserRequest\x12\x36\n\nchallenges\x18\x01 \x03(\x0b\x32\".bnet.protocol.challenge.Challenge\x12\x0f\n\x07\x63ontext\x18\x02 \x02(\x07\x12\n\n\x02id\x18\x03 \x01(\r\x12\x10\n\x08\x64\x65\x61\x64line\x18\x04 \x01(\x04\x12\x36\n\nattributes\x18\x05 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x30\n\x0fgame_account_id\x18\x06 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\x8b\x02\n\x1aSendChallengeToUserRequest\x12)\n\x07peer_id\x18\x01 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\x12\x30\n\x0fgame_account_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x36\n\nchallenges\x18\x03 \x03(\x0b\x32\".bnet.protocol.challenge.Challenge\x12\x0f\n\x07\x63ontext\x18\x04 \x02(\x07\x12\x0f\n\x07timeout\x18\x05 \x01(\x04\x12\x36\n\nattributes\x18\x06 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute')
   ,
   dependencies=[bnet_dot_protocol_dot_attribute__pb2.DESCRIPTOR,bnet_dot_protocol__0__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -38,7 +38,7 @@ _CHALLENGE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='type', full_name='bnet.protocol.challenge.Challenge.type', index=0,
-      number=1, type=7, cpp_type=3, label=1,
+      number=1, type=7, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -90,7 +90,7 @@ _CHALLENGEANSWEREDREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='answer', full_name='bnet.protocol.challenge.ChallengeAnsweredRequest.answer', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -294,7 +294,7 @@ _CHALLENGEPICKEDREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='challenge', full_name='bnet.protocol.challenge.ChallengePickedRequest.challenge', index=0,
-      number=1, type=7, cpp_type=3, label=1,
+      number=1, type=7, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -309,7 +309,7 @@ _CHALLENGEPICKEDREQUEST = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='new_challenge_protocol', full_name='bnet.protocol.challenge.ChallengePickedRequest.new_challenge_protocol', index=2,
       number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -326,7 +326,7 @@ _CHALLENGEPICKEDREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=546,
-  serialized_end=633,
+  serialized_end=640,
 )
 
 
@@ -356,8 +356,8 @@ _CHALLENGEPICKEDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=635,
-  serialized_end=674,
+  serialized_start=642,
+  serialized_end=681,
 )
 
 
@@ -408,8 +408,8 @@ _CHALLENGERESULTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=676,
-  serialized_end=760,
+  serialized_start=683,
+  serialized_end=767,
 )
 
 
@@ -439,8 +439,8 @@ _SENDCHALLENGETOUSERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=762,
-  serialized_end=803,
+  serialized_start=769,
+  serialized_end=810,
 )
 
 
@@ -460,7 +460,7 @@ _CHALLENGEUSERREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='context', full_name='bnet.protocol.challenge.ChallengeUserRequest.context', index=1,
-      number=2, type=7, cpp_type=3, label=1,
+      number=2, type=7, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -505,8 +505,8 @@ _CHALLENGEUSERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=806,
-  serialized_end=1037,
+  serialized_start=813,
+  serialized_end=1044,
 )
 
 
@@ -540,7 +540,7 @@ _SENDCHALLENGETOUSERREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='context', full_name='bnet.protocol.challenge.SendChallengeToUserRequest.context', index=3,
-      number=4, type=7, cpp_type=3, label=1,
+      number=4, type=7, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -571,8 +571,8 @@ _SENDCHALLENGETOUSERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1040,
-  serialized_end=1307,
+  serialized_start=1047,
+  serialized_end=1314,
 )
 
 _CHALLENGEUSERREQUEST.fields_by_name['challenges'].message_type = _CHALLENGE

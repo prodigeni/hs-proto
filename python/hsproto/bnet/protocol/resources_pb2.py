@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='bnet/protocol/resources.proto',
   package='bnet.protocol.resources',
   syntax='proto2',
-  serialized_pb=_b('\n\x1d\x62net/protocol/resources.proto\x12\x17\x62net.protocol.resources\"Y\n\x14\x43ontentHandleRequest\x12\x12\n\nprogram_id\x18\x01 \x01(\x07\x12\x11\n\tstream_id\x18\x02 \x01(\x07\x12\x1a\n\x06locale\x18\x03 \x01(\x07:\n1701729619')
+  serialized_pb=_b('\n\x1d\x62net/protocol/resources.proto\x12\x17\x62net.protocol.resources\"Y\n\x14\x43ontentHandleRequest\x12\x12\n\nprogram_id\x18\x01 \x02(\x07\x12\x11\n\tstream_id\x18\x02 \x02(\x07\x12\x1a\n\x06locale\x18\x03 \x01(\x07:\n1701729619')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -35,14 +35,14 @@ _CONTENTHANDLEREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='program_id', full_name='bnet.protocol.resources.ContentHandleRequest.program_id', index=0,
-      number=1, type=7, cpp_type=3, label=1,
+      number=1, type=7, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='stream_id', full_name='bnet.protocol.resources.ContentHandleRequest.stream_id', index=1,
-      number=2, type=7, cpp_type=3, label=1,
+      number=2, type=7, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,

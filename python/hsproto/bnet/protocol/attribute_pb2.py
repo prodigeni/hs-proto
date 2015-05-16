@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='bnet/protocol/attribute.proto',
   package='bnet.protocol.attribute',
   syntax='proto2',
-  serialized_pb=_b('\n\x1d\x62net/protocol/attribute.proto\x12\x17\x62net.protocol.attribute\x1a\x15\x62net/protocol_0.proto\"\xe1\x01\n\x07Variant\x12\x12\n\nbool_value\x18\x02 \x01(\x08\x12\x11\n\tint_value\x18\x03 \x01(\x03\x12\x13\n\x0b\x66loat_value\x18\x04 \x01(\x01\x12\x14\n\x0cstring_value\x18\x05 \x01(\t\x12\x12\n\nblob_value\x18\x06 \x01(\x0c\x12\x15\n\rmessage_value\x18\x07 \x01(\x0c\x12\x14\n\x0c\x66ourcc_value\x18\x08 \x01(\t\x12\x12\n\nuint_value\x18\t \x01(\x04\x12/\n\x0e\x65ntityid_value\x18\n \x01(\x0b\x32\x17.bnet.protocol.EntityId\"J\n\tAttribute\x12\x0c\n\x04name\x18\x01 \x01(\t\x12/\n\x05value\x18\x02 \x01(\x0b\x32 .bnet.protocol.attribute.Variant\"\xe0\x01\n\x0f\x41ttributeFilter\x12>\n\x02op\x18\x01 \x01(\x0e\x32\x32.bnet.protocol.attribute.AttributeFilter.Operation\x12\x35\n\tattribute\x18\x02 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\"V\n\tOperation\x12\x0e\n\nMATCH_NONE\x10\x00\x12\r\n\tMATCH_ANY\x10\x01\x12\r\n\tMATCH_ALL\x10\x02\x12\x1b\n\x17MATCH_ALL_MOST_SPECIFIC\x10\x03')
+  serialized_pb=_b('\n\x1d\x62net/protocol/attribute.proto\x12\x17\x62net.protocol.attribute\x1a\x15\x62net/protocol_0.proto\"\xe1\x01\n\x07Variant\x12\x12\n\nbool_value\x18\x02 \x01(\x08\x12\x11\n\tint_value\x18\x03 \x01(\x03\x12\x13\n\x0b\x66loat_value\x18\x04 \x01(\x01\x12\x14\n\x0cstring_value\x18\x05 \x01(\t\x12\x12\n\nblob_value\x18\x06 \x01(\x0c\x12\x15\n\rmessage_value\x18\x07 \x01(\x0c\x12\x14\n\x0c\x66ourcc_value\x18\x08 \x01(\t\x12\x12\n\nuint_value\x18\t \x01(\x04\x12/\n\x0e\x65ntityid_value\x18\n \x01(\x0b\x32\x17.bnet.protocol.EntityId\"J\n\tAttribute\x12\x0c\n\x04name\x18\x01 \x02(\t\x12/\n\x05value\x18\x02 \x02(\x0b\x32 .bnet.protocol.attribute.Variant\"\xe0\x01\n\x0f\x41ttributeFilter\x12>\n\x02op\x18\x01 \x02(\x0e\x32\x32.bnet.protocol.attribute.AttributeFilter.Operation\x12\x35\n\tattribute\x18\x02 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\"V\n\tOperation\x12\x0e\n\nMATCH_NONE\x10\x00\x12\r\n\tMATCH_ANY\x10\x01\x12\r\n\tMATCH_ALL\x10\x02\x12\x1b\n\x17MATCH_ALL_MOST_SPECIFIC\x10\x03')
   ,
   dependencies=[bnet_dot_protocol__0__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -154,14 +154,14 @@ _ATTRIBUTE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='name', full_name='bnet.protocol.attribute.Attribute.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='value', full_name='bnet.protocol.attribute.Attribute.value', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -192,7 +192,7 @@ _ATTRIBUTEFILTER = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='op', full_name='bnet.protocol.attribute.AttributeFilter.op', index=0,
-      number=1, type=14, cpp_type=8, label=1,
+      number=1, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,

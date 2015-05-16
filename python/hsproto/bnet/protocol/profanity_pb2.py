@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='bnet/protocol/profanity.proto',
   package='bnet.protocol.profanity',
   syntax='proto2',
-  serialized_pb=_b('\n\x1d\x62net/protocol/profanity.proto\x12\x17\x62net.protocol.profanity\")\n\nWordFilter\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\r\n\x05regex\x18\x02 \x01(\t\"C\n\x0bWordFilters\x12\x34\n\x07\x66ilters\x18\x01 \x03(\x0b\x32#.bnet.protocol.profanity.WordFilter')
+  serialized_pb=_b('\n\x1d\x62net/protocol/profanity.proto\x12\x17\x62net.protocol.profanity\")\n\nWordFilter\x12\x0c\n\x04type\x18\x01 \x02(\t\x12\r\n\x05regex\x18\x02 \x02(\t\"C\n\x0bWordFilters\x12\x34\n\x07\x66ilters\x18\x01 \x03(\x0b\x32#.bnet.protocol.profanity.WordFilter')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -35,14 +35,14 @@ _WORDFILTER = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='type', full_name='bnet.protocol.profanity.WordFilter.type', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='regex', full_name='bnet.protocol.profanity.WordFilter.regex', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,

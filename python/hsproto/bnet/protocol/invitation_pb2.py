@@ -14,15 +14,17 @@ _sym_db = _symbol_database.Default()
 
 
 from .. import protocol_0_pb2 as bnet_dot_protocol__0__pb2
+from . import channel_invitation_0_pb2 as bnet_dot_protocol_dot_channel__invitation__0__pb2
+from . import friends_pb2 as bnet_dot_protocol_dot_friends__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='bnet/protocol/invitation.proto',
   package='bnet.protocol.invitation',
   syntax='proto2',
-  serialized_pb=_b('\n\x1e\x62net/protocol/invitation.proto\x12\x18\x62net.protocol.invitation\x1a\x15\x62net/protocol_0.proto\"\xe7\x01\n\x0eGenericRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12*\n\ttarget_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x15\n\rinvitation_id\x18\x03 \x01(\x06\x12\x14\n\x0cinvitee_name\x18\x04 \x01(\t\x12\x14\n\x0cinviter_name\x18\x05 \x01(\t\x12\x15\n\rprevious_role\x18\x06 \x03(\r\x12\x14\n\x0c\x64\x65sired_role\x18\x07 \x03(\r\x12\x0e\n\x06reason\x18\x08 \x01(\r\"\xfd\x01\n\nInvitation\x12\n\n\x02id\x18\x01 \x01(\x06\x12\x31\n\x10inviter_identity\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.Identity\x12\x31\n\x10invitee_identity\x18\x03 \x01(\x0b\x32\x17.bnet.protocol.Identity\x12\x14\n\x0cinviter_name\x18\x04 \x01(\t\x12\x14\n\x0cinvitee_name\x18\x05 \x01(\t\x12\x1a\n\x12invitation_message\x18\x06 \x01(\t\x12\x15\n\rcreation_time\x18\x07 \x01(\x04\x12\x17\n\x0f\x65xpiration_time\x18\x08 \x01(\x04*\x05\x08\x64\x10\x91N\"N\n\x10InvitationParams\x12\x1a\n\x12invitation_message\x18\x01 \x01(\t\x12\x17\n\x0f\x65xpiration_time\x18\x02 \x01(\x04*\x05\x08\x64\x10\x91N\"g\n\x10InvitationTarget\x12)\n\x08identity\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.Identity\x12\r\n\x05\x65mail\x18\x02 \x01(\t\x12\x12\n\nbattle_tag\x18\x03 \x01(\t*\x05\x08\x64\x10\x91N\"\x9c\x02\n\x15SendInvitationRequest\x12/\n\x0e\x61gent_identity\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.Identity\x12*\n\ttarget_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12:\n\x06params\x18\x03 \x01(\x0b\x32*.bnet.protocol.invitation.InvitationParams\x12.\n\nagent_info\x18\x04 \x01(\x0b\x32\x1a.bnet.protocol.AccountInfo\x12:\n\x06target\x18\x05 \x01(\x0b\x32*.bnet.protocol.invitation.InvitationTarget\"R\n\x16SendInvitationResponse\x12\x38\n\ninvitation\x18\x02 \x01(\x0b\x32$.bnet.protocol.invitation.Invitation\"\xfe\x01\n\nSuggestion\x12+\n\nchannel_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12-\n\x0csuggester_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12-\n\x0csuggestee_id\x18\x03 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x16\n\x0esuggester_name\x18\x04 \x01(\t\x12\x16\n\x0esuggestee_name\x18\x05 \x01(\t\x12\x35\n\x14suggester_account_id\x18\x06 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\x9d\x01\n\x17UpdateInvitationRequest\x12/\n\x0e\x61gent_identity\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.Identity\x12\x15\n\rinvitation_id\x18\x02 \x01(\x06\x12:\n\x06params\x18\x03 \x01(\x0b\x32*.bnet.protocol.invitation.InvitationParams')
+  serialized_pb=_b('\n\x1e\x62net/protocol/invitation.proto\x12\x18\x62net.protocol.invitation\x1a\x15\x62net/protocol_0.proto\x1a(bnet/protocol/channel_invitation_0.proto\x1a\x1b\x62net/protocol/friends.proto\"\xe7\x01\n\x0eGenericRequest\x12)\n\x08\x61gent_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12*\n\ttarget_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x15\n\rinvitation_id\x18\x03 \x02(\x06\x12\x14\n\x0cinvitee_name\x18\x04 \x01(\t\x12\x14\n\x0cinviter_name\x18\x05 \x01(\t\x12\x15\n\rprevious_role\x18\x06 \x03(\r\x12\x14\n\x0c\x64\x65sired_role\x18\x07 \x03(\r\x12\x0e\n\x06reason\x18\x08 \x01(\r\"\xe3\x01\n\x10InvitationParams\x12\x1a\n\x12invitation_message\x18\x01 \x01(\t\x12\x1a\n\x0f\x65xpiration_time\x18\x02 \x01(\x04:\x01\x30\x12Q\n\x0e\x63hannel_params\x18y \x01(\x0b\x32\x39.bnet.protocol.channel_invitation.ChannelInvitationParams\x12\x44\n\rfriend_params\x18w \x01(\x0b\x32-.bnet.protocol.friends.FriendInvitationParams\"`\n\x10InvitationTarget\x12)\n\x08identity\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.Identity\x12\r\n\x05\x65mail\x18\x02 \x01(\t\x12\x12\n\nbattle_tag\x18\x03 \x01(\t\"\x9c\x02\n\x15SendInvitationRequest\x12/\n\x0e\x61gent_identity\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.Identity\x12*\n\ttarget_id\x18\x02 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12:\n\x06params\x18\x03 \x02(\x0b\x32*.bnet.protocol.invitation.InvitationParams\x12.\n\nagent_info\x18\x04 \x01(\x0b\x32\x1a.bnet.protocol.AccountInfo\x12:\n\x06target\x18\x05 \x01(\x0b\x32*.bnet.protocol.invitation.InvitationTarget\"\xfe\x01\n\nSuggestion\x12+\n\nchannel_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12-\n\x0csuggester_id\x18\x02 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12-\n\x0csuggestee_id\x18\x03 \x02(\x0b\x32\x17.bnet.protocol.EntityId\x12\x16\n\x0esuggester_name\x18\x04 \x01(\t\x12\x16\n\x0esuggestee_name\x18\x05 \x01(\t\x12\x35\n\x14suggester_account_id\x18\x06 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\x9d\x01\n\x17UpdateInvitationRequest\x12/\n\x0e\x61gent_identity\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.Identity\x12\x15\n\rinvitation_id\x18\x02 \x02(\x06\x12:\n\x06params\x18\x03 \x02(\x0b\x32*.bnet.protocol.invitation.InvitationParams')
   ,
-  dependencies=[bnet_dot_protocol__0__pb2.DESCRIPTOR,])
+  dependencies=[bnet_dot_protocol__0__pb2.DESCRIPTOR,bnet_dot_protocol_dot_channel__invitation__0__pb2.DESCRIPTOR,bnet_dot_protocol_dot_friends__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -51,7 +53,7 @@ _GENERICREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='invitation_id', full_name='bnet.protocol.invitation.GenericRequest.invitation_id', index=2,
-      number=3, type=6, cpp_type=4, label=1,
+      number=3, type=6, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -103,88 +105,8 @@ _GENERICREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=84,
-  serialized_end=315,
-)
-
-
-_INVITATION = _descriptor.Descriptor(
-  name='Invitation',
-  full_name='bnet.protocol.invitation.Invitation',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='id', full_name='bnet.protocol.invitation.Invitation.id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='inviter_identity', full_name='bnet.protocol.invitation.Invitation.inviter_identity', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='invitee_identity', full_name='bnet.protocol.invitation.Invitation.invitee_identity', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='inviter_name', full_name='bnet.protocol.invitation.Invitation.inviter_name', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='invitee_name', full_name='bnet.protocol.invitation.Invitation.invitee_name', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='invitation_message', full_name='bnet.protocol.invitation.Invitation.invitation_message', index=5,
-      number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='creation_time', full_name='bnet.protocol.invitation.Invitation.creation_time', index=6,
-      number=7, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='expiration_time', full_name='bnet.protocol.invitation.Invitation.expiration_time', index=7,
-      number=8, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=True,
-  syntax='proto2',
-  extension_ranges=[(100, 10001), ],
-  oneofs=[
-  ],
-  serialized_start=318,
-  serialized_end=571,
+  serialized_start=155,
+  serialized_end=386,
 )
 
 
@@ -205,7 +127,21 @@ _INVITATIONPARAMS = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='expiration_time', full_name='bnet.protocol.invitation.InvitationParams.expiration_time', index=1,
       number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='channel_params', full_name='bnet.protocol.invitation.InvitationParams.channel_params', index=2,
+      number=121, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='friend_params', full_name='bnet.protocol.invitation.InvitationParams.friend_params', index=3,
+      number=119, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -216,13 +152,13 @@ _INVITATIONPARAMS = _descriptor.Descriptor(
   enum_types=[
   ],
   options=None,
-  is_extendable=True,
+  is_extendable=False,
   syntax='proto2',
-  extension_ranges=[(100, 10001), ],
+  extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=573,
-  serialized_end=651,
+  serialized_start=389,
+  serialized_end=616,
 )
 
 
@@ -261,13 +197,13 @@ _INVITATIONTARGET = _descriptor.Descriptor(
   enum_types=[
   ],
   options=None,
-  is_extendable=True,
+  is_extendable=False,
   syntax='proto2',
-  extension_ranges=[(100, 10001), ],
+  extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=653,
-  serialized_end=756,
+  serialized_start=618,
+  serialized_end=714,
 )
 
 
@@ -287,14 +223,14 @@ _SENDINVITATIONREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='target_id', full_name='bnet.protocol.invitation.SendInvitationRequest.target_id', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='params', full_name='bnet.protocol.invitation.SendInvitationRequest.params', index=2,
-      number=3, type=11, cpp_type=10, label=1,
+      number=3, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -325,39 +261,8 @@ _SENDINVITATIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=759,
-  serialized_end=1043,
-)
-
-
-_SENDINVITATIONRESPONSE = _descriptor.Descriptor(
-  name='SendInvitationResponse',
-  full_name='bnet.protocol.invitation.SendInvitationResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='invitation', full_name='bnet.protocol.invitation.SendInvitationResponse.invitation', index=0,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1045,
-  serialized_end=1127,
+  serialized_start=717,
+  serialized_end=1001,
 )
 
 
@@ -377,14 +282,14 @@ _SUGGESTION = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='suggester_id', full_name='bnet.protocol.invitation.Suggestion.suggester_id', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='suggestee_id', full_name='bnet.protocol.invitation.Suggestion.suggestee_id', index=2,
-      number=3, type=11, cpp_type=10, label=1,
+      number=3, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -422,8 +327,8 @@ _SUGGESTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1130,
-  serialized_end=1384,
+  serialized_start=1004,
+  serialized_end=1258,
 )
 
 
@@ -443,14 +348,14 @@ _UPDATEINVITATIONREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='invitation_id', full_name='bnet.protocol.invitation.UpdateInvitationRequest.invitation_id', index=1,
-      number=2, type=6, cpp_type=4, label=1,
+      number=2, type=6, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='params', full_name='bnet.protocol.invitation.UpdateInvitationRequest.params', index=2,
-      number=3, type=11, cpp_type=10, label=1,
+      number=3, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -467,21 +372,20 @@ _UPDATEINVITATIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1387,
-  serialized_end=1544,
+  serialized_start=1261,
+  serialized_end=1418,
 )
 
 _GENERICREQUEST.fields_by_name['agent_id'].message_type = bnet_dot_protocol__0__pb2._ENTITYID
 _GENERICREQUEST.fields_by_name['target_id'].message_type = bnet_dot_protocol__0__pb2._ENTITYID
-_INVITATION.fields_by_name['inviter_identity'].message_type = bnet_dot_protocol__0__pb2._IDENTITY
-_INVITATION.fields_by_name['invitee_identity'].message_type = bnet_dot_protocol__0__pb2._IDENTITY
+_INVITATIONPARAMS.fields_by_name['channel_params'].message_type = bnet_dot_protocol_dot_channel__invitation__0__pb2._CHANNELINVITATIONPARAMS
+_INVITATIONPARAMS.fields_by_name['friend_params'].message_type = bnet_dot_protocol_dot_friends__pb2._FRIENDINVITATIONPARAMS
 _INVITATIONTARGET.fields_by_name['identity'].message_type = bnet_dot_protocol__0__pb2._IDENTITY
 _SENDINVITATIONREQUEST.fields_by_name['agent_identity'].message_type = bnet_dot_protocol__0__pb2._IDENTITY
 _SENDINVITATIONREQUEST.fields_by_name['target_id'].message_type = bnet_dot_protocol__0__pb2._ENTITYID
 _SENDINVITATIONREQUEST.fields_by_name['params'].message_type = _INVITATIONPARAMS
 _SENDINVITATIONREQUEST.fields_by_name['agent_info'].message_type = bnet_dot_protocol__0__pb2._ACCOUNTINFO
 _SENDINVITATIONREQUEST.fields_by_name['target'].message_type = _INVITATIONTARGET
-_SENDINVITATIONRESPONSE.fields_by_name['invitation'].message_type = _INVITATION
 _SUGGESTION.fields_by_name['channel_id'].message_type = bnet_dot_protocol__0__pb2._ENTITYID
 _SUGGESTION.fields_by_name['suggester_id'].message_type = bnet_dot_protocol__0__pb2._ENTITYID
 _SUGGESTION.fields_by_name['suggestee_id'].message_type = bnet_dot_protocol__0__pb2._ENTITYID
@@ -489,11 +393,9 @@ _SUGGESTION.fields_by_name['suggester_account_id'].message_type = bnet_dot_proto
 _UPDATEINVITATIONREQUEST.fields_by_name['agent_identity'].message_type = bnet_dot_protocol__0__pb2._IDENTITY
 _UPDATEINVITATIONREQUEST.fields_by_name['params'].message_type = _INVITATIONPARAMS
 DESCRIPTOR.message_types_by_name['GenericRequest'] = _GENERICREQUEST
-DESCRIPTOR.message_types_by_name['Invitation'] = _INVITATION
 DESCRIPTOR.message_types_by_name['InvitationParams'] = _INVITATIONPARAMS
 DESCRIPTOR.message_types_by_name['InvitationTarget'] = _INVITATIONTARGET
 DESCRIPTOR.message_types_by_name['SendInvitationRequest'] = _SENDINVITATIONREQUEST
-DESCRIPTOR.message_types_by_name['SendInvitationResponse'] = _SENDINVITATIONRESPONSE
 DESCRIPTOR.message_types_by_name['Suggestion'] = _SUGGESTION
 DESCRIPTOR.message_types_by_name['UpdateInvitationRequest'] = _UPDATEINVITATIONREQUEST
 
@@ -503,13 +405,6 @@ GenericRequest = _reflection.GeneratedProtocolMessageType('GenericRequest', (_me
   # @@protoc_insertion_point(class_scope:bnet.protocol.invitation.GenericRequest)
   ))
 _sym_db.RegisterMessage(GenericRequest)
-
-Invitation = _reflection.GeneratedProtocolMessageType('Invitation', (_message.Message,), dict(
-  DESCRIPTOR = _INVITATION,
-  __module__ = 'bnet.protocol.invitation_pb2'
-  # @@protoc_insertion_point(class_scope:bnet.protocol.invitation.Invitation)
-  ))
-_sym_db.RegisterMessage(Invitation)
 
 InvitationParams = _reflection.GeneratedProtocolMessageType('InvitationParams', (_message.Message,), dict(
   DESCRIPTOR = _INVITATIONPARAMS,
@@ -531,13 +426,6 @@ SendInvitationRequest = _reflection.GeneratedProtocolMessageType('SendInvitation
   # @@protoc_insertion_point(class_scope:bnet.protocol.invitation.SendInvitationRequest)
   ))
 _sym_db.RegisterMessage(SendInvitationRequest)
-
-SendInvitationResponse = _reflection.GeneratedProtocolMessageType('SendInvitationResponse', (_message.Message,), dict(
-  DESCRIPTOR = _SENDINVITATIONRESPONSE,
-  __module__ = 'bnet.protocol.invitation_pb2'
-  # @@protoc_insertion_point(class_scope:bnet.protocol.invitation.SendInvitationResponse)
-  ))
-_sym_db.RegisterMessage(SendInvitationResponse)
 
 Suggestion = _reflection.GeneratedProtocolMessageType('Suggestion', (_message.Message,), dict(
   DESCRIPTOR = _SUGGESTION,

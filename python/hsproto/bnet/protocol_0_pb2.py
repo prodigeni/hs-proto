@@ -3,7 +3,6 @@
 
 import sys
 _b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
-from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
@@ -20,35 +19,10 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='bnet/protocol_0.proto',
   package='bnet.protocol',
   syntax='proto2',
-  serialized_pb=_b('\n\x15\x62net/protocol_0.proto\x12\rbnet.protocol\"b\n\x0b\x41\x63\x63ountInfo\x12\x14\n\x0c\x61\x63\x63ount_paid\x18\x01 \x01(\x08\x12\x12\n\ncountry_id\x18\x02 \x01(\x07\x12\x12\n\nbattle_tag\x18\x03 \x01(\t\x12\x15\n\rmanual_review\x18\x04 \x01(\x08\"(\n\x07\x41\x64\x64ress\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\x12\x0c\n\x04port\x18\x02 \x01(\r\"O\n\rContentHandle\x12\x0e\n\x06region\x18\x01 \x01(\x07\x12\r\n\x05usage\x18\x02 \x01(\x07\x12\x0c\n\x04hash\x18\x03 \x01(\x0c\x12\x11\n\tproto_url\x18\x04 \x01(\t\"%\n\x08\x45ntityId\x12\x0c\n\x04high\x18\x01 \x01(\x06\x12\x0b\n\x03low\x18\x02 \x01(\x06\"i\n\x08Identity\x12+\n\naccount_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x30\n\x0fgame_account_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\r\n\x0bNO_RESPONSE\"\x08\n\x06NoData\"(\n\tPrivilege\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\r\")\n\tProcessId\x12\r\n\x05label\x18\x01 \x01(\r\x12\r\n\x05\x65poch\x18\x02 \x01(\r* \n\tLogOption\x12\n\n\x06HIDDEN\x10\x01\x12\x07\n\x03HEX\x10\x02')
+  serialized_pb=_b('\n\x15\x62net/protocol_0.proto\x12\rbnet.protocol\"s\n\x0b\x41\x63\x63ountInfo\x12\x1b\n\x0c\x61\x63\x63ount_paid\x18\x01 \x01(\x08:\x05\x66\x61lse\x12\x15\n\ncountry_id\x18\x02 \x01(\x07:\x01\x30\x12\x12\n\nbattle_tag\x18\x03 \x01(\t\x12\x1c\n\rmanual_review\x18\x04 \x01(\x08:\x05\x66\x61lse\"(\n\x07\x41\x64\x64ress\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x02(\t\x12\x0c\n\x04port\x18\x02 \x01(\r\"O\n\rContentHandle\x12\x0e\n\x06region\x18\x01 \x02(\x07\x12\r\n\x05usage\x18\x02 \x02(\x07\x12\x0c\n\x04hash\x18\x03 \x02(\x0c\x12\x11\n\tproto_url\x18\x04 \x01(\t\"%\n\x08\x45ntityId\x12\x0c\n\x04high\x18\x01 \x02(\x06\x12\x0b\n\x03low\x18\x02 \x02(\x06\"i\n\x08Identity\x12+\n\naccount_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x30\n\x0fgame_account_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\x08\n\x06NoData\"\x0c\n\nNORESPONSE\"\x17\n\x04Path\x12\x0f\n\x07ordinal\x18\x01 \x03(\r\"(\n\tPrivilege\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\r\n\x05value\x18\x02 \x02(\r\")\n\tProcessId\x12\r\n\x05label\x18\x01 \x02(\r\x12\r\n\x05\x65poch\x18\x02 \x02(\r')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-_LOGOPTION = _descriptor.EnumDescriptor(
-  name='LogOption',
-  full_name='bnet.protocol.LogOption',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='HIDDEN', index=0, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='HEX', index=1, number=2,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=519,
-  serialized_end=551,
-)
-_sym_db.RegisterEnumDescriptor(_LOGOPTION)
-
-LogOption = enum_type_wrapper.EnumTypeWrapper(_LOGOPTION)
-HIDDEN = 1
-HEX = 2
 
 
 
@@ -62,14 +36,14 @@ _ACCOUNTINFO = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='account_paid', full_name='bnet.protocol.AccountInfo.account_paid', index=0,
       number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='country_id', full_name='bnet.protocol.AccountInfo.country_id', index=1,
       number=2, type=7, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -83,7 +57,7 @@ _ACCOUNTINFO = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='manual_review', full_name='bnet.protocol.AccountInfo.manual_review', index=3,
       number=4, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -100,7 +74,7 @@ _ACCOUNTINFO = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=40,
-  serialized_end=138,
+  serialized_end=155,
 )
 
 
@@ -113,7 +87,7 @@ _ADDRESS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='address', full_name='bnet.protocol.Address.address', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -137,8 +111,8 @@ _ADDRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=140,
-  serialized_end=180,
+  serialized_start=157,
+  serialized_end=197,
 )
 
 
@@ -151,21 +125,21 @@ _CONTENTHANDLE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='region', full_name='bnet.protocol.ContentHandle.region', index=0,
-      number=1, type=7, cpp_type=3, label=1,
+      number=1, type=7, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='usage', full_name='bnet.protocol.ContentHandle.usage', index=1,
-      number=2, type=7, cpp_type=3, label=1,
+      number=2, type=7, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='hash', full_name='bnet.protocol.ContentHandle.hash', index=2,
-      number=3, type=12, cpp_type=9, label=1,
+      number=3, type=12, cpp_type=9, label=2,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -189,8 +163,8 @@ _CONTENTHANDLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=182,
-  serialized_end=261,
+  serialized_start=199,
+  serialized_end=278,
 )
 
 
@@ -203,14 +177,14 @@ _ENTITYID = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='high', full_name='bnet.protocol.EntityId.high', index=0,
-      number=1, type=6, cpp_type=4, label=1,
+      number=1, type=6, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='low', full_name='bnet.protocol.EntityId.low', index=1,
-      number=2, type=6, cpp_type=4, label=1,
+      number=2, type=6, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -227,8 +201,8 @@ _ENTITYID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=263,
-  serialized_end=300,
+  serialized_start=280,
+  serialized_end=317,
 )
 
 
@@ -265,32 +239,8 @@ _IDENTITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=302,
-  serialized_end=407,
-)
-
-
-_NO_RESPONSE = _descriptor.Descriptor(
-  name='NO_RESPONSE',
-  full_name='bnet.protocol.NO_RESPONSE',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=409,
-  serialized_end=422,
+  serialized_start=319,
+  serialized_end=424,
 )
 
 
@@ -313,8 +263,63 @@ _NODATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=424,
-  serialized_end=432,
+  serialized_start=426,
+  serialized_end=434,
+)
+
+
+_NORESPONSE = _descriptor.Descriptor(
+  name='NORESPONSE',
+  full_name='bnet.protocol.NORESPONSE',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=436,
+  serialized_end=448,
+)
+
+
+_PATH = _descriptor.Descriptor(
+  name='Path',
+  full_name='bnet.protocol.Path',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ordinal', full_name='bnet.protocol.Path.ordinal', index=0,
+      number=1, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=450,
+  serialized_end=473,
 )
 
 
@@ -327,14 +332,14 @@ _PRIVILEGE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='name', full_name='bnet.protocol.Privilege.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='value', full_name='bnet.protocol.Privilege.value', index=1,
-      number=2, type=13, cpp_type=3, label=1,
+      number=2, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -351,8 +356,8 @@ _PRIVILEGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=434,
-  serialized_end=474,
+  serialized_start=475,
+  serialized_end=515,
 )
 
 
@@ -365,14 +370,14 @@ _PROCESSID = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='label', full_name='bnet.protocol.ProcessId.label', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='epoch', full_name='bnet.protocol.ProcessId.epoch', index=1,
-      number=2, type=13, cpp_type=3, label=1,
+      number=2, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -389,8 +394,8 @@ _PROCESSID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=476,
-  serialized_end=517,
+  serialized_start=517,
+  serialized_end=558,
 )
 
 _IDENTITY.fields_by_name['account_id'].message_type = _ENTITYID
@@ -400,11 +405,11 @@ DESCRIPTOR.message_types_by_name['Address'] = _ADDRESS
 DESCRIPTOR.message_types_by_name['ContentHandle'] = _CONTENTHANDLE
 DESCRIPTOR.message_types_by_name['EntityId'] = _ENTITYID
 DESCRIPTOR.message_types_by_name['Identity'] = _IDENTITY
-DESCRIPTOR.message_types_by_name['NO_RESPONSE'] = _NO_RESPONSE
 DESCRIPTOR.message_types_by_name['NoData'] = _NODATA
+DESCRIPTOR.message_types_by_name['NORESPONSE'] = _NORESPONSE
+DESCRIPTOR.message_types_by_name['Path'] = _PATH
 DESCRIPTOR.message_types_by_name['Privilege'] = _PRIVILEGE
 DESCRIPTOR.message_types_by_name['ProcessId'] = _PROCESSID
-DESCRIPTOR.enum_types_by_name['LogOption'] = _LOGOPTION
 
 AccountInfo = _reflection.GeneratedProtocolMessageType('AccountInfo', (_message.Message,), dict(
   DESCRIPTOR = _ACCOUNTINFO,
@@ -441,19 +446,26 @@ Identity = _reflection.GeneratedProtocolMessageType('Identity', (_message.Messag
   ))
 _sym_db.RegisterMessage(Identity)
 
-NO_RESPONSE = _reflection.GeneratedProtocolMessageType('NO_RESPONSE', (_message.Message,), dict(
-  DESCRIPTOR = _NO_RESPONSE,
-  __module__ = 'bnet.protocol_0_pb2'
-  # @@protoc_insertion_point(class_scope:bnet.protocol.NO_RESPONSE)
-  ))
-_sym_db.RegisterMessage(NO_RESPONSE)
-
 NoData = _reflection.GeneratedProtocolMessageType('NoData', (_message.Message,), dict(
   DESCRIPTOR = _NODATA,
   __module__ = 'bnet.protocol_0_pb2'
   # @@protoc_insertion_point(class_scope:bnet.protocol.NoData)
   ))
 _sym_db.RegisterMessage(NoData)
+
+NORESPONSE = _reflection.GeneratedProtocolMessageType('NORESPONSE', (_message.Message,), dict(
+  DESCRIPTOR = _NORESPONSE,
+  __module__ = 'bnet.protocol_0_pb2'
+  # @@protoc_insertion_point(class_scope:bnet.protocol.NORESPONSE)
+  ))
+_sym_db.RegisterMessage(NORESPONSE)
+
+Path = _reflection.GeneratedProtocolMessageType('Path', (_message.Message,), dict(
+  DESCRIPTOR = _PATH,
+  __module__ = 'bnet.protocol_0_pb2'
+  # @@protoc_insertion_point(class_scope:bnet.protocol.Path)
+  ))
+_sym_db.RegisterMessage(Path)
 
 Privilege = _reflection.GeneratedProtocolMessageType('Privilege', (_message.Message,), dict(
   DESCRIPTOR = _PRIVILEGE,

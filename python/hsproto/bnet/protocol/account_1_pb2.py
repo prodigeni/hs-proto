@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='bnet/protocol/account_1.proto',
   package='bnet.protocol.account',
   syntax='proto2',
-  serialized_pb=_b('\n\x1d\x62net/protocol/account_1.proto\x12\x15\x62net.protocol.account\x1a\x1d\x62net/protocol/account_0.proto\x1a\x15\x62net/protocol_0.proto\"\x90\x01\n\x10\x41\x63\x63ountLevelInfo\x12\x37\n\x08licenses\x18\x03 \x03(\x0b\x32%.bnet.protocol.account.AccountLicense\x12\x18\n\x10\x64\x65\x66\x61ult_currency\x18\x04 \x01(\x07\x12\x0f\n\x07\x63ountry\x18\x05 \x01(\t\x12\x18\n\x10preferred_region\x18\x06 \x01(\r\"1\n\x14\x41\x63\x63ountServiceRegion\x12\n\n\x02id\x18\x01 \x01(\r\x12\r\n\x05shard\x18\x02 \x01(\t\"S\n\x14\x41\x63\x63ountServiceConfig\x12;\n\x06region\x18\x01 \x03(\x0b\x32+.bnet.protocol.account.AccountServiceRegion\"O\n\x04\x43\x41IS\x12\x16\n\x0eplayed_minutes\x18\x01 \x01(\r\x12\x16\n\x0erested_minutes\x18\x02 \x01(\r\x12\x17\n\x0flast_heard_time\x18\x03 \x01(\x04\"\x8c\x01\n\x18\x43reateGameAccountRequest\x12\x31\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32 .bnet.protocol.account.AccountId\x12\x0e\n\x06region\x18\x02 \x01(\r\x12\x0f\n\x07program\x18\x03 \x01(\x07\x12\x1c\n\x11realm_permissions\x18\x04 \x01(\r:\x01\x31\"\xe2\x01\n\x17\x43redentialUpdateRequest\x12\x31\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32 .bnet.protocol.account.AccountId\x12\x41\n\x0fold_credentials\x18\x02 \x03(\x0b\x32(.bnet.protocol.account.AccountCredential\x12\x41\n\x0fnew_credentials\x18\x03 \x03(\x0b\x32(.bnet.protocol.account.AccountCredential\x12\x0e\n\x06region\x18\x04 \x01(\r\"\x1a\n\x18\x43redentialUpdateResponse\"T\n\x13\x43urrencyRestriction\x12\x10\n\x08\x63urrency\x18\x01 \x01(\t\x12\x19\n\x11\x61uthenticator_cap\x18\x02 \x01(\t\x12\x10\n\x08soft_cap\x18\x03 \x01(\t\"t\n\x11\x46lagUpdateRequest\x12\x31\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32 .bnet.protocol.account.AccountId\x12\x0e\n\x06region\x18\x02 \x01(\r\x12\x0c\n\x04\x66lag\x18\x03 \x01(\x04\x12\x0e\n\x06\x61\x63tive\x18\x04 \x01(\x08\"\x14\n\x12\x46lagUpdateResponse\"\x85\x01\n\x17GameAccountFieldOptions\x12\x12\n\nall_fields\x18\x01 \x01(\x08\x12\x1d\n\x15\x66ield_game_level_info\x18\x02 \x01(\x08\x12\x1c\n\x14\x66ield_game_time_info\x18\x03 \x01(\x08\x12\x19\n\x11\x66ield_game_status\x18\x04 \x01(\x08\"h\n\x14GameAccountFieldTags\x12\x1b\n\x13game_level_info_tag\x18\x02 \x01(\x07\x12\x1a\n\x12game_time_info_tag\x18\x03 \x01(\x07\x12\x17\n\x0fgame_status_tag\x18\x04 \x01(\x07\"@\n\x11GameAccountHandle\x12\n\n\x02id\x18\x01 \x01(\x07\x12\x0f\n\x07program\x18\x02 \x01(\x07\x12\x0e\n\x06region\x18\x03 \x01(\r\"\x8b\x01\n\x10\x41\x63\x63ountReference\x12\n\n\x02id\x18\x01 \x01(\x07\x12\r\n\x05\x65mail\x18\x02 \x01(\t\x12\x38\n\x06handle\x18\x03 \x01(\x0b\x32(.bnet.protocol.account.GameAccountHandle\x12\x12\n\nbattle_tag\x18\x04 \x01(\t\x12\x0e\n\x06region\x18\n \x01(\r\"\x96\x01\n\x12\x43\x61\x63heExpireRequest\x12\x31\n\x07\x61\x63\x63ount\x18\x01 \x03(\x0b\x32 .bnet.protocol.account.AccountId\x12>\n\x0cgame_account\x18\x02 \x03(\x0b\x32(.bnet.protocol.account.GameAccountHandle\x12\r\n\x05\x65mail\x18\x03 \x03(\t\"\x89\x03\n\x0fGameAccountBlob\x12>\n\x0cgame_account\x18\x01 \x01(\x0b\x32(.bnet.protocol.account.GameAccountHandle\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x19\n\x11realm_permissions\x18\x03 \x01(\r\x12\x0e\n\x06status\x18\x04 \x01(\r\x12\r\n\x05\x66lags\x18\x05 \x01(\x04\x12\x15\n\rbilling_flags\x18\x06 \x01(\r\x12\x18\n\x10\x63\x61\x63he_expiration\x18\x07 \x01(\x04\x12\x1f\n\x17subscription_expiration\x18\n \x01(\x04\x12\x17\n\x0funits_remaining\x18\x0b \x01(\r\x12\x19\n\x11status_expiration\x18\x0c \x01(\x04\x12\x11\n\tbox_level\x18\r \x01(\r\x12\x1c\n\x14\x62ox_level_expiration\x18\x0e \x01(\x04\x12\x37\n\x08licenses\x18\x14 \x03(\x0b\x32%.bnet.protocol.account.AccountLicense\"K\n\x13GameAccountBlobList\x12\x34\n\x04\x62lob\x18\x01 \x03(\x0b\x32&.bnet.protocol.account.GameAccountBlob\"_\n\x0fGameAccountLink\x12>\n\x0cgame_account\x18\x01 \x01(\x0b\x32(.bnet.protocol.account.GameAccountHandle\x12\x0c\n\x04name\x18\x02 \x01(\t\"[\n\x0fGameAccountList\x12\x0e\n\x06region\x18\x03 \x01(\r\x12\x38\n\x06handle\x18\x04 \x03(\x0b\x32(.bnet.protocol.account.GameAccountHandle\"\xed\x01\n\rGameLevelInfo\x12\x1a\n\x12is_starter_edition\x18\x03 \x01(\x08\x12\x10\n\x08is_trial\x18\x04 \x01(\x08\x12\x13\n\x0bis_lifetime\x18\x05 \x01(\x08\x12\x15\n\ris_restricted\x18\x06 \x01(\x08\x12\x0f\n\x07is_beta\x18\x07 \x01(\x08\x12\x0c\n\x04name\x18\x08 \x01(\t\x12\x0f\n\x07program\x18\t \x01(\x07\x12\x37\n\x08licenses\x18\n \x03(\x0b\x32%.bnet.protocol.account.AccountLicense\x12\x19\n\x11realm_permissions\x18\x0b \x01(\r\"H\n\x13GameSessionLocation\x12\x12\n\nip_address\x18\x01 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x02 \x01(\r\x12\x0c\n\x04\x63ity\x18\x03 \x01(\t\"\xb3\x01\n\x0fGameSessionInfo\x12\x12\n\nstart_time\x18\x03 \x01(\r\x12<\n\x08location\x18\x04 \x01(\x0b\x32*.bnet.protocol.account.GameSessionLocation\x12\x16\n\x0ehas_benefactor\x18\x05 \x01(\x08\x12\x14\n\x0cis_using_igr\x18\x06 \x01(\x08\x12 \n\x18parental_controls_active\x18\x07 \x01(\x08\"B\n\x15GameSessionUpdateInfo\x12)\n\x04\x63\x61is\x18\x08 \x01(\x0b\x32\x1b.bnet.protocol.account.CAIS\"\xa4\x01\n\x1eGameAccountSessionNotification\x12>\n\x0cgame_account\x18\x01 \x01(\x0b\x32(.bnet.protocol.account.GameAccountHandle\x12\x42\n\x0csession_info\x18\x02 \x01(\x0b\x32,.bnet.protocol.account.GameSessionUpdateInfo\"b\n\nGameStatus\x12\x14\n\x0cis_suspended\x18\x04 \x01(\x08\x12\x11\n\tis_banned\x18\x05 \x01(\x08\x12\x1a\n\x12suspension_expires\x18\x06 \x01(\x04\x12\x0f\n\x07program\x18\x07 \x01(\x07\"\x85\x01\n\x0cGameTimeInfo\x12\x1e\n\x16is_unlimited_play_time\x18\x03 \x01(\x08\x12\x19\n\x11play_time_expires\x18\x05 \x01(\x04\x12\x17\n\x0fis_subscription\x18\x06 \x01(\x08\x12!\n\x19is_recurring_subscription\x18\x07 \x01(\x08\"\xc6\x01\n\x10GameAccountState\x12=\n\x0fgame_level_info\x18\x01 \x01(\x0b\x32$.bnet.protocol.account.GameLevelInfo\x12;\n\x0egame_time_info\x18\x02 \x01(\x0b\x32#.bnet.protocol.account.GameTimeInfo\x12\x36\n\x0bgame_status\x18\x03 \x01(\x0b\x32!.bnet.protocol.account.GameStatus\"\xd5\x01\n\x1cGameAccountStateNotification\x12\x36\n\x05state\x18\x01 \x01(\x0b\x32\'.bnet.protocol.account.GameAccountState\x12\x15\n\rsubscriber_id\x18\x02 \x01(\x04\x12\x46\n\x11game_account_tags\x18\x03 \x01(\x0b\x32+.bnet.protocol.account.GameAccountFieldTags\x12\x1e\n\x16subscription_completed\x18\x04 \x01(\x08\"\xa5\x01\n\x16GameAccountStateTagged\x12\x43\n\x12game_account_state\x18\x01 \x01(\x0b\x32\'.bnet.protocol.account.GameAccountState\x12\x46\n\x11game_account_tags\x18\x02 \x01(\x0b\x32+.bnet.protocol.account.GameAccountFieldTags\"\x87\x01\n\x15GameTimeRemainingInfo\x12\x19\n\x11minutes_remaining\x18\x01 \x01(\r\x12(\n parental_daily_minutes_remaining\x18\x02 \x01(\r\x12)\n!parental_weekly_minutes_remaining\x18\x03 \x01(\r\"\x80\x02\n\x11GetAccountRequest\x12\x34\n\x03ref\x18\x01 \x01(\x0b\x32\'.bnet.protocol.account.AccountReference\x12\x11\n\tfetch_all\x18\n \x01(\x08\x12\x12\n\nfetch_blob\x18\x0b \x01(\x08\x12\x10\n\x08\x66\x65tch_id\x18\x0c \x01(\x08\x12\x13\n\x0b\x66\x65tch_email\x18\r \x01(\x08\x12\x18\n\x10\x66\x65tch_battle_tag\x18\x0e \x01(\x08\x12\x17\n\x0f\x66\x65tch_full_name\x18\x0f \x01(\x08\x12\x13\n\x0b\x66\x65tch_links\x18\x10 \x01(\x08\x12\x1f\n\x17\x66\x65tch_parental_controls\x18\x11 \x01(\x08\"E\n\x13GetCAISInfoResponse\x12.\n\tcais_info\x18\x01 \x01(\x0b\x32\x1b.bnet.protocol.account.CAIS\"z\n\x12GetEBalanceRequest\x12\x34\n\naccount_id\x18\x01 \x01(\x0b\x32 .bnet.protocol.account.AccountId\x12\x10\n\x08\x63urrency\x18\x02 \x01(\t\x12\x1c\n\x14\x63urrency_home_region\x18\x03 \x01(\r\"&\n\x13GetEBalanceResponse\x12\x0f\n\x07\x62\x61lance\x18\x01 \x01(\t\">\n\x1eGetEBalanceRestrictionsRequest\x12\x1c\n\x14\x63urrency_home_region\x18\x01 \x01(\r\"l\n\x1fGetEBalanceRestrictionsResponse\x12I\n\x15\x63urrency_restrictions\x18\x01 \x03(\x0b\x32*.bnet.protocol.account.CurrencyRestriction\"\x90\x01\n\x1bGetGameAccountStateResponse\x12\x36\n\x05state\x18\x01 \x01(\x0b\x32\'.bnet.protocol.account.GameAccountState\x12\x39\n\x04tags\x18\x02 \x01(\x0b\x32+.bnet.protocol.account.GameAccountFieldTags\"Z\n\x1aGetGameSessionInfoResponse\x12<\n\x0csession_info\x18\x02 \x01(\x0b\x32&.bnet.protocol.account.GameSessionInfo\"r\n GetGameTimeRemainingInfoResponse\x12N\n\x18game_time_remaining_info\x18\x01 \x01(\x0b\x32,.bnet.protocol.account.GameTimeRemainingInfo\"N\n\x13GetLicensesResponse\x12\x37\n\x08licenses\x18\x01 \x03(\x0b\x32%.bnet.protocol.account.AccountLicense\"]\n\x14GetWalletListRequest\x12\x34\n\naccount_id\x18\x01 \x01(\x0b\x32 .bnet.protocol.account.AccountId\x12\x0f\n\x07refresh\x18\x02 \x01(\x08\"=\n\x13IsIgrAddressRequest\x12\x16\n\x0e\x63lient_address\x18\x01 \x01(\t\x12\x0e\n\x06region\x18\x02 \x01(\r\"\xa4\x01\n\x13ParentalControlInfo\x12\x10\n\x08timezone\x18\x03 \x01(\t\x12\x17\n\x0fminutes_per_day\x18\x04 \x01(\r\x12\x18\n\x10minutes_per_week\x18\x05 \x01(\r\x12\x19\n\x11\x63\x61n_receive_voice\x18\x06 \x01(\x08\x12\x16\n\x0e\x63\x61n_send_voice\x18\x07 \x01(\x08\x12\x15\n\rplay_schedule\x18\x08 \x03(\x08\"\xc3\x04\n\x0b\x41\x63\x63ountBlob\x12\n\n\x02id\x18\x02 \x01(\x07\x12\x0e\n\x06region\x18\x03 \x01(\r\x12\r\n\x05\x65mail\x18\x04 \x03(\t\x12\r\n\x05\x66lags\x18\x05 \x01(\x04\x12\x16\n\x0esecure_release\x18\x06 \x01(\x04\x12\x17\n\x0fwhitelist_start\x18\x07 \x01(\x04\x12\x15\n\rwhitelist_end\x18\x08 \x01(\x04\x12\x11\n\tfull_name\x18\n \x01(\t\x12\x37\n\x08licenses\x18\x14 \x03(\x0b\x32%.bnet.protocol.account.AccountLicense\x12=\n\x0b\x63redentials\x18\x15 \x03(\x0b\x32(.bnet.protocol.account.AccountCredential\x12=\n\raccount_links\x18\x16 \x03(\x0b\x32&.bnet.protocol.account.GameAccountLink\x12\x12\n\nbattle_tag\x18\x17 \x01(\t\x12\x18\n\x10\x64\x65\x66\x61ult_currency\x18\x19 \x01(\x07\x12\x14\n\x0clegal_region\x18\x1a \x01(\r\x12\x14\n\x0clegal_locale\x18\x1b \x01(\x07\x12\x18\n\x10\x63\x61\x63he_expiration\x18\x1e \x01(\x04\x12I\n\x15parental_control_info\x18\x1f \x01(\x0b\x32*.bnet.protocol.account.ParentalControlInfo\x12\x0f\n\x07\x63ountry\x18  \x01(\t\x12\x18\n\x10preferred_region\x18! \x01(\r\"C\n\x0f\x41\x63\x63ountBlobList\x12\x30\n\x04\x62lob\x18\x01 \x03(\x0b\x32\".bnet.protocol.account.AccountBlob\"\xac\x02\n\x12GetAccountResponse\x12\x30\n\x04\x62lob\x18\x0b \x01(\x0b\x32\".bnet.protocol.account.AccountBlob\x12,\n\x02id\x18\x0c \x01(\x0b\x32 .bnet.protocol.account.AccountId\x12\r\n\x05\x65mail\x18\r \x03(\t\x12\x12\n\nbattle_tag\x18\x0e \x01(\t\x12\x11\n\tfull_name\x18\x0f \x01(\t\x12\x35\n\x05links\x18\x10 \x03(\x0b\x32&.bnet.protocol.account.GameAccountLink\x12I\n\x15parental_control_info\x18\x11 \x01(\x0b\x32*.bnet.protocol.account.ParentalControlInfo\"\xa4\x02\n\x0bPrivacyInfo\x12\x14\n\x0cis_using_rid\x18\x03 \x01(\x08\x12+\n#is_real_id_visible_for_view_friends\x18\x04 \x01(\x08\x12$\n\x1cis_hidden_from_friend_finder\x18\x05 \x01(\x08\x12^\n\x11game_info_privacy\x18\x06 \x01(\x0e\x32\x32.bnet.protocol.account.PrivacyInfo.GameInfoPrivacy:\x0fPRIVACY_FRIENDS\"L\n\x0fGameInfoPrivacy\x12\x0e\n\nPRIVACY_ME\x10\x00\x12\x13\n\x0fPRIVACY_FRIENDS\x10\x01\x12\x14\n\x10PRIVACY_EVERYONE\x10\x02\"\x8e\x03\n\x0c\x41\x63\x63ountState\x12\x43\n\x12\x61\x63\x63ount_level_info\x18\x01 \x01(\x0b\x32\'.bnet.protocol.account.AccountLevelInfo\x12\x38\n\x0cprivacy_info\x18\x02 \x01(\x0b\x32\".bnet.protocol.account.PrivacyInfo\x12I\n\x15parental_control_info\x18\x03 \x01(\x0b\x32*.bnet.protocol.account.ParentalControlInfo\x12=\n\x0fgame_level_info\x18\x05 \x03(\x0b\x32$.bnet.protocol.account.GameLevelInfo\x12\x36\n\x0bgame_status\x18\x06 \x03(\x0b\x32!.bnet.protocol.account.GameStatus\x12=\n\rgame_accounts\x18\x07 \x03(\x0b\x32&.bnet.protocol.account.GameAccountList\"*\n\nProgramTag\x12\x0f\n\x07program\x18\x01 \x01(\x07\x12\x0b\n\x03tag\x18\x02 \x01(\x07\"(\n\tRegionTag\x12\x0e\n\x06region\x18\x01 \x01(\x07\x12\x0b\n\x03tag\x18\x02 \x01(\x07\"\xaa\x02\n\x10\x41\x63\x63ountFieldTags\x12\x1e\n\x16\x61\x63\x63ount_level_info_tag\x18\x02 \x01(\x07\x12\x18\n\x10privacy_info_tag\x18\x03 \x01(\x07\x12!\n\x19parental_control_info_tag\x18\x04 \x01(\x07\x12?\n\x14game_level_info_tags\x18\x07 \x03(\x0b\x32!.bnet.protocol.account.ProgramTag\x12;\n\x10game_status_tags\x18\t \x03(\x0b\x32!.bnet.protocol.account.ProgramTag\x12;\n\x11game_account_tags\x18\x0b \x03(\x0b\x32 .bnet.protocol.account.RegionTag\"\xc4\x01\n\x18\x41\x63\x63ountStateNotification\x12\x32\n\x05state\x18\x01 \x01(\x0b\x32#.bnet.protocol.account.AccountState\x12\x15\n\rsubscriber_id\x18\x02 \x01(\x04\x12=\n\x0c\x61\x63\x63ount_tags\x18\x03 \x01(\x0b\x32\'.bnet.protocol.account.AccountFieldTags\x12\x1e\n\x16subscription_completed\x18\x04 \x01(\x08\"\x87\x01\n\x12\x41\x63\x63ountStateTagged\x12:\n\raccount_state\x18\x01 \x01(\x0b\x32#.bnet.protocol.account.AccountState\x12\x35\n\x04tags\x18\x02 \x01(\x0b\x32\'.bnet.protocol.account.AccountFieldTags\"\xad\x01\n\x17GameAccountNotification\x12<\n\x0cregion_delta\x18\x01 \x03(\x0b\x32&.bnet.protocol.account.GameAccountList\x12\x15\n\rsubscriber_id\x18\x02 \x01(\x04\x12=\n\x0c\x61\x63\x63ount_tags\x18\x03 \x01(\x0b\x32\'.bnet.protocol.account.AccountFieldTags\"\x84\x01\n\x17GetAccountStateResponse\x12\x32\n\x05state\x18\x01 \x01(\x0b\x32#.bnet.protocol.account.AccountState\x12\x35\n\x04tags\x18\x02 \x01(\x0b\x32\'.bnet.protocol.account.AccountFieldTags\"\x9c\x02\n\x06Wallet\x12\x0e\n\x06region\x18\x01 \x01(\r\x12\x11\n\twallet_id\x18\x02 \x01(\x04\x12\x13\n\x0bwallet_type\x18\x03 \x01(\r\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12\x12\n\ncountry_id\x18\x05 \x01(\r\x12\r\n\x05state\x18\x06 \x01(\t\x12\x0c\n\x04\x63ity\x18\x07 \x01(\t\x12\x13\n\x0bpostal_code\x18\x08 \x01(\t\x12\x14\n\x0cpayment_info\x18\t \x01(\x0c\x12\x0b\n\x03\x62in\x18\n \x01(\t\x12\x11\n\tlocale_id\x18\x0b \x01(\t\x12\x0e\n\x06street\x18\x0c \x01(\t\x12\x12\n\nfirst_name\x18\r \x01(\t\x12\x11\n\tlast_name\x18\x0e \x01(\t\x12\x12\n\nbirth_date\x18\x0f \x01(\x04\"G\n\x15GetWalletListResponse\x12.\n\x07wallets\x18\x01 \x03(\x0b\x32\x1d.bnet.protocol.account.Wallet\"9\n\x07Wallets\x12.\n\x07wallets\x18\x01 \x03(\x0b\x32\x1d.bnet.protocol.account.Wallet\"G\n\x19\x46orwardCacheExpireRequest\x12*\n\tentity_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\xd9\x01\n\x16GetAccountStateRequest\x12*\n\tentity_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x0f\n\x07program\x18\x02 \x01(\r\x12\x0e\n\x06region\x18\x03 \x01(\r\x12;\n\x07options\x18\n \x01(\x0b\x32*.bnet.protocol.account.AccountFieldOptions\x12\x35\n\x04tags\x18\x0b \x01(\x0b\x32\'.bnet.protocol.account.AccountFieldTags\"@\n\x12GetCAISInfoRequest\x12*\n\tentity_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\xf7\x01\n\x1aGetGameAccountStateRequest\x12+\n\naccount_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x30\n\x0fgame_account_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12?\n\x07options\x18\n \x01(\x0b\x32..bnet.protocol.account.GameAccountFieldOptions\x12\x39\n\x04tags\x18\x0b \x01(\x0b\x32+.bnet.protocol.account.GameAccountFieldTags\"G\n\x19GetGameSessionInfoRequest\x12*\n\tentity_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\x80\x01\n\x1fGetGameTimeRemainingInfoRequest\x12\x30\n\x0fgame_account_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12+\n\naccount_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\xdc\x01\n\x12GetLicensesRequest\x12*\n\ttarget_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x1c\n\x14get_account_licenses\x18\x02 \x01(\x08\x12!\n\x19get_game_account_licenses\x18\x03 \x01(\x08\x12$\n\x1cget_dynamic_account_licenses\x18\x04 \x01(\x08\x12\x12\n\nprogram_id\x18\x05 \x01(\x07\x12\x1f\n\x17\x65xclude_unknown_program\x18\x06 \x01(\x08\"\xee\x02\n\x13SubscriberReference\x12\x11\n\tobject_id\x18\x01 \x01(\x04\x12*\n\tentity_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x43\n\x0f\x61\x63\x63ount_options\x18\x03 \x01(\x0b\x32*.bnet.protocol.account.AccountFieldOptions\x12=\n\x0c\x61\x63\x63ount_tags\x18\x04 \x01(\x0b\x32\'.bnet.protocol.account.AccountFieldTags\x12L\n\x14game_account_options\x18\x05 \x01(\x0b\x32..bnet.protocol.account.GameAccountFieldOptions\x12\x46\n\x11game_account_tags\x18\x06 \x01(\x0b\x32+.bnet.protocol.account.GameAccountFieldTags\"T\n\x19SubscriptionUpdateRequest\x12\x37\n\x03ref\x18\x02 \x03(\x0b\x32*.bnet.protocol.account.SubscriberReference\"U\n\x1aSubscriptionUpdateResponse\x12\x37\n\x03ref\x18\x01 \x03(\x0b\x32*.bnet.protocol.account.SubscriberReference')
+  serialized_pb=_b('\n\x1d\x62net/protocol/account_1.proto\x12\x15\x62net.protocol.account\x1a\x1d\x62net/protocol/account_0.proto\x1a\x15\x62net/protocol_0.proto\"\x90\x01\n\x10\x41\x63\x63ountLevelInfo\x12\x37\n\x08licenses\x18\x03 \x03(\x0b\x32%.bnet.protocol.account.AccountLicense\x12\x18\n\x10\x64\x65\x66\x61ult_currency\x18\x04 \x01(\x07\x12\x0f\n\x07\x63ountry\x18\x05 \x01(\t\x12\x18\n\x10preferred_region\x18\x06 \x01(\r\"1\n\x14\x41\x63\x63ountServiceRegion\x12\n\n\x02id\x18\x01 \x02(\r\x12\r\n\x05shard\x18\x02 \x02(\t\"S\n\x14\x41\x63\x63ountServiceConfig\x12;\n\x06region\x18\x01 \x03(\x0b\x32+.bnet.protocol.account.AccountServiceRegion\"O\n\x04\x43\x41IS\x12\x16\n\x0eplayed_minutes\x18\x01 \x01(\r\x12\x16\n\x0erested_minutes\x18\x02 \x01(\r\x12\x17\n\x0flast_heard_time\x18\x03 \x01(\x04\"\x8c\x01\n\x18\x43reateGameAccountRequest\x12\x31\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32 .bnet.protocol.account.AccountId\x12\x0e\n\x06region\x18\x02 \x01(\r\x12\x0f\n\x07program\x18\x03 \x01(\x07\x12\x1c\n\x11realm_permissions\x18\x04 \x01(\r:\x01\x31\"\xe2\x01\n\x17\x43redentialUpdateRequest\x12\x31\n\x07\x61\x63\x63ount\x18\x01 \x02(\x0b\x32 .bnet.protocol.account.AccountId\x12\x41\n\x0fold_credentials\x18\x02 \x03(\x0b\x32(.bnet.protocol.account.AccountCredential\x12\x41\n\x0fnew_credentials\x18\x03 \x03(\x0b\x32(.bnet.protocol.account.AccountCredential\x12\x0e\n\x06region\x18\x04 \x01(\r\"\x1a\n\x18\x43redentialUpdateResponse\"T\n\x13\x43urrencyRestriction\x12\x10\n\x08\x63urrency\x18\x01 \x02(\t\x12\x19\n\x11\x61uthenticator_cap\x18\x02 \x02(\t\x12\x10\n\x08soft_cap\x18\x03 \x02(\t\"t\n\x11\x46lagUpdateRequest\x12\x31\n\x07\x61\x63\x63ount\x18\x01 \x02(\x0b\x32 .bnet.protocol.account.AccountId\x12\x0e\n\x06region\x18\x02 \x01(\r\x12\x0c\n\x04\x66lag\x18\x03 \x02(\x04\x12\x0e\n\x06\x61\x63tive\x18\x04 \x02(\x08\"\x14\n\x12\x46lagUpdateResponse\"\x85\x01\n\x17GameAccountFieldOptions\x12\x12\n\nall_fields\x18\x01 \x01(\x08\x12\x1d\n\x15\x66ield_game_level_info\x18\x02 \x01(\x08\x12\x1c\n\x14\x66ield_game_time_info\x18\x03 \x01(\x08\x12\x19\n\x11\x66ield_game_status\x18\x04 \x01(\x08\"h\n\x14GameAccountFieldTags\x12\x1b\n\x13game_level_info_tag\x18\x02 \x01(\x07\x12\x1a\n\x12game_time_info_tag\x18\x03 \x01(\x07\x12\x17\n\x0fgame_status_tag\x18\x04 \x01(\x07\"@\n\x11GameAccountHandle\x12\n\n\x02id\x18\x01 \x02(\x07\x12\x0f\n\x07program\x18\x02 \x02(\x07\x12\x0e\n\x06region\x18\x03 \x02(\r\"\x8e\x01\n\x10\x41\x63\x63ountReference\x12\n\n\x02id\x18\x01 \x01(\x07\x12\r\n\x05\x65mail\x18\x02 \x01(\t\x12\x38\n\x06handle\x18\x03 \x01(\x0b\x32(.bnet.protocol.account.GameAccountHandle\x12\x12\n\nbattle_tag\x18\x04 \x01(\t\x12\x11\n\x06region\x18\n \x01(\r:\x01\x30\"\x96\x01\n\x12\x43\x61\x63heExpireRequest\x12\x31\n\x07\x61\x63\x63ount\x18\x01 \x03(\x0b\x32 .bnet.protocol.account.AccountId\x12>\n\x0cgame_account\x18\x02 \x03(\x0b\x32(.bnet.protocol.account.GameAccountHandle\x12\r\n\x05\x65mail\x18\x03 \x03(\t\"\x94\x03\n\x0fGameAccountBlob\x12>\n\x0cgame_account\x18\x01 \x02(\x0b\x32(.bnet.protocol.account.GameAccountHandle\x12\x0e\n\x04name\x18\x02 \x01(\t:\x00\x12\x1c\n\x11realm_permissions\x18\x03 \x01(\r:\x01\x30\x12\x0e\n\x06status\x18\x04 \x02(\r\x12\x10\n\x05\x66lags\x18\x05 \x01(\x04:\x01\x30\x12\x18\n\rbilling_flags\x18\x06 \x01(\r:\x01\x30\x12\x18\n\x10\x63\x61\x63he_expiration\x18\x07 \x02(\x04\x12\x1f\n\x17subscription_expiration\x18\n \x01(\x04\x12\x17\n\x0funits_remaining\x18\x0b \x01(\r\x12\x19\n\x11status_expiration\x18\x0c \x01(\x04\x12\x11\n\tbox_level\x18\r \x01(\r\x12\x1c\n\x14\x62ox_level_expiration\x18\x0e \x01(\x04\x12\x37\n\x08licenses\x18\x14 \x03(\x0b\x32%.bnet.protocol.account.AccountLicense\"K\n\x13GameAccountBlobList\x12\x34\n\x04\x62lob\x18\x01 \x03(\x0b\x32&.bnet.protocol.account.GameAccountBlob\"_\n\x0fGameAccountLink\x12>\n\x0cgame_account\x18\x01 \x02(\x0b\x32(.bnet.protocol.account.GameAccountHandle\x12\x0c\n\x04name\x18\x02 \x02(\t\"[\n\x0fGameAccountList\x12\x0e\n\x06region\x18\x03 \x01(\r\x12\x38\n\x06handle\x18\x04 \x03(\x0b\x32(.bnet.protocol.account.GameAccountHandle\"\xed\x01\n\rGameLevelInfo\x12\x1a\n\x12is_starter_edition\x18\x03 \x01(\x08\x12\x10\n\x08is_trial\x18\x04 \x01(\x08\x12\x13\n\x0bis_lifetime\x18\x05 \x01(\x08\x12\x15\n\ris_restricted\x18\x06 \x01(\x08\x12\x0f\n\x07is_beta\x18\x07 \x01(\x08\x12\x0c\n\x04name\x18\x08 \x01(\t\x12\x0f\n\x07program\x18\t \x01(\x07\x12\x37\n\x08licenses\x18\n \x03(\x0b\x32%.bnet.protocol.account.AccountLicense\x12\x19\n\x11realm_permissions\x18\x0b \x01(\r\"H\n\x13GameSessionLocation\x12\x12\n\nip_address\x18\x01 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x02 \x01(\r\x12\x0c\n\x04\x63ity\x18\x03 \x01(\t\"\xb3\x01\n\x0fGameSessionInfo\x12\x12\n\nstart_time\x18\x03 \x01(\r\x12<\n\x08location\x18\x04 \x01(\x0b\x32*.bnet.protocol.account.GameSessionLocation\x12\x16\n\x0ehas_benefactor\x18\x05 \x01(\x08\x12\x14\n\x0cis_using_igr\x18\x06 \x01(\x08\x12 \n\x18parental_controls_active\x18\x07 \x01(\x08\"B\n\x15GameSessionUpdateInfo\x12)\n\x04\x63\x61is\x18\x08 \x01(\x0b\x32\x1b.bnet.protocol.account.CAIS\"\xa4\x01\n\x1eGameAccountSessionNotification\x12>\n\x0cgame_account\x18\x01 \x01(\x0b\x32(.bnet.protocol.account.GameAccountHandle\x12\x42\n\x0csession_info\x18\x02 \x01(\x0b\x32,.bnet.protocol.account.GameSessionUpdateInfo\"b\n\nGameStatus\x12\x14\n\x0cis_suspended\x18\x04 \x01(\x08\x12\x11\n\tis_banned\x18\x05 \x01(\x08\x12\x1a\n\x12suspension_expires\x18\x06 \x01(\x04\x12\x0f\n\x07program\x18\x07 \x01(\x07\"\x85\x01\n\x0cGameTimeInfo\x12\x1e\n\x16is_unlimited_play_time\x18\x03 \x01(\x08\x12\x19\n\x11play_time_expires\x18\x05 \x01(\x04\x12\x17\n\x0fis_subscription\x18\x06 \x01(\x08\x12!\n\x19is_recurring_subscription\x18\x07 \x01(\x08\"\xc6\x01\n\x10GameAccountState\x12=\n\x0fgame_level_info\x18\x01 \x01(\x0b\x32$.bnet.protocol.account.GameLevelInfo\x12;\n\x0egame_time_info\x18\x02 \x01(\x0b\x32#.bnet.protocol.account.GameTimeInfo\x12\x36\n\x0bgame_status\x18\x03 \x01(\x0b\x32!.bnet.protocol.account.GameStatus\"\xd5\x01\n\x1cGameAccountStateNotification\x12\x36\n\x05state\x18\x01 \x01(\x0b\x32\'.bnet.protocol.account.GameAccountState\x12\x15\n\rsubscriber_id\x18\x02 \x01(\x04\x12\x46\n\x11game_account_tags\x18\x03 \x01(\x0b\x32+.bnet.protocol.account.GameAccountFieldTags\x12\x1e\n\x16subscription_completed\x18\x04 \x01(\x08\"\xa5\x01\n\x16GameAccountStateTagged\x12\x43\n\x12game_account_state\x18\x01 \x01(\x0b\x32\'.bnet.protocol.account.GameAccountState\x12\x46\n\x11game_account_tags\x18\x02 \x01(\x0b\x32+.bnet.protocol.account.GameAccountFieldTags\"\x87\x01\n\x15GameTimeRemainingInfo\x12\x19\n\x11minutes_remaining\x18\x01 \x01(\r\x12(\n parental_daily_minutes_remaining\x18\x02 \x01(\r\x12)\n!parental_weekly_minutes_remaining\x18\x03 \x01(\r\"\xb8\x02\n\x11GetAccountRequest\x12\x34\n\x03ref\x18\x01 \x01(\x0b\x32\'.bnet.protocol.account.AccountReference\x12\x18\n\tfetch_all\x18\n \x01(\x08:\x05\x66\x61lse\x12\x19\n\nfetch_blob\x18\x0b \x01(\x08:\x05\x66\x61lse\x12\x17\n\x08\x66\x65tch_id\x18\x0c \x01(\x08:\x05\x66\x61lse\x12\x1a\n\x0b\x66\x65tch_email\x18\r \x01(\x08:\x05\x66\x61lse\x12\x1f\n\x10\x66\x65tch_battle_tag\x18\x0e \x01(\x08:\x05\x66\x61lse\x12\x1e\n\x0f\x66\x65tch_full_name\x18\x0f \x01(\x08:\x05\x66\x61lse\x12\x1a\n\x0b\x66\x65tch_links\x18\x10 \x01(\x08:\x05\x66\x61lse\x12&\n\x17\x66\x65tch_parental_controls\x18\x11 \x01(\x08:\x05\x66\x61lse\"E\n\x13GetCAISInfoResponse\x12.\n\tcais_info\x18\x01 \x01(\x0b\x32\x1b.bnet.protocol.account.CAIS\"z\n\x12GetEBalanceRequest\x12\x34\n\naccount_id\x18\x01 \x02(\x0b\x32 .bnet.protocol.account.AccountId\x12\x10\n\x08\x63urrency\x18\x02 \x02(\t\x12\x1c\n\x14\x63urrency_home_region\x18\x03 \x01(\r\"&\n\x13GetEBalanceResponse\x12\x0f\n\x07\x62\x61lance\x18\x01 \x01(\t\">\n\x1eGetEBalanceRestrictionsRequest\x12\x1c\n\x14\x63urrency_home_region\x18\x01 \x01(\r\"l\n\x1fGetEBalanceRestrictionsResponse\x12I\n\x15\x63urrency_restrictions\x18\x01 \x03(\x0b\x32*.bnet.protocol.account.CurrencyRestriction\"\x90\x01\n\x1bGetGameAccountStateResponse\x12\x36\n\x05state\x18\x01 \x01(\x0b\x32\'.bnet.protocol.account.GameAccountState\x12\x39\n\x04tags\x18\x02 \x01(\x0b\x32+.bnet.protocol.account.GameAccountFieldTags\"Z\n\x1aGetGameSessionInfoResponse\x12<\n\x0csession_info\x18\x02 \x01(\x0b\x32&.bnet.protocol.account.GameSessionInfo\"r\n GetGameTimeRemainingInfoResponse\x12N\n\x18game_time_remaining_info\x18\x01 \x01(\x0b\x32,.bnet.protocol.account.GameTimeRemainingInfo\"N\n\x13GetLicensesResponse\x12\x37\n\x08licenses\x18\x01 \x03(\x0b\x32%.bnet.protocol.account.AccountLicense\"d\n\x14GetWalletListRequest\x12\x34\n\naccount_id\x18\x01 \x02(\x0b\x32 .bnet.protocol.account.AccountId\x12\x16\n\x07refresh\x18\x02 \x01(\x08:\x05\x66\x61lse\"=\n\x13IsIgrAddressRequest\x12\x16\n\x0e\x63lient_address\x18\x01 \x01(\t\x12\x0e\n\x06region\x18\x02 \x01(\r\"\xa4\x01\n\x13ParentalControlInfo\x12\x10\n\x08timezone\x18\x03 \x01(\t\x12\x17\n\x0fminutes_per_day\x18\x04 \x01(\r\x12\x18\n\x10minutes_per_week\x18\x05 \x01(\r\x12\x19\n\x11\x63\x61n_receive_voice\x18\x06 \x01(\x08\x12\x16\n\x0e\x63\x61n_send_voice\x18\x07 \x01(\x08\x12\x15\n\rplay_schedule\x18\x08 \x03(\x08\"\xc3\x04\n\x0b\x41\x63\x63ountBlob\x12\n\n\x02id\x18\x02 \x02(\x07\x12\x0e\n\x06region\x18\x03 \x02(\r\x12\r\n\x05\x65mail\x18\x04 \x03(\t\x12\r\n\x05\x66lags\x18\x05 \x02(\x04\x12\x16\n\x0esecure_release\x18\x06 \x01(\x04\x12\x17\n\x0fwhitelist_start\x18\x07 \x01(\x04\x12\x15\n\rwhitelist_end\x18\x08 \x01(\x04\x12\x11\n\tfull_name\x18\n \x02(\t\x12\x37\n\x08licenses\x18\x14 \x03(\x0b\x32%.bnet.protocol.account.AccountLicense\x12=\n\x0b\x63redentials\x18\x15 \x03(\x0b\x32(.bnet.protocol.account.AccountCredential\x12=\n\raccount_links\x18\x16 \x03(\x0b\x32&.bnet.protocol.account.GameAccountLink\x12\x12\n\nbattle_tag\x18\x17 \x01(\t\x12\x18\n\x10\x64\x65\x66\x61ult_currency\x18\x19 \x01(\x07\x12\x14\n\x0clegal_region\x18\x1a \x01(\r\x12\x14\n\x0clegal_locale\x18\x1b \x01(\x07\x12\x18\n\x10\x63\x61\x63he_expiration\x18\x1e \x02(\x04\x12I\n\x15parental_control_info\x18\x1f \x01(\x0b\x32*.bnet.protocol.account.ParentalControlInfo\x12\x0f\n\x07\x63ountry\x18\x30 \x01(\t\x12\x18\n\x10preferred_region\x18\x31 \x01(\r\"C\n\x0f\x41\x63\x63ountBlobList\x12\x30\n\x04\x62lob\x18\x01 \x03(\x0b\x32\".bnet.protocol.account.AccountBlob\"\xac\x02\n\x12GetAccountResponse\x12\x30\n\x04\x62lob\x18\x0b \x01(\x0b\x32\".bnet.protocol.account.AccountBlob\x12,\n\x02id\x18\x0c \x01(\x0b\x32 .bnet.protocol.account.AccountId\x12\r\n\x05\x65mail\x18\r \x03(\t\x12\x12\n\nbattle_tag\x18\x0e \x01(\t\x12\x11\n\tfull_name\x18\x0f \x01(\t\x12\x35\n\x05links\x18\x10 \x03(\x0b\x32&.bnet.protocol.account.GameAccountLink\x12I\n\x15parental_control_info\x18\x11 \x01(\x0b\x32*.bnet.protocol.account.ParentalControlInfo\"\xa4\x02\n\x0bPrivacyInfo\x12\x14\n\x0cis_using_rid\x18\x03 \x01(\x08\x12+\n#is_real_id_visible_for_view_friends\x18\x04 \x01(\x08\x12$\n\x1cis_hidden_from_friend_finder\x18\x05 \x01(\x08\x12^\n\x11game_info_privacy\x18\x06 \x01(\x0e\x32\x32.bnet.protocol.account.PrivacyInfo.GameInfoPrivacy:\x0fPRIVACY_FRIENDS\"L\n\x0fGameInfoPrivacy\x12\x0e\n\nPRIVACY_ME\x10\x00\x12\x13\n\x0fPRIVACY_FRIENDS\x10\x01\x12\x14\n\x10PRIVACY_EVERYONE\x10\x02\"\x8e\x03\n\x0c\x41\x63\x63ountState\x12\x43\n\x12\x61\x63\x63ount_level_info\x18\x01 \x01(\x0b\x32\'.bnet.protocol.account.AccountLevelInfo\x12\x38\n\x0cprivacy_info\x18\x02 \x01(\x0b\x32\".bnet.protocol.account.PrivacyInfo\x12I\n\x15parental_control_info\x18\x03 \x01(\x0b\x32*.bnet.protocol.account.ParentalControlInfo\x12=\n\x0fgame_level_info\x18\x05 \x03(\x0b\x32$.bnet.protocol.account.GameLevelInfo\x12\x36\n\x0bgame_status\x18\x06 \x03(\x0b\x32!.bnet.protocol.account.GameStatus\x12=\n\rgame_accounts\x18\x07 \x03(\x0b\x32&.bnet.protocol.account.GameAccountList\"*\n\nProgramTag\x12\x0f\n\x07program\x18\x01 \x01(\x07\x12\x0b\n\x03tag\x18\x02 \x01(\x07\"(\n\tRegionTag\x12\x0e\n\x06region\x18\x01 \x01(\x07\x12\x0b\n\x03tag\x18\x02 \x01(\x07\"\xaa\x02\n\x10\x41\x63\x63ountFieldTags\x12\x1e\n\x16\x61\x63\x63ount_level_info_tag\x18\x02 \x01(\x07\x12\x18\n\x10privacy_info_tag\x18\x03 \x01(\x07\x12!\n\x19parental_control_info_tag\x18\x04 \x01(\x07\x12?\n\x14game_level_info_tags\x18\x07 \x03(\x0b\x32!.bnet.protocol.account.ProgramTag\x12;\n\x10game_status_tags\x18\t \x03(\x0b\x32!.bnet.protocol.account.ProgramTag\x12;\n\x11game_account_tags\x18\x0b \x03(\x0b\x32 .bnet.protocol.account.RegionTag\"\xc4\x01\n\x18\x41\x63\x63ountStateNotification\x12\x32\n\x05state\x18\x01 \x01(\x0b\x32#.bnet.protocol.account.AccountState\x12\x15\n\rsubscriber_id\x18\x02 \x01(\x04\x12=\n\x0c\x61\x63\x63ount_tags\x18\x03 \x01(\x0b\x32\'.bnet.protocol.account.AccountFieldTags\x12\x1e\n\x16subscription_completed\x18\x04 \x01(\x08\"\x87\x01\n\x12\x41\x63\x63ountStateTagged\x12:\n\raccount_state\x18\x01 \x01(\x0b\x32#.bnet.protocol.account.AccountState\x12\x35\n\x04tags\x18\x02 \x01(\x0b\x32\'.bnet.protocol.account.AccountFieldTags\"\xad\x01\n\x17GameAccountNotification\x12<\n\x0cregion_delta\x18\x01 \x03(\x0b\x32&.bnet.protocol.account.GameAccountList\x12\x15\n\rsubscriber_id\x18\x02 \x01(\x04\x12=\n\x0c\x61\x63\x63ount_tags\x18\x03 \x01(\x0b\x32\'.bnet.protocol.account.AccountFieldTags\"\x84\x01\n\x17GetAccountStateResponse\x12\x32\n\x05state\x18\x01 \x01(\x0b\x32#.bnet.protocol.account.AccountState\x12\x35\n\x04tags\x18\x02 \x01(\x0b\x32\'.bnet.protocol.account.AccountFieldTags\"\x9c\x02\n\x06Wallet\x12\x0e\n\x06region\x18\x01 \x02(\r\x12\x11\n\twallet_id\x18\x02 \x02(\x04\x12\x13\n\x0bwallet_type\x18\x03 \x02(\r\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12\x12\n\ncountry_id\x18\x05 \x02(\r\x12\r\n\x05state\x18\x06 \x01(\t\x12\x0c\n\x04\x63ity\x18\x07 \x01(\t\x12\x13\n\x0bpostal_code\x18\x08 \x01(\t\x12\x14\n\x0cpayment_info\x18\t \x01(\x0c\x12\x0b\n\x03\x62in\x18\n \x01(\t\x12\x11\n\tlocale_id\x18\x0b \x01(\t\x12\x0e\n\x06street\x18\x0c \x01(\t\x12\x12\n\nfirst_name\x18\r \x01(\t\x12\x11\n\tlast_name\x18\x0e \x01(\t\x12\x12\n\nbirth_date\x18\x0f \x01(\x04\"G\n\x15GetWalletListResponse\x12.\n\x07wallets\x18\x01 \x03(\x0b\x32\x1d.bnet.protocol.account.Wallet\"9\n\x07Wallets\x12.\n\x07wallets\x18\x01 \x03(\x0b\x32\x1d.bnet.protocol.account.Wallet\"G\n\x19\x46orwardCacheExpireRequest\x12*\n\tentity_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\xd9\x01\n\x16GetAccountStateRequest\x12*\n\tentity_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x0f\n\x07program\x18\x02 \x01(\r\x12\x0e\n\x06region\x18\x03 \x01(\r\x12;\n\x07options\x18\n \x01(\x0b\x32*.bnet.protocol.account.AccountFieldOptions\x12\x35\n\x04tags\x18\x0b \x01(\x0b\x32\'.bnet.protocol.account.AccountFieldTags\"@\n\x12GetCAISInfoRequest\x12*\n\tentity_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\xf7\x01\n\x1aGetGameAccountStateRequest\x12+\n\naccount_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x30\n\x0fgame_account_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12?\n\x07options\x18\n \x01(\x0b\x32..bnet.protocol.account.GameAccountFieldOptions\x12\x39\n\x04tags\x18\x0b \x01(\x0b\x32+.bnet.protocol.account.GameAccountFieldTags\"G\n\x19GetGameSessionInfoRequest\x12*\n\tentity_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\x80\x01\n\x1fGetGameTimeRemainingInfoRequest\x12\x30\n\x0fgame_account_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12+\n\naccount_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\"\xe3\x01\n\x12GetLicensesRequest\x12*\n\ttarget_id\x18\x01 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x1c\n\x14get_account_licenses\x18\x02 \x01(\x08\x12!\n\x19get_game_account_licenses\x18\x03 \x01(\x08\x12$\n\x1cget_dynamic_account_licenses\x18\x04 \x01(\x08\x12\x12\n\nprogram_id\x18\x05 \x01(\x07\x12&\n\x17\x65xclude_unknown_program\x18\x06 \x01(\x08:\x05\x66\x61lse\"\xf1\x02\n\x13SubscriberReference\x12\x14\n\tobject_id\x18\x01 \x01(\x04:\x01\x30\x12*\n\tentity_id\x18\x02 \x01(\x0b\x32\x17.bnet.protocol.EntityId\x12\x43\n\x0f\x61\x63\x63ount_options\x18\x03 \x01(\x0b\x32*.bnet.protocol.account.AccountFieldOptions\x12=\n\x0c\x61\x63\x63ount_tags\x18\x04 \x01(\x0b\x32\'.bnet.protocol.account.AccountFieldTags\x12L\n\x14game_account_options\x18\x05 \x01(\x0b\x32..bnet.protocol.account.GameAccountFieldOptions\x12\x46\n\x11game_account_tags\x18\x06 \x01(\x0b\x32+.bnet.protocol.account.GameAccountFieldTags\"T\n\x19SubscriptionUpdateRequest\x12\x37\n\x03ref\x18\x02 \x03(\x0b\x32*.bnet.protocol.account.SubscriberReference\"U\n\x1aSubscriptionUpdateResponse\x12\x37\n\x03ref\x18\x01 \x03(\x0b\x32*.bnet.protocol.account.SubscriberReference')
   ,
   dependencies=[bnet_dot_protocol_dot_account__0__pb2.DESCRIPTOR,bnet_dot_protocol__0__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -49,8 +49,8 @@ _PRIVACYINFO_GAMEINFOPRIVACY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6655,
-  serialized_end=6731,
+  serialized_start=6732,
+  serialized_end=6808,
 )
 _sym_db.RegisterEnumDescriptor(_PRIVACYINFO_GAMEINFOPRIVACY)
 
@@ -116,14 +116,14 @@ _ACCOUNTSERVICEREGION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='bnet.protocol.account.AccountServiceRegion.id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='shard', full_name='bnet.protocol.account.AccountServiceRegion.shard', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -282,7 +282,7 @@ _CREDENTIALUPDATEREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account', full_name='bnet.protocol.account.CredentialUpdateRequest.account', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -358,21 +358,21 @@ _CURRENCYRESTRICTION = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='currency', full_name='bnet.protocol.account.CurrencyRestriction.currency', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='authenticator_cap', full_name='bnet.protocol.account.CurrencyRestriction.authenticator_cap', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='soft_cap', full_name='bnet.protocol.account.CurrencyRestriction.soft_cap', index=2,
-      number=3, type=9, cpp_type=9, label=1,
+      number=3, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -403,7 +403,7 @@ _FLAGUPDATEREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account', full_name='bnet.protocol.account.FlagUpdateRequest.account', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -417,14 +417,14 @@ _FLAGUPDATEREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='flag', full_name='bnet.protocol.account.FlagUpdateRequest.flag', index=2,
-      number=3, type=4, cpp_type=4, label=1,
+      number=3, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='active', full_name='bnet.protocol.account.FlagUpdateRequest.active', index=3,
-      number=4, type=8, cpp_type=7, label=1,
+      number=4, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -576,21 +576,21 @@ _GAMEACCOUNTHANDLE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='bnet.protocol.account.GameAccountHandle.id', index=0,
-      number=1, type=7, cpp_type=3, label=1,
+      number=1, type=7, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='program', full_name='bnet.protocol.account.GameAccountHandle.program', index=1,
-      number=2, type=7, cpp_type=3, label=1,
+      number=2, type=7, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='region', full_name='bnet.protocol.account.GameAccountHandle.region', index=2,
-      number=3, type=13, cpp_type=3, label=1,
+      number=3, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -650,7 +650,7 @@ _ACCOUNTREFERENCE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='region', full_name='bnet.protocol.account.AccountReference.region', index=4,
       number=10, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -667,7 +667,7 @@ _ACCOUNTREFERENCE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1409,
-  serialized_end=1548,
+  serialized_end=1551,
 )
 
 
@@ -711,8 +711,8 @@ _CACHEEXPIREREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1551,
-  serialized_end=1701,
+  serialized_start=1554,
+  serialized_end=1704,
 )
 
 
@@ -725,7 +725,7 @@ _GAMEACCOUNTBLOB = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='game_account', full_name='bnet.protocol.account.GameAccountBlob.game_account', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -733,20 +733,20 @@ _GAMEACCOUNTBLOB = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='name', full_name='bnet.protocol.account.GameAccountBlob.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      has_default_value=True, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='realm_permissions', full_name='bnet.protocol.account.GameAccountBlob.realm_permissions', index=2,
       number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='status', full_name='bnet.protocol.account.GameAccountBlob.status', index=3,
-      number=4, type=13, cpp_type=3, label=1,
+      number=4, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -754,20 +754,20 @@ _GAMEACCOUNTBLOB = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='flags', full_name='bnet.protocol.account.GameAccountBlob.flags', index=4,
       number=5, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='billing_flags', full_name='bnet.protocol.account.GameAccountBlob.billing_flags', index=5,
       number=6, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='cache_expiration', full_name='bnet.protocol.account.GameAccountBlob.cache_expiration', index=6,
-      number=7, type=4, cpp_type=4, label=1,
+      number=7, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -826,8 +826,8 @@ _GAMEACCOUNTBLOB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1704,
-  serialized_end=2097,
+  serialized_start=1707,
+  serialized_end=2111,
 )
 
 
@@ -857,8 +857,8 @@ _GAMEACCOUNTBLOBLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2099,
-  serialized_end=2174,
+  serialized_start=2113,
+  serialized_end=2188,
 )
 
 
@@ -871,14 +871,14 @@ _GAMEACCOUNTLINK = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='game_account', full_name='bnet.protocol.account.GameAccountLink.game_account', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='name', full_name='bnet.protocol.account.GameAccountLink.name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -895,8 +895,8 @@ _GAMEACCOUNTLINK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2176,
-  serialized_end=2271,
+  serialized_start=2190,
+  serialized_end=2285,
 )
 
 
@@ -933,8 +933,8 @@ _GAMEACCOUNTLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2273,
-  serialized_end=2364,
+  serialized_start=2287,
+  serialized_end=2378,
 )
 
 
@@ -1020,8 +1020,8 @@ _GAMELEVELINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2367,
-  serialized_end=2604,
+  serialized_start=2381,
+  serialized_end=2618,
 )
 
 
@@ -1065,8 +1065,8 @@ _GAMESESSIONLOCATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2606,
-  serialized_end=2678,
+  serialized_start=2620,
+  serialized_end=2692,
 )
 
 
@@ -1124,8 +1124,8 @@ _GAMESESSIONINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2681,
-  serialized_end=2860,
+  serialized_start=2695,
+  serialized_end=2874,
 )
 
 
@@ -1155,8 +1155,8 @@ _GAMESESSIONUPDATEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2862,
-  serialized_end=2928,
+  serialized_start=2876,
+  serialized_end=2942,
 )
 
 
@@ -1193,8 +1193,8 @@ _GAMEACCOUNTSESSIONNOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2931,
-  serialized_end=3095,
+  serialized_start=2945,
+  serialized_end=3109,
 )
 
 
@@ -1245,8 +1245,8 @@ _GAMESTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3097,
-  serialized_end=3195,
+  serialized_start=3111,
+  serialized_end=3209,
 )
 
 
@@ -1297,8 +1297,8 @@ _GAMETIMEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3198,
-  serialized_end=3331,
+  serialized_start=3212,
+  serialized_end=3345,
 )
 
 
@@ -1342,8 +1342,8 @@ _GAMEACCOUNTSTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3334,
-  serialized_end=3532,
+  serialized_start=3348,
+  serialized_end=3546,
 )
 
 
@@ -1394,8 +1394,8 @@ _GAMEACCOUNTSTATENOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3535,
-  serialized_end=3748,
+  serialized_start=3549,
+  serialized_end=3762,
 )
 
 
@@ -1432,8 +1432,8 @@ _GAMEACCOUNTSTATETAGGED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3751,
-  serialized_end=3916,
+  serialized_start=3765,
+  serialized_end=3930,
 )
 
 
@@ -1477,8 +1477,8 @@ _GAMETIMEREMAININGINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3919,
-  serialized_end=4054,
+  serialized_start=3933,
+  serialized_end=4068,
 )
 
 
@@ -1499,56 +1499,56 @@ _GETACCOUNTREQUEST = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='fetch_all', full_name='bnet.protocol.account.GetAccountRequest.fetch_all', index=1,
       number=10, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='fetch_blob', full_name='bnet.protocol.account.GetAccountRequest.fetch_blob', index=2,
       number=11, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='fetch_id', full_name='bnet.protocol.account.GetAccountRequest.fetch_id', index=3,
       number=12, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='fetch_email', full_name='bnet.protocol.account.GetAccountRequest.fetch_email', index=4,
       number=13, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='fetch_battle_tag', full_name='bnet.protocol.account.GetAccountRequest.fetch_battle_tag', index=5,
       number=14, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='fetch_full_name', full_name='bnet.protocol.account.GetAccountRequest.fetch_full_name', index=6,
       number=15, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='fetch_links', full_name='bnet.protocol.account.GetAccountRequest.fetch_links', index=7,
       number=16, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='fetch_parental_controls', full_name='bnet.protocol.account.GetAccountRequest.fetch_parental_controls', index=8,
       number=17, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1564,8 +1564,8 @@ _GETACCOUNTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4057,
-  serialized_end=4313,
+  serialized_start=4071,
+  serialized_end=4383,
 )
 
 
@@ -1595,8 +1595,8 @@ _GETCAISINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4315,
-  serialized_end=4384,
+  serialized_start=4385,
+  serialized_end=4454,
 )
 
 
@@ -1609,14 +1609,14 @@ _GETEBALANCEREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='bnet.protocol.account.GetEBalanceRequest.account_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='currency', full_name='bnet.protocol.account.GetEBalanceRequest.currency', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1640,8 +1640,8 @@ _GETEBALANCEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4386,
-  serialized_end=4508,
+  serialized_start=4456,
+  serialized_end=4578,
 )
 
 
@@ -1671,8 +1671,8 @@ _GETEBALANCERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4510,
-  serialized_end=4548,
+  serialized_start=4580,
+  serialized_end=4618,
 )
 
 
@@ -1702,8 +1702,8 @@ _GETEBALANCERESTRICTIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4550,
-  serialized_end=4612,
+  serialized_start=4620,
+  serialized_end=4682,
 )
 
 
@@ -1733,8 +1733,8 @@ _GETEBALANCERESTRICTIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4614,
-  serialized_end=4722,
+  serialized_start=4684,
+  serialized_end=4792,
 )
 
 
@@ -1771,8 +1771,8 @@ _GETGAMEACCOUNTSTATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4725,
-  serialized_end=4869,
+  serialized_start=4795,
+  serialized_end=4939,
 )
 
 
@@ -1802,8 +1802,8 @@ _GETGAMESESSIONINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4871,
-  serialized_end=4961,
+  serialized_start=4941,
+  serialized_end=5031,
 )
 
 
@@ -1833,8 +1833,8 @@ _GETGAMETIMEREMAININGINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4963,
-  serialized_end=5077,
+  serialized_start=5033,
+  serialized_end=5147,
 )
 
 
@@ -1864,8 +1864,8 @@ _GETLICENSESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5079,
-  serialized_end=5157,
+  serialized_start=5149,
+  serialized_end=5227,
 )
 
 
@@ -1878,7 +1878,7 @@ _GETWALLETLISTREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='bnet.protocol.account.GetWalletListRequest.account_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1886,7 +1886,7 @@ _GETWALLETLISTREQUEST = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='refresh', full_name='bnet.protocol.account.GetWalletListRequest.refresh', index=1,
       number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1902,8 +1902,8 @@ _GETWALLETLISTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5159,
-  serialized_end=5252,
+  serialized_start=5229,
+  serialized_end=5329,
 )
 
 
@@ -1940,8 +1940,8 @@ _ISIGRADDRESSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5254,
-  serialized_end=5315,
+  serialized_start=5331,
+  serialized_end=5392,
 )
 
 
@@ -2006,8 +2006,8 @@ _PARENTALCONTROLINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5318,
-  serialized_end=5482,
+  serialized_start=5395,
+  serialized_end=5559,
 )
 
 
@@ -2020,14 +2020,14 @@ _ACCOUNTBLOB = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='bnet.protocol.account.AccountBlob.id', index=0,
-      number=2, type=7, cpp_type=3, label=1,
+      number=2, type=7, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='region', full_name='bnet.protocol.account.AccountBlob.region', index=1,
-      number=3, type=13, cpp_type=3, label=1,
+      number=3, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -2041,7 +2041,7 @@ _ACCOUNTBLOB = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='flags', full_name='bnet.protocol.account.AccountBlob.flags', index=3,
-      number=5, type=4, cpp_type=4, label=1,
+      number=5, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -2069,7 +2069,7 @@ _ACCOUNTBLOB = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='full_name', full_name='bnet.protocol.account.AccountBlob.full_name', index=7,
-      number=10, type=9, cpp_type=9, label=1,
+      number=10, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -2125,7 +2125,7 @@ _ACCOUNTBLOB = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='cache_expiration', full_name='bnet.protocol.account.AccountBlob.cache_expiration', index=15,
-      number=30, type=4, cpp_type=4, label=1,
+      number=30, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -2139,14 +2139,14 @@ _ACCOUNTBLOB = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='country', full_name='bnet.protocol.account.AccountBlob.country', index=17,
-      number=32, type=9, cpp_type=9, label=1,
+      number=48, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='preferred_region', full_name='bnet.protocol.account.AccountBlob.preferred_region', index=18,
-      number=33, type=13, cpp_type=3, label=1,
+      number=49, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -2163,8 +2163,8 @@ _ACCOUNTBLOB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5485,
-  serialized_end=6064,
+  serialized_start=5562,
+  serialized_end=6141,
 )
 
 
@@ -2194,8 +2194,8 @@ _ACCOUNTBLOBLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6066,
-  serialized_end=6133,
+  serialized_start=6143,
+  serialized_end=6210,
 )
 
 
@@ -2267,8 +2267,8 @@ _GETACCOUNTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6136,
-  serialized_end=6436,
+  serialized_start=6213,
+  serialized_end=6513,
 )
 
 
@@ -2320,8 +2320,8 @@ _PRIVACYINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6439,
-  serialized_end=6731,
+  serialized_start=6516,
+  serialized_end=6808,
 )
 
 
@@ -2386,8 +2386,8 @@ _ACCOUNTSTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6734,
-  serialized_end=7132,
+  serialized_start=6811,
+  serialized_end=7209,
 )
 
 
@@ -2424,8 +2424,8 @@ _PROGRAMTAG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7134,
-  serialized_end=7176,
+  serialized_start=7211,
+  serialized_end=7253,
 )
 
 
@@ -2462,8 +2462,8 @@ _REGIONTAG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7178,
-  serialized_end=7218,
+  serialized_start=7255,
+  serialized_end=7295,
 )
 
 
@@ -2528,8 +2528,8 @@ _ACCOUNTFIELDTAGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7221,
-  serialized_end=7519,
+  serialized_start=7298,
+  serialized_end=7596,
 )
 
 
@@ -2580,8 +2580,8 @@ _ACCOUNTSTATENOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7522,
-  serialized_end=7718,
+  serialized_start=7599,
+  serialized_end=7795,
 )
 
 
@@ -2618,8 +2618,8 @@ _ACCOUNTSTATETAGGED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7721,
-  serialized_end=7856,
+  serialized_start=7798,
+  serialized_end=7933,
 )
 
 
@@ -2663,8 +2663,8 @@ _GAMEACCOUNTNOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7859,
-  serialized_end=8032,
+  serialized_start=7936,
+  serialized_end=8109,
 )
 
 
@@ -2701,8 +2701,8 @@ _GETACCOUNTSTATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8035,
-  serialized_end=8167,
+  serialized_start=8112,
+  serialized_end=8244,
 )
 
 
@@ -2715,21 +2715,21 @@ _WALLET = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='region', full_name='bnet.protocol.account.Wallet.region', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      number=1, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='wallet_id', full_name='bnet.protocol.account.Wallet.wallet_id', index=1,
-      number=2, type=4, cpp_type=4, label=1,
+      number=2, type=4, cpp_type=4, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='wallet_type', full_name='bnet.protocol.account.Wallet.wallet_type', index=2,
-      number=3, type=13, cpp_type=3, label=1,
+      number=3, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -2743,7 +2743,7 @@ _WALLET = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='country_id', full_name='bnet.protocol.account.Wallet.country_id', index=4,
-      number=5, type=13, cpp_type=3, label=1,
+      number=5, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -2830,8 +2830,8 @@ _WALLET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8170,
-  serialized_end=8454,
+  serialized_start=8247,
+  serialized_end=8531,
 )
 
 
@@ -2861,8 +2861,8 @@ _GETWALLETLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8456,
-  serialized_end=8527,
+  serialized_start=8533,
+  serialized_end=8604,
 )
 
 
@@ -2892,8 +2892,8 @@ _WALLETS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8529,
-  serialized_end=8586,
+  serialized_start=8606,
+  serialized_end=8663,
 )
 
 
@@ -2923,8 +2923,8 @@ _FORWARDCACHEEXPIREREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8588,
-  serialized_end=8659,
+  serialized_start=8665,
+  serialized_end=8736,
 )
 
 
@@ -2982,8 +2982,8 @@ _GETACCOUNTSTATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8662,
-  serialized_end=8879,
+  serialized_start=8739,
+  serialized_end=8956,
 )
 
 
@@ -3013,8 +3013,8 @@ _GETCAISINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8881,
-  serialized_end=8945,
+  serialized_start=8958,
+  serialized_end=9022,
 )
 
 
@@ -3065,8 +3065,8 @@ _GETGAMEACCOUNTSTATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8948,
-  serialized_end=9195,
+  serialized_start=9025,
+  serialized_end=9272,
 )
 
 
@@ -3096,8 +3096,8 @@ _GETGAMESESSIONINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9197,
-  serialized_end=9268,
+  serialized_start=9274,
+  serialized_end=9345,
 )
 
 
@@ -3134,8 +3134,8 @@ _GETGAMETIMEREMAININGINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9271,
-  serialized_end=9399,
+  serialized_start=9348,
+  serialized_end=9476,
 )
 
 
@@ -3184,7 +3184,7 @@ _GETLICENSESREQUEST = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='exclude_unknown_program', full_name='bnet.protocol.account.GetLicensesRequest.exclude_unknown_program', index=5,
       number=6, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3200,8 +3200,8 @@ _GETLICENSESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9402,
-  serialized_end=9622,
+  serialized_start=9479,
+  serialized_end=9706,
 )
 
 
@@ -3215,7 +3215,7 @@ _SUBSCRIBERREFERENCE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='object_id', full_name='bnet.protocol.account.SubscriberReference.object_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3266,8 +3266,8 @@ _SUBSCRIBERREFERENCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9625,
-  serialized_end=9991,
+  serialized_start=9709,
+  serialized_end=10078,
 )
 
 
@@ -3297,8 +3297,8 @@ _SUBSCRIPTIONUPDATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9993,
-  serialized_end=10077,
+  serialized_start=10080,
+  serialized_end=10164,
 )
 
 
@@ -3328,8 +3328,8 @@ _SUBSCRIPTIONUPDATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10079,
-  serialized_end=10164,
+  serialized_start=10166,
+  serialized_end=10251,
 )
 
 _ACCOUNTLEVELINFO.fields_by_name['licenses'].message_type = bnet_dot_protocol_dot_account__0__pb2._ACCOUNTLICENSE

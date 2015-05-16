@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='bnet/protocol/server_pool.proto',
   package='bnet.protocol.server_pool',
   syntax='proto2',
-  serialized_pb=_b('\n\x1f\x62net/protocol/server_pool.proto\x12\x19\x62net.protocol.server_pool\x1a\x15\x62net/protocol_0.proto\x1a\x1d\x62net/protocol/attribute.proto\"\x10\n\x0eGetLoadRequest\"\x12\n\x10PoolStateRequest\"P\n\x0bServerState\x12\x17\n\x0c\x63urrent_load\x18\x01 \x01(\x02:\x01\x31\x12\x12\n\ngame_count\x18\x02 \x01(\r\x12\x14\n\x0cplayer_count\x18\x03 \x01(\r\"\xc7\x01\n\nServerInfo\x12&\n\x04host\x18\x01 \x01(\x0b\x32\x18.bnet.protocol.ProcessId\x12\x0f\n\x07replace\x18\x02 \x01(\x08\x12\x35\n\x05state\x18\x03 \x01(\x0b\x32&.bnet.protocol.server_pool.ServerState\x12\x35\n\tattribute\x18\x04 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x12\n\nprogram_id\x18\x05 \x01(\x07\"H\n\x11PoolStateResponse\x12\x33\n\x04info\x18\x01 \x03(\x0b\x32%.bnet.protocol.server_pool.ServerInfo')
+  serialized_pb=_b('\n\x1f\x62net/protocol/server_pool.proto\x12\x19\x62net.protocol.server_pool\x1a\x15\x62net/protocol_0.proto\x1a\x1d\x62net/protocol/attribute.proto\"\x10\n\x0eGetLoadRequest\"\x12\n\x10PoolStateRequest\"V\n\x0bServerState\x12\x17\n\x0c\x63urrent_load\x18\x01 \x01(\x02:\x01\x31\x12\x15\n\ngame_count\x18\x02 \x01(\r:\x01\x30\x12\x17\n\x0cplayer_count\x18\x03 \x01(\r:\x01\x30\"\xce\x01\n\nServerInfo\x12&\n\x04host\x18\x01 \x02(\x0b\x32\x18.bnet.protocol.ProcessId\x12\x16\n\x07replace\x18\x02 \x01(\x08:\x05\x66\x61lse\x12\x35\n\x05state\x18\x03 \x01(\x0b\x32&.bnet.protocol.server_pool.ServerState\x12\x35\n\tattribute\x18\x04 \x03(\x0b\x32\".bnet.protocol.attribute.Attribute\x12\x12\n\nprogram_id\x18\x05 \x01(\x07\"H\n\x11PoolStateResponse\x12\x33\n\x04info\x18\x01 \x03(\x0b\x32%.bnet.protocol.server_pool.ServerInfo')
   ,
   dependencies=[bnet_dot_protocol__0__pb2.DESCRIPTOR,bnet_dot_protocol_dot_attribute__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -94,14 +94,14 @@ _SERVERSTATE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='game_count', full_name='bnet.protocol.server_pool.ServerState.game_count', index=1,
       number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='player_count', full_name='bnet.protocol.server_pool.ServerState.player_count', index=2,
       number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -118,7 +118,7 @@ _SERVERSTATE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=154,
-  serialized_end=234,
+  serialized_end=240,
 )
 
 
@@ -131,7 +131,7 @@ _SERVERINFO = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='host', full_name='bnet.protocol.server_pool.ServerInfo.host', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -139,7 +139,7 @@ _SERVERINFO = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='replace', full_name='bnet.protocol.server_pool.ServerInfo.replace', index=1,
       number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -176,8 +176,8 @@ _SERVERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=237,
-  serialized_end=436,
+  serialized_start=243,
+  serialized_end=449,
 )
 
 
@@ -207,8 +207,8 @@ _POOLSTATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=438,
-  serialized_end=510,
+  serialized_start=451,
+  serialized_end=523,
 )
 
 _SERVERINFO.fields_by_name['host'].message_type = bnet_dot_protocol__0__pb2._PROCESSID

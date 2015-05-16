@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='BobNetProto.proto',
   package='BobNetProto',
   syntax='proto2',
-  serialized_pb=_b('\n\x11\x42obNetProto.proto\x12\x0b\x42obNetProto\x1a\x13PegasusShared.proto\"p\n\tAutoLogin\x12\x0c\n\x04user\x18\x01 \x01(\t\x12\x0b\n\x03pwd\x18\x02 \x01(\t\x12\x10\n\x08\x62uild_id\x18\x03 \x01(\x05\x12\x12\n\ndebug_name\x18\x04 \x01(\t\x12\x0e\n\x06source\x18\x05 \x01(\x05\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10g\"N\n\x07\x44\x65\x61\x64\x65nd\x12\x0e\n\x06reply1\x18\x01 \x01(\t\x12\x0e\n\x06reply2\x18\x02 \x01(\t\x12\x0e\n\x06reply3\x18\x03 \x01(\t\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa9\x01\"R\n\x0b\x44\x65\x61\x64\x65ndUtil\x12\x0e\n\x06reply1\x18\x01 \x01(\t\x12\x0e\n\x06reply2\x18\x02 \x01(\t\x12\x0e\n\x06reply3\x18\x03 \x01(\t\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa7\x01\"\xa5\x02\n\x13\x44\x65\x62ugConsoleCmdList\x12\x42\n\x08\x63ommands\x18\x01 \x03(\x0b\x32\x30.BobNetProto.DebugConsoleCmdList.DebugConsoleCmd\x1a\xb4\x01\n\x0f\x44\x65\x62ugConsoleCmd\x12\x0c\n\x04name\x18\x01 \x01(\t\x12U\n\x06params\x18\x02 \x03(\x0b\x32\x45.BobNetProto.DebugConsoleCmdList.DebugConsoleCmd.DebugConsoleCmdParam\x1a<\n\x14\x44\x65\x62ugConsoleCmdParam\x12\x11\n\tparamType\x18\x01 \x01(\t\x12\x11\n\tparamName\x18\x02 \x01(\t\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x92\x01\":\n\x13\x44\x65\x62ugConsoleCommand\x12\x0f\n\x07\x63ommand\x18\x01 \x01(\t\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10{\",\n\x16\x44\x65\x62ugConsoleGetCmdList\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10}\"+\n\x14\x44\x65\x62ugConsoleGetZones\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x93\x01\"\xb8\x01\n\x14\x44\x65\x62ugConsoleResponse\x12\x10\n\x08response\x18\x01 \x01(\t\x12\x45\n\rresponse_type\x18\x02 \x01(\x0e\x32..BobNetProto.DebugConsoleResponse.ResponseType\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10|\"3\n\x0cResponseType\x12\x12\n\x0e\x43ONSOLE_OUTPUT\x10\x00\x12\x0f\n\x0bLOG_MESSAGE\x10\x01\"N\n\x1a\x44\x65\x62ugConsoleUpdateFromPane\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x91\x01\"\x96\x01\n\x11\x44\x65\x62ugConsoleZones\x12>\n\x05zones\x18\x01 \x03(\x0b\x32/.BobNetProto.DebugConsoleZones.DebugConsoleZone\x1a,\n\x10\x44\x65\x62ugConsoleZone\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\r\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x94\x01\"\x8a\x01\n\x11\x44\x65\x62ugPaneDelItems\x12>\n\x05items\x18\x01 \x03(\x0b\x32/.BobNetProto.DebugPaneDelItems.DebugPaneDelItem\x1a \n\x10\x44\x65\x62ugPaneDelItem\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x8f\x01\"\x99\x01\n\x11\x44\x65\x62ugPaneNewItems\x12>\n\x05items\x18\x01 \x03(\x0b\x32/.BobNetProto.DebugPaneNewItems.DebugPaneNewItem\x1a/\n\x10\x44\x65\x62ugPaneNewItem\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x8e\x01\")\n\x0cPACKET_TYPES\"\x19\n\x0b\x42obNetCount\x12\n\n\x05\x43OUNT\x10\xf4\x03\"\x1a\n\x04Ping\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10s\"\x1a\n\x04Pong\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10t\"\xc7\x01\n\x0f\x41uroraHandshake\x12\x13\n\x0bgame_handle\x18\x01 \x01(\x05\x12\x10\n\x08password\x18\x02 \x01(\t\x12\x15\n\rclient_handle\x18\x03 \x01(\x03\x12\x0f\n\x07mission\x18\x04 \x01(\x05\x12\x0f\n\x07version\x18\x05 \x01(\t\x12\x14\n\x0cold_platform\x18\x06 \x01(\x05\x12)\n\x08platform\x18\x07 \x01(\x0b\x32\x17.PegasusShared.Platform\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa8\x01')
+  serialized_pb=_b('\n\x11\x42obNetProto.proto\x12\x0b\x42obNetProto\x1a\x13PegasusShared.proto\"p\n\tAutoLogin\x12\x0c\n\x04user\x18\x01 \x02(\t\x12\x0b\n\x03pwd\x18\x02 \x02(\t\x12\x10\n\x08\x62uild_id\x18\x03 \x02(\x05\x12\x12\n\ndebug_name\x18\x04 \x02(\t\x12\x0e\n\x06source\x18\x05 \x02(\x05\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10g\"N\n\x07\x44\x65\x61\x64\x65nd\x12\x0e\n\x06reply1\x18\x01 \x01(\t\x12\x0e\n\x06reply2\x18\x02 \x01(\t\x12\x0e\n\x06reply3\x18\x03 \x01(\t\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa9\x01\"R\n\x0b\x44\x65\x61\x64\x65ndUtil\x12\x0e\n\x06reply1\x18\x01 \x01(\t\x12\x0e\n\x06reply2\x18\x02 \x01(\t\x12\x0e\n\x06reply3\x18\x03 \x01(\t\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa7\x01\"\xa7\x02\n\x13\x44\x65\x62ugConsoleCmdList\x12\x42\n\x08\x63ommands\x18\x01 \x03(\x0b\x32\x30.BobNetProto.DebugConsoleCmdList.DebugConsoleCmd\x1a\xb6\x01\n\x0f\x44\x65\x62ugConsoleCmd\x12\x0c\n\x04name\x18\x01 \x02(\t\x12U\n\x06params\x18\x02 \x03(\x0b\x32\x45.BobNetProto.DebugConsoleCmdList.DebugConsoleCmd.DebugConsoleCmdParam\x1a>\n\x14\x44\x65\x62ugConsoleCmdParam\x12\x12\n\nparam_type\x18\x01 \x02(\t\x12\x12\n\nparam_name\x18\x02 \x02(\t\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x92\x01\":\n\x13\x44\x65\x62ugConsoleCommand\x12\x0f\n\x07\x63ommand\x18\x01 \x02(\t\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10{\",\n\x16\x44\x65\x62ugConsoleGetCmdList\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10}\"+\n\x14\x44\x65\x62ugConsoleGetZones\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x93\x01\"\xb8\x01\n\x14\x44\x65\x62ugConsoleResponse\x12\x10\n\x08response\x18\x01 \x02(\t\x12\x45\n\rresponse_type\x18\x02 \x02(\x0e\x32..BobNetProto.DebugConsoleResponse.ResponseType\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10|\"3\n\x0cResponseType\x12\x12\n\x0e\x43ONSOLE_OUTPUT\x10\x00\x12\x0f\n\x0bLOG_MESSAGE\x10\x01\"N\n\x1a\x44\x65\x62ugConsoleUpdateFromPane\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\r\n\x05value\x18\x02 \x02(\t\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x91\x01\"\x96\x01\n\x11\x44\x65\x62ugConsoleZones\x12>\n\x05zones\x18\x01 \x03(\x0b\x32/.BobNetProto.DebugConsoleZones.DebugConsoleZone\x1a,\n\x10\x44\x65\x62ugConsoleZone\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\n\n\x02id\x18\x02 \x02(\r\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x94\x01\"\x8a\x01\n\x11\x44\x65\x62ugPaneDelItems\x12>\n\x05items\x18\x01 \x03(\x0b\x32/.BobNetProto.DebugPaneDelItems.DebugPaneDelItem\x1a \n\x10\x44\x65\x62ugPaneDelItem\x12\x0c\n\x04name\x18\x01 \x02(\t\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x8f\x01\"\x99\x01\n\x11\x44\x65\x62ugPaneNewItems\x12>\n\x05items\x18\x01 \x03(\x0b\x32/.BobNetProto.DebugPaneNewItems.DebugPaneNewItem\x1a/\n\x10\x44\x65\x62ugPaneNewItem\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\r\n\x05value\x18\x02 \x02(\t\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\x8e\x01\"(\n\x0bPACKETTYPES\"\x19\n\x0b\x42obNetCount\x12\n\n\x05\x43OUNT\x10\xf4\x03\"\x1a\n\x04Ping\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10s\"\x1a\n\x04Pong\"\x12\n\x08PacketID\x12\x06\n\x02ID\x10t\"\xc7\x01\n\x0f\x41uroraHandshake\x12\x13\n\x0bgame_handle\x18\x01 \x02(\x05\x12\x10\n\x08password\x18\x02 \x02(\t\x12\x15\n\rclient_handle\x18\x03 \x02(\x03\x12\x0f\n\x07mission\x18\x04 \x01(\x05\x12\x0f\n\x07version\x18\x05 \x02(\t\x12\x14\n\x0cold_platform\x18\x06 \x02(\x05\x12)\n\x08platform\x18\x07 \x01(\x0b\x32\x17.PegasusShared.Platform\"\x13\n\x08PacketID\x12\x07\n\x02ID\x10\xa8\x01')
   ,
   dependencies=[PegasusShared__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -94,8 +94,8 @@ _DEBUGCONSOLECMDLIST_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=608,
-  serialized_end=627,
+  serialized_start=610,
+  serialized_end=629,
 )
 _sym_db.RegisterEnumDescriptor(_DEBUGCONSOLECMDLIST_PACKETID)
 
@@ -112,8 +112,8 @@ _DEBUGCONSOLECOMMAND_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=669,
-  serialized_end=687,
+  serialized_start=671,
+  serialized_end=689,
 )
 _sym_db.RegisterEnumDescriptor(_DEBUGCONSOLECOMMAND_PACKETID)
 
@@ -130,8 +130,8 @@ _DEBUGCONSOLEGETCMDLIST_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=715,
-  serialized_end=733,
+  serialized_start=717,
+  serialized_end=735,
 )
 _sym_db.RegisterEnumDescriptor(_DEBUGCONSOLEGETCMDLIST_PACKETID)
 
@@ -148,8 +148,8 @@ _DEBUGCONSOLEGETZONES_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=759,
-  serialized_end=778,
+  serialized_start=761,
+  serialized_end=780,
 )
 _sym_db.RegisterEnumDescriptor(_DEBUGCONSOLEGETZONES_PACKETID)
 
@@ -166,8 +166,8 @@ _DEBUGCONSOLERESPONSE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=894,
-  serialized_end=912,
+  serialized_start=896,
+  serialized_end=914,
 )
 _sym_db.RegisterEnumDescriptor(_DEBUGCONSOLERESPONSE_PACKETID)
 
@@ -188,8 +188,8 @@ _DEBUGCONSOLERESPONSE_RESPONSETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=914,
-  serialized_end=965,
+  serialized_start=916,
+  serialized_end=967,
 )
 _sym_db.RegisterEnumDescriptor(_DEBUGCONSOLERESPONSE_RESPONSETYPE)
 
@@ -206,8 +206,8 @@ _DEBUGCONSOLEUPDATEFROMPANE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1026,
-  serialized_end=1045,
+  serialized_start=1028,
+  serialized_end=1047,
 )
 _sym_db.RegisterEnumDescriptor(_DEBUGCONSOLEUPDATEFROMPANE_PACKETID)
 
@@ -224,8 +224,8 @@ _DEBUGCONSOLEZONES_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1179,
-  serialized_end=1198,
+  serialized_start=1181,
+  serialized_end=1200,
 )
 _sym_db.RegisterEnumDescriptor(_DEBUGCONSOLEZONES_PACKETID)
 
@@ -242,8 +242,8 @@ _DEBUGPANEDELITEMS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1320,
-  serialized_end=1339,
+  serialized_start=1322,
+  serialized_end=1341,
 )
 _sym_db.RegisterEnumDescriptor(_DEBUGPANEDELITEMS_PACKETID)
 
@@ -260,14 +260,14 @@ _DEBUGPANENEWITEMS_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1476,
-  serialized_end=1495,
+  serialized_start=1478,
+  serialized_end=1497,
 )
 _sym_db.RegisterEnumDescriptor(_DEBUGPANENEWITEMS_PACKETID)
 
-_PACKET_TYPES_BOBNETCOUNT = _descriptor.EnumDescriptor(
+_PACKETTYPES_BOBNETCOUNT = _descriptor.EnumDescriptor(
   name='BobNetCount',
-  full_name='BobNetProto.PACKET_TYPES.BobNetCount',
+  full_name='BobNetProto.PACKETTYPES.BobNetCount',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -278,10 +278,10 @@ _PACKET_TYPES_BOBNETCOUNT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1513,
-  serialized_end=1538,
+  serialized_start=1514,
+  serialized_end=1539,
 )
-_sym_db.RegisterEnumDescriptor(_PACKET_TYPES_BOBNETCOUNT)
+_sym_db.RegisterEnumDescriptor(_PACKETTYPES_BOBNETCOUNT)
 
 _PING_PACKETID = _descriptor.EnumDescriptor(
   name='PacketID',
@@ -296,8 +296,8 @@ _PING_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1548,
-  serialized_end=1566,
+  serialized_start=1549,
+  serialized_end=1567,
 )
 _sym_db.RegisterEnumDescriptor(_PING_PACKETID)
 
@@ -314,8 +314,8 @@ _PONG_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1576,
-  serialized_end=1594,
+  serialized_start=1577,
+  serialized_end=1595,
 )
 _sym_db.RegisterEnumDescriptor(_PONG_PACKETID)
 
@@ -332,8 +332,8 @@ _AURORAHANDSHAKE_PACKETID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1777,
-  serialized_end=1796,
+  serialized_start=1778,
+  serialized_end=1797,
 )
 _sym_db.RegisterEnumDescriptor(_AURORAHANDSHAKE_PACKETID)
 
@@ -347,35 +347,35 @@ _AUTOLOGIN = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='user', full_name='BobNetProto.AutoLogin.user', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='pwd', full_name='BobNetProto.AutoLogin.pwd', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='build_id', full_name='BobNetProto.AutoLogin.build_id', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='debug_name', full_name='BobNetProto.AutoLogin.debug_name', index=3,
-      number=4, type=9, cpp_type=9, label=1,
+      number=4, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='source', full_name='BobNetProto.AutoLogin.source', index=4,
-      number=5, type=5, cpp_type=1, label=1,
+      number=5, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -498,15 +498,15 @@ _DEBUGCONSOLECMDLIST_DEBUGCONSOLECMD_DEBUGCONSOLECMDPARAM = _descriptor.Descript
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='paramType', full_name='BobNetProto.DebugConsoleCmdList.DebugConsoleCmd.DebugConsoleCmdParam.paramType', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      name='param_type', full_name='BobNetProto.DebugConsoleCmdList.DebugConsoleCmd.DebugConsoleCmdParam.param_type', index=0,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='paramName', full_name='BobNetProto.DebugConsoleCmdList.DebugConsoleCmd.DebugConsoleCmdParam.paramName', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      name='param_name', full_name='BobNetProto.DebugConsoleCmdList.DebugConsoleCmd.DebugConsoleCmdParam.param_name', index=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -524,7 +524,7 @@ _DEBUGCONSOLECMDLIST_DEBUGCONSOLECMD_DEBUGCONSOLECMDPARAM = _descriptor.Descript
   oneofs=[
   ],
   serialized_start=546,
-  serialized_end=606,
+  serialized_end=608,
 )
 
 _DEBUGCONSOLECMDLIST_DEBUGCONSOLECMD = _descriptor.Descriptor(
@@ -536,7 +536,7 @@ _DEBUGCONSOLECMDLIST_DEBUGCONSOLECMD = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='name', full_name='BobNetProto.DebugConsoleCmdList.DebugConsoleCmd.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -561,7 +561,7 @@ _DEBUGCONSOLECMDLIST_DEBUGCONSOLECMD = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=426,
-  serialized_end=606,
+  serialized_end=608,
 )
 
 _DEBUGCONSOLECMDLIST = _descriptor.Descriptor(
@@ -592,7 +592,7 @@ _DEBUGCONSOLECMDLIST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=334,
-  serialized_end=627,
+  serialized_end=629,
 )
 
 
@@ -605,7 +605,7 @@ _DEBUGCONSOLECOMMAND = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='command', full_name='BobNetProto.DebugConsoleCommand.command', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -623,8 +623,8 @@ _DEBUGCONSOLECOMMAND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=629,
-  serialized_end=687,
+  serialized_start=631,
+  serialized_end=689,
 )
 
 
@@ -648,8 +648,8 @@ _DEBUGCONSOLEGETCMDLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=689,
-  serialized_end=733,
+  serialized_start=691,
+  serialized_end=735,
 )
 
 
@@ -673,8 +673,8 @@ _DEBUGCONSOLEGETZONES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=735,
-  serialized_end=778,
+  serialized_start=737,
+  serialized_end=780,
 )
 
 
@@ -687,14 +687,14 @@ _DEBUGCONSOLERESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='response', full_name='BobNetProto.DebugConsoleResponse.response', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='response_type', full_name='BobNetProto.DebugConsoleResponse.response_type', index=1,
-      number=2, type=14, cpp_type=8, label=1,
+      number=2, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -713,8 +713,8 @@ _DEBUGCONSOLERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=781,
-  serialized_end=965,
+  serialized_start=783,
+  serialized_end=967,
 )
 
 
@@ -727,14 +727,14 @@ _DEBUGCONSOLEUPDATEFROMPANE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='name', full_name='BobNetProto.DebugConsoleUpdateFromPane.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='value', full_name='BobNetProto.DebugConsoleUpdateFromPane.value', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -752,8 +752,8 @@ _DEBUGCONSOLEUPDATEFROMPANE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=967,
-  serialized_end=1045,
+  serialized_start=969,
+  serialized_end=1047,
 )
 
 
@@ -766,14 +766,14 @@ _DEBUGCONSOLEZONES_DEBUGCONSOLEZONE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='name', full_name='BobNetProto.DebugConsoleZones.DebugConsoleZone.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='id', full_name='BobNetProto.DebugConsoleZones.DebugConsoleZone.id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
+      number=2, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -790,8 +790,8 @@ _DEBUGCONSOLEZONES_DEBUGCONSOLEZONE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1133,
-  serialized_end=1177,
+  serialized_start=1135,
+  serialized_end=1179,
 )
 
 _DEBUGCONSOLEZONES = _descriptor.Descriptor(
@@ -821,8 +821,8 @@ _DEBUGCONSOLEZONES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1048,
-  serialized_end=1198,
+  serialized_start=1050,
+  serialized_end=1200,
 )
 
 
@@ -835,7 +835,7 @@ _DEBUGPANEDELITEMS_DEBUGPANEDELITEM = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='name', full_name='BobNetProto.DebugPaneDelItems.DebugPaneDelItem.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -852,8 +852,8 @@ _DEBUGPANEDELITEMS_DEBUGPANEDELITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1286,
-  serialized_end=1318,
+  serialized_start=1288,
+  serialized_end=1320,
 )
 
 _DEBUGPANEDELITEMS = _descriptor.Descriptor(
@@ -883,8 +883,8 @@ _DEBUGPANEDELITEMS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1201,
-  serialized_end=1339,
+  serialized_start=1203,
+  serialized_end=1341,
 )
 
 
@@ -897,14 +897,14 @@ _DEBUGPANENEWITEMS_DEBUGPANENEWITEM = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='name', full_name='BobNetProto.DebugPaneNewItems.DebugPaneNewItem.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='value', full_name='BobNetProto.DebugPaneNewItems.DebugPaneNewItem.value', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -921,8 +921,8 @@ _DEBUGPANENEWITEMS_DEBUGPANENEWITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1427,
-  serialized_end=1474,
+  serialized_start=1429,
+  serialized_end=1476,
 )
 
 _DEBUGPANENEWITEMS = _descriptor.Descriptor(
@@ -952,14 +952,14 @@ _DEBUGPANENEWITEMS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1342,
-  serialized_end=1495,
+  serialized_start=1344,
+  serialized_end=1497,
 )
 
 
-_PACKET_TYPES = _descriptor.Descriptor(
-  name='PACKET_TYPES',
-  full_name='BobNetProto.PACKET_TYPES',
+_PACKETTYPES = _descriptor.Descriptor(
+  name='PACKETTYPES',
+  full_name='BobNetProto.PACKETTYPES',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -969,7 +969,7 @@ _PACKET_TYPES = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _PACKET_TYPES_BOBNETCOUNT,
+    _PACKETTYPES_BOBNETCOUNT,
   ],
   options=None,
   is_extendable=False,
@@ -977,8 +977,8 @@ _PACKET_TYPES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1497,
-  serialized_end=1538,
+  serialized_start=1499,
+  serialized_end=1539,
 )
 
 
@@ -1002,8 +1002,8 @@ _PING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1540,
-  serialized_end=1566,
+  serialized_start=1541,
+  serialized_end=1567,
 )
 
 
@@ -1027,8 +1027,8 @@ _PONG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1568,
-  serialized_end=1594,
+  serialized_start=1569,
+  serialized_end=1595,
 )
 
 
@@ -1041,21 +1041,21 @@ _AURORAHANDSHAKE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='game_handle', full_name='BobNetProto.AuroraHandshake.game_handle', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='password', full_name='BobNetProto.AuroraHandshake.password', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='client_handle', full_name='BobNetProto.AuroraHandshake.client_handle', index=2,
-      number=3, type=3, cpp_type=2, label=1,
+      number=3, type=3, cpp_type=2, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1069,14 +1069,14 @@ _AURORAHANDSHAKE = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='version', full_name='BobNetProto.AuroraHandshake.version', index=4,
-      number=5, type=9, cpp_type=9, label=1,
+      number=5, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='old_platform', full_name='BobNetProto.AuroraHandshake.old_platform', index=5,
-      number=6, type=5, cpp_type=1, label=1,
+      number=6, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1101,8 +1101,8 @@ _AURORAHANDSHAKE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1597,
-  serialized_end=1796,
+  serialized_start=1598,
+  serialized_end=1797,
 )
 
 _AUTOLOGIN_PACKETID.containing_type = _AUTOLOGIN
@@ -1129,7 +1129,7 @@ _DEBUGPANEDELITEMS_PACKETID.containing_type = _DEBUGPANEDELITEMS
 _DEBUGPANENEWITEMS_DEBUGPANENEWITEM.containing_type = _DEBUGPANENEWITEMS
 _DEBUGPANENEWITEMS.fields_by_name['items'].message_type = _DEBUGPANENEWITEMS_DEBUGPANENEWITEM
 _DEBUGPANENEWITEMS_PACKETID.containing_type = _DEBUGPANENEWITEMS
-_PACKET_TYPES_BOBNETCOUNT.containing_type = _PACKET_TYPES
+_PACKETTYPES_BOBNETCOUNT.containing_type = _PACKETTYPES
 _PING_PACKETID.containing_type = _PING
 _PONG_PACKETID.containing_type = _PONG
 _AURORAHANDSHAKE.fields_by_name['platform'].message_type = PegasusShared__pb2._PLATFORM
@@ -1146,7 +1146,7 @@ DESCRIPTOR.message_types_by_name['DebugConsoleUpdateFromPane'] = _DEBUGCONSOLEUP
 DESCRIPTOR.message_types_by_name['DebugConsoleZones'] = _DEBUGCONSOLEZONES
 DESCRIPTOR.message_types_by_name['DebugPaneDelItems'] = _DEBUGPANEDELITEMS
 DESCRIPTOR.message_types_by_name['DebugPaneNewItems'] = _DEBUGPANENEWITEMS
-DESCRIPTOR.message_types_by_name['PACKET_TYPES'] = _PACKET_TYPES
+DESCRIPTOR.message_types_by_name['PACKETTYPES'] = _PACKETTYPES
 DESCRIPTOR.message_types_by_name['Ping'] = _PING
 DESCRIPTOR.message_types_by_name['Pong'] = _PONG
 DESCRIPTOR.message_types_by_name['AuroraHandshake'] = _AURORAHANDSHAKE
@@ -1275,12 +1275,12 @@ DebugPaneNewItems = _reflection.GeneratedProtocolMessageType('DebugPaneNewItems'
 _sym_db.RegisterMessage(DebugPaneNewItems)
 _sym_db.RegisterMessage(DebugPaneNewItems.DebugPaneNewItem)
 
-PACKET_TYPES = _reflection.GeneratedProtocolMessageType('PACKET_TYPES', (_message.Message,), dict(
-  DESCRIPTOR = _PACKET_TYPES,
+PACKETTYPES = _reflection.GeneratedProtocolMessageType('PACKETTYPES', (_message.Message,), dict(
+  DESCRIPTOR = _PACKETTYPES,
   __module__ = 'BobNetProto_pb2'
-  # @@protoc_insertion_point(class_scope:BobNetProto.PACKET_TYPES)
+  # @@protoc_insertion_point(class_scope:BobNetProto.PACKETTYPES)
   ))
-_sym_db.RegisterMessage(PACKET_TYPES)
+_sym_db.RegisterMessage(PACKETTYPES)
 
 Ping = _reflection.GeneratedProtocolMessageType('Ping', (_message.Message,), dict(
   DESCRIPTOR = _PING,

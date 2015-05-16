@@ -3,7 +3,7 @@ package bnet.protocol.account;
 
 
 message AccountCredential {
-	optional uint32 id = 1;
+	required uint32 id = 1;
 	optional bytes data = 2;
 }
 
@@ -18,11 +18,11 @@ message AccountFieldOptions {
 }
 
 message AccountId {
-	optional fixed32 id = 1;
+	required fixed32 id = 1;
 }
 
 message AccountLicense {
-	optional uint32 id = 1;
+	required uint32 id = 1;
 	optional uint64 expires = 2;
 }
 

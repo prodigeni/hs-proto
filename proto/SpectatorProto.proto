@@ -15,15 +15,15 @@ message JoinInfo {
 	optional bool is_joinable = 5;
 	optional int32 current_num_spectators = 6;
 	optional int32 max_num_spectators = 7;
-	optional .PegasusShared.GameType game_type = 8;
+	optional .PegasusShared.GameType game_type = 8 [default = GT_UNKNOWN];
 	optional int32 mission_id = 9;
 	repeated .PegasusShared.BnetId spectated_players = 10;
 	optional .PegasusShared.BnetId party_id = 11;
 }
 
 message Invite {
-	optional .PegasusShared.BnetId inviterGameAccountId = 1;
-	optional .SpectatorProto.JoinInfo join_info = 2;
+	required .PegasusShared.BnetId inviter_game_account_id = 1;
+	required .SpectatorProto.JoinInfo join_info = 2;
 }
 
 message PartyServerInfo {
@@ -31,7 +31,7 @@ message PartyServerInfo {
 	optional uint32 server_port = 2;
 	optional int32 game_handle = 3;
 	optional string secret_key = 4;
-	optional .PegasusShared.GameType game_type = 5;
+	optional .PegasusShared.GameType game_type = 5 [default = GT_UNKNOWN];
 	optional int32 mission_id = 6;
 }
 

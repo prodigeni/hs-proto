@@ -12,10 +12,10 @@ message AdventureProgress {
 		DEFEAT_CLASS_CHALLENGE_MISSION_1 = 256;
 		DEFEAT_CLASS_CHALLENGE_MISSION_2 = 512;
 	}
-	optional int32 wing_id = 1;
-	optional int32 progress = 2;
-	optional int32 ack = 3;
-	optional uint64 flags = 4;
+	required int32 wing_id = 1;
+	required int32 progress = 2;
+	optional int32 ack = 3 [default = 0];
+	required uint64 flags = 4;
 }
 
 enum BattlePayProvider {
@@ -42,12 +42,12 @@ enum BnetGameType {
 }
 
 message BnetId {
-	optional uint64 hi = 1;
-	optional uint64 lo = 2;
+	required uint64 hi = 1;
+	required uint64 lo = 2;
 }
 
 message CardDef {
-	optional int32 asset = 1;
+	required int32 asset = 1;
 	optional int32 premium = 2;
 }
 
@@ -73,26 +73,25 @@ enum DatabaseResult {
 }
 
 message Date {
-	optional int32 year = 1;
-	optional int32 month = 2;
-	optional int32 day = 3;
-	optional int32 hours = 4;
-	optional int32 min = 5;
-	optional int32 sec = 6;
+	required int32 year = 1;
+	required int32 month = 2;
+	required int32 day = 3;
+	required int32 hours = 4;
+	required int32 min = 5;
+	required int32 sec = 6;
 }
 
 message CardStack {
-	optional .PegasusShared.CardDef card_def = 1;
-	optional .PegasusShared.Date latest_insert_date = 2;
-	optional int32 count = 3;
-	optional int32 num_seen = 4;
+	required .PegasusShared.CardDef card_def = 1;
+	required .PegasusShared.Date latest_insert_date = 2;
+	required int32 num_seen = 515;
 }
 
 message DeckCardData {
-	optional .PegasusShared.CardDef def = 1;
-	optional int32 handle = 2;
+	required .PegasusShared.CardDef def = 1;
+	required int32 handle = 2;
 	optional int32 qty = 3;
-	optional int32 prev = 5;
+	required int32 prev = 5;
 }
 
 message DeckInfo {
@@ -102,14 +101,14 @@ message DeckInfo {
 		DRAFT_DECK = 4;
 		PRECON_DECK = 5;
 	}
-	optional int64 id = 1;
-	optional string name = 2;
-	optional int32 card_back = 3;
-	optional int32 hero = 4;
-	optional .PegasusShared.DeckInfo.DeckType deck_type = 5 [default = NORMAL_DECK];
-	optional int64 validity = 6;
-	optional int32 hero_premium = 7;
-	optional bool card_back_override = 8;
+	required int64 id = 1;
+	required string name = 2;
+	required int32 card_back = 3;
+	required int32 hero = 4;
+	required .PegasusShared.DeckInfo.DeckType deck_type = 5;
+	required int64 validity = 6;
+	required int32 hero_premium = 7;
+	required bool card_back_override = 8;
 }
 
 enum GameType {
@@ -125,35 +124,36 @@ enum GameType {
 }
 
 message Platform {
-	optional int32 os = 1;
-	optional int32 screen = 2;
-	optional string name = 3;
+	required int32 os = 1;
+	required int32 screen = 2;
+	required string name = 3;
+	optional int32 store = 4;
 }
 
 message PlayQueueInfo {
-	optional .PegasusShared.BnetGameType game_type = 1;
+	required .PegasusShared.BnetGameType game_type = 1;
 }
 
 message ProfileNoticeAdventureProgress {
 	enum NoticeID {
 		ID = 14;
 	}
-	optional int32 wing_id = 1;
+	required int32 wing_id = 1;
 }
 
 message ProfileNoticeBonusStars {
 	enum NoticeID {
 		ID = 12;
 	}
-	optional int32 star_level = 1;
-	optional int32 stars = 2;
+	required int32 star_level = 1;
+	required int32 stars = 2;
 }
 
 message ProfileNoticeCardBack {
 	enum NoticeID {
 		ID = 11;
 	}
-	optional int32 card_back = 1;
+	required int32 card_back = 1;
 }
 
 message ProfileNoticeDisconnectedGameResult {
@@ -173,18 +173,18 @@ message ProfileNoticeDisconnectedGameResult {
 		PR_DISCONNECTED = 3;
 		PR_QUIT = 4;
 	}
-	optional .PegasusShared.GameType game_type = 8;
+	optional .PegasusShared.GameType game_type = 8 [default = GT_UNKNOWN];
 	optional int32 mission_id = 9;
-	optional .PegasusShared.ProfileNoticeDisconnectedGameResult.GameResult game_result = 10;
-	optional .PegasusShared.ProfileNoticeDisconnectedGameResult.PlayerResult your_result = 11;
-	optional .PegasusShared.ProfileNoticeDisconnectedGameResult.PlayerResult opponent_result = 12;
+	optional .PegasusShared.ProfileNoticeDisconnectedGameResult.GameResult game_result = 10 [default = GR_UNKNOWN];
+	optional .PegasusShared.ProfileNoticeDisconnectedGameResult.PlayerResult your_result = 11 [default = PR_UNKNOWN];
+	optional .PegasusShared.ProfileNoticeDisconnectedGameResult.PlayerResult opponent_result = 12 [default = PR_UNKNOWN];
 }
 
 message ProfileNoticeMedal {
 	enum NoticeID {
 		ID = 1;
 	}
-	optional int32 star_level = 1;
+	required int32 star_level = 1;
 	optional int32 legend_rank = 2;
 }
 
@@ -192,15 +192,15 @@ message ProfileNoticePreconDeck {
 	enum NoticeID {
 		ID = 5;
 	}
-	optional int64 deck = 1;
-	optional int32 hero = 2;
+	required int64 deck = 1;
+	required int32 hero = 2;
 }
 
 message ProfileNoticePurchase {
 	enum NoticeID {
 		ID = 10;
 	}
-	optional string product_id = 1;
+	required string product_id = 1;
 	optional int64 data = 2;
 	optional int32 currency = 3;
 }
@@ -209,15 +209,15 @@ message ProfileNoticeRewardBooster {
 	enum NoticeID {
 		ID = 2;
 	}
-	optional int32 booster_type = 1;
-	optional int32 booster_count = 2;
+	required int32 booster_type = 1;
+	required int32 booster_count = 2;
 }
 
 message ProfileNoticeRewardCard {
 	enum NoticeID {
 		ID = 3;
 	}
-	optional .PegasusShared.CardDef card = 1;
+	required .PegasusShared.CardDef card = 1;
 	optional int32 quantity = 2;
 }
 
@@ -231,33 +231,33 @@ message ProfileNoticeRewardDust {
 	enum NoticeID {
 		ID = 6;
 	}
-	optional int32 amount = 1;
+	required int32 amount = 1;
 }
 
 message ProfileNoticeRewardForge {
 	enum NoticeID {
 		ID = 8;
 	}
-	optional int32 quantity = 1;
+	required int32 quantity = 1;
 }
 
 message ProfileNoticeRewardGold {
 	enum NoticeID {
 		ID = 9;
 	}
-	optional int32 amount = 1;
+	required int32 amount = 1;
 }
 
 message ProfileNoticeRewardMount {
 	enum NoticeID {
 		ID = 7;
 	}
-	optional int32 mount_id = 1;
+	required int32 mount_id = 1;
 }
 
 enum ProtocolVersion {
 	PV_MAJOR = 2;
-	PV_MINOR = 4;
+	PV_MINOR = 6;
 	PV_PATCH = 0;
 	PV_SKU = 0;
 	option allow_alias = true;
